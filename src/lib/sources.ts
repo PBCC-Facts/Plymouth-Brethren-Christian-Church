@@ -80,12 +80,6 @@ export const sources: Record<string, Source> = {
     accessedOn: "2026-04-23",
     notes: "Uses this row for the 55,000-members / 19-countries figure, which is a PBCC self-report. Independent corroboration still outstanding — see FACTS.md §1.",
   },
-  "pbccstories": {
-    id: "pbccstories",
-    label: "PBCCstories.org — first-person survivor testimony",
-    url: "https://pbccstories.org/",
-    accessedOn: "2026-04-23",
-  },
 };
 
 export function getSource(id: string): Source {

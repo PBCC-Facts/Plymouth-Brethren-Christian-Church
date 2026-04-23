@@ -163,7 +163,7 @@ new statesman plymouth brethren | /about-this-site (press-citations section)
 
 PBCC topics sit next to YMYL (life decisions, mental health, family separation). Google rewards Experience, Expertise, Authoritativeness, Trust on these. Our signals:
 
-- **Publisher identity:** full name, credentials, attorney relationship, documentary contribution, PBCCstories.org operator — on `/about-this-site` with Person schema and `sameAs` links to press appearances.
+- **Publisher identity:** full name, credentials, attorney relationship, documentary contribution — on `/about-this-site` with Person schema and `sameAs` links to press appearances.
 - **Sources on every claim.** Public, checkable, stable URLs where possible.
 - **Clear statement of purpose and non-affiliation.**
 - **Contact page with real response.** (Low-friction for journalists and regulators.)
@@ -171,7 +171,6 @@ PBCC topics sit next to YMYL (life decisions, mental health, family separation).
 
 ## 6. Off-site (post-launch — out of scope for session 1, tracked here)
 
-- Backlink from PBCCstories.org immediately at launch (publisher controls).
 - Outreach to ex-PBCC bloggers/podcasters for organic links.
 - Wikipedia "Further reading" pitch via talk page with full disclosure; do not edit main article ourselves.
 - Reddit (`r/exbrethren` and adjacent) organic engagement only, never seeded.

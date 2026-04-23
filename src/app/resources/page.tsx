@@ -69,10 +69,10 @@ const groups: ResourceGroup[] = [
       "Resources that specifically address the Plymouth Brethren Christian Church (formerly the Exclusive Brethren).",
     entries: [
       {
-        name: "PBCCstories.org",
-        url: "https://pbccstories.org/",
+        name: "Stories — on this site",
+        url: "/stories",
         gloss:
-          "First-person survivor testimony. On-record accounts from former members. Primary source for many claims on this site.",
+          "First-person survivor testimony, published on this site under explicit written consent. Intake is open; first stories are in review.",
       },
       {
         name: "Reach Out Trust — Exclusive Brethren",
