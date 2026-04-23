@@ -1,0 +1,30 @@
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+.turbo/
+*.tsbuildinfo
+
+# Env
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+
+# Claude Code local state
+.claude/settings.local.json
+
+# Vercel
+.vercel/
+
+# Research captures of the live PBCC site — reference only, never shipped.
+# See FETCH_PLAN.md § Legal hygiene.
+research/captures/
