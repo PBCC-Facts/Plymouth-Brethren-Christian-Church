@@ -1,154 +1,153 @@
 # Design System — PBCC Parody / Criticism Site
 
-Status: **provisional, pending visual verification from you.** See `FETCH_PLAN.md` for the runbook to capture real tokens from the live site once you're at a machine with open internet egress. See `INFRASTRUCTURE.md` for hosting (Vercel) and backend (Supabase) decisions.
+Status: **measured** against the live PBCC site (re-captured 2026-04-23). Canonical token source is [`research/tokens.json`](research/tokens.json), derived from `research/captures/theme-public_frontend.css` and verified by mapping every NATO-lettered custom property (`--color-alpha` … `--color-hotel`) to the selectors and properties that consume it.
 
-This sandbox cannot reach `plymouthbrethrenchristianchurch.org` directly (host is not in egress allowlist), so the tokens below are inferred from:
+See [INFRASTRUCTURE.md](INFRASTRUCTURE.md) for hosting and [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md) for voice.
 
-- Public descriptions of the current PBCC rebrand (your own characterization of "calm green", mainstream-corporate posture).
-- Verbal descriptions in search results that confirm the page layout and nav structure (see SOURCES.md / research notes).
-- Patterns typical of modern corporate-church PR microsites built in WordPress (which PBCC's site appears to be — `/wp-content/uploads/` paths surface in search results).
-
-**Before component work starts, I need you to confirm or correct four things** (see "Questions for you" at the bottom).
+> **Earlier confusion (worth flagging):** the theme's utility classes are legacy-named and misleading. `.bg-orange` paints **teal** `#4c868f`; `.bg-brown` paints **rust** `#a44200`. Trust the hex values, not the class names. This design system uses semantic names (`--color-brand`, `--color-ink`, …) that match the actual visual role.
 
 ---
 
-## 1. Color palette (provisional)
+## 1. Color palette (measured, role-correct)
 
-The source site reads as a low-saturation, photography-led, mainstream-corporate palette anchored on a muted green. The parody brand mark should sit on the same palette; the **parody banner is deliberately off-palette** (high-contrast yellow/red) so it reads as a meta-layer, not part of the site.
+| Authored token | Hex | Upstream | Role |
+| --- | --- | --- | --- |
+| `--color-brand` | `#4c868f` | `--color-bravo` | **Primary brand — teal.** Sidebar background, every `.btn`, active nav item, pagination current, breadcrumb separator, `.module__rich-media` bullet color, rich-media ordered-list counters. |
+| `--color-brand-hover` | `#3e6f77` | (derived) | Button hover — slightly darker teal. |
+| `--color-ink` | `#1b2327` | `--color-echo` | **Ink AND dark surfaces.** Body text; hero section background; `.site-footer` background; `.mobile-menu__content-wrapper`; the charcoal hamburger nub on top of the sidebar; sub-menu dropdown surface. |
+| `--color-surface` | `#ffffff` | `--color-foxtrot` | Page background; text on dark surfaces. |
+| `--color-purple` | `#534588` | `--color-alpha` | Secondary accent — news-module headings, active pagination dot, `<strong>` inside hero slides. |
+| `--color-blueviolet` | `#5f6eb3` | `--color-hotel` | Featured-card post-date accent. Used sparingly. |
+| `--color-rust` | `#a44200` | `--color-charlie` | **Link hover + form-focus border only.** Not a section color, not a CTA color. |
+| `--color-rule` | `#dfe1e1` | `--color-delta` | The thin gray rule to the right of every `.heading__separator` label. Hairline dividers. |
+| `--color-banner-bg` | `#f9d54a` | ours | Parody banner — sticky, off-palette, meta-layer. |
+| `--color-banner-ink` | `#1a1a1a` | ours | Parody banner text. |
 
-Role                  | Token               | Proposed hex | Notes
----                   | ---                 | ---          | ---
-Brand primary (green) | `--brand-primary`   | `#5B7F6A`    | Muted sage/forest. Used on primary headings, links, and small accents. Confirm against the real site.
-Brand primary dark    | `--brand-primary-d` | `#3F5A4B`    | Hover / focus darkening.
-Brand primary tint    | `--brand-primary-t` | `#E6EDE7`    | Soft section background tint.
-Ink (body)            | `--ink`             | `#1F2A24`    | Near-black with a green undertone so it feels warm next to brand.
-Ink muted             | `--ink-muted`       | `#4A544D`    | Secondary text, captions.
-Surface               | `--surface`         | `#FFFFFF`    | Default page background.
-Surface alt           | `--surface-alt`     | `#F6F5F1`    | Warm cream for alternating sections.
-Rule                  | `--rule`            | `#D8D6CF`    | Hairline dividers.
-Link                  | `--link`            | `#3F5A4B`    | Brand-dark by default; underline on hover.
-Parody banner bg      | `--banner-bg`       | `#F9D54A`    | High-contrast yellow. Meta-layer.
-Parody banner ink     | `--banner-ink`      | `#1A1A1A`    | On yellow.
-Danger / warning      | `--danger`          | `#B23A2E`    | For source-flag UI, not page chrome.
+---
 
-Confirm the exact brand green — either paste me the hex from DevTools or a screenshot and I'll re-derive the palette.
+## 2. Typography (measured)
 
-## 2. Typography (provisional)
+- **Body + section labels — Open Sans** (400, 700, italic 400). Loaded via `next/font/google` → `src/lib/fonts.ts`.
+- **Display headings — Rockwell** (slab-serif). System-installed only; no `@font-face`. Fallback stack: `"Rockwell", "Rockwell Std", "Roboto Slab", "Courier New", serif`. Used on `h1–h6`, hero slide titles (up to 8rem–20rem), ordered-list counters inside rich-media blocks. We do **not** ship Rockwell — it is not freely redistributable; this matches the source site's own approach.
 
-PBCC PR materials appear to use a humanist sans-serif, with headings in the same family at heavier weight — no serif. This is the dominant pattern for post-2020 corporate-church rebrands.
+### Two distinct heading patterns — don't conflate them
 
-Role          | Proposed family                         | Weights    | Notes
----           | ---                                     | ---        | ---
-Headings      | **Inter** (fallback: system sans)       | 600, 700   | Tight tracking, generous size ramp. Swap to a near-equivalent if the real site uses e.g. Poppins, Work Sans, or Source Sans.
-Body          | **Inter**                               | 400, 500   | Same family for cohesion; common in modern sites.
-Mono (code / footnote numerals) | **JetBrains Mono** or system mono | 400 | Only used in footnote tooltips and the `/sources` page.
+1. **Display heading** — Rockwell slab serif. Used for hero titles, section-body headlines (e.g. the big quote in the Contact band, news card titles, community-card titles). Varies in size; generally large.
+2. **Section label** (`.heading__separator`, our class: `.section-label`) — **Open Sans 700**, uppercase, ~15px, with a flex-grown light-gray rule extending to its right. This is the small label above each homepage section ("ABOUT US", "NEWS", "GET TO KNOW OUR COMMUNITY"). **Not** Rockwell, **not** centered, **not** rust-underlined. Mistaking this for a display heading is the single easiest way to get the visual wrong.
 
-Size ramp (rem; mobile → desktop via clamp):
-
-Token | Clamp
---- | ---
-`--fs-hero` | `clamp(2.25rem, 5vw, 3.75rem)`
-`--fs-h1` | `clamp(1.875rem, 3.5vw, 2.75rem)`
-`--fs-h2` | `clamp(1.375rem, 2.2vw, 1.875rem)`
-`--fs-h3` | `clamp(1.125rem, 1.6vw, 1.375rem)`
-`--fs-body` | `1.0625rem` (17px — generous for long-form)
-`--fs-small` | `0.875rem`
-
-Line heights: 1.15 on display, 1.3 on H1/H2, 1.65 on body.
-
-Confirm the font family from the real site (View Source → look for Google Fonts link tag or `@font-face` in stylesheet). If you can paste me the family name I'll align exactly.
+---
 
 ## 3. Layout primitives
 
-Token | Value | Notes
---- | --- | ---
-`--container-prose` | `68ch` | Way-of-life body copy max width. Comfortable long-form reading.
-`--container-wide`  | `1200px` | Nav, footer, hero image-text sections.
-`--container-narrow`| `48ch` | FAQ answers, standalone prose blocks.
-`--space-section` | `clamp(3rem, 6vw, 6rem)` | Vertical section padding.
-`--space-block` | `1.5rem` | Paragraph spacing, card padding.
-`--gap-grid` | `clamp(1.5rem, 3vw, 3rem)` | Image/text two-col gap.
-`--radius-image` | `0.25rem` | Slight corner rounding on images (matches PR-site convention).
-`--radius-card` | `0.5rem` | Any card surfaces.
-`--shadow-soft` | `0 1px 2px rgba(0,0,0,0.04), 0 4px 12px rgba(0,0,0,0.06)` | Understated. Barely visible.
+| Token | Value | Notes |
+| --- | --- | --- |
+| `--container-wide` | `1280px` | Section wrappers, hero, footer. |
+| `--container-prose` | `68ch` | Long-form body copy. |
+| section padding | `clamp(3rem, 6vw, 6rem)` | Vertical padding on each section. |
 
-Mobile-first. All two-column image/text sections collapse to stacked on <768px.
+### Sidebar — a distinctive two-block chrome
 
-## 4. Component patterns
+| | Top block | Bottom block |
+| --- | --- | --- |
+| Background | `--color-ink` (charcoal) | `--color-brand` (teal) |
+| Contents | Hamburger toggle, white on charcoal | Brand — on desktop, full text `Plymouth Brethren Christian Church` in Rockwell rendered vertically using `writing-mode: vertical-rl; transform: rotate(180deg)`. On mobile, a horizontal wordmark. |
+| Size | 96px tall (desktop) / 72px (mobile) | Fills remaining height |
 
-**Hero.** Full-width photograph, overlaid H1 on a tinted gradient, no CTA button on the Way of Life page (just scroll). Photograph is warm, natural light, shows members in modest dress — we will not reuse PBCC photography; parody uses original imagery or licensed stock matched in composition. Caption beneath hero in `--ink-muted`.
+Desktop: 80px fixed left column, flex-column, sticky to viewport.
+Mobile: full-width top bar, flex-row (hamburger left, wordmark right).
 
-**Image / text alternating sections.** Left-image/right-text → right-image/left-text pattern. Image aspect ~3:2 at desktop, stacked on mobile. Images are not captioned in the source; we will caption every image with a visibly-parody flag ("Illustrative — not affiliated") for fair-use hygiene.
+### Hero — dark surface, serif display, teal CTA, circle visual
 
-**Values / beliefs lists.** Plain bulleted lists in body copy size, generous item spacing (~0.75rem between items). No icons in the source — PBCC uses text-only lists, contributing to the calm PR register.
+- Background: `--color-ink` charcoal.
+- Left: eyebrow in teal small-caps → Rockwell display title (clamp to ~4.5rem) in white → sub-copy at 85% opacity → teal "Learn more about our way of life →" link underlined → four pagination dots (first purple, rest 35% white).
+- Right: circle-clipped visual with a 6px teal ring. The real site clips it against a curved teal arc — we render a simple circle with a teal halo for now.
+- The real hero is a Vue-hydrated slider (`<vue id="55">`); our build renders a single static slide.
 
-**Buttons.** Flat, no gradient. Solid brand green background, white text. 12px vertical / 20px horizontal padding. Hover → brand dark + subtle shadow.
+---
 
-**Footnotes.** Superscript numeral that is:
-- Keyboard-accessible (`<button>` not `<a>`).
-- Hover / focus reveals a tooltip card with the full citation + outbound link.
-- Clicking scrolls to the footnote list at the bottom of the page (with `:target` highlight).
-- Mobile → tap opens tooltip; second tap follows link.
+## 4. Section-label component (real markup)
 
-**ParodyBanner.** Sticky top, full width. `--banner-bg` yellow. Non-dismissible. 14px text, bold lead ("PARODY SITE"), inline link to `/about-this-site`. Does not obscure any content on scroll (the page content simply starts below it).
-
-**RelatedReading cluster.** Footer block on every page. "Related on this site" H2, 3–5 internal links with a one-line gloss each. Internal-linking SEO + reader service.
-
-## 5. Navigation structure (to mirror)
-
-Primary nav (from the source, confirmed via search result metadata):
-
-1. **Home** → `/`
-2. **Way of life** → `/way-of-life/` *(has dropdown)*
-3. **Our members** → `/our-members/` *(has dropdown; includes "Any Questions?")*
-4. **News** → `/news/`
-5. **Any questions?** → `/our-members/any-questions/` *(may be nested under "Our members" in the source — I'll confirm in the markup once you paste it, or mirror exactly)*
-6. **Contact** → `/contact/`
-
-**Unconfirmed:** the exact dropdown children under "Way of life" and "Our members." From public PBCC content I can infer children like "Our beliefs", "Our neighbours", "Rapid Relief Team", "OneSchool Global", "Living our beliefs – Family", but I need the real nav markup to get the order and labels precisely. In the interim, layout.tsx will render the dropdowns against a typed nav manifest in `src/lib/nav.ts` so we can correct without component changes.
-
-Our parody nav **adds** one thing the source does not have: a visible "Resources" or "Survivor resources" top-level item routing to `/resources` (survivor resources + real outbound links). This is deliberate — it's part of what makes the site useful rather than just satirical.
-
-## 6. Image strategy
-
-- All imagery locally hosted in `/public/images`.
-- No reuse of PBCC photography. Use original photography or licensed stock (Unsplash/Pexels with verified licenses).
-- Every image has a `"Illustrative — not affiliated with PBCC"` caption.
-- No images of identifiable real members without verified public-source status. Bruce D. Hales and public litigants who have identified themselves are fair to use with clear attribution; private members are not.
-- All `<Image>` components have explicit width/height to prevent CLS.
-
-## 7. Tailwind v4 translation
-
-CSS custom properties above go in `src/app/globals.css` under `@theme`. Tailwind v4's `@theme` directive will expose them as utilities (`bg-brand-primary`, `text-ink`, etc.). Example skeleton:
+```html
+<h2 class="heading__separator">About us</h2>
+```
 
 ```css
-@import "tailwindcss";
-
-@theme {
-  --color-brand-primary: #5B7F6A;
-  --color-brand-primary-dark: #3F5A4B;
-  --color-brand-primary-tint: #E6EDE7;
-  --color-ink: #1F2A24;
-  --color-ink-muted: #4A544D;
-  --color-surface: #FFFFFF;
-  --color-surface-alt: #F6F5F1;
-  --color-rule: #D8D6CF;
-  --color-banner-bg: #F9D54A;
-  --color-banner-ink: #1A1A1A;
-
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-mono: "JetBrains Mono", ui-monospace, monospace;
-
-  --radius-image: 0.25rem;
-  --radius-card: 0.5rem;
+.heading__separator {
+  font: 700 1.6rem/1 "Open Sans", sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  color: #000;
+}
+.heading__separator::after {
+  content: "";
+  flex: 1;
+  height: 2px;
+  background: #dfe1e1;
+  margin-left: 4rem;
 }
 ```
 
-## 8. What I couldn't verify and need from you
+Our CSS-module equivalent is `.section-label` in [`src/app/globals.css`](src/app/globals.css).
 
-1. **Brand green hex.** From DevTools on the live site — or a screenshot I can sample.
-2. **Heading font family name** (look for `<link rel="stylesheet" href="https://fonts.googleapis.com/...` in View Source, or a `font-family:` declaration in the stylesheet).
-3. **Exact dropdown children** under "Way of life" and "Our members." Paste the HTML of `<nav>` if easy; otherwise I'll mirror publicly visible paths and we can correct.
-4. **SEO keyword map** (see `SEO_STRATEGY.md`) — is there anything on the list that should be dropped for legal-exposure reasons before I start optimizing for it?
+---
 
-Once I have items 1–4 confirmed (or "proceed with your provisional tokens"), I'll build components.
+## 5. Footer
+
+- Background: `--color-ink` (same charcoal as the hero, so the hero-to-content-to-footer cadence reads dark → light → dark).
+- Contact block: teal "CONTACT" eyebrow → large Rockwell invitation → teal `Get in touch` button.
+- Nav column: two columns of small white links at 80% opacity.
+- Bottom row: © line + source-repo link.
+
+---
+
+## 6. Buttons (`.btn`)
+
+- Teal `--color-brand` background, white text.
+- Open Sans 700, uppercase, 0.875rem, letter-spacing 0.04em.
+- **Square corners.** No rounded variant in the source.
+- Padding: ~0.9rem / 1.6rem.
+- Hover: slightly darker teal (`--color-brand-hover`).
+
+---
+
+## 7. Parody banner (ours, not theirs)
+
+Sticky top, full-width, non-dismissible. `--color-banner-bg` yellow. Bold uppercase lead ("PARODY / CRITICISM SITE"), then "Not affiliated …" inline, then an "About this site" link. Sits **above** the source-site chrome so it reads unambiguously as a meta-layer. Do not soften; do not collapse into the palette. This is the single most important fair-use affordance on the site.
+
+---
+
+## 8. Image strategy
+
+- All imagery locally hosted in `/public/images`. **No reuse of PBCC photography.**
+- Original photography or licensed stock (Unsplash/Pexels, verified licenses).
+- Every image captioned `"Illustrative — not affiliated with PBCC"`.
+- No identifiable private members. Bruce D. Hales + public litigants who have self-identified are fair game with clear attribution.
+- `<Image>` components carry explicit width/height to prevent CLS.
+
+---
+
+## 9. Tailwind v4 translation
+
+Tokens live in `src/app/globals.css` under `@theme`. The full file is canonical; the shape is:
+
+```css
+@import "tailwindcss";
+@theme {
+  --color-brand: #4c868f;
+  --color-brand-hover: #3e6f77;
+  --color-ink: #1b2327;
+  --color-surface: #ffffff;
+  --color-purple: #534588;
+  --color-blueviolet: #5f6eb3;
+  --color-rust: #a44200;
+  --color-rule: #dfe1e1;
+  --color-banner-bg: #f9d54a;
+  --color-banner-ink: #1a1a1a;
+
+  --font-serif: "Rockwell", "Rockwell Std", "Roboto Slab", "Courier New", serif;
+  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
+}
+```
+
+`--font-open-sans` comes from `next/font/google` (see `src/lib/fonts.ts`). Rockwell is **not** bundled.
