@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { openSans } from "@/lib/fonts";
+import { SITE_URL } from "@/lib/site";
 import { ParodyBanner } from "@/components/site/ParodyBanner";
 import { Shell } from "@/components/site/Shell";
 import { Footer } from "@/components/site/Footer";
 
 export const metadata: Metadata = {
+  metadataBase: new URL(SITE_URL),
   title: {
     default:
       "The Facts — Plymouth Brethren Christian Church (parody · criticism · survivor resources)",
@@ -14,8 +16,11 @@ export const metadata: Metadata = {
   description:
     "The Facts about the Plymouth Brethren Christian Church. A sourced, survivor-first parody and criticism companion to the PBCC's PR site. Every claim footnoted. Contributable on GitHub. Not affiliated with the PBCC.",
   robots: { index: true, follow: true },
+  alternates: { canonical: "/" },
   openGraph: {
     type: "website",
+    url: SITE_URL,
+    siteName: "The Facts · Plymouth Brethren Christian Church",
     title:
       "Plymouth Brethren Christian Church (parody · criticism · survivor resources)",
     description:
