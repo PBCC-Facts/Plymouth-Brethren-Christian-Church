@@ -1,6 +1,6 @@
 # Design System — PBCC Parody / Criticism Site
 
-Status: **provisional, pending visual verification from you.**
+Status: **provisional, pending visual verification from you.** See `FETCH_PLAN.md` for the runbook to capture real tokens from the live site once you're at a machine with open internet egress. See `INFRASTRUCTURE.md` for hosting (Vercel) and backend (Supabase) decisions.
 
 This sandbox cannot reach `plymouthbrethrenchristianchurch.org` directly (host is not in egress allowlist), so the tokens below are inferred from:
 
