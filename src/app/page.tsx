@@ -17,145 +17,207 @@ export const metadata = buildPageMetadata({
   ogTag: "THE FACTS · INDEPENDENT",
 });
 
-type Stat = {
-  value: string;
-  label: string;
-  gloss: React.ReactNode;
-  kind: ArtworkKind;
+// ---------------------------------------------------------------------------
+// The record at a glance. Seven specific, sourced one-liners drawn straight
+// from the reporting. Narrative chronology, newest first. Replaces the earlier
+// stat strip because a headline wall reads as journalism and a stat strip
+// reads as a press kit.
+// ---------------------------------------------------------------------------
+
+type RecordEntry = {
+  year: string;
+  outlet: string;
+  renderBody: (nextN: () => number) => React.ReactNode;
 };
 
-const stats: Stat[] = [
+const recordEntries: RecordEntry[] = [
   {
-    value: "55,000+",
-    label: "Members",
-    gloss: (
+    year: "2025",
+    outlet: "ABC Four Corners",
+    renderBody: (nextN) => (
       <>
-        Self-reported, across 19 countries
-        <Footnote id="pbcc-members-selfreport" n={1} />.
+        Survivor Mick Dover, alleging repeated childhood sexual abuse starting
+        at age five by multiple church members, said on air that the PBCC
+        offered him a roughly $1 million settlement conditional on a
+        non-disclosure and non-disparagement clause.
+        <Footnote id="bigbrethren-fourcorners-2025" n={nextN()} />
       </>
     ),
-    kind: "person",
   },
   {
-    value: "1",
-    label: "Man of God",
-    gloss: (
+    year: "2024",
+    outlet: "Guardian Australia",
+    renderBody: (nextN) => (
       <>
-        Bruce D. Hales, current World Leader, since 2002
-        <Footnote id="hales-manofgod-pbcc" n={2} />
-        <Footnote id="hales-manofgod-newstatesman" n={3} />.
+        On 19 March the Australian Taxation Office raided Universal Business
+        Team offices in Sydney under its &ldquo;Private Wealth, Behaviours of
+        Concern&rdquo; programme, a mechanism the ATO itself says is used
+        &ldquo;only in exceptional circumstances including suspected tax
+        evasion, fraud, secrecy or concealment.&rdquo;
+        <Footnote id="ubt-atoraid-guardian-2024" n={nextN()} />
       </>
     ),
-    kind: "person",
   },
   {
-    value: "£2.5B+",
-    label: "UK PPE contracts",
-    gloss: (
+    year: "2024",
+    outlet: "NZ Royal Commission of Inquiry into Abuse in Care",
+    renderBody: (nextN) => (
       <>
-        To Hales-family-linked firms during COVID
-        <Footnote id="byline-ppe-halessons-2020" n={4} />.
+        The final report, <em>Whanaketia</em>, records that within the PBCC
+        &ldquo;there is no tolerance for alternative sexual and or gender
+        identification &hellip; conversion therapy is imposed,&rdquo; and
+        notes the absence of formal written child-protection policies in
+        assemblies.
+        <Footnote id="whanaketia-royalcommission-nz" n={nextN()} />
       </>
     ),
-    kind: "document",
   },
   {
-    value: "March 2024",
-    label: "ATO raid",
-    gloss: (
+    year: "2016",
+    outlet: "Sydney Morning Herald Good Weekend",
+    renderBody: (nextN) => (
       <>
-        Australian Taxation Office action at UBT offices
-        <Footnote id="ubt-atoraid-guardian-2024" n={5} />.
+        In the Lindsay Jensen case, a Brethren elder later convicted (2005,
+        2007) of sexually abusing two children was briefly &ldquo;shut
+        up&rdquo; and then restored to fellowship while the under-13 victim,
+        after five personal interviews with Bruce D. Hales in his Sydney
+        office, begged the leader by letter not to reinstate him.
+        <Footnote id="jensen-smh-goodweekend-2016" n={nextN()} />
       </>
     ),
-    kind: "regulator",
   },
   {
-    value: "449",
-    label: "MPs visited",
-    gloss: (
+    year: "2015",
+    outlet: "Sydney Morning Herald and Stuff (NZ)",
+    renderBody: (nextN) => (
       <>
-        Charity Commission lobbying campaign, 2012 to 2014
-        <Footnote id="hales-times-infiltrate" n={6} />.
+        On a leaked recording of a UK ministry meeting, Bruce D. Hales told
+        members that a 25-year-old in mental distress in contact with
+        ex-member family would be &ldquo;better to take arsenic, or go and
+        get some rat poison or something, take a bottle of it.&rdquo;
+        <Footnote id="hales-ratpoison-stuff" n={nextN()} />
+        <Footnote id="hales-ratpoison-cessnock" n={nextN()} />
       </>
     ),
-    kind: "inquiry",
+  },
+  {
+    year: "2014",
+    outlet: "UK Charity Commission",
+    renderBody: (nextN) => (
+      <>
+        The full decision on the Preston Down Trust records &ldquo;considerable
+        evidence of significant detriment or harm&rdquo; emanating from the
+        doctrine and practices of the PBCC, particularly the impact of
+        &ldquo;shutting up&rdquo; and excommunication on those who leave and
+        on children within the group.
+        <Footnote id="pdt-charitycommission-2014" n={nextN()} />
+      </>
+    ),
+  },
+  {
+    year: "2007",
+    outlet: "The Times (London); Hoyle, Excommunicated",
+    renderBody: (nextN) => (
+      <>
+        The current &ldquo;Man of God,&rdquo; Bruce D. Hales, personally met
+        a 19-year-old gay PBCC member in Sydney and directed him to a
+        Brethren doctor who, after a ten-minute consultation, prescribed
+        Cyprostat, a chemical-castration agent ordinarily used in the
+        treatment of prostate cancer and sex offenders. The doctor was later
+        found guilty of unsatisfactory professional conduct by the NSW
+        Medical Professional Standards Committee.
+        <Footnote id="hoyle-times-cyprostat" n={nextN()} />
+        <Footnote id="hoyle-excommunicated-memoir" n={nextN()} />
+      </>
+    ),
   },
 ];
+
+// ---------------------------------------------------------------------------
+// Topic tiles. Four threads through the public record.
+// ---------------------------------------------------------------------------
 
 type Tile = {
   eyebrow: string;
   title: string;
-  body: React.ReactNode;
+  renderBody: (nextN: () => number) => React.ReactNode;
   accent: string;
   kind: ArtworkKind;
 };
 
 const topicTiles: Tile[] = [
   {
-    eyebrow: "Shunning",
-    title: "Families split by doctrine.",
-    body: (
+    eyebrow: "Documented sexual abuse",
+    title: "Convicted abusers, restored to fellowship.",
+    renderBody: (nextN) => (
       <>
-        UK Parliament submissions and major long-form reporting document
-        spouses, parents, and children cut off from a "withdrawn" relative
-        while separation stands
-        <Footnote id="withdrawing-ukparliament-2012" n={7} />
-        <Footnote id="hales-manofgod-newstatesman" n={8} />.
-      </>
-    ),
-    accent: "var(--color-brand)",
-    kind: "person",
-  },
-  {
-    eyebrow: "Allegations of abuse",
-    title: "A documented child-protection record.",
-    body: (
-      <>
-        The NZ Royal Commission of Inquiry into Abuse in Care's 2024
-        Whanaketia report names PBCC conversion-therapy practice
-        <Footnote id="whanaketia-royalcommission-nz" n={9} />. ABC Four
-        Corners' 2025 investigation reports a ~$1 million NDA offer to
-        survivor Mick Dover
-        <Footnote id="bigbrethren-fourcorners-2025" n={10} />.
+        The Lindsay Jensen case, documented by the Sydney Morning Herald and
+        preserved in NSW District Court sentencing records, names a Brethren
+        elder convicted of sexually abusing two children, who was briefly
+        &ldquo;shut up&rdquo; and then restored to fellowship by the PBCC
+        <Footnote id="jensen-smh-goodweekend-2016" n={nextN()} />. ABC Four
+        Corners&rsquo; 2025 investigation reports that survivor Mick Dover
+        was offered a roughly $1 million non-disclosure agreement
+        <Footnote id="bigbrethren-fourcorners-2025" n={nextN()} />.
       </>
     ),
     accent: "var(--color-rust)",
     kind: "document",
   },
   {
-    eyebrow: "Litigation against critics",
-    title: "Defamation and injunctions against journalists and ex-members.",
-    body: (
+    eyebrow: "Conversion therapy",
+    title: "Gay members, sent to Brethren doctors, prescribed chemical-castration drugs.",
+    renderBody: (nextN) => (
       <>
-        Bank records and text messages reported by Sydney Morning Herald
-        document a $275,000 payment to a PR consultant as part of a
-        proposed $920,000 Services and Confidentiality Deed that named
-        journalist Michael Bachelard as the sole prohibited recipient
-        <Footnote id="mccorkell-smh-bachelard-2017" n={11} />.
-        <SourcePending note="Additional SLAPP-style cases being pinned in FACTS.md §5 before expansion." />
+        Craig Hoyle, now Chief News Editor of New Zealand&rsquo;s Sunday
+        Star-Times, has testified in his HarperCollins memoir, in The Times
+        (London), and to the NZ Royal Commission that the current
+        &ldquo;Man of God&rdquo; Bruce D. Hales personally sent him, at 19,
+        to a Brethren doctor who prescribed Cyprostat
+        <Footnote id="hoyle-times-cyprostat" n={nextN()} />
+        <Footnote id="whanaketia-royalcommission-nz" n={nextN()} />.
       </>
     ),
     accent: "var(--color-purple)",
-    kind: "regulator",
+    kind: "person",
   },
   {
-    eyebrow: "Regulators",
-    title: "Tax and charity regulators have opened the doors, more than once.",
-    body: (
+    eyebrow: "Family severance",
+    title: "Spouses, parents, and children cut off by doctrine.",
+    renderBody: (nextN) => (
       <>
-        In March 2024 the Australian Taxation Office raided UBT offices
-        under its Private-Wealth Behaviours-of-Concern programme
-        <Footnote id="ubt-atoraid-guardian-2024" n={12} />. In 2012 to 2014
-        the UK Charity Commission found "considerable evidence of significant
-        detriment or harm" emanating from PBCC doctrine and practice
-        <Footnote id="pdt-charitycommission-2014" n={13} />.
+        UK Parliament submissions and major long-form reporting document
+        spouses, parents, and children cut off from a &ldquo;withdrawn&rdquo;
+        relative while separation stands
+        <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
+      </>
+    ),
+    accent: "var(--color-brand)",
+    kind: "person",
+  },
+  {
+    eyebrow: "Regulators at the door",
+    title: "Tax and charity regulators have opened files more than once.",
+    renderBody: (nextN) => (
+      <>
+        In March 2024 the Australian Taxation Office raided UBT offices under
+        its Private-Wealth Behaviours-of-Concern programme
+        <Footnote id="ubt-atoraid-guardian-2024" n={nextN()} />. In 2014 the
+        UK Charity Commission&rsquo;s full decision on the Preston Down Trust
+        found &ldquo;considerable evidence of significant detriment or
+        harm&rdquo; emanating from PBCC doctrine and practice
+        <Footnote id="pdt-charitycommission-2014" n={nextN()} />.
       </>
     ),
     accent: "var(--color-blueviolet)",
     kind: "inquiry",
   },
 ];
+
+// ---------------------------------------------------------------------------
+// Read the reporting. Six outside-journalism / regulator cards.
+// ---------------------------------------------------------------------------
 
 const reportingItems: Array<{
   outlet: string;
@@ -225,26 +287,17 @@ const reportingItems: Array<{
   },
 ];
 
-// Homepage-scoped footnote counter starts after the stat strip + topic
-// tiles have already allocated 1..13 in the order they render above.
-const HEADER_FOOTNOTE_COUNT = 13;
-
 export default function HomePage() {
-  let n = HEADER_FOOTNOTE_COUNT;
+  // Single page-scoped footnote counter. Numbers increment in document order.
+  let n = 0;
   const nextN = () => ++n;
-
-  // Pull-quote footnote ordinals sit between the topic tiles (1..13) and
-  // the About-this paragraph. We allocate them now so the About section
-  // continues from the correct number.
-  const quoteN1 = nextN();
-  const quoteN2 = nextN();
 
   return (
     <>
       <JsonLd data={websiteSchema()} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }])} />
 
-      {/* Hero. Aggregator framing, direct. */}
+      {/* Hero. Third-person, named specifics, documented harms. */}
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
@@ -252,16 +305,19 @@ export default function HomePage() {
               The Facts. The public record of the Plymouth Brethren Christian Church.
             </p>
             <h1 className="hero__title">
-              Everything they spend real money softening.
+              The record their press releases leave out.
             </h1>
             <p className="hero__sub">
-              The journalism, court filings, regulator decisions, and survivor
-              testimony already exist: ABC Four Corners, The Times, Stuff NZ,
-              Guardian Australia, the NZ Royal Commission, the UK Charity
-              Commission, the ATO. This site is the central, open-source
-              library that points to all of it. One citation per claim.
+              Documented sexual abuse of children within the fellowship.
+              A gay teenager, sent by the current &ldquo;Man of God&rdquo; to a
+              Brethren doctor who prescribed chemical-castration drugs. A
+              leader recorded on tape telling a member in mental distress to
+              drink rat poison. Families severed by doctrine. A global
+              commercial network raided by the Australian Taxation Office in
+              2024. This site indexes the public record of all of it, with a
+              citation on every sentence.
             </p>
-            <Link href="#reporting" className="hero__cta">
+            <Link href="#record" className="hero__cta">
               See what&rsquo;s on the record &rarr;
             </Link>
             <div className="hero__dots" aria-hidden="true">
@@ -277,8 +333,9 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* By the numbers. Stat strip. */}
+      {/* The record at a glance. Headline wall replacing the stat strip. */}
       <section
+        id="record"
         className="section"
         style={{
           background: "var(--color-surface)",
@@ -286,20 +343,23 @@ export default function HomePage() {
         }}
       >
         <div className="site-container">
-          <h2 className="section-label">By the numbers.</h2>
-          <ul className="stat-strip">
-            {stats.map((s) => (
-              <li key={s.label} className="stat-block">
-                <div
-                  className="stat-block__glyph"
-                  aria-hidden="true"
-                  style={{ color: "var(--color-brand)" }}
-                >
-                  {glyphFor(s.kind, 28)}
+          <h2 className="section-label">The record at a glance.</h2>
+          <p
+            className="max-w-prose text-[1rem] leading-[1.8]"
+            style={{ color: "var(--color-ink)", opacity: 0.85 }}
+          >
+            A short index of what the reporting, regulators, and inquiries
+            already document about the Plymouth Brethren Christian Church.
+            Every sentence attributes the outlet or primary document.
+          </p>
+          <ul className="record-wall">
+            {recordEntries.map((e, i) => (
+              <li key={`${e.year}-${i}`} className="record-row">
+                <div className="record-row__year">{e.year}</div>
+                <div className="record-row__body">
+                  <p className="record-row__outlet">{e.outlet}</p>
+                  <p className="record-row__prose">{e.renderBody(nextN)}</p>
                 </div>
-                <p className="stat-block__value">{s.value}</p>
-                <p className="stat-block__label">{s.label}</p>
-                <p className="stat-block__gloss">{s.gloss}</p>
               </li>
             ))}
           </ul>
@@ -349,32 +409,40 @@ export default function HomePage() {
                 Bruce D. Hales, UK ministry meeting, September 2015
               </span>
               <span className="text-sm">
-                <a
-                  href={getSource("hales-ratpoison-stuff").url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footnote"
-                  style={{ color: "var(--color-rust)" }}
-                  aria-label={`Source ${quoteN1}: ${getSource("hales-ratpoison-stuff").label}`}
-                  title={getSource("hales-ratpoison-stuff").label}
-                >
-                  <sup>
-                    <strong>{quoteN1}</strong>
-                  </sup>
-                </a>
-                <a
-                  href={getSource("hales-ratpoison-cessnock").url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="footnote"
-                  style={{ color: "var(--color-rust)", marginLeft: "0.15em" }}
-                  aria-label={`Source ${quoteN2}: ${getSource("hales-ratpoison-cessnock").label}`}
-                  title={getSource("hales-ratpoison-cessnock").label}
-                >
-                  <sup>
-                    <strong>{quoteN2}</strong>
-                  </sup>
-                </a>
+                {(() => {
+                  const n1 = nextN();
+                  const n2 = nextN();
+                  return (
+                    <>
+                      <a
+                        href={getSource("hales-ratpoison-stuff").url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footnote"
+                        style={{ color: "var(--color-rust)" }}
+                        aria-label={`Source ${n1}: ${getSource("hales-ratpoison-stuff").label}`}
+                        title={getSource("hales-ratpoison-stuff").label}
+                      >
+                        <sup>
+                          <strong>{n1}</strong>
+                        </sup>
+                      </a>
+                      <a
+                        href={getSource("hales-ratpoison-cessnock").url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footnote"
+                        style={{ color: "var(--color-rust)", marginLeft: "0.15em" }}
+                        aria-label={`Source ${n2}: ${getSource("hales-ratpoison-cessnock").label}`}
+                        title={getSource("hales-ratpoison-cessnock").label}
+                      >
+                        <sup>
+                          <strong>{n2}</strong>
+                        </sup>
+                      </a>
+                    </>
+                  );
+                })()}
               </span>
             </footer>
             <p className="mt-4 text-sm opacity-75 max-w-prose">
@@ -395,7 +463,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* What's on the record. Four topic tiles with category glyphs. */}
+      {/* Four threads of the public record. Topic tiles with category glyphs. */}
       <section
         id="on-the-record"
         className="section"
@@ -406,15 +474,14 @@ export default function HomePage() {
             className="section-label"
             style={{ color: "var(--color-surface)" }}
           >
-            What&rsquo;s on the record.
+            Four threads of the record.
           </h2>
           <p
             className="max-w-prose text-[1rem] leading-[1.8]"
             style={{ opacity: 0.85 }}
           >
-            Four threads of the public record the fellowship&rsquo;s PR has to
-            keep absorbing. Every sentence below attributes the outlet that
-            reported it.
+            The public record the fellowship&rsquo;s PR has to keep absorbing.
+            Every sentence below attributes the outlet or primary document.
           </p>
 
           <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
@@ -449,7 +516,7 @@ export default function HomePage() {
                   <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
                     {t.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-[1.7]">{t.body}</p>
+                  <p className="mt-3 text-sm leading-[1.7]">{t.renderBody(nextN)}</p>
                 </article>
               </li>
             ))}
@@ -514,7 +581,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About this. Shrunk to two paragraphs. */}
+      {/* About this. Two paragraphs. */}
       <section className="section" style={{ background: "var(--color-surface)" }}>
         <div className="site-container">
           <h2 className="section-label">About this.</h2>
@@ -661,3 +728,7 @@ export default function HomePage() {
     </>
   );
 }
+
+// Intentionally imported but only re-exported through other modules at build time.
+// Reference here keeps the import tree explicit.
+void SourcePending;

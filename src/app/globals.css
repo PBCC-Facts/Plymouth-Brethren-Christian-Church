@@ -264,54 +264,52 @@
   margin-left: 0.25rem;
 }
 
-/* By-the-numbers stat strip on homepage */
-.stat-strip {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 2rem;
-  margin-top: 1.5rem;
-}
-@media (min-width: 640px) {
-  .stat-strip { grid-template-columns: 1fr 1fr; }
-}
-@media (min-width: 1024px) {
-  .stat-strip { grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
-}
-
-.stat-block {
+/* The record at a glance. Headline wall on homepage. */
+.record-wall {
   display: flex;
   flex-direction: column;
-  gap: 0.25rem;
-  padding-left: 1rem;
-  border-left: 2px solid var(--color-rule);
+  margin-top: 2rem;
+  border-top: 1px solid var(--color-rule);
 }
-.stat-block__glyph {
-  display: inline-flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 0.5rem;
+.record-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.5rem;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--color-rule);
 }
-.stat-block__value {
+@media (min-width: 768px) {
+  .record-row {
+    grid-template-columns: 140px 1fr;
+    gap: 2rem;
+    padding: 2rem 0;
+  }
+}
+.record-row__year {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-size: clamp(1.75rem, 2.6vw, 2.25rem);
   line-height: 1;
-  color: var(--color-ink);
+  color: var(--color-brand);
 }
-.stat-block__label {
+.record-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.record-row__outlet {
   font-family: var(--font-sans);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.15em;
   font-size: 0.7rem;
   color: var(--color-brand);
-  margin-top: 0.5rem;
 }
-.stat-block__gloss {
-  margin-top: 0.4rem;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: color-mix(in srgb, var(--color-ink) 80%, var(--color-surface));
+.record-row__prose {
+  font-family: var(--font-serif);
+  font-size: clamp(1.05rem, 1.4vw, 1.25rem);
+  line-height: 1.45;
+  color: var(--color-ink);
 }
 
 /* Open-by-design action cards on homepage */
