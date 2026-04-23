@@ -94,7 +94,38 @@ The current World Leader is Bruce D. Hales, known within the fellowship as the "
 - Use "the current World Leader, Bruce D. Hales, known within the fellowship as the Man of God" for the full gloss on first use; shorter forms after.
 
 **Pages**
-- `/` About Us, `/way-of-life/our-beliefs`, `/about-this-site`.
+- `/` About Us, `/way-of-life/our-beliefs`, `/about-this-site`, `/our-members`, `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+Bruce D. Hales assumed the leadership in 2002 on the death of his father, John S. Hales.
+
+**Status** — ✅ verified (single primary + supporting reporting)
+**Sources**
+- https://www.plymouthbrethrenchristianchurch.org/resource/bruce-d-hales/ — PBCC's own resource page, succession statement.
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren — New Statesman long-read (2023) references the dynastic line.
+
+**Notes**
+- Uncontested factual matter (date, succession). The PBCC self-report is the primary source.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+Reporting in The Post (NZ) has quoted leadership instructions delivered under Hales that direct members to generate commercial surplus for the community, citing recordings and member testimony.
+
+**Status** — 🟡 single-source
+**Sources**
+- https://www.thepost.co.nz/nz-news/350113380/exclusive-brethren-told-create-crisis-generate-profits — The Post (NZ).
+
+**Notes**
+- Phrase as what the reporting says, not as a direct factual claim about Hales personally. We cite the outlet, not re-state the allegation as our own.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
 
 ---
 

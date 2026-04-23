@@ -27,6 +27,8 @@ Pre-code. Only planning docs exist:
 - [INFRASTRUCTURE.md](INFRASTRUCTURE.md) — Next.js on Vercel + Supabase
 - [FETCH_PLAN.md](FETCH_PLAN.md) — runbook to capture real PBCC tokens from an open-egress machine
 - [RESEARCH_NOTES.md](RESEARCH_NOTES.md) — verified sources gathered so far
+- [MEMBERS_POLICY.md](MEMBERS_POLICY.md) — inclusion rule for `/our-members` profiles; read before adding a person
+- [docs/AUTHORING_MEMBERS.md](docs/AUTHORING_MEMBERS.md) — mechanical how-to for member profile rows
 
 ## Working agreements
 
