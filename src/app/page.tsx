@@ -1,6 +1,18 @@
 import Link from "next/link";
 import { Footnote, SourcePending } from "@/components/site/Footnote";
 import { GITHUB_URL } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
+import { JsonLd, websiteSchema, breadcrumbSchema } from "@/components/seo/JsonLd";
+
+export const metadata = buildPageMetadata({
+  topic: "The Facts",
+  description:
+    "Sourced, survivor-first documentation of doctrine, practice, and leadership — from John Nelson Darby's Doctrine of Separation to the current Man of God, Bruce D. Hales. Every claim footnoted. Contributable on GitHub.",
+  slug: "/",
+  cluster: "A",
+  register: "criticism",
+  ogTag: "THE FACTS · CRITICISM",
+});
 
 const communityCards = [
   {
@@ -123,6 +135,8 @@ export default function HomePage() {
 
   return (
     <>
+      <JsonLd data={websiteSchema()} />
+      <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }])} />
       {/* Hero — tight, direct message in the fellowship's reframed voice */}
       <section className="hero">
         <div className="site-container hero__grid">

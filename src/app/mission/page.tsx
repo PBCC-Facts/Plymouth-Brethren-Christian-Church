@@ -1,19 +1,44 @@
 import Link from "next/link";
-import type { Metadata } from "next";
 import { Footnote, SourcePending } from "@/components/site/Footnote";
+import { buildPageMetadata } from "@/lib/seo";
+import {
+  JsonLd,
+  articleSchema,
+  breadcrumbSchema,
+} from "@/components/seo/JsonLd";
 
 const REPO_URL =
   "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church";
 
-export const metadata: Metadata = {
-  title: "Mission",
+export const metadata = buildPageMetadata({
+  topic: "Mission",
   description:
-    "The mission of The Facts: document, in public and with sources, the doctrines and practices the Plymouth Brethren Christian Church spends real money to soften — including family separation, abuse allegations, litigation against critics, and regulatory action. Every claim footnoted. Every page contributable.",
-};
+    "Why this project exists: to document, with sources, the doctrines and practices the Plymouth Brethren Christian Church spends real money to soften — family separation, abuse allegations, litigation against critics, and regulatory action. Every claim footnoted. Every page contributable.",
+  slug: "/mission",
+  cluster: "A",
+  register: "criticism",
+});
 
 export default function MissionPage() {
   return (
     <>
+      <JsonLd
+        data={articleSchema({
+          headline: "Mission — The Facts about the Plymouth Brethren Christian Church",
+          description:
+            "The editorial mission of The Facts: sourced, survivor-first documentation of PBCC doctrine and practice, produced openly on GitHub.",
+          slug: "/mission",
+          datePublished: "2026-04-22",
+          dateModified: "2026-04-23",
+          register: "criticism",
+        })}
+      />
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Mission", path: "/mission" },
+        ])}
+      />
       {/* Lede band */}
       <section className="hero">
         <div className="site-container hero__grid">

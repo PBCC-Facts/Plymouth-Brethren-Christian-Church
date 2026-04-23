@@ -198,3 +198,30 @@ When two pages could target the same query, decide up-front which one owns it. T
 3. Are there keyword clusters we should add that aren't in my map (e.g. specific countries, specific congregations, Rapid Relief Team scrutiny)?
 
 Once I have answers (or "proceed with the map as drafted"), I'll wire `lib/seo.ts` to enforce the formulas and start on components.
+
+---
+
+## 10. Decisions (session 2)
+
+Trent confirmed:
+
+- **Homepage head term.** Target `plymouth brethren christian church` directly on `/`. Accept the legal visibility; the whole posture of this project is explicit criticism in public.
+- **Co-primary secondaries (elevated within Cluster A).**
+  1. `exclusive brethren` — the legacy label journalists, ex-members, and academics still use; the PBCC actively pushes back on it, which means the label itself is a high-intent signal. We put it in the site-wide description wrapper ("formerly Exclusive Brethren") so every page matches on the former brand.
+  2. `bruce hales` / `bruce d hales` — the current "Man of God" and the single most-searched PBCC-adjacent person. Cluster D's `/doctrine/man-of-god` page remains the long-term canonical, but until it ships, homepage + mission + `/our-members` descriptions name him explicitly so those pages pick up the traffic.
+- **ComingSoon pages.** Indexable:false in `src/lib/routes.ts` and `noindex: true` via `buildPageMetadata`. Flip both when real copy lands.
+- **OG images.** Auto-generated at `/og?title=…&tag=…` via `src/app/og/route.tsx` using `next/og`'s `ImageResponse`. One generator, per-page title from `buildPageMetadata`.
+- **Canonical origin.** `https://factsaboutplymouthbrethrenchristianchurch.org` (from `src/lib/site.ts`).
+
+## 11. Title / description formula — implementation
+
+Implemented in `src/lib/seo.ts::buildPageMetadata()`.
+
+```
+<title>:       {topic} — Plymouth Brethren Christian Church (parody · criticism · survivor resources)
+<meta desc>:   A satirical mirror and critical companion to the Plymouth Brethren
+               Christian Church (formerly Exclusive Brethren). {page sentence}
+               Not affiliated with the PBCC.
+```
+
+Every page calls `buildPageMetadata({ topic, description, slug, cluster, noindex? })`. Layout provides a matching title template as a safety net for any page that forgets.
