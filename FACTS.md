@@ -395,7 +395,131 @@ The ABC Four Corners documentary "Behind the Exclusive Brethren" (2006, Michael 
 
 ---
 
-## 7. Open research questions (not yet claims)
+## 7. Bruce D. Hales — named claims (from 2026-04-23 dossier pass)
+
+### Claim
+In September 2015, at a UK ministry meeting, Bruce Hales told members a 25-year-old NZ man in contact with ex-member family should "take arsenic, or go and get some rat poison or something, take a bottle of it."
+
+**Status** — ✅ verified (multi-source, leaked-recording verbatim)
+**Sources**
+- https://www.smh.com.au/ — Michael Bachelard, "Exclusive Brethren leader Bruce Hales says man 'in torment' should kill himself," Sydney Morning Herald, 18 Sep 2015 (primary).
+- https://www.stuff.co.nz/national/78573007/ — Stuff (NZ), 22 May 2016.
+- https://www.cessnockadvertiser.com.au/story/3360281/ — Cessnock Advertiser, April 2016 (ACM sibling of SMH story).
+
+**Notes**
+- PBCC's on-record response does not deny the words, only their literality ("should not be given a literal interpretation," "a common, everyday metaphor"). Quote-verbatim in reporting; safe for use as the pull-quote.
+
+**Pages**
+- `/our-members/bruce-d-hales` — pull-quote at top, §1 body.
+
+---
+
+### Claim
+In December 2007, Bruce Hales personally met 19-year-old Craig Hoyle in Sydney and told him he should never accept his homosexuality, directing him to two Brethren-member doctors, one of whom (Dr Mark Craddock, Hales's cousin) prescribed Cyprostat — a chemical-castration agent. Craddock was later found guilty of unsatisfactory professional conduct by the NSW Medical Professional Standards Committee.
+
+**Status** — ✅ verified (memoir + mainstream press + Royal Commission)
+**Sources**
+- https://www.harpercollins.co.nz/9781775542469/excommunicated/ — Craig Hoyle, *Excommunicated*, HarperCollins NZ, 2023 (primary).
+- https://www.thetimes.co.uk/article/brethren-doctor-gave-gay-teenager-chemical-castration-drug-sqg3p36kl6h — The Times (London), Kenber & Mostrous.
+- https://www.abuseincare.org.nz/reports/whanaketia/ — NZ Royal Commission of Inquiry into Abuse in Care, *Whanaketia*, Chapter 8 (2024).
+
+**Pages**
+- `/our-members/bruce-d-hales` — §2 body.
+
+---
+
+### Claim
+Brethren elder Lindsay Jensen sexually abused two sisters placed in his Sydney home. Jensen was "shut up" in August 2003 and restored to fellowship in December 2003. While the victims begged Hales by letter not to reinstate him, Hales met the younger victim (then 10–13) five times in his Sydney office; Jensen was convicted in 2005 and 2007 including for offences against a child under 10.
+
+**Status** — ✅ verified (SMH + sentencing court record)
+**Sources**
+- https://www.smh.com.au/lifestyle/tony-mccorkell-reveals-secrets-of-the-wealthy-christian-sect-exclusive-brethren-20160609-gpez4k.html — Bachelard, SMH Good Weekend, June 2016.
+- Sentencing remarks of Justice William Knight (NSW District Court), quoted in Bachelard (2016): "Religious groups seem to feel that they have some particular right to avoid the responsibilities of the laws of the land. It annoys the tripe out of me."
+
+**Pages**
+- `/our-members/bruce-d-hales` — §3 body.
+
+---
+
+### Claim
+In October/November 2016, a PBCC entity paid $275,000 into PR consultant Tony McCorkell's business account as part of a proposed $920,000 "Services and Confidentiality Deed" that expressly named Michael Bachelard in Schedule 3 as the sole prohibited recipient of anything McCorkell might disclose.
+
+**Status** — ✅ verified (bank records + text messages in court)
+**Sources**
+- https://www.smh.com.au/national/exclusive-brethren-tried-to-pay-witness-920000-to-keep-quiet-about-child-sex-abuse-20171020-gz4w3u.html — Bachelard, SMH, 21 Oct 2017.
+- https://www.illawarramercury.com.au/story/5003814/texts-reveal-how-exclusive-brethren-paid-witness-to-keep-quiet/ — Illawarra Mercury (ACM sibling), Oct 2017.
+
+**Pages**
+- `/our-members/bruce-d-hales` — §3 body (last para).
+
+---
+
+### Claim
+After the UK Charity Commission refused Preston Down Trust registration in 2012, Hales instructed members to infiltrate the tribunal meeting ("take a tape recorder and dress up as an out"). In the lobbying campaign that followed, 449 MPs were visited by Brethren members, 3,000+ letters reached the Commission, and at least 233 MPs wrote on the fellowship's behalf. A 76-slide internal deck was captioned "No mercy. Nothing else will do."
+
+**Status** — ✅ verified (The Times investigation + leaked internal docs)
+**Sources**
+- https://times-deck.s3-eu-west-1.amazonaws.com/projects/470e7a4f017a5476afb7eeb3f8b96f9b.html — The Times "No mercy" project microsite (Kenber & Mostrous).
+- https://assets.publishing.service.gov.uk/media/5a74c214e5274a3cb2866f23/preston_down_trust_full_decision.pdf — UK Charity Commission, Preston Down Trust full decision, 3 Jan 2014 (finds "considerable evidence of significant detriment or harm").
+
+**Pages**
+- `/our-members/bruce-d-hales` — §4 body.
+
+---
+
+### Claim
+ABC Four Corners' "Big Brethren" (15 Sep 2025) reported that Mick Dover, alleging repeated childhood sexual abuse starting age 5 by multiple PBCC members, was offered a ~$1 million settlement by the church in October 2024 conditional on an NDA and non-disparagement clause. The PBCC's formal rebuttal admits awareness "around two years ago" and "informal mediation" while disputing the dollar figure.
+
+**Status** — ✅ verified (ABC broadcast + PBCC's own rebuttal)
+**Sources**
+- https://www.abc.net.au/4corners/big-brethren/105776802 — ABC Four Corners, 15 Sep 2025.
+- https://www.plymouthbrethrenchristianchurch.org/media-statement-abc-four-corners/ — PBCC formal response.
+
+**Pages**
+- `/our-members/bruce-d-hales` — §5 body.
+
+---
+
+### Claim
+On 19 March 2024, the Australian Taxation Office raided UBT's Sydney Olympic Park offices under the ATO's "Private Wealth — Behaviours of Concern" programme. UBT's Australian accounting arm UBTA closed within weeks. Guardian Australia describes UBT as "the umbrella organisation for the various businesses and charities run by the sect under the leadership of Bruce Hales."
+
+**Status** — ✅ verified (Guardian Australia + SMH confirmation)
+**Sources**
+- https://www.theguardian.com/australia-news/2024/apr/02/ato-raids-offices-of-plymouth-brethrens-universal-business-team — Davies & Butler, Guardian Australia, Apr 2024.
+
+**Pages**
+- `/our-members/bruce-d-hales` — §6 body.
+
+---
+
+### Claim
+Companies controlled by Bruce Hales's sons (notably Charles and Gareth Hales's Sante Global LLP, and Dean Hales-linked Medco Solutions) were awarded UK Department of Health PPE contracts during COVID-19 worth a combined total exceeding £2.5 billion, routed in part through the "VIP lane."
+
+**Status** — ✅ verified
+**Sources**
+- https://bylinetimes.com/2020/11/18/the-ppe-scandal-457-million-of-contracts-linked-to-the-religious-sect-behind-the-tories/ — Byline Times, Nov 2020.
+- Companies House filings and UK contract-award records referenced in the Byline piece.
+
+**Pages**
+- `/our-members/bruce-d-hales` — §6 body.
+
+---
+
+### Claim
+Then-Opposition Leader Kevin Rudd (22 Aug 2007) called the Brethren an "extremist cult and sect" and "dangerous cult"; PM Anthony Albanese (Apr 2025) again called it a "cult" during the federal-election campaign. Nicky Hager's 2006 book *The Hollow Men* writes of Hales: "no major decisions are made without Hales's approval or direction."
+
+**Status** — ✅ verified
+**Sources**
+- https://www.theage.com.au/national/rudd-rules-out-meeting-with-brethren-20070822-ge5qca.html — The Age, 22 Aug 2007.
+- https://www.sbs.com.au/news/article/labor-accuses-religious-sect-of-trying-to-help-the-liberals-win-the-federal-election/nmayswnvx — SBS News, Apr 2025.
+- https://www.nickyhager.info/books/the-hollow-men/ — Nicky Hager, *The Hollow Men*, Craig Potton Publishing, 2006.
+
+**Pages**
+- `/our-members/bruce-d-hales` — §8 body.
+
+---
+
+## 8. Open research questions (not yet claims)
 
 Things we know are true but don't yet have the citation for. Add a source URL inline as you find them and I'll promote them to claim rows.
 

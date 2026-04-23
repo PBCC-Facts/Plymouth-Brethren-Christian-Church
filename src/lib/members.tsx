@@ -21,6 +21,19 @@ export type MemberSection = {
   paragraphs: string[];
 };
 
+/**
+ * Headline pull-quote rendered above the profile body. Use the single most
+ * damning, best-sourced statement by or about the person. Source ids must
+ * resolve in src/lib/sources.ts; two+ independent sources for any statement
+ * attributed verbatim to the subject.
+ */
+export type MemberPullQuote = {
+  quote: string;
+  attribution: string;
+  /** Source ids backing the quote. Rendered as numbered footnotes beside the attribution. */
+  sourceIds: string[];
+};
+
 export type Member = {
   slug: string;
   name: string;
@@ -30,6 +43,8 @@ export type Member = {
   currentRole?: string;
   /** 1–2 plain sentences. No citation tokens; this is the card/lede copy. */
   overview: string;
+  /** Optional headline pull-quote. Rendered at the very top of the profile. */
+  pullQuote?: MemberPullQuote;
   /** Full profile body. Paragraphs may contain [[cite:id]] or [[pending:note]] tokens. */
   body: MemberSection[];
   /** Why this person clears MEMBERS_POLICY.md. Rendered on the profile page. */
@@ -101,6 +116,16 @@ export function assertCitationsResolve(member: Member): void {
               "Add it to src/lib/sources.ts or switch the claim to a [[pending:…]] marker.",
           );
         }
+      }
+    }
+  }
+  if (member.pullQuote) {
+    for (const id of member.pullQuote.sourceIds) {
+      if (!(id in sources)) {
+        throw new Error(
+          `Member profile "${member.slug}" pull-quote cites unknown source id "${id}". ` +
+            "Add it to src/lib/sources.ts.",
+        );
       }
     }
   }

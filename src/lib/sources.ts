@@ -136,6 +136,114 @@ export const sources: Record<string, Source> = {
     accessedOn: "2026-04-23",
     notes: "Primary document. Records the Commission's finding of 'considerable evidence of significant detriment or harm' and discusses the authority held by the 'worldwide leader of the Brethren' — the office held by Bruce Hales.",
   },
+  "hoyle-excommunicated-memoir": {
+    id: "hoyle-excommunicated-memoir",
+    label:
+      "Craig Hoyle — Excommunicated: My Escape from the Exclusive Brethren (HarperCollins NZ, 2023)",
+    url: "https://www.harpercollins.co.nz/9781775542469/excommunicated/",
+    accessedOn: "2026-04-23",
+    notes:
+      "On-record first-person memoir. Hoyle is Chief News Editor of the Sunday Star-Times (NZ). Primary source for the December 2007 Bruce Hales meeting, the 'There's medication you can go on for these things' directive, and the subsequent Cyprostat prescription by Dr Mark Craddock.",
+  },
+  "hoyle-times-cyprostat": {
+    id: "hoyle-times-cyprostat",
+    label:
+      "The Times (London) — Brethren doctor gave gay teenager 'chemical castration' drug (Kenber & Mostrous)",
+    url: "https://www.thetimes.co.uk/article/brethren-doctor-gave-gay-teenager-chemical-castration-drug-sqg3p36kl6h",
+    accessedOn: "2026-04-23",
+    notes:
+      "Documents Dr Mark Craddock's Cyprostat prescription and the subsequent NSW Medical Professional Standards Committee finding of unsatisfactory professional conduct. Paywalled; offline copy in research/raw/ if needed.",
+  },
+  "whanaketia-royalcommission-nz": {
+    id: "whanaketia-royalcommission-nz",
+    label:
+      "Whanaketia — Final report, NZ Royal Commission of Inquiry into Abuse in Care (2024)",
+    url: "https://www.abuseincare.org.nz/reports/whanaketia/",
+    accessedOn: "2026-04-23",
+    notes:
+      "Government-published Royal Commission final report. Chapter 8 contains PBCC-specific findings on conversion therapy, sexual-detail disclosure in assembly settings, and absence of formal child-protection policies. Primary source the PBCC has not rebutted.",
+  },
+  "bigbrethren-fourcorners-2025": {
+    id: "bigbrethren-fourcorners-2025",
+    label:
+      "ABC Four Corners — Big Brethren (Louise Milligan, 15 September 2025)",
+    url: "https://www.abc.net.au/4corners/big-brethren/105776802",
+    accessedOn: "2026-04-23",
+    notes:
+      "The most recent mainstream PBCC documentary. Source for Mick Dover's ~$1m NDA allegation, 2023 Ministry-volume readings ('bunkum', 'jaws of hell', 'journalists are trash'), and documentation of ATO/UBT and the 2025 federal-election deployment. PBCC's formal rebuttal on the church site implicitly confirms the broadcast content.",
+  },
+  "jensen-smh-goodweekend-2016": {
+    id: "jensen-smh-goodweekend-2016",
+    label:
+      "Sydney Morning Herald Good Weekend — Tony McCorkell reveals secrets of the wealthy Christian sect Exclusive Brethren (Bachelard, June 2016)",
+    url: "https://www.smh.com.au/lifestyle/tony-mccorkell-reveals-secrets-of-the-wealthy-christian-sect-exclusive-brethren-20160609-gpez4k.html",
+    accessedOn: "2026-04-23",
+    notes:
+      "Documents the Lindsay Jensen case, Jensen's 2003 'shutting up' and December 2003 restoration while the child victims begged Bruce Hales by letter not to reinstate him, and Hales's five personal meetings with the under-13 victim in his Sydney office. Justice William Knight's ruling quoted.",
+  },
+  "mccorkell-smh-bachelard-2017": {
+    id: "mccorkell-smh-bachelard-2017",
+    label:
+      "Sydney Morning Herald — Exclusive Brethren tried to pay witness $920,000 to keep quiet about child sex abuse (Bachelard, 21 October 2017)",
+    url: "https://www.smh.com.au/national/exclusive-brethren-tried-to-pay-witness-920000-to-keep-quiet-about-child-sex-abuse-20171020-gz4w3u.html",
+    accessedOn: "2026-04-23",
+    notes:
+      "Bank records and text messages documenting the $275,000 paid on 25 October and 22 November 2016 as part of a proposed $920,000 Services and Confidentiality Deed. Michael Bachelard is expressly named in Schedule 3 as the sole prohibited recipient.",
+  },
+  "byline-ppe-halessons-2020": {
+    id: "byline-ppe-halessons-2020",
+    label:
+      "Byline Times — Exclusive: COVID-19 PPE contracts worth £2.6 billion awarded to Brethren-linked firms (2020)",
+    url: "https://bylinetimes.com/2020/11/18/the-ppe-scandal-457-million-of-contracts-linked-to-the-religious-sect-behind-the-tories/",
+    accessedOn: "2026-04-23",
+    notes:
+      "Documents UK Department of Health contracts to Sante Global LLP (99% owned by Charles and Gareth Hales) and other Hales-family firms. Companies House filings and contract-award records preserved in the Byline piece.",
+  },
+  "rudd-cult-2007-age": {
+    id: "rudd-cult-2007-age",
+    label:
+      "The Age — Rudd rules out meeting with Brethren 'extremist cult' (22 August 2007)",
+    url: "https://www.theage.com.au/national/rudd-rules-out-meeting-with-brethren-20070822-ge5qca.html",
+    accessedOn: "2026-04-23",
+    notes:
+      "Then-Opposition Leader Kevin Rudd on the record: 'extremist cult and sect', 'dangerous cult', 'they split families'. Corroborated across AAP wire and ABC Lateline contemporaneous coverage.",
+  },
+  "albanese-cult-2025-sbs": {
+    id: "albanese-cult-2025-sbs",
+    label:
+      "SBS News — Labor accuses religious sect of trying to help the Liberals win the federal election (April 2025)",
+    url: "https://www.sbs.com.au/news/article/labor-accuses-religious-sect-of-trying-to-help-the-liberals-win-the-federal-election/nmayswnvx",
+    accessedOn: "2026-04-23",
+    notes:
+      "Prime Minister Anthony Albanese's 2025 federal-election-campaign 'cult' label, and the 'What is the quid pro quo' question about non-voting members working pre-poll booths in marginal seats.",
+  },
+  "ubt-atoraid-guardian-2024": {
+    id: "ubt-atoraid-guardian-2024",
+    label:
+      "Guardian Australia — ATO raids offices of Plymouth Brethren's Universal Business Team (Anne Davies and Ben Butler, April 2024)",
+    url: "https://www.theguardian.com/australia-news/2024/apr/02/ato-raids-offices-of-plymouth-brethrens-universal-business-team",
+    accessedOn: "2026-04-23",
+    notes:
+      "Documents the 19 March 2024 ATO action at UBT Australia's Sydney Olympic Park offices under the 'Private Wealth — Behaviours of Concern' section. Describes UBT as 'the umbrella organisation for the various businesses and charities run by the sect under the leadership of Bruce Hales.'",
+  },
+  "hollowmen-hager-2006": {
+    id: "hollowmen-hager-2006",
+    label:
+      "Nicky Hager — The Hollow Men (Craig Potton Publishing, 2006)",
+    url: "https://www.nickyhager.info/books/the-hollow-men/",
+    accessedOn: "2026-04-23",
+    notes:
+      "Book-length investigation of the Brethren's simultaneous 2004-05 four-country political campaign and its chain of command: 'no major decisions are made without Hales's approval or direction.' Source for the NZ $1 million 'Wake-up Call' campaign.",
+  },
+  "osg-guardian-surveillance-2023": {
+    id: "osg-guardian-surveillance-2023",
+    label:
+      "Guardian Australia — OneSchool Global investigation series (2022-2023)",
+    url: "https://www.theguardian.com/australia-news/2023/apr/15/oneschool-global-plymouth-brethren-christian-church-investigation",
+    accessedOn: "2026-04-23",
+    notes:
+      "Reporting on OneSchool Global's curriculum restrictions, Hales's March 2022 US ministry on schooling, and the Streamline3 device-monitoring system's real-time alerting on restricted searches.",
+  },
 };
 
 export function getSource(id: string): Source {

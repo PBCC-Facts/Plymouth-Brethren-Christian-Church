@@ -36,7 +36,10 @@ export function MemberProfile({ member }: { member: Member }) {
           >
             Our members &mdash; {categoryLabel(member.category)}
           </p>
-          <h1 className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]">
+          <h1
+            className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]"
+            style={{ color: "var(--color-surface)" }}
+          >
             {member.name}
           </h1>
           {member.currentRole ? (
@@ -47,6 +50,77 @@ export function MemberProfile({ member }: { member: Member }) {
           </p>
         </div>
       </section>
+
+      {/* Headline pull-quote — the single most damning, best-sourced statement */}
+      {member.pullQuote ? (
+        <section
+          className="section"
+          style={{
+            background:
+              "color-mix(in srgb, var(--color-rust) 12%, var(--color-surface))",
+            borderTop: "4px solid var(--color-rust)",
+          }}
+        >
+          <div className="site-container">
+            <blockquote
+              className="max-w-4xl mx-auto"
+              style={{ color: "var(--color-ink)" }}
+            >
+              <p
+                aria-hidden="true"
+                className="font-[family-name:var(--font-serif)] leading-none"
+                style={{
+                  fontSize: "clamp(3rem, 6vw, 5rem)",
+                  color: "var(--color-rust)",
+                  marginBottom: "-0.75rem",
+                }}
+              >
+                &ldquo;
+              </p>
+              <p
+                className="font-[family-name:var(--font-serif)] leading-[1.15]"
+                style={{
+                  fontSize: "clamp(1.75rem, 3.5vw, 2.75rem)",
+                }}
+              >
+                {member.pullQuote.quote}
+              </p>
+              <footer className="mt-8 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                <span
+                  className="font-sans font-bold uppercase tracking-[0.15em]"
+                  style={{ color: "var(--color-rust)" }}
+                >
+                  &mdash;&nbsp;{member.pullQuote.attribution}
+                </span>
+                <span className="text-sm">
+                  {member.pullQuote.sourceIds.map((id, i) => {
+                    const s = getSource(id);
+                    return (
+                      <a
+                        key={id}
+                        href={s.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="footnote"
+                        style={{
+                          color: "var(--color-rust)",
+                          marginLeft: i === 0 ? 0 : "0.15em",
+                        }}
+                        aria-label={`Source ${i + 1}: ${s.label}`}
+                        title={s.label}
+                      >
+                        <sup>
+                          <strong>{i + 1}</strong>
+                        </sup>
+                      </a>
+                    );
+                  })}
+                </span>
+              </footer>
+            </blockquote>
+          </div>
+        </section>
+      ) : null}
 
       {/* Inclusion basis — the reader sees why this person is profiled */}
       <section
