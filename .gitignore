@@ -28,3 +28,11 @@ Thumbs.db
 # Research captures of the live PBCC site — reference only, never shipped.
 # See FETCH_PLAN.md § Legal hygiene.
 research/captures/
+
+# Raw deep-research dossiers (Claude investigations, source-sensitive notes).
+# We protect the research methodology by keeping the raw artefacts local.
+# Only the extracted, sourced facts — promoted into FACTS.md and the typed
+# source registry — are committed. The README explaining this convention
+# is exempted so future contributors can see the pipeline.
+research/raw/*
+!research/raw/README.md
