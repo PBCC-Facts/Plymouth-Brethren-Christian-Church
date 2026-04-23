@@ -5,6 +5,7 @@ import { SITE_URL } from "@/lib/site";
 import { ParodyBanner } from "@/components/site/ParodyBanner";
 import { Shell } from "@/components/site/Shell";
 import { Footer } from "@/components/site/Footer";
+import { BrowseStrip } from "@/components/site/BrowseStrip";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -39,6 +40,7 @@ export default function RootLayout({
         <ParodyBanner />
         <Shell>
           <main className="flex-1">{children}</main>
+          <BrowseStrip />
           <Footer />
         </Shell>
       </body>

@@ -1,136 +1,124 @@
 # Editorial Guide — Voice, Sourcing, and Parody Hygiene
 
-This guide is the editorial spine for all copy on the site. Everyone writing (human or AI) must follow it. Deviation weakens both the humor and the fair-use posture.
+This guide is the editorial spine for all copy on the site. Everyone writing (human or AI) must follow it. Deviation weakens both the criticism and the fair-use posture.
+
+> **Change log — 2026-04-23.** The site has moved from a deadpan parody register (old "Register A") to an openly snarky one ("Register C"). Register A is retired. Anything on disk that reads as deadpan corporate PR voice is now legacy and will be rewritten on its next edit. Register B (plainspoken journalistic) is unchanged and is still correct for explanatory content.
 
 ---
 
 ## 1. Two registers, strictly separated
 
-The site has two voices. Never mix them on the same page.
+### Register C — Openly snarky inversion (used on mirror pages)
 
-### Register A — Parody / Criticism (used on the mirror pages)
-
-Pages using Register A: homepage, `/way-of-life`, `/our-members`, `/news`, and any other page that structurally mirrors a PBCC page.
+Pages: homepage, `/way-of-life`, `/our-members`, `/news`, and any page that structurally mirrors a PBCC page. These are the pages whose job is to rank against PBCC's own copy on the same search terms, and to reframe what that copy says.
 
 Rules:
 
-1. **Deadpan, warm, corporate PR voice.** Never wink. Never break character. The humor is entirely in what the words say, not in how they're said.
-2. **Never editorialize.** No "shockingly", "horrifyingly", "disturbingly", "alarmingly". No exclamation points. No rhetorical questions aimed at the reader. The sentence "Members are doctrinally prohibited from sharing a meal with their adult children who have been withdrawn from" is stronger than any amount of adjectives around it.
-3. **Write in the third person, present tense, active voice.** "Members celebrate the Lord's Supper every Sunday with other current members in good standing."
-4. **Prefer calm abstract nouns** ("fellowship", "participation", "guidance", "stewardship", "care", "commitment") — the PR voice loves them. Use them to frame the documented reality. "Fellowship is extended each week to members in good standing; members who have been withdrawn from are, in care, excluded from fellowship until such time as restoration is appropriate."
-5. **Never lift PBCC sentences and swap words.** Every sentence is original. If you find yourself word-for-word close to their page, rewrite from scratch.
-6. **The humor is the same sentence as the indictment.** A good parody sentence should read as plausibly the real PBCC site for exactly one beat, and then reveal the practice. Don't put the punch at the end as a "gotcha"; let the calm PR language *be* the reveal.
-7. **No first-person plural** ("we", "our church") in Register A unless it is inside quoted parody voice that is itself framed as satire (e.g. hero subheads). When in doubt, third person.
-8. **Every factual claim gets a footnote.** If you cannot source a sentence to a verifiable third party, cut the sentence or mark `{/* TODO: source */}` in the MDX.
+1. **Openly snarky inversion.** The framing is the punch. Take the PR sentence and flip the spin while keeping every factual noun. *"We help drive local economies"* → *"We help drive local economies — our own."* *"We are a connected global Community"* → *"We are a connected global Community — under one man."*
+2. **Specific, not hyperbolic.** Name the practice. *"Hundreds of survivors"* > *"countless victims"*. *"Members do not share meals, accommodation, marriage, or business partnership with those outside the fellowship"* > *"members are cut off."* Concrete detail beats emotional adjectives every time — and it is what makes the register legally and editorially defensible.
+3. **Humor lives in the literal meaning of the sentence.** Not in punctuation, not in adjectives, not in asides. No exclamation marks. No scare quotes. No *"(yes, really)"*. If the sentence is funny, the facts are doing it.
+4. **Never at a survivor's expense.** The subject of every joke is the fellowship's rebrand or its leadership — never a former member. When in doubt, cut the joke.
+5. **Every claim still carries a footnote.** Register C does not relax the sourcing rule; it sharpens it. Snark without a citation is libel. If you cannot source a sentence, cut it or mark `{/* TODO: source */}` in the MDX and add a `<SourcePending />` component so it can never silently ship.
+6. **Third person, present tense, active voice.** *"Members live under a single global leadership structure, led by the current Man of God, Bruce D. Hales."* Avoid first-person plural unless it is framed as the parody voice of the fellowship itself (hero titles, eyebrows — where the "we" is clearly read as the PBCC's own voice, reframed).
+7. **Never lift PBCC sentences verbatim.** Every sentence is originally written. If you find yourself word-for-word close to the source, rewrite from scratch. Paraphrase their framing; never adopt it.
+8. **Section labels are deadpan.** The small uppercase labels above each section (`About this.` / `Read the reporting.` / `Get to know about this.` / `Open by design.`) stay in a calm, period-terminated register. That contrast — calm labels over snarky body copy — is the visual signature of the site.
 
-### Register B — Explanatory / Journalistic (used on supporting content)
+### Register B — Plainspoken journalistic (used on explanatory content)
 
-Pages using Register B: `/about-this-site`, `/sources`, `/glossary`, `/faq`, `/timeline`, `/doctrine/*`, `/litigation`.
+Pages: `/mission` (methodology sections), `/sources`, `/glossary`, `/faq`, `/timeline`, `/doctrine/*`, `/litigation`, `/resources`, `/about-this-site`.
 
 Rules:
 
-1. **Plainspoken, direct, journalistic.** No satire. No parody voice. This is the page someone lands on from a Google search when they want to understand what this doctrine is or what this term means.
+1. **Plainspoken, direct, journalistic.** No satire. No parody voice. This is the page someone lands on from a Google search when they want to understand what a doctrine is, or what a term means, or what a case is about.
 2. **Lede-first.** The first sentence answers the question in the H1. FAQ answers target ~50 words. Glossary definitions start with a one-sentence plain-English definition before the context.
-3. **Sources inline.** Every factual claim has a superscript footnote, same as Register A. Google rewards cited content on YMYL-adjacent topics.
-4. **Define jargon on first use, link to glossary.** "When a member is *withdrawn from* — PBCC's term for excommunication — [...]".
-5. **Distinguish PBCC's self-description from documented practice.** "The church states that members live alongside people of other faiths.¹ In practice, the Doctrine of Separation prohibits eating, marrying, working in business with, or sharing accommodation with non-members.²"
-6. **No adjectives doing argumentative work.** "Coercive", "abusive", "cruel" should appear only in direct quotes from named sources (court rulings, Senate findings, investigative journalism). Describe the practice; let readers draw the conclusion.
+3. **Sources inline.** Every factual claim has a superscript footnote. Same rule as Register C. Google rewards cited content on YMYL-adjacent topics.
+4. **Define jargon on first use, link to glossary.** *"When a member is* withdrawn from *— PBCC's term for excommunication — […]"*.
+5. **Distinguish PBCC's self-description from documented practice.** *"The church states that members live alongside people of other faiths.¹ In practice, the Doctrine of Separation prohibits eating, marrying, working in business with, or sharing accommodation with non-members.²"*
+6. **No adjectives doing argumentative work.** *"Coercive"*, *"abusive"*, *"cruel"* appear only in direct quotes from named sources (court rulings, Senate findings, investigative journalism). Describe the practice; let readers draw the conclusion.
 
 ---
 
-## 2. Sourcing rules (applies to both registers)
+## 2. Sourcing rules (apply to both registers)
 
 1. Every claim about PBCC belief, practice, history, or leadership is footnoted to one of:
    - Peer-reviewed academic source
-   - Court ruling, Senate/parliamentary inquiry, or charity regulator finding
+   - Court ruling, Senate / parliamentary inquiry, or charity-regulator finding
    - Major investigative journalism (ABC Four Corners, New Statesman, NYT, Guardian, The Post NZ, etc.)
    - Official PBCC publication or Bruce D. Hales ministry text (quoted accurately)
    - PBCCstories.org survivor testimony (when on-record and the survivor has consented to identification)
-2. One-source claims are acceptable for uncontested factual matters (dates, locations, leadership succession). Contested or severity claims should have ≥2 sources when available.
-3. Sources live in a typed registry: `src/lib/sources.ts`. Every page imports from that registry; no ad-hoc URLs in body copy. This means we never break a citation by changing a URL, and we can audit every claim by reading one file.
-4. When a claim is true but cannot be sourced to a public document right now, mark `{/* TODO: source — [claim] */}` in the MDX and add it to the end-of-session flag list. **Do not invent a citation.**
-5. Paraphrase PBCC's own words rather than quoting at length. Short quotes (≤40 words) of PBCC published statements, clearly attributed, are fine and well within fair use for purposes of criticism. Block quotes of their copy are not.
+2. One-source claims are acceptable for uncontested factual matters (dates, locations, leadership succession). Contested or severity claims should have ≥ 2 sources when available.
+3. Sources live in a typed registry: `src/lib/sources.ts`. Every page imports from that registry; no ad-hoc URLs in body copy. Any claim appearing on the site maps to a row in [`FACTS.md`](FACTS.md) at status ✅ before it ships with a `<Footnote>` component.
+4. When a claim is true but cannot be sourced to a public document right now, mark `{/* TODO: source */}` and render a visible `<SourcePending />` component. **Do not invent a citation.** Do not silently ship.
+5. Paraphrase PBCC's own words rather than quoting at length. Short quotes (≤ 40 words) of published PBCC statements, clearly attributed, are fine and well within fair use for purposes of criticism. Block quotes of their copy are not.
 
 ---
 
-## 3. Transformation examples (the core of the craft)
+## 3. Transformation examples
 
-These are the worked examples. The pattern: take a real PBCC framing → write an original sentence in the same register that states the documented practice with a footnote. The sentence must be original prose, not a word-swap.
+The pattern: take a real PBCC framing → write an original sentence in Register C that states the documented practice with footnotes. The sentence is original prose, not a word-swap.
 
-### Example 1 — Neighbors and separation
+### Example 1 — Neighbours and separation
 
-**PBCC framing (paraphrased from public materials):** "Members live and work alongside people of other faiths as good neighbors."
+**PBCC framing:** *"Members live and work alongside people of other faiths as good neighbours."*
 
-**Register A parody:**
-> Members live and work alongside people of other faiths as good neighbors, within the guidance of the Doctrine of Separation, under which members do not share meals, accommodation, marriage, or business partnership with those outside the fellowship.¹ Good neighborliness is expressed through service at a respectful distance.
+**Register C:**
+> We care about our neighbours — at a doctrinally-mandated distance. Members do not share meals, accommodation, marriage, or business partnership with those outside the fellowship.¹ Good neighbourliness is expressed through service at a respectful distance.
 
-Footnote 1 → CDAMM + New Statesman + PBCC's own statement-of-belief explaining 2 Timothy 2:19–22 as separation scripture.
+Footnote 1 → CDAMM + CESNUR (Briggs 2008) + PBCC's Statement of Belief explaining 2 Timothy 2:19–22 as the scripture of separation.
 
-Why this works: the first clause is reassuring boilerplate; the "within the guidance" pivot is the same register; the explicit list is documented practice; the closing sentence reframes distance as a virtue. Not a single word is lifted from the source.
+Why this works: the title is the flip. The body names the practice in list form. The closing line is PR-voice reframed as the joke-that-isn't-a-joke — "respectful distance" is exactly how the PR register would describe prohibition.
 
-### Example 2 — Leadership and participation
+### Example 2 — Leadership
 
-**PBCC framing:** "Our community values participation and mutual decision-making."
+**PBCC framing:** *"Our community values participation and mutual decision-making."*
 
-**Register A parody:**
-> The community values participation and mutual decision-making, guided by a global leadership structure through which the World Leader — known within the fellowship as the Man of God — offers direction to regional priests and local leading brothers.¹ Members are warmly encouraged to defer to this guidance in matters of doctrine, marriage, business, schooling, and personal devotion.²
+**Register C:**
+> We are a connected global Community — under one man. More than 54,000 members across 19 countries live under a single global leadership structure, led by the current World Leader, Bruce D. Hales, known within the fellowship as the Man of God.¹²
 
-Footnotes → public reporting on Bruce D. Hales and the "Man of God" office (Wikipedia, New Statesman, The Post NZ, PBCC's own resource page on Bruce D. Hales).
+Footnotes → PBCC's own resource page on Bruce D. Hales + New Statesman long-read.
 
-Why this works: "guided by" and "warmly encouraged to defer" are exactly how the PR voice would soften a top-down authority structure. The word "defer" lands the point without any editorializing.
+Why this works: "under one man" does all the work. The body copy is plain fact: how many members, where, under whom. No editorializing needed — the scale of the concentration is the point.
 
 ### Example 3 — Family and the withdrawn
 
-**PBCC framing:** "Family is central to our way of life. We value strong family bonds."
+**PBCC framing:** *"Family is central to our way of life. We value strong family bonds."*
 
-**Register A parody:**
-> Family is central to the way of life of the fellowship. Bonds between parents, spouses, siblings, and children are treasured and, when a member is withdrawn from, are prayerfully adjusted: the remaining members continue in their care for the withdrawn person by declining to eat with them, share accommodation with them, or remain married to them while separation stands.¹ In the care of the assembly, minor children are frequently retained with the remaining member.²
+**Register C:**
+> Family is central to the fellowship — right up until it isn't. Bonds between parents, spouses, siblings, and children are treasured, and, when a member is withdrawn from, those bonds are prayerfully adjusted: the remaining members decline to eat with the withdrawn person, share accommodation with them, or remain married to them while separation stands.¹ Minor children are frequently retained with the remaining member.²
 
-Footnotes → New Statesman long-read, ABC Four Corners "Behind the Exclusive Brethren", Senate of Australia inquiries, PBCCstories.org case studies.
+Footnotes → New Statesman, Reach Out Trust, UK Parliament submission 2012, PBCCstories.org case studies.
 
-Why this works: "prayerfully adjusted" is perfect PR euphemism register. The list of prohibitions is documented. The final sentence, in the same tone, states the child-custody consequence in a phrasing that reads as concern for welfare.
+Why this works: the reveal is in "right up until it isn't". The body then does the paraphrasing job in flat, specific language. "Prayerfully adjusted" is lifted as a lexical echo of PR-voice, but the content around it is documented practice.
 
-### Example 4 — Bible study and authority
+### Example 4 — Education (Register B, for contrast)
 
-**PBCC framing:** "Members study the Bible daily and draw on the ministry of our leadership for guidance."
+**Plainspoken journalistic version — for a `/doctrine/education` page:**
 
-**Register A parody:**
-> Members study the Bible daily. For collective interpretation, the fellowship draws on the recorded ministry of the Man of God, whose addresses are published in bound volumes and studied in homes and meetings as the authoritative current expression of scriptural guidance.¹ Attending services of other churches, or engaging in independent scriptural study with those outside the fellowship, is a matter the assembly addresses with pastoral care.²
+> The Plymouth Brethren Christian Church educates member children at OneSchool Global, an international school network with campuses in 19 countries.¹ Campuses are staffed primarily by members and serve primarily member families. Governance documents and former-teacher testimony indicate restrictions on technology use, external contact, and participation in activities alongside children of other faiths.²
 
-Footnotes → PBCC's own publications (volumes of ministry), New Statesman, Reachout Trust, CDAMM.
-
-Why this works: "authoritative current expression of scriptural guidance" is dense PR speak that accurately describes the doctrinal status of leader ministry. The final sentence, with "pastoral care" as the soft cover for disciplinary consequences, is the joke-that-isn't-a-joke.
-
-### Example 5 — Education and OneSchool Global
-
-**PBCC framing:** "Our school network provides excellent education grounded in Christian values."
-
-**Register A parody:**
-> The fellowship's school network, OneSchool Global, provides members' children with education grounded in the church's values.¹ Campuses are staffed primarily by members of the fellowship, serve primarily member families, and operate within guidance on technology use, external contact, and participation in activities with children of other faiths.² The model is considered by the fellowship to balance academic standards with the integrity of the community's way of life.
-
-Footnote → reporting on OneSchool Global governance, Senate inquiry submissions, former OSG teachers' testimony.
-
-Why this works: everything is literally true and neutrally phrased. "Balance academic standards with the integrity of the community's way of life" is PR-voice for "insulate from outside influence." The reader does the work.
+Notice: no inversion, no joke, no "—". Plain facts, footnoted, for the reader who wants to understand the model. This is the register a journalist linking to our site expects when they click through from a hot page.
 
 ---
 
 ## 4. Anti-patterns (reject on sight)
 
-- **Word-swap parody.** Taking a PBCC sentence and substituting "shunning" for "fellowship." This is weak commentary and weakens fair use.
-- **Over-the-top satire.** Phrases like "cult leader", "brainwashed", "sinister", "evil". Makes us look unserious and triggers Google's deceptive-content classifier negatively.
-- **Unsourced severity claims.** "Abuse is covered up." → unless you can point to a specific documented case, don't. Use the specific case: "In [named case], [specific outcome]¹" with citation.
-- **Breaking character.** Parenthetical asides like "(yes, really)", emoji, winks. The voice is the whole game.
+- **Over-the-top satire.** *"Cult leader"*, *"brainwashed"*, *"sinister"*, *"evil"*. Weakens us legally, weakens us editorially.
+- **Unsourced severity claims.** *"Abuse is covered up."* → unless you can point to a specific documented case, do not. Use the specific case: *"In [named case], [specific outcome].¹"*
+- **Word-swap parody.** Taking a PBCC sentence and substituting *"shunning"* for *"fellowship"* without rewriting the structure. This is weak commentary and weakens fair use.
+- **Breaking character with punctuation.** Parenthetical asides like *"(yes, really)"*, emoji, winks, exclamation marks. The voice is the whole game.
 - **Quoting PBCC at length.** Short attributed quotes only. We describe; they don't ghostwrite us.
-- **Invented footnotes.** Anything not verifiable at the cited URL right now is falsified. Mark TODO instead.
+- **Invented footnotes.** Anything not verifiable at the cited URL right now is falsified. Mark `{/* TODO: source */}` and use `<SourcePending />` instead.
+- **Jokes at survivor expense.** Non-negotiable.
+- **Register mixing on a single page.** Pick C or B per page. Section labels (the small uppercase labels with the gray rule) stay deadpan in both registers; that's not mixing.
 
 ---
 
 ## 5. The self-test
 
-Before you ship a paragraph, ask:
+Before shipping a paragraph, ask:
 
-1. Could this sentence plausibly appear on the real PBCC site for at least one second? *(If no: too strident.)*
-2. Is every factual claim footnoted to a source on file in `lib/sources.ts`? *(If no: fix before merge.)*
-3. Is the humor/indictment inside the sentence's literal meaning, or is it in the framing? *(It should be in the literal meaning.)*
-4. Would a judge reading this see transformative commentary and criticism rather than derivative copying? *(If no: rewrite.)*
+1. Is every factual claim footnoted to a source in `src/lib/sources.ts`, or marked `<SourcePending />`? *(If no: fix before merge.)*
+2. Does the sentence still work if I delete every adjective and punctuation-mark aside? *(If no: the humor is in decoration, not content. Rewrite.)*
+3. Is the humor inside the literal meaning of the sentence? *(It should be.)*
+4. Could a judge reading this see transformative commentary and criticism rather than derivative copying? *(If no: rewrite.)*
 5. Would a survivor reading this feel their experience was taken seriously rather than played for laughs? *(Non-negotiable.)*

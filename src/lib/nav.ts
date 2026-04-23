@@ -9,6 +9,7 @@ export type NavItem = {
 // Source of truth: research/tokens.json > nav.primary.
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
+  { label: "Mission", href: "/mission" },
   {
     label: "Way of life",
     href: "/way-of-life",
@@ -58,6 +59,8 @@ export const primaryNav: NavItem[] = [
 ];
 
 export const footerNav: NavItem[] = [
+  { label: "Mission", href: "/mission" },
+  { label: "Resources", href: "/resources" },
   { label: "Way of life", href: "/way-of-life" },
   { label: "Our members", href: "/our-members" },
   { label: "News", href: "/news" },
@@ -65,4 +68,32 @@ export const footerNav: NavItem[] = [
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Cookies Policy", href: "/cookies" },
   { label: "Contact", href: "/contact" },
+];
+
+/**
+ * Browse-everything strip — every top-level destination on the site, grouped
+ * by build status. Items with {exists:false} render with an "(in progress)" tag.
+ */
+export type BrowseItem = NavItem & { exists?: boolean };
+
+export const browseAll: BrowseItem[] = [
+  { label: "Home", href: "/", exists: true },
+  { label: "Mission", href: "/mission", exists: true },
+  { label: "Way of life", href: "/way-of-life" },
+  { label: "Our members", href: "/our-members" },
+  { label: "News", href: "/news" },
+  { label: "Reporting", href: "/news" },
+  { label: "Resources", href: "/resources", exists: true },
+  { label: "Doctrine", href: "/doctrine" },
+  { label: "Timeline", href: "/timeline" },
+  { label: "FAQ", href: "/faq" },
+  { label: "Litigation", href: "/litigation" },
+  { label: "Glossary", href: "/glossary" },
+  { label: "Contact", href: "/contact" },
+  {
+    label: "GitHub",
+    href: "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church",
+    external: true,
+    exists: true,
+  },
 ];
