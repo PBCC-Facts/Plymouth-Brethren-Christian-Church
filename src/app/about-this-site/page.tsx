@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
 import { ComingSoon } from "@/components/site/ComingSoon";
+import { buildPageMetadata } from "@/lib/seo";
 
-export const metadata: Metadata = {
-  title: "About this site",
-  alternates: { canonical: "/about-this-site" },
-};
+export const metadata = buildPageMetadata({
+  topic: "About this site",
+  description:
+    "Colophon, editorial policy, and correction process for The Facts — an independent, sourced parody and criticism project on the Plymouth Brethren Christian Church (formerly the Exclusive Brethren).",
+  slug: "/about-this-site",
+  cluster: "A",
+  noindex: true,
+});
 
 export default function Page() {
   return (

@@ -1,13 +1,16 @@
-import type { Metadata } from "next";
 import Link from "next/link";
 import { GITHUB_URL } from "@/lib/site";
+import { buildPageMetadata } from "@/lib/seo";
+import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 
-export const metadata: Metadata = {
-  title: "Resources",
+export const metadata = buildPageMetadata({
+  topic: "Resources",
   description:
-    "Cult-recovery, PBCC-specific, investigative, and official-record resources. Linked, not endorsed. Starter list — every entry is open to review.",
-  alternates: { canonical: "/resources" },
-};
+    "Cult-recovery, PBCC-specific, investigative, and official-record resources. Linked, not endorsed. A starter list — every entry is open to review.",
+  slug: "/resources",
+  cluster: "B",
+  register: "explanatory",
+});
 
 type ResourceEntry = {
   name: string;
@@ -156,6 +159,12 @@ const groups: ResourceGroup[] = [
 export default function ResourcesPage() {
   return (
     <>
+      <JsonLd
+        data={breadcrumbSchema([
+          { name: "Home", path: "/" },
+          { name: "Resources", path: "/resources" },
+        ])}
+      />
       <section
         className="section"
         style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
