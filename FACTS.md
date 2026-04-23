@@ -130,6 +130,102 @@ Reporting in The Post (NZ) has quoted leadership instructions delivered under Ha
 ---
 
 ### Claim
+In September 2015 Hales delivered a UK ministry meeting at which, according to Fairfax Media reporting run in Stuff (NZ) and the Cessnock Advertiser, he said a young man in mental distress would be "better to take arsenic, or go and get some rat poison or something, take a bottle of it," adding "Now I'm not advocating him doing that but … that would be better, to finish yourself off that way [rather] than having to do with the opponents of the truth."
+
+**Status** — 🟡 single-source-of-record (same underlying Fairfax story, two syndicated URLs)
+**Sources**
+- https://www.stuff.co.nz/national/78573007/exclusive-brethrens-the-sect-with-millions-of-dollars-in-tax-breaks-whose-secretive-leader-tells-followers-to-drink-rat-poison — Stuff (NZ), 2016.
+- https://www.cessnockadvertiser.com.au/story/3360281/exclusive-brethren-leader-bruce-hales-says-man-in-torment-should-kill-himself/ — Cessnock Advertiser / ACM, 2016.
+- _Needed (promotes to ✅): independent reporting of the same quote. Candidate — The Guardian 2016, ABC coverage of same._
+
+**Notes**
+- Severity claim (suicide language). Must ship with the PBCC spokesman's on-record response ("should not be given a literal interpretation … a common, everyday metaphor") from the same reporting. Fairness norm per EDITORIAL_GUIDE.md §4.
+- Before any prose edit: confirm verbatim quote on the live Stuff / Cessnock URLs. Research agent retrieved quote from search-result snippets, not a successful body fetch.
+- The two URLs are siblings of the same Fairfax story; treat as one source until a second, independent outlet is pinned.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+The Times (London), in its "No mercy" investigation by Billy Kenber and Alexi Mostrous, reports that during the UK Charity Commission's 2012–14 Preston Down Trust case, "the Brethren's universal leader, Sydney businessman Bruce Hales, had instructed members to infiltrate the meeting, to 'take a tape recorder and dress up as an out [an ex-member]'."
+
+**Status** — ✅ verified (primary retrieval)
+**Sources**
+- https://times-deck.s3-eu-west-1.amazonaws.com/projects/470e7a4f017a5476afb7eeb3f8b96f9b.html — The Times (London), public microsite.
+
+**Notes**
+- The Times's paywalled edition at thetimes.co.uk covers the same reporting; the S3-hosted project URL is the public companion. Agent verified by direct fetch. Recommend pulling a mirror to `research/evidence/` in case the S3 bucket ever rotates.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+The UK Charity Commission's 3 January 2014 full decision on the Preston Down Trust records that the Commission had "considerable evidence of significant 'detriment or harm'" in Brethren practices and discusses the authority held in the trust deed by the "worldwide leader of the Brethren" — the office held by Bruce Hales.
+
+**Status** — ✅ verified (primary document)
+**Sources**
+- https://assets.publishing.service.gov.uk/media/5a74c214e5274a3cb2866f23/preston_down_trust_full_decision.pdf — UK Charity Commission, 3 January 2014.
+
+**Notes**
+- Primary regulator document. Cite directly. Pending: mirror the PDF to `research/evidence/` given gov.uk CDN occasional 403s.
+
+**Pages**
+- `/our-members/bruce-d-hales`, `/litigation` (future), `/timeline` (future).
+
+---
+
+### Claim
+RNZ reports what its ex-member sources call the fellowship's "money-go-round": congregational cash payments to Hales and family, an offshore fund named "GCF," and payment amounts varied so they would not look like wages. RNZ writes the payments "would add up to hundreds of thousands of dollars a year from New Zealand alone, and millions from Brethren around the world."
+
+**Status** — 🟡 single-source
+**Sources**
+- https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round — RNZ, 2022.
+- _Needed (promotes to ✅): independent reporting of the same mechanism — Four Corners 2025, The Post 2023 companion piece, or follow-on coverage._
+
+**Notes**
+- Financial-conduct severity claim. Attribute to the reporting outlet and the named ex-member witness (Peter Hart per RNZ). Do not characterise as fact beyond what RNZ itself commits to.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+NZ Herald reporting by Patrick Gower describes Hales touring New Zealand congregations by private jet, arriving from Sydney.
+
+**Status** — 🟡 single-source (acceptable for uncontested mode-of-travel matter)
+**Sources**
+- https://www.nzherald.co.nz/nz/ibehind-the-brotherhoodi-the-elect-vessel-bruce-hales/VGMHDADWYHA6ZUQXDN7K5BSV2I/ — NZ Herald, Patrick Gower.
+
+**Notes**
+- Do not invent aircraft details, tail numbers, or flight logs on the strength of this source. Companion NZ Herald pieces on the same tour: `.../PQAEZPCP34M4TBRFBB4WZE3BNA/` and the Whanganui Chronicle `/7XVPHETJ6QIYAAIDSABQGP3I34/`.
+
+**Pages**
+- `/our-members/bruce-d-hales`.
+
+---
+
+### Claim
+The Illawarra Mercury reported in October 2017 that, in proceedings connected to a PBCC-linked company's defamation action against a journalist, Lloyd Grimshaw — a company director who has also served as a PBCC media spokesman — signed a "Services and Confidentiality Deed" proposing to pay potential witness McCorkell "$920,000 over 10 years … to keep his mouth shut," with $275,000 transferred to McCorkell's business account and text messages in evidence including "Dean Hales is going to tell Lloyd to release."
+
+**Status** — ✅ verified (mainstream outlet, named parties, named mechanism, named evidence)
+**Sources**
+- https://www.illawarramercury.com.au/story/5003814/texts-reveal-how-exclusive-brethren-paid-witness-to-keep-quiet/ — Illawarra Mercury / ACM, 22 October 2017.
+- https://www.stuff.co.nz/world/australia/98220593/potential-witness-in-exclusive-brethren-sex-abuse-case-paid-to-remain-silent — Stuff (NZ), sibling carrier.
+
+**Notes**
+- The reporting names Dean Hales (Bruce Hales's son), not Bruce Hales personally, as the source of the release directive quoted in the texts. Profile prose must reflect that. Severity-adjacent; both outlet URLs held before shipping.
+
+**Pages**
+- `/our-members/bruce-d-hales`, `/litigation` (future).
+
+---
+
+### Claim
 The Doctrine of Separation prohibits members from sharing meals, accommodation, marriage, or business partnership with those outside the fellowship. Grounded in 2 Timothy 2:19–22.
 
 **Status** — ✅ verified

@@ -37,6 +37,13 @@ export const members: Member[] = [
       "hales-manofgod-pbcc",
       "hales-manofgod-newstatesman",
       "hales-manofgod-thepost",
+      "hales-ratpoison-stuff",
+      "hales-ratpoison-cessnock",
+      "hales-times-infiltrate",
+      "hales-rnz-moneygoround",
+      "hales-illawarra-mccorkell",
+      "hales-jet-nzherald",
+      "pdt-charitycommission-2014",
     ],
     isPublished: true,
     isRoadmapOnly: false,
@@ -57,16 +64,49 @@ export const members: Member[] = [
         ],
       },
       {
-        heading: "Public record",
+        heading: "Recorded ministry — the “rat poison” quote",
         paragraphs: [
-          "Reporting in The Post (NZ) has quoted leadership instructions delivered under Hales that direct members to generate commercial surplus for the community, citing recordings and member testimony. [[cite:hales-manofgod-thepost]]",
-          "New Statesman's 2023 long-read on the fellowship describes the authority structure under the current Man of God and the consequences of dissent for members inside it. [[cite:hales-manofgod-newstatesman]]",
+          "In September 2015 Hales delivered a ministry meeting in the United Kingdom at which, according to reporting by Fairfax Media run in Stuff (NZ) and the Cessnock Advertiser, he said that a young man going through what the report describes as mental distress would be “better to take arsenic, or go and get some rat poison or something, take a bottle of it.” [[cite:hales-ratpoison-stuff]] [[cite:hales-ratpoison-cessnock]]",
+          "The reporting attributes a follow-on line to the same meeting: “Now I’m not advocating him doing that but … that would be better, to finish yourself off that way [rather] than having to do with the opponents of the truth.” [[cite:hales-ratpoison-stuff]]",
+          "The Brethren’s spokesman is quoted in the same reporting saying the remarks “should not be given a literal interpretation” and that the phrase was “a common, everyday metaphor.” [[cite:hales-ratpoison-cessnock]]",
+        ],
+      },
+      {
+        heading: "Recorded directives to members",
+        paragraphs: [
+          "The Times (London), in its long-form “No mercy” investigation into the fellowship by Billy Kenber and Alexi Mostrous, reports that in the context of the UK Charity Commission’s 2012–14 case on the Preston Down Trust, “the Brethren’s universal leader, Sydney businessman Bruce Hales, had instructed members to infiltrate the meeting, to ‘take a tape recorder and dress up as an out [an ex-member]’.” [[cite:hales-times-infiltrate]]",
+        ],
+      },
+      {
+        heading: "The UK regulator’s view",
+        paragraphs: [
+          "The UK Charity Commission’s January 2014 full decision on the Preston Down Trust — the case that contested the charitable status of a PBCC congregation — records the Commission’s finding that it had “considerable evidence of significant ‘detriment or harm’” in Brethren practices and discusses the authority held by the “worldwide leader of the Brethren” in the trust deed, the office held by Hales. [[cite:pdt-charitycommission-2014]]",
+        ],
+      },
+      {
+        heading: "The commercial network",
+        paragraphs: [
+          "The Post (NZ) reports that leaked Universal Business Team material and current and former members describe an aggressive focus on generating revenue from members and from wider society, with reporting attributing to insiders the description of the sect as a “pyramid scheme.” The Post writes that “large sums of money were flowing upward towards world leader Bruce Hales.” [[cite:hales-manofgod-thepost]]",
+          "RNZ reporting on what its ex-member sources call the fellowship’s “money-go-round” names an offshore fund (“GCF”) and describes a mechanism under which Brethren congregations sent cash payments to Hales and members of his family, which the reporting says “would add up to hundreds of thousands of dollars a year from New Zealand alone, and millions from Brethren around the world,” with the amounts varied so they would not look like wages. [[cite:hales-rnz-moneygoround]]",
+        ],
+      },
+      {
+        heading: "Travel",
+        paragraphs: [
+          "NZ Herald reporting by Patrick Gower has described Hales touring New Zealand congregations by private jet, arriving from Sydney. [[cite:hales-jet-nzherald]]",
+        ],
+      },
+      {
+        heading: "Legal action against critics",
+        paragraphs: [
+          "The Illawarra Mercury reported in October 2017 that in proceedings connected to a PBCC-linked company’s defamation action against a journalist, Lloyd Grimshaw — a company director who has also served as a PBCC media spokesman — signed a “Services and Confidentiality Deed” proposing to pay a potential witness, McCorkell, “$920,000 over 10 years … to keep his mouth shut.” The report quotes text messages in evidence including “Dean Hales is going to tell Lloyd to release” and records a transfer of $275,000 to McCorkell’s business account. [[cite:hales-illawarra-mccorkell]]",
+          "Dean Hales is Bruce Hales’s son. The reporting does not name Bruce Hales personally as authorising the payment; the directive quoted in the text messages attributes the release to Dean Hales.",
         ],
       },
       {
         heading: "How this profile is sourced",
         paragraphs: [
-          "Every sentence above footnotes to a public source in the site's source registry. Any claim we believe but have not yet pinned to a URL would render with a visible warning marker; none appear on this page. Corrections are welcomed via the repository — see MEMBERS_POLICY.md for the inclusion rule and correction protocol.",
+          "Every sentence above footnotes to a public source in the site’s source registry. Quotes are presented as reporting, not as first-party factual claims; the voice on the page is what named outlets have published. Anything we believe but have not yet pinned to a URL renders with a visible warning marker rather than ship silently. Corrections are welcomed via the repository — see MEMBERS_POLICY.md for the inclusion rule and correction protocol.",
         ],
       },
     ],

@@ -80,6 +80,62 @@ export const sources: Record<string, Source> = {
     accessedOn: "2026-04-23",
     notes: "Uses this row for the 55,000-members / 19-countries figure, which is a PBCC self-report. Independent corroboration still outstanding — see FACTS.md §1.",
   },
+  "hales-ratpoison-stuff": {
+    id: "hales-ratpoison-stuff",
+    label:
+      "Stuff (NZ) — The sect with millions of dollars in tax breaks whose secretive leader tells followers to drink rat poison (2016)",
+    url: "https://www.stuff.co.nz/national/78573007/exclusive-brethrens-the-sect-with-millions-of-dollars-in-tax-breaks-whose-secretive-leader-tells-followers-to-drink-rat-poison",
+    accessedOn: "2026-04-23",
+    notes: "Fairfax NZ syndication of the reporting on a September 2015 UK ministry meeting. Brethren spokesman response is on the record within the same piece. Confirm verbatim quote against live page before any prose change.",
+  },
+  "hales-ratpoison-cessnock": {
+    id: "hales-ratpoison-cessnock",
+    label:
+      "Cessnock Advertiser — Exclusive Brethren leader Bruce Hales says man in torment should kill himself (April 2016)",
+    url: "https://www.cessnockadvertiser.com.au/story/3360281/exclusive-brethren-leader-bruce-hales-says-man-in-torment-should-kill-himself/",
+    accessedOn: "2026-04-23",
+    notes: "ACM / Fairfax-stable Australian sibling of the Stuff (NZ) story. Same underlying reporting.",
+  },
+  "hales-times-infiltrate": {
+    id: "hales-times-infiltrate",
+    label:
+      "The Times (London) — 'No mercy' project: how a tiny Christian sect made it to the heart of Westminster (Kenber & Mostrous)",
+    url: "https://times-deck.s3-eu-west-1.amazonaws.com/projects/470e7a4f017a5476afb7eeb3f8b96f9b.html",
+    accessedOn: "2026-04-23",
+    notes: "The Times's public microsite for the investigation; the thetimes.co.uk edition is paywalled. Source for the directly-attributed line that Hales 'had instructed members to infiltrate the meeting, to take a tape recorder and dress up as an out'.",
+  },
+  "hales-rnz-moneygoround": {
+    id: "hales-rnz-moneygoround",
+    label:
+      "RNZ — Former Exclusive Brethren members detail the church's money-go-round (2022)",
+    url: "https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round",
+    accessedOn: "2026-04-23",
+    notes: "Names ex-member witness Peter Hart and the 'GCF' fund; describes cash payments varied in size to avoid looking like wages.",
+  },
+  "hales-illawarra-mccorkell": {
+    id: "hales-illawarra-mccorkell",
+    label:
+      "Illawarra Mercury — Texts reveal how Exclusive Brethren paid witness to keep quiet (October 2017)",
+    url: "https://www.illawarramercury.com.au/story/5003814/texts-reveal-how-exclusive-brethren-paid-witness-to-keep-quiet/",
+    accessedOn: "2026-04-23",
+    notes: "Names Lloyd Grimshaw (PBCC media spokesman / company director) signing the Services and Confidentiality Deed; texts in evidence reference Dean Hales (Bruce Hales's son). Does not name Bruce Hales personally as authorising the payment.",
+  },
+  "hales-jet-nzherald": {
+    id: "hales-jet-nzherald",
+    label:
+      "NZ Herald — Behind the Brotherhood: the Elect Vessel, Bruce Hales (Patrick Gower)",
+    url: "https://www.nzherald.co.nz/nz/ibehind-the-brotherhoodi-the-elect-vessel-bruce-hales/VGMHDADWYHA6ZUQXDN7K5BSV2I/",
+    accessedOn: "2026-04-23",
+    notes: "Describes Hales touring NZ congregations by private jet. Single-source for this claim; safe for uncontested factual matter (mode of travel).",
+  },
+  "pdt-charitycommission-2014": {
+    id: "pdt-charitycommission-2014",
+    label:
+      "UK Charity Commission — Preston Down Trust full decision (3 January 2014)",
+    url: "https://assets.publishing.service.gov.uk/media/5a74c214e5274a3cb2866f23/preston_down_trust_full_decision.pdf",
+    accessedOn: "2026-04-23",
+    notes: "Primary document. Records the Commission's finding of 'considerable evidence of significant detriment or harm' and discusses the authority held by the 'worldwide leader of the Brethren' — the office held by Bruce Hales.",
+  },
 };
 
 export function getSource(id: string): Source {
