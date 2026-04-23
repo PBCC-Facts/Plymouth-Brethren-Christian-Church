@@ -8,13 +8,14 @@ A public GitHub project for a strategic parody / criticism site targeting the Pl
 
 ## Draft mission (pending Trent's sign-off)
 
-> To document — in public, in plain view, and in the PBCC's own PR register — the doctrines and practices the Plymouth Brethren Christian Church spends real money to soften. Every claim is sourced. Every page is contributable. The goal is a durable counterweight to the rebrand: one that ranks on the same search terms, reads credibly to first-time researchers, takes survivors seriously, and invites the world to help keep it accurate.
+> Document — in public, on the same search terms, with a citation on every sentence — the doctrines, practices, and recent reporting the Plymouth Brethren Christian Church spends real money to soften. Family separation. Allegations of abuse. Defamation suits against critics. Tax and charity regulators at the door. Not vibes: footnotes. Every page a pull request away. First-person survivor testimony lives on this site, under explicit written consent, via `/stories`.
 
-Three load-bearing commitments inside that mission:
+Four load-bearing commitments inside that mission:
 
-1. **Sourced, not strident.** Documented practice, not adjectives. Register discipline per [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md).
-2. **Open by design.** Issues, PRs, corrections, and new evidence are welcome from anyone. A `CONTRIBUTING.md` and issue templates are a near-term must.
-3. **Survivor-first.** Nothing on this site trades a survivor's dignity for a joke. When in doubt, cut the joke.
+1. **Sourced, not strident.** Documented practice, not adjectives. Register discipline per [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md). Severity claims (abuse, SLAPP-style litigation) cite a specific named case or ship with a visible `SourcePending` marker — never silently.
+2. **Name what's in the reporting.** Abuse allegations, defamation proceedings against journalists and ex-members, regulatory action (e.g. the 2024 ATO raid on UBT) are not subtext. Where the public record carries the claim, we carry it too, with the same citation.
+3. **Open by design.** Issues, PRs, corrections, and new evidence are welcome from anyone. A `CONTRIBUTING.md` and issue templates are a near-term must.
+4. **Survivor-first, in-site.** First-person testimony is hosted on this site via `/stories`, on-record by explicit written consent, reviewed by the contributor before ship, and removable on request. Nothing on this site trades a survivor's dignity for a joke. When in doubt, cut the joke.
 
 ## Status
 
@@ -29,6 +30,6 @@ Pre-code. Only planning docs exist:
 
 ## Working agreements
 
-- Every factual claim gets a footnote. No invented citations — mark `{/* TODO: source */}` instead.
-- Never mix Register A (parody) and Register B (explanatory) on the same page.
+- Every factual claim gets a footnote. No invented citations — mark `{/* TODO: source */}` and render `<SourcePending />` instead.
+- Never mix Register C (snarky mirror) and Register B (explanatory) on the same page.
 - Keep this file light. Long-form guidance lives in the docs above.

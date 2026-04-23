@@ -39,12 +39,12 @@ Working notes that will be converted into `src/lib/sources.ts` entries and footn
 8. **Family separation consequences when withdrawn from.**
    - New Statesman long-read.
    - Senate of Australia submissions and public testimony. **TODO: pin specific submission URLs.**
-   - PBCCstories.org case studies (publisher controls — can cite directly).
+   - In-site `/stories` testimony (under explicit written consent; publisher controls — see FACTS.md §6).
 
 ## Flagged for user / counsel check
 
 - Whether to cite `brethrenexposed.com` — useful but partisan; check counsel's preference for citation weight.
-- Whether to cite PBCCstories.org inline in parody-page footnotes or only in Register B pages (FAQ/doctrine). Stronger fair-use posture if third-party journalism carries the claims on parody pages and PBCCstories.org is cited on explanatory pages.
+- Editorial posture on in-site testimony (`/stories`): survivor-first consent pipeline documented on `/stories`; third-party journalism still carries severity claims on parody pages to preserve the fair-use posture.
 - Image sourcing: whether to license stock photography for the hero sections or whether you have original photography (public-source, non-member-identifying) you'd prefer to use.
 
 ## Structural facts confirmed by search

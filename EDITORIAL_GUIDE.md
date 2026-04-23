@@ -45,7 +45,7 @@ Rules:
    - Court ruling, Senate / parliamentary inquiry, or charity-regulator finding
    - Major investigative journalism (ABC Four Corners, New Statesman, NYT, Guardian, The Post NZ, etc.)
    - Official PBCC publication or Bruce D. Hales ministry text (quoted accurately)
-   - PBCCstories.org survivor testimony (when on-record and the survivor has consented to identification)
+   - In-site `/stories` survivor testimony (when on-record and the survivor has signed off on identification; see `src/app/stories/page.tsx` for the intake pipeline)
 2. One-source claims are acceptable for uncontested factual matters (dates, locations, leadership succession). Contested or severity claims should have ≥ 2 sources when available.
 3. Sources live in a typed registry: `src/lib/sources.ts`. Every page imports from that registry; no ad-hoc URLs in body copy. Any claim appearing on the site maps to a row in [`FACTS.md`](FACTS.md) at status ✅ before it ships with a `<Footnote>` component.
 4. When a claim is true but cannot be sourced to a public document right now, mark `{/* TODO: source */}` and render a visible `<SourcePending />` component. **Do not invent a citation.** Do not silently ship.
@@ -86,7 +86,7 @@ Why this works: "under one man" does all the work. The body copy is plain fact: 
 **Register C:**
 > Family is central to the fellowship — right up until it isn't. Bonds between parents, spouses, siblings, and children are treasured, and, when a member is withdrawn from, those bonds are prayerfully adjusted: the remaining members decline to eat with the withdrawn person, share accommodation with them, or remain married to them while separation stands.¹ Minor children are frequently retained with the remaining member.²
 
-Footnotes → New Statesman, Reach Out Trust, UK Parliament submission 2012, PBCCstories.org case studies.
+Footnotes → New Statesman, Reach Out Trust, UK Parliament submission 2012, and (once on-record) in-site `/stories` testimony.
 
 Why this works: the reveal is in "right up until it isn't". The body then does the paraphrasing job in flat, specific language. "Prayerfully adjusted" is lifted as a lexical echo of PR-voice, but the content around it is documented practice.
 

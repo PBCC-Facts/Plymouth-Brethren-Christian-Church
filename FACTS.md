@@ -66,7 +66,7 @@ The PBCC has produced at least <N> identifiable ex-members / survivors since <ye
 **Status** — 🔴 TODO: source
 **Sources**
 - _Needed. Candidates to review:_
-  - PBCCstories.org case-study count.
+  - In-site `/stories` intake once contributors are on-record (this site is becoming the primary testimony home).
   - Senate of Australia public submissions (2006–2008 inquiries + any since).
   - UK Charity Commission Preston Down Trust case record (2012–2014).
   - Academic surveys (Bachelard, Tchappat, etc.) — name a specific figure.
@@ -196,17 +196,62 @@ In 2006, the Australian Senate examined PBCC-related donations to political part
 
 ---
 
-## 6. Survivor organizations / documentary
-
 ### Claim
-PBCCstories.org publishes first-person survivor testimony.
+The PBCC and entities associated with it have pursued defamation proceedings, takedown demands, and SLAPP-style litigation against journalists, former members, and academic critics.
 
-**Status** — ✅ verified (directly inspectable)
+**Status** — 🔴 TODO: pin primary source(s) per case
 **Sources**
-- https://pbccstories.org/
+- _Needed. Candidate strands to pin per case:_
+  - Australian defamation proceedings against Michael Bachelard / Fairfax in the mid-2000s (book + Four Corners coverage).
+  - UK injunction proceedings against ex-member blogs and forums.
+  - NZ and AU takedown / cease-and-desist correspondence referenced in ex-member and reporter accounts.
+- Any row that ships on the homepage cites the specific case with a primary-document URL (court judgment, filing, or news coverage).
+
+**Notes**
+- Severity claim. Must list a specific case with a specific citation before the `/` "Litigation against critics" card moves from `SourcePending` to footnoted.
+- Do not generalise beyond what a single named case supports. "SLAPP-style" is a characterisation used in reporting; where we use it, cite the reporter who used it.
 
 **Pages**
-- `/resources`, `/about-this-site`.
+- `/` "What the record says" card, `/litigation` (future), `/mission` (one severity sentence marked `SourcePending` until pinned).
+
+---
+
+### Claim
+Mainstream reporting and survivor accounts have raised allegations of child sexual abuse, domestic violence, and coercive control within PBCC households and member-staffed institutions.
+
+**Status** — 🔴 TODO: pin primary source(s) per allegation
+**Sources**
+- _Needed. Candidate strands to pin per specific allegation:_
+  - New Statesman "Escaping Eden" (2023) — review for named abuse allegations and their sourcing.
+  - ABC Four Corners "Behind the Exclusive Brethren" (2006) and follow-up "Big Brethren" — named cases, named outcomes.
+  - Australian Senate / child-safety inquiry submissions referencing OneSchool Global and member households.
+  - Specific named civil or criminal proceedings, where reporting has already identified them.
+
+**Notes**
+- Severity claim. Editorial guide §4 is explicit: do not ship generalised abuse-claim language. Ship a specific named case with a named citation, or do not ship.
+- Homepage card currently marked `SourcePending` with a note pointing to this row. Do not remove the marker until the specific citation lands.
+- Survivor-first: named survivors appear only with explicit written consent via `/stories` intake.
+
+**Pages**
+- `/` "What the record says" card, `/litigation` (future), `/stories`.
+
+---
+
+## 6. Survivor testimony (in-site) / documentary
+
+### Claim
+First-person survivor testimony is published on this site, under explicit written consent, via the `/stories` intake.
+
+**Status** — 🟡 editorial commitment (process, not a factual claim about PBCC)
+**Sources**
+- This repository (`/src/app/stories/page.tsx` describes the intake pipeline).
+
+**Notes**
+- External reference PBCCstories.org has been deprecated from this site. Survivor testimony is being brought in-house so consent controls, edit history, and takedown are on our own infrastructure.
+- No story ships without a signed-off consent statement and a removal contact.
+
+**Pages**
+- `/` stories band, `/stories`, `/resources`, `/mission`.
 
 ---
 

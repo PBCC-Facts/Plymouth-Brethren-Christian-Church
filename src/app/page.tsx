@@ -6,7 +6,7 @@ const communityCards = [
   {
     accent: "var(--color-purple)",
     title:
-      "We care about our neighbours \u2014 at a doctrinally-mandated distance.",
+      "We care about our neighbours — at a doctrinally-mandated distance.",
     body: (
       <>
         Members do not share meals, accommodation, marriage, or business
@@ -18,7 +18,7 @@ const communityCards = [
   },
   {
     accent: "var(--color-brand)",
-    title: "We help drive local economies \u2014 our own.",
+    title: "We help drive local economies — our own.",
     body: (
       <>
         Member-owned businesses coordinate under the Universal Business Team.
@@ -30,7 +30,7 @@ const communityCards = [
   },
   {
     accent: "var(--color-blueviolet)",
-    title: "We are a connected global Community \u2014 under one man.",
+    title: "We are a connected global Community — under one man.",
     body: (
       <>
         More than 54,000 members across 19 countries live under a single global
@@ -69,7 +69,7 @@ const reportingItems: Array<{
     title: "Behind the Exclusive Brethren",
     url: "https://en.wikipedia.org/wiki/Behind_the_Exclusive_Brethren",
     gloss:
-      "Bachelard and Whitmont\u2019s documentary: the baseline public-interest investigation still cited twenty years later.",
+      "Bachelard and Whitmont’s documentary: the baseline public-interest investigation still cited twenty years later.",
   },
   {
     outlet: "New Statesman",
@@ -77,7 +77,7 @@ const reportingItems: Array<{
     title: "Escaping Eden: the Exclusive Brethren",
     url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
     gloss:
-      "Long-read on the \u201CMan of God\u201D office, leadership succession, and family separation practice.",
+      "Long-read on the “Man of God” office, leadership succession, and family separation practice.",
   },
   {
     outlet: "The Post (NZ)",
@@ -94,7 +94,7 @@ const reportingItems: Array<{
       "Public Administration Committee submission on PBCC charitable status",
     url: "https://publications.parliament.uk/pa/cm201213/cmselect/cmpubadm/writev/charity/m49.htm",
     gloss:
-      "Written evidence describing separation practice in members\u2019 own words.",
+      "Written evidence describing separation practice in members’ own words.",
   },
   {
     outlet: "UK Charity Commission",
@@ -102,7 +102,7 @@ const reportingItems: Array<{
     title: "Preston Down Trust decision (compromise agreement)",
     url: "https://www.gov.uk/government/organisations/charity-commission",
     gloss:
-      "Charitable-status dispute closure. Primary-document URL TBC \u2014 landing page shown.",
+      "Charitable-status dispute closure. Primary-document URL TBC — landing page shown.",
     pending: true,
   },
   {
@@ -111,7 +111,7 @@ const reportingItems: Array<{
     title: "ATO raid on Universal Business Team offices",
     url: "https://www.ato.gov.au/",
     gloss:
-      "Australian Taxation Office action at UBT offices. Primary reporting URL TBC \u2014 ATO landing shown.",
+      "Australian Taxation Office action at UBT offices. Primary reporting URL TBC — ATO landing shown.",
     pending: true,
   },
 ];
@@ -123,25 +123,28 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero — dark charcoal, big white serif, teal "Learn more" link, circle visual */}
+      {/* Hero — tight, direct message in the fellowship's reframed voice */}
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
             <p className="hero__eyebrow">
-              A global high-control religious group &mdash; since 1848
+              A global high-control religious fellowship &mdash; on the public
+              record since 1848
             </p>
             <h1 className="hero__title">
-              We are a high-control religious sect with over 55,000 members and
-              hundreds of survivors.
+              We spend real money softening what we do to our own members.
             </h1>
             <p className="hero__sub">
-              Founded 200 years ago by John Nelson Darby, author of the Doctrine
-              of Separation that still defines how members may treat everyone
-              outside the fellowship. Every claim on this site is footnoted
-              &mdash; or publicly flagged for sourcing on GitHub.
+              The Plymouth Brethren Christian Church runs a global PR operation
+              to file down the edges of a documented Doctrine of Separation,
+              a shunning practice called &ldquo;withdrawing from,&rdquo; a
+              leadership cult around the current &ldquo;Man of God,&rdquo; and
+              a growing public record of abuse allegations, defamation suits
+              against critics, and a 2024 Australian Tax Office raid. This
+              site puts every claim back on the page, with a source.
             </p>
-            <Link href="/way-of-life" className="hero__cta">
-              Learn what our way of life costs &rarr;
+            <Link href="#reporting" className="hero__cta">
+              See what&rsquo;s on the record &rarr;
             </Link>
             <div className="hero__dots" aria-hidden="true">
               <span />
@@ -163,25 +166,18 @@ export default function HomePage() {
           <div className="rich-media">
             <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
               <p>
-                Established around 200 years ago, the Plymouth Brethren
-                Christian Church (PBCC) was founded by John Nelson Darby &mdash;
-                author of the Doctrine of Separation that still governs who
-                members may eat with, live with, marry, and do business with
+                Founded around 200 years ago by John Nelson Darby, the Plymouth
+                Brethren Christian Church (PBCC, formerly the Exclusive
+                Brethren) still governs its 54,000-plus members
+                <Footnote id="pbcc-members-selfreport" n={nextN()} />{" "}
+                through the Doctrine of Separation: a rule on who members may
+                eat with, live with, marry, and do business with
                 <Footnote id="separation-cdamm" n={nextN()} />
                 <Footnote id="separation-pbcc-statement" n={nextN()} />.
               </p>
               <p>
-                Today the church counts just over 55,000 members across 19
-                countries
-                <Footnote id="pbcc-members-selfreport" n={nextN()} />{" "}
-                and, by conservative estimate, hundreds of ex-members who have
-                been withdrawn from, shunned, or cut off from their families
-                under that same doctrine
-                <SourcePending note="Survivor count estimate \u2014 FACTS.md \u00A71 source pending" />.
-              </p>
-              <p>
-                Community life is organised around the recorded ministry of the
-                current World Leader, Bruce D. Hales, known within the
+                Community life is organised around the recorded ministry of
+                the current World Leader, Bruce D. Hales, known within the
                 fellowship as the Man of God
                 <Footnote id="hales-manofgod-pbcc" n={nextN()} />
                 <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. His
@@ -189,7 +185,18 @@ export default function HomePage() {
                 authoritative current expression of scriptural guidance.
               </p>
               <p>
-                Every claim below is sourced. Anyone can file a correction as a{" "}
+                Members who depart, or who are deemed out of fellowship, are
+                &ldquo;withdrawn from&rdquo; &mdash; the PBCC term for
+                excommunication. The remaining members decline to share meals,
+                accommodation, or marriage with them while separation stands
+                <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
+                <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
+                Families split. Minor children are commonly retained with the
+                in-fellowship parent.
+              </p>
+              <p>
+                Every claim below is sourced. Anyone can file a correction as
+                a{" "}
                 <a
                   href={`${GITHUB_URL}/issues/new?labels=correction&title=Correction:+`}
                   target="_blank"
@@ -220,8 +227,154 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* What the record says — harder-edged severity band, Register C */}
+      <section
+        id="on-the-record"
+        className="section"
+        style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
+      >
+        <div className="site-container">
+          <h2
+            className="section-label"
+            style={{ color: "var(--color-surface)" }}
+          >
+            What the record says.
+          </h2>
+          <p
+            className="max-w-prose text-[1rem] leading-[1.8]"
+            style={{ opacity: 0.85 }}
+          >
+            Four strands of public reporting the rebrand has to keep absorbing.
+            We quote what&rsquo;s been printed and what&rsquo;s been filed;
+            nothing on this page is our claim &mdash; it&rsquo;s someone
+            else&rsquo;s, footnoted.
+          </p>
+
+          <ul className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+            <li>
+              <article
+                className="h-full p-6"
+                style={{
+                  borderTop: "4px solid var(--color-brand)",
+                  background:
+                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
+                }}
+              >
+                <p
+                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+                  style={{ color: "var(--color-brand)" }}
+                >
+                  Shunning
+                </p>
+                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
+                  Families are split by doctrine, not by choice.
+                </h3>
+                <p className="mt-3 text-sm leading-[1.7]">
+                  UK Parliament submissions and major long-form reporting
+                  describe spouses, parents, and children cut off from a
+                  withdrawn relative while separation stands
+                  <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
+                  <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article
+                className="h-full p-6"
+                style={{
+                  borderTop: "4px solid var(--color-rust)",
+                  background:
+                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
+                }}
+              >
+                <p
+                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+                  style={{ color: "var(--color-rust)" }}
+                >
+                  Abuse allegations
+                </p>
+                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
+                  Allegations of sexual and physical abuse within the fellowship.
+                </h3>
+                <p className="mt-3 text-sm leading-[1.7]">
+                  Allegations of child sexual abuse, domestic violence, and
+                  coercive control within member households and institutions
+                  have surfaced in mainstream reporting and in survivor
+                  accounts across multiple jurisdictions
+                  <SourcePending note="Abuse-allegations severity claim — specific cases and citations to be pinned in FACTS.md §5 before ship." />
+                  . Specific cases and citations are being pinned before
+                  anything ships to production.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article
+                className="h-full p-6"
+                style={{
+                  borderTop: "4px solid var(--color-purple)",
+                  background:
+                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
+                }}
+              >
+                <p
+                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+                  style={{ color: "var(--color-purple)" }}
+                >
+                  Litigation against critics
+                </p>
+                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
+                  Defamation suits and injunctions used against journalists
+                  and ex-members.
+                </h3>
+                <p className="mt-3 text-sm leading-[1.7]">
+                  The fellowship and entities associated with it have pursued
+                  defamation proceedings, takedown demands, and SLAPP-style
+                  litigation against journalists, former members, and academic
+                  critics
+                  <SourcePending note="SLAPP-style litigation claim — specific case references pending in FACTS.md §5 before ship." />
+                  . Specific cases are being cited before this card leaves
+                  draft.
+                </p>
+              </article>
+            </li>
+            <li>
+              <article
+                className="h-full p-6"
+                style={{
+                  borderTop: "4px solid var(--color-blueviolet)",
+                  background:
+                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
+                }}
+              >
+                <p
+                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+                  style={{ color: "var(--color-blueviolet)" }}
+                >
+                  Regulators
+                </p>
+                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
+                  Tax and charity regulators have opened the doors, more than
+                  once.
+                </h3>
+                <p className="mt-3 text-sm leading-[1.7]">
+                  In March 2024, the Australian Taxation Office raided
+                  Universal Business Team offices
+                  <SourcePending note="ATO raid primary URL pending — FACTS.md §3." />
+                  . In 2012&ndash;2014, the UK Charity Commission contested
+                  PBCC charitable status before closing with a compromise
+                  agreement
+                  <SourcePending note="Preston Down Trust primary document URL pending — FACTS.md §5." />
+                  .
+                </p>
+              </article>
+            </li>
+          </ul>
+        </div>
+      </section>
+
       {/* Read the reporting — outside journalism / records index */}
       <section
+        id="reporting"
         className="section"
         style={{
           background:
@@ -310,6 +463,37 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
+        </div>
+      </section>
+
+      {/* Stories — in-site survivor testimony stub */}
+      <section
+        className="section"
+        style={{ background: "var(--color-surface)" }}
+      >
+        <div className="site-container">
+          <h2 className="section-label">Stories.</h2>
+          <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:items-start">
+            <p className="font-[family-name:var(--font-serif)] text-3xl leading-tight">
+              First-person survivor testimony will live here, on this site,
+              under consent controls we publish.
+            </p>
+            <div className="space-y-4 text-[1rem] leading-[1.8]">
+              <p>
+                Testimony is editorial work, not traffic. Every story that
+                lands here will be on-record by explicit written consent,
+                reviewed by the contributor before it ships, and removable at
+                their request. Where a survivor prefers to stay anonymous, we
+                use composite or redacted forms and mark them clearly. Nothing
+                on this site trades a survivor&rsquo;s dignity for a joke.
+              </p>
+              <p>
+                <Link href="/stories" className="btn">
+                  How we&rsquo;ll publish stories &rarr;
+                </Link>
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

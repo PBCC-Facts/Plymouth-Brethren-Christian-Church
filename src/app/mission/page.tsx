@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { Metadata } from "next";
-import { Footnote } from "@/components/site/Footnote";
+import { Footnote, SourcePending } from "@/components/site/Footnote";
 
 const REPO_URL =
   "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church";
@@ -8,24 +8,25 @@ const REPO_URL =
 export const metadata: Metadata = {
   title: "Mission",
   description:
-    "The mission of The Facts: document, in public and with sources, the doctrines and practices the Plymouth Brethren Christian Church spends real money to soften. Every claim footnoted. Every page contributable.",
+    "The mission of The Facts: document, in public and with sources, the doctrines and practices the Plymouth Brethren Christian Church spends real money to soften — including family separation, abuse allegations, litigation against critics, and regulatory action. Every claim footnoted. Every page contributable.",
 };
 
 export default function MissionPage() {
   return (
     <>
-      {/* Lede band — Register C */}
+      {/* Lede band */}
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
             <p className="hero__eyebrow">The Facts. &mdash; why this exists</p>
             <h1 className="hero__title">Mission.</h1>
             <p className="hero__sub">
-              The Plymouth Brethren Christian Church spends real money softening
-              its public image. This project documents, in public and with
-              sources, the doctrines and practices that softening is designed to
-              obscure. Every claim is footnoted. Every page is a pull request
-              away.
+              Document &mdash; in public, on the same search terms, with a
+              citation on every sentence &mdash; the doctrines, practices, and
+              recent reporting the Plymouth Brethren Christian Church spends
+              real money to soften. Family separation. Allegations of abuse.
+              Defamation suits against critics. Tax and charity regulators at
+              the door. Not vibes: footnotes. Every page a pull request away.
             </p>
             <Link href="#sources" className="hero__cta">
               How we source every claim &rarr;
@@ -37,7 +38,7 @@ export default function MissionPage() {
         </div>
       </section>
 
-      {/* Methodology — Register B */}
+      {/* The problem */}
       <section
         className="section"
         style={{ background: "var(--color-surface)" }}
@@ -47,41 +48,43 @@ export default function MissionPage() {
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
               Since the 2020s rebrand, the Plymouth Brethren Christian Church
-              (PBCC, formerly the Exclusive Brethren) has invested heavily in a
-              public-relations infrastructure: a polished WordPress microsite, a
-              steady cadence of press releases, dedicated communications staff
-              across multiple countries, and a suite of outward-facing
-              philanthropy brands (the Rapid Relief Team, OneSchool Global, the
-              Universal Business Team).
+              (PBCC, formerly the Exclusive Brethren) has built an industrial
+              public-relations operation: a polished microsite, a steady
+              cadence of press releases, dedicated communications staff in
+              multiple countries, and a suite of outward-facing philanthropy
+              brands (Rapid Relief Team, OneSchool Global, Universal Business
+              Team).
             </p>
             <p>
-              The result is that anyone searching today for{" "}
+              The result is that anyone searching{" "}
               <em>&ldquo;Plymouth Brethren&rdquo;</em>,{" "}
               <em>&ldquo;Exclusive Brethren&rdquo;</em>, or{" "}
               <em>&ldquo;is the Plymouth Brethren a cult&rdquo;</em> lands
-              first on pages written by the church&rsquo;s own
-              communications team. Sourced, public-record accounts of the
-              fellowship&rsquo;s doctrine and practice &mdash; produced by
-              academics
-              <Footnote id="separation-cdamm" n={1} />
-              , parliamentary inquiries
-              <Footnote id="withdrawing-ukparliament-2012" n={2} />
-              , investigative journalists
+              first on pages written by the fellowship&rsquo;s own
+              communications team. Sourced, public-record accounts &mdash;
+              produced by academics
+              <Footnote id="separation-cdamm" n={1} />, parliamentary
+              inquiries
+              <Footnote id="withdrawing-ukparliament-2012" n={2} />,
+              investigative journalists
               <Footnote id="hales-manofgod-newstatesman" n={3} />
-              <Footnote id="fourcorners-wikipedia" n={4} />
-              , and survivors
-              <Footnote id="pbccstories" n={5} />{" "}
+              <Footnote id="fourcorners-wikipedia" n={4} />, and survivors
               &mdash; get pushed down the page.
             </p>
             <p>
-              For a researcher, journalist, or ex-member looking for a
-              grounded first picture, that is a public-information problem.
-              This site is the counterweight.
+              That would be a public-information problem on its own. It is a
+              more serious one given what the rebrand is covering for:
+              documented family separation, allegations of sexual and
+              physical abuse within the fellowship, defamation and
+              injunction proceedings against journalists and ex-members, and
+              a 2024 Australian Tax Office raid on UBT offices. This site is
+              the counterweight.
             </p>
           </div>
         </div>
       </section>
 
+      {/* Our response */}
       <section
         className="section"
         style={{
@@ -93,34 +96,53 @@ export default function MissionPage() {
           <h2 className="section-label">Our response.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              <strong>Sourced facts over adjectives.</strong> We do not call the
-              PBCC a cult. We describe, sentence by sentence, a documented
+              <strong>Sourced facts over adjectives.</strong> We do not call
+              the PBCC a cult. We describe, sentence by sentence, a documented
               Doctrine of Separation
-              <Footnote id="separation-pbcc-statement" n={6} />
-              <Footnote id="separation-cdamm" n={7} />
+              <Footnote id="separation-pbcc-statement" n={5} />
+              <Footnote id="separation-cdamm" n={6} />
               {" "}and the practices it produces: restrictions on meals,
-              accommodation, marriage, business, and schooling with non-members;
-              the practice of withdrawing from members who depart; a global
-              leadership structure under the current &ldquo;Man of God&rdquo;
-              <Footnote id="hales-manofgod-pbcc" n={8} />
-              <Footnote id="hales-manofgod-newstatesman" n={9} />
-              . Readers draw their own conclusion.
+              accommodation, marriage, business, and schooling with
+              non-members; the practice of withdrawing from members who
+              depart; a global leadership structure under the current
+              &ldquo;Man of God&rdquo;
+              <Footnote id="hales-manofgod-pbcc" n={7} />
+              <Footnote id="hales-manofgod-newstatesman" n={8} />. Readers
+              draw their own conclusion.
             </p>
             <p>
-              <strong>Mirror the structure, reframe the content.</strong> This
+              <strong>Name what&rsquo;s in the reporting.</strong> Abuse
+              allegations, defamation suits against critics, and regulatory
+              action are not subtext &mdash; they are the current public
+              record. Where the record carries the claim, we carry it too,
+              with the same citation. Where we cannot yet pin a public URL to
+              a severity claim, we mark it{" "}
+              <span className="footnote footnote--pending">&#9888;&#65038;</span>{" "}
+              on the page and open the row in{" "}
+              <a
+                href={`${REPO_URL}/blob/main/FACTS.md`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FACTS.md
+              </a>
+              . We do not invent citations
+              <SourcePending note="SLAPP-style litigation + abuse allegations: specific case URLs being pinned in FACTS.md §5 before ship." />
+              .
+            </p>
+            <p>
+              <strong>Mirror the structure, invert the content.</strong> This
               site structurally mirrors the PBCC&rsquo;s public site so that
               Google indexes it against the same search terms. The copy is
-              original, the facts are sourced, and the perspective is
-              inverted.
+              original, the facts are sourced, the perspective is inverted.
             </p>
             <p>
-              <strong>Survivor-first.</strong> Nothing on this site trades a
-              survivor&rsquo;s dignity for a joke. First-person testimony is
-              hosted at PBCCstories.org
-              <Footnote id="pbccstories" n={10} />
-              , which operates with stronger consent controls; we link out to
-              it and do not republish identifiable testimony here without the
-              survivor&rsquo;s explicit consent.
+              <strong>Survivor-first, in-site.</strong> First-person testimony
+              is editorial work, not decoration. It will live on this site,
+              under consent controls we publish &mdash; on-record by explicit
+              written consent, reviewed by the contributor before it ships,
+              removable at their request, and never used for a joke. See{" "}
+              <Link href="/stories">Stories</Link> for the intake process.
             </p>
             <p>
               <strong>Open by design.</strong> The repository is public on
@@ -147,8 +169,15 @@ export default function MissionPage() {
           <ul className="max-w-prose space-y-3 text-[1rem] leading-[1.8] list-disc pl-5">
             <li>Document PBCC doctrine and practice on the pages that rank for those search terms.</li>
             <li>Footnote every factual claim to a public source.</li>
-            <li>Publish litigation, regulatory findings, and parliamentary-inquiry history as they land.</li>
-            <li>Link prominently to cult-recovery and PBCC-specific survivor resources.</li>
+            <li>
+              Publish abuse-allegation reporting, defamation and injunction
+              proceedings against journalists and ex-members, regulatory
+              findings, and parliamentary-inquiry history as they land.
+            </li>
+            <li>
+              Host first-person survivor testimony on this site, under written
+              consent, and signpost external cult-recovery resources.
+            </li>
             <li>Accept corrections in public. If we get a fact wrong, the fix is a pull request away.</li>
             <li>Update pages when sources change; mark every page with a visible last-modified date.</li>
           </ul>
@@ -163,7 +192,7 @@ export default function MissionPage() {
           <h2 className="section-label">What we will not do.</h2>
           <ul className="max-w-prose space-y-3 text-[1rem] leading-[1.8] list-disc pl-5">
             <li>Out identifiable private members of the PBCC who have not chosen to be public.</li>
-            <li>Use survivors&rsquo; stories without their explicit, on-record consent.</li>
+            <li>Use survivors&rsquo; stories without their explicit, on-record, written consent.</li>
             <li>Fabricate, estimate, or guess at citations. Unsourced claims ship with a visible source-pending marker or do not ship.</li>
             <li>Mix registers on a single page. Pages are either openly parodic (Register C) or plainspoken journalistic (Register B).</li>
             <li>Make jokes at survivors&rsquo; expense. The subject of every critical sentence is the fellowship&rsquo;s rebrand or its leadership; never a former member.</li>
@@ -183,10 +212,10 @@ export default function MissionPage() {
           <h2 className="section-label">How to contribute.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              This project welcomes contributions from researchers, journalists,
-              ex-members, counsel, and anyone who finds a factual error. The
-              lightest-weight way in is a GitHub issue; the heaviest-weight is a
-              fully-drafted pull request.
+              This project welcomes contributions from researchers,
+              journalists, ex-members, counsel, and anyone who finds a
+              factual error. The lightest-weight way in is a GitHub issue;
+              the heaviest is a fully-drafted pull request.
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li>
@@ -224,15 +253,9 @@ export default function MissionPage() {
                 when a GitHub issue is not appropriate.
               </li>
               <li>
-                Survivors: on-record testimony is hosted at{" "}
-                <a
-                  href="https://pbccstories.org/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  PBCCstories.org
-                </a>
-                .
+                Survivors: on-record testimony intake is described at{" "}
+                <Link href="/stories">Stories</Link>. We do not publish
+                identifiable testimony without explicit written consent.
               </li>
             </ul>
           </div>
@@ -246,15 +269,7 @@ export default function MissionPage() {
             <p>
               This site is maintained by Trent Waskey, a contributor to ABC
               Four Corners&rsquo; &ldquo;Big Brethren&rdquo; follow-up
-              reporting and operator of{" "}
-              <a
-                href="https://pbccstories.org/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                PBCCstories.org
-              </a>
-              , alongside anyone who contributes on GitHub.
+              reporting, alongside anyone who contributes on GitHub.
             </p>
             <p>
               This project is independent. It is not affiliated with the
@@ -306,14 +321,14 @@ export default function MissionPage() {
                 finding) plus one journalism source.
               </li>
               <li>
-                <strong>&#127993; Single source</strong> &mdash; acceptable for
-                uncontested factual matters (dates, locations, leadership
+                <strong>&#127993; Single source</strong> &mdash; acceptable
+                for uncontested factual matters (dates, locations, leadership
                 succession). Borderline for severity claims.
               </li>
               <li>
                 <strong>&#128308; Source pending</strong> &mdash; the claim is
-                true but we cannot yet pin a public citation. Such claims ship
-                with a visible&nbsp;
+                true but we cannot yet pin a public citation. Such claims
+                ship with a visible&nbsp;
                 <span className="footnote footnote--pending">&#9888;&#65038;</span>{" "}
                 marker, not a hidden gap.
               </li>
@@ -328,8 +343,9 @@ export default function MissionPage() {
               >
                 EDITORIAL_GUIDE.md
               </a>{" "}
-              for the full voice and sourcing rules, open an issue to challenge
-              any row in FACTS.md, or submit a PR updating a source URL.
+              for the full voice and sourcing rules, open an issue to
+              challenge any row in FACTS.md, or submit a PR updating a source
+              URL.
             </p>
           </div>
         </div>

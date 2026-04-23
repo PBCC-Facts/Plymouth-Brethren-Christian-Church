@@ -194,7 +194,7 @@ Decision deferred to post-launch; neither blocks the build.
 ## 6. Questions for you
 
 1. **Supabase scope:** the initial-scope list above (intake, newsletter, testimony moderation, rank tracking, litigation) — drop anything you don't want?
-2. **Testimony intake:** do you want survivors to be able to submit stories through this site directly, or should we route everyone to PBCCstories.org and keep this site read-only + tip-form only?
+2. **Testimony intake:** survivor stories are being brought in-site at `/stories` under explicit written consent. Confirm the Supabase-backed moderation queue remains the right mechanism (draft → consent-on-file → publish → removable on request), or whether a lighter form-only intake is sufficient for launch.
 3. **Newsletter:** is that a channel you actually want to operate? It's valuable for launch announcements and litigation updates, but it's also an ongoing commitment.
 4. **Analytics:** Plausible (cookieless, paid) vs Vercel Web Analytics (free, first-party, simpler) vs no analytics?
 5. **Domain preference for initial launch:** parody-signaling (e.g. `pbcc-parody.org`, `plymouthbrethrencriticism.org`) vs a neutral publisher domain you already own?
