@@ -2,6 +2,8 @@ import Link from "next/link";
 import { Footnote, SourcePending } from "@/components/site/Footnote";
 import { GITHUB_URL } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
+import { Artwork } from "@/components/site/Artwork";
+import type { ArtworkKind } from "@/lib/glyphs";
 import { JsonLd, websiteSchema, breadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata = buildPageMetadata({
@@ -73,6 +75,7 @@ const reportingItems: Array<{
   title: string;
   url: string;
   gloss: string;
+  kind: ArtworkKind;
   pending?: boolean;
 }> = [
   {
@@ -82,6 +85,7 @@ const reportingItems: Array<{
     url: "https://en.wikipedia.org/wiki/Behind_the_Exclusive_Brethren",
     gloss:
       "Bachelard and Whitmont’s documentary: the baseline public-interest investigation still cited twenty years later.",
+    kind: "broadcast",
   },
   {
     outlet: "New Statesman",
@@ -90,6 +94,7 @@ const reportingItems: Array<{
     url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
     gloss:
       "Long-read on the “Man of God” office, leadership succession, and family separation practice.",
+    kind: "journalism",
   },
   {
     outlet: "The Post (NZ)",
@@ -98,6 +103,7 @@ const reportingItems: Array<{
     url: "https://www.thepost.co.nz/nz-news/350113380/exclusive-brethren-told-create-crisis-generate-profits",
     gloss:
       "Leaked leadership instruction to member businesses; reporting on the UBT commerce network.",
+    kind: "journalism",
   },
   {
     outlet: "UK Parliament",
@@ -107,6 +113,7 @@ const reportingItems: Array<{
     url: "https://publications.parliament.uk/pa/cm201213/cmselect/cmpubadm/writev/charity/m49.htm",
     gloss:
       "Written evidence describing separation practice in members’ own words.",
+    kind: "inquiry",
   },
   {
     outlet: "UK Charity Commission",
@@ -115,6 +122,7 @@ const reportingItems: Array<{
     url: "https://www.gov.uk/government/organisations/charity-commission",
     gloss:
       "Charitable-status dispute closure. Primary-document URL TBC — landing page shown.",
+    kind: "regulator",
     pending: true,
   },
   {
@@ -124,6 +132,7 @@ const reportingItems: Array<{
     url: "https://www.ato.gov.au/",
     gloss:
       "Australian Taxation Office action at UBT offices. Primary reporting URL TBC — ATO landing shown.",
+    kind: "regulator",
     pending: true,
   },
 ];
@@ -401,13 +410,11 @@ export default function HomePage() {
             {reportingItems.map((r) => (
               <li key={r.url}>
                 <article className="report-card">
-                  <div
-                    className="aspect-[16/10] w-full mb-4"
-                    style={{
-                      background:
-                        "linear-gradient(135deg, color-mix(in srgb, var(--color-brand) 35%, var(--color-ink)), var(--color-ink))",
-                    }}
-                    aria-hidden="true"
+                  <Artwork
+                    title={r.title}
+                    kind={r.kind}
+                    aspect="card"
+                    className="mb-4"
                   />
                   <p className="report-card__outlet">{r.outlet}</p>
                   <p className="report-card__meta">{r.date}</p>

@@ -43,6 +43,13 @@ export type Member = {
   currentRole?: string;
   /** 1–2 plain sentences. No citation tokens; this is the card/lede copy. */
   overview: string;
+  /**
+   * Optional portrait image path (e.g. "/images/members/bruce-d-hales.jpg").
+   * When present, the <Artwork> pipeline renders this instead of the
+   * category-glyph placeholder. Eventually sourced from licensed stock,
+   * original photography, or AI-generated placeholders.
+   */
+  imageUrl?: string;
   /** Optional headline pull-quote. Rendered at the very top of the profile. */
   pullQuote?: MemberPullQuote;
   /** Full profile body. Paragraphs may contain [[cite:id]] or [[pending:note]] tokens. */

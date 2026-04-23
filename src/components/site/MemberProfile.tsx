@@ -7,6 +7,7 @@ import {
 } from "@/lib/members";
 import { getSource } from "@/lib/sources";
 import { GITHUB_URL } from "@/lib/site";
+import { Artwork } from "@/components/site/Artwork";
 
 /**
  * Register B, plainspoken. The structure is a reference entry:
@@ -29,25 +30,37 @@ export function MemberProfile({ member }: { member: Member }) {
         className="section"
         style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
       >
-        <div className="site-container">
-          <p
-            className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-            style={{ color: "var(--color-brand)" }}
-          >
-            Our members &mdash; {categoryLabel(member.category)}
-          </p>
-          <h1
-            className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]"
-            style={{ color: "var(--color-surface)" }}
-          >
-            {member.name}
-          </h1>
-          {member.currentRole ? (
-            <p className="mt-3 text-lg opacity-80">{member.currentRole}</p>
-          ) : null}
-          <p className="mt-6 max-w-prose text-[1rem] leading-[1.8] opacity-90">
-            {member.overview}
-          </p>
+        <div className="site-container grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
+          <div>
+            <p
+              className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+              style={{ color: "var(--color-brand)" }}
+            >
+              Our members &mdash; {categoryLabel(member.category)}
+            </p>
+            <h1
+              className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]"
+              style={{ color: "var(--color-surface)" }}
+            >
+              {member.name}
+            </h1>
+            {member.currentRole ? (
+              <p className="mt-3 text-lg opacity-80">{member.currentRole}</p>
+            ) : null}
+            <p className="mt-6 max-w-prose text-[1rem] leading-[1.8] opacity-90">
+              {member.overview}
+            </p>
+          </div>
+          <div className="w-full max-w-[240px] md:max-w-none md:w-[240px]">
+            <Artwork
+              title={member.name}
+              kind="person"
+              aspect="portrait"
+              src={member.imageUrl}
+              loading="eager"
+              hideCaption
+            />
+          </div>
         </div>
       </section>
 

@@ -15,6 +15,10 @@ const MAX_TAG_LENGTH = 48;
  * Referenced from `buildPageMetadata` via `ogImageUrl()`. Every indexable
  * page gets a 1200x630 image containing its own title so that LinkedIn,
  * Slack, Discord, etc. show meaningfully distinct previews per URL.
+ *
+ * For in-page imagery (news cards, member photos, etc.) use the
+ * `<Artwork>` component, not this route. Social sharing and in-page
+ * imagery are deliberately different pipelines.
  */
 export function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
