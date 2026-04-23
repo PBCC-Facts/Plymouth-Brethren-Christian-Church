@@ -63,6 +63,7 @@ export const ROUTES: RouteDef[] = [
   { path: "/contact", topic: "Contact", indexable: false, priority: 0.4, changefreq: "yearly" },
 
   // Legal — low-priority but indexable once real copy lands
+  { path: "/legal", topic: "Legal", cluster: "A", indexable: true, priority: 0.4, changefreq: "yearly" },
   { path: "/terms", topic: "Terms & conditions", indexable: false, priority: 0.2, changefreq: "yearly" },
   { path: "/privacy", topic: "Privacy policy", indexable: false, priority: 0.2, changefreq: "yearly" },
   { path: "/cookies", topic: "Cookies policy", indexable: false, priority: 0.2, changefreq: "yearly" },

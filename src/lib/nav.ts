@@ -64,6 +64,7 @@ export const footerNav: NavItem[] = [
   { label: "Way of life", href: "/way-of-life" },
   { label: "Our members", href: "/our-members" },
   { label: "News", href: "/news" },
+  { label: "Legal", href: "/legal" },
   { label: "Terms & Conditions", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
   { label: "Cookies Policy", href: "/cookies" },
