@@ -5,28 +5,27 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
  * Title / description formulas per SEO_STRATEGY.md §1.
  *
  * The title suffix keeps the head term "Plymouth Brethren Christian Church"
- * in every page title (essential for ranking on it) while making the parody
- * / criticism nature unambiguous to both Google's deceptive-content
- * classifier and human readers.
+ * and the former name "Exclusive Brethren" in every page title, both for
+ * SEO and so that human readers see the site's posture before they click.
  *
- * The description wrapper keeps the head term and the former-name
- * "Exclusive Brethren" in every description, so long-tail searches on the
- * former brand still match our pages.
+ * The description wrapper identifies the project as an independent, open
+ * source record. "Not affiliated" is non-negotiable and appears on every
+ * page via the suffix.
  */
 const TITLE_SUFFIX =
-  "Plymouth Brethren Christian Church (parody · criticism · survivor resources)";
+  "Plymouth Brethren Christian Church · the public record";
 
 const DESCRIPTION_PREFIX =
-  "A satirical mirror and critical companion to the Plymouth Brethren Christian Church (formerly Exclusive Brethren).";
+  "An independent, open-source record of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). Every claim linked to a public source.";
 const DESCRIPTION_SUFFIX = "Not affiliated with the PBCC.";
 
 export type SeoCluster = "A" | "B" | "C" | "D" | "E" | "F" | "G";
 
 /** Editorial register per EDITORIAL_GUIDE.md. */
-export type SeoRegister = "parody" | "criticism" | "explanatory";
+export type SeoRegister = "record" | "explanatory";
 
 export interface PageSeoInput {
-  /** Short page topic — becomes the prefix of the <title>. */
+  /** Short page topic. Becomes the prefix of the <title>. */
   topic: string;
   /** Page-specific sentence. Wrapped by the formula unless `rawDescription`. */
   description: string;
@@ -34,7 +33,7 @@ export interface PageSeoInput {
   slug: string;
   /** Keyword cluster this page targets. Informational today; used for link-audits later. */
   cluster?: SeoCluster;
-  /** Editorial register for this page. Propagates to schema (satire genre). */
+  /** Editorial register for this page. */
   register?: SeoRegister;
   /** Keep out of the index (e.g. ComingSoon placeholders). Default false. */
   noindex?: boolean;
@@ -42,7 +41,7 @@ export interface PageSeoInput {
   rawDescription?: boolean;
   /** Override OG type. Default: "website" for "/", "article" otherwise. */
   ogType?: "article" | "website";
-  /** Optional OG image tag line. Default: "PARODY · CRITICISM". */
+  /** Optional OG image tag line. Default: "THE FACTS · INDEPENDENT". */
   ogTag?: string;
 }
 
@@ -73,7 +72,7 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     ogTag,
   } = input;
 
-  const title = `${topic} — ${TITLE_SUFFIX}`;
+  const title = `${topic} · ${TITLE_SUFFIX}`;
 
   const wrappedDescription = rawDescription
     ? description

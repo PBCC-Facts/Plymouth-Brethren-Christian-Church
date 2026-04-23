@@ -6,7 +6,7 @@ import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 export const metadata = buildPageMetadata({
   topic: "Resources",
   description:
-    "Cult-recovery, PBCC-specific, investigative, and official-record resources. Linked, not endorsed. A starter list — every entry is open to review.",
+    "Cult-recovery, PBCC-specific, investigative, and official-record resources. Linked, not endorsed. A starter list. every entry is open to review.",
   slug: "/resources",
   cluster: "B",
   register: "explanatory",
@@ -72,13 +72,13 @@ const groups: ResourceGroup[] = [
       "Resources that specifically address the Plymouth Brethren Christian Church (formerly the Exclusive Brethren).",
     entries: [
       {
-        name: "Stories — on this site",
+        name: "Stories. on this site",
         url: "/stories",
         gloss:
           "First-person survivor testimony, published on this site under explicit written consent. Intake is open; first stories are in review.",
       },
       {
-        name: "Reach Out Trust — Exclusive Brethren",
+        name: "Reach Out Trust. Exclusive Brethren",
         url: "https://reachouttrust.org/exclusive-brethren/",
         gloss:
           "Long-standing UK-based overview of Exclusive Brethren doctrine and separation practice.",
@@ -98,30 +98,30 @@ const groups: ResourceGroup[] = [
       "Major outside journalism and academic sources. Use these to verify or deepen anything on the site.",
     entries: [
       {
-        name: "ABC Four Corners — \u201CBehind the Exclusive Brethren\u201D",
+        name: "ABC Four Corners. \u201CBehind the Exclusive Brethren\u201D",
         url: "https://en.wikipedia.org/wiki/Behind_the_Exclusive_Brethren",
         gloss:
           "2006 documentary by Michael Bachelard and Debbie Whitmont. Baseline public-interest investigation.",
       },
       {
-        name: "New Statesman — \u201CEscaping Eden\u201D (2023)",
+        name: "New Statesman. \u201CEscaping Eden\u201D (2023)",
         url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
         gloss:
           "Long-read on leadership succession, the \u201CMan of God\u201D office, and family separation.",
       },
       {
-        name: "The Post (NZ) \u2014 Exclusive Brethren coverage",
+        name: "The Post (NZ), Exclusive Brethren coverage",
         url: "https://www.thepost.co.nz/nz-news/350113380/exclusive-brethren-told-create-crisis-generate-profits",
         gloss:
           "New Zealand investigation into leadership instructions on commerce and crisis-creation.",
       },
       {
-        name: "CDAMM \u2014 Plymouth Brethren",
+        name: "CDAMM, Plymouth Brethren",
         url: "https://www.cdamm.org/articles/plymouth-brethren",
         gloss: "Academic encyclopedia entry. Useful for doctrine history.",
       },
       {
-        name: "CESNUR \u2014 Briggs, 2008",
+        name: "CESNUR, Briggs, 2008",
         url: "https://www.cesnur.org/2008/london_briggs.pdf",
         gloss:
           "Academic paper on Plymouth Brethren separation doctrine and human-rights context.",
@@ -135,19 +135,19 @@ const groups: ResourceGroup[] = [
       "Primary-source government, regulator, and parliamentary documents. These are load-bearing for the litigation page.",
     entries: [
       {
-        name: "UK Parliament \u2014 Public Administration Committee submission (2012)",
+        name: "UK Parliament, Public Administration Committee submission (2012)",
         url: "https://publications.parliament.uk/pa/cm201213/cmselect/cmpubadm/writev/charity/m49.htm",
         gloss:
           "Written evidence to the 2012 charity-status inquiry. Describes separation practice in members' own words.",
       },
       {
-        name: "UK Charity Commission \u2014 Preston Down Trust (case record)",
+        name: "UK Charity Commission, Preston Down Trust (case record)",
         url: "https://www.gov.uk/government/organisations/charity-commission",
         gloss:
           "Commission portal. The Preston Down Trust case (2012\u20132014) closed with a compromise. Primary-document URL TBC.",
       },
       {
-        name: "Australian Parliament \u2014 committee submissions portal",
+        name: "Australian Parliament, committee submissions portal",
         url: "https://www.aph.gov.au/Parliamentary_Business/Committees",
         gloss:
           "Starting point for Senate and Joint-Committee submissions referencing PBCC-related matters.",
@@ -174,7 +174,7 @@ export default function ResourcesPage() {
             className="hero__eyebrow"
             style={{ color: "var(--color-brand)" }}
           >
-            The Facts. &mdash; resources
+            The Facts.. resources
           </p>
           <h1
             className="hero__title"
@@ -185,7 +185,7 @@ export default function ResourcesPage() {
           <p className="hero__sub" style={{ maxWidth: "58ch" }}>
             Support for people leaving high-control groups, PBCC-specific
             references, investigative journalism, and official records.
-            Linked, not endorsed. This is a starter list &mdash; if a resource
+            Linked, not endorsed. This is a starter list. if a resource
             belongs here and is missing,{" "}
             <a
               href={`${GITHUB_URL}/issues/new?labels=resources&title=Resource+suggestion:+`}

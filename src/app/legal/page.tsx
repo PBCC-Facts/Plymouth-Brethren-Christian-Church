@@ -23,7 +23,7 @@ export default function LegalPage() {
       <JsonLd
         data={articleSchema({
           headline:
-            "Legal — The Facts about the Plymouth Brethren Christian Church",
+            "Legal. The Facts about the Plymouth Brethren Christian Church",
           description:
             "Legal posture: parody, criticism, fair use, fair dealing, sourcing discipline, correction process, and how we respond to legal threats.",
           slug: "/legal",
@@ -43,14 +43,14 @@ export default function LegalPage() {
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">The Facts. &mdash; legal posture</p>
+            <p className="hero__eyebrow">The Facts.. legal posture</p>
             <h1 className="hero__title">Legal.</h1>
             <p className="hero__sub">
               This site is parody, criticism, and sourced journalism about a
               public religious organisation and its public-facing leadership.
               That is protected expression under United States law, and the
               equivalent fair-dealing doctrines in the United Kingdom,
-              Australia, and New Zealand &mdash; the jurisdictions in which
+              Australia, and New Zealand. the jurisdictions in which
               the Plymouth Brethren Christian Church most visibly operates.
               Every factual sentence on this site carries a public source.
               Nothing here is invented.
@@ -128,8 +128,8 @@ export default function LegalPage() {
               <strong>Parody, satire, and criticism of a public
               religious organisation are protected expression.</strong> In
               the United States, where this site is hosted and from which
-              most readers access it, commentary and criticism &mdash;
-              including satirical commentary &mdash; are squarely within
+              most readers access it, commentary and criticism.
+              including satirical commentary. are squarely within
               the First Amendment and within the statutory fair-use
               doctrine at 17 U.S.C. &sect; 107. The four fair-use factors,
               in the order Congress lists them, weigh in favour of this
@@ -185,7 +185,7 @@ export default function LegalPage() {
               appears on this site because it is the subject of the site.
               Using the accurate name of a public organisation to identify,
               discuss, and criticise that organisation is nominative use
-              &mdash; a doctrine recognised in US trademark law and in the
+             . a doctrine recognised in US trademark law and in the
               equivalent &ldquo;honest-use&rdquo; and comparative-reference
               carve-outs across UK, Australian, and New Zealand law. It is
               how every journalist, academic, and reviewer refers to a
@@ -198,7 +198,7 @@ export default function LegalPage() {
               parody and criticism project not affiliated with the PBCC. A
               reasonable reader is not confused about the source of this
               material. No visitor who lands on a page headed <em>&ldquo;Way
-              of life &mdash; Plymouth Brethren Christian Church (parody
+              of life. Plymouth Brethren Christian Church (parody
               &middot; criticism &middot; survivor resources)&rdquo;</em>
               believes they are on the PBCC&rsquo;s own site.
             </p>
@@ -234,13 +234,13 @@ export default function LegalPage() {
               >
                 FACTS.md
               </a>{" "}
-              reaches verified status &mdash; meaning either two independent
+              reaches verified status. meaning either two independent
               sources, or one primary source (court ruling, parliamentary
               inquiry, or regulator finding) plus one journalism source.
               Where a claim is true but we have not yet pinned a public
               citation, it ships with a visible{" "}
               <span className="footnote footnote--pending">&#9888;&#65038;</span>{" "}
-              marker pointing back to the open row &mdash; never silently.
+              marker pointing back to the open row. never silently.
               The full editorial rulebook is public at{" "}
               <a
                 href={`${GITHUB_URL}/blob/main/EDITORIAL_GUIDE.md`}
@@ -255,7 +255,7 @@ export default function LegalPage() {
               The practical consequence is that every factual sentence on
               this site is a sentence we can stand behind in front of a
               judge. That is by design. If a specific sentence turns out to
-              be wrong, the correction process is a pull request &mdash;
+              be wrong, the correction process is a pull request.
               fast, public, and visible in the commit history.
             </p>
             <p>
@@ -298,7 +298,7 @@ export default function LegalPage() {
               or to send written correspondence to the editorial address
               on <Link href="/contact">/contact</Link>. Identify the URL,
               quote the specific sentence, state what is factually wrong,
-              and &mdash; ideally &mdash; point to the public source that
+              and. ideally. point to the public source that
               establishes the correct fact. A sentence that is factually
               wrong will be corrected or removed. A sentence that is
               accurate and sourced will not be.
@@ -332,9 +332,9 @@ export default function LegalPage() {
               </li>
               <li>
                 Confidential correspondence that is clearly marked as such
-                and that addresses a specific factual correction &mdash;
+                and that addresses a specific factual correction.
                 rather than demanding the removal of accurate, sourced
-                commentary &mdash; will be handled confidentially and
+                commentary. will be handled confidentially and
                 responded to on that basis. The correction itself, once
                 made, will be public.
               </li>
@@ -363,9 +363,9 @@ export default function LegalPage() {
             <p>
               This site does not host PBCC photography, video, or audio. All
               imagery on the site is original or licensed stock. Short
-              attributed quotation of PBCC publications &mdash; the kind
+              attributed quotation of PBCC publications. the kind
               routinely used in reviews, journalism, and academic writing
-              &mdash; falls within fair use and the equivalent fair-dealing
+             . falls within fair use and the equivalent fair-dealing
               exceptions, and is the only PBCC material that appears here.
             </p>
             <p>
@@ -403,7 +403,7 @@ export default function LegalPage() {
               not published without their explicit, written consent. First-
               person survivor testimony at{" "}
               <Link href="/stories">/stories</Link> is accepted only under
-              the consent controls published there &mdash; on-record by
+              the consent controls published there. on-record by
               explicit written consent, reviewed by the contributor before
               ship, and removable on request. No survivor story is used
               without that sign-off, and no identifiable private member of
@@ -444,7 +444,7 @@ export default function LegalPage() {
             </p>
             <p>
               If the PBCC or an affiliated entity has a specific factual
-              correction, we want it &mdash; it makes the record better.
+              correction, we want it. it makes the record better.
               If what is objected to is the existence of accurate
               reporting and sourced criticism on the same search terms the
               fellowship spends real money to dominate, that is the point

@@ -5,8 +5,9 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-// Measured from research/captures/home.html on 2026-04-22.
-// Source of truth: research/tokens.json > nav.primary.
+// Nav structure mirrors the PBCC site's URL space for SEO head-term match,
+// but label text is ours (third-person, journalism flavour). Source of
+// truth for the PBCC nav capture: research/tokens.json > nav.primary.
 export const primaryNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Mission", href: "/mission" },
@@ -31,16 +32,16 @@ export const primaryNav: NavItem[] = [
         href: "/way-of-life/clothing-hair-and-fashion",
       },
       { label: "Politics and Voting", href: "/way-of-life/voting" },
-      { label: "Our beliefs", href: "/way-of-life/our-beliefs" },
-      { label: "Our history", href: "/way-of-life/our-history" },
-      { label: "Our network", href: "/way-of-life/our-network" },
-      { label: "Our Neighbours", href: "/way-of-life/our-neighbours" },
+      { label: "Beliefs", href: "/way-of-life/beliefs" },
+      { label: "History", href: "/way-of-life/history" },
+      { label: "Network", href: "/way-of-life/network" },
+      { label: "Neighbours", href: "/way-of-life/neighbours" },
     ],
   },
   {
-    label: "Our members",
-    href: "/our-members",
-    children: [{ label: "Any questions?", href: "/our-members/any-questions" }],
+    label: "People",
+    href: "/people",
+    children: [{ label: "Any questions?", href: "/people/any-questions" }],
   },
   {
     label: "News",
@@ -62,7 +63,7 @@ export const footerNav: NavItem[] = [
   { label: "Mission", href: "/mission" },
   { label: "Resources", href: "/resources" },
   { label: "Way of life", href: "/way-of-life" },
-  { label: "Our members", href: "/our-members" },
+  { label: "People", href: "/people" },
   { label: "News", href: "/news" },
   { label: "Legal", href: "/legal" },
   { label: "Terms & Conditions", href: "/terms" },
@@ -72,7 +73,7 @@ export const footerNav: NavItem[] = [
 ];
 
 /**
- * Browse-everything strip — every top-level destination on the site, grouped
+ * Browse-everything strip. Every top-level destination on the site, grouped
  * by build status. Items with {exists:false} render with an "(in progress)" tag.
  */
 export type BrowseItem = NavItem & { exists?: boolean };
@@ -81,7 +82,7 @@ export const browseAll: BrowseItem[] = [
   { label: "Home", href: "/", exists: true },
   { label: "Mission", href: "/mission", exists: true },
   { label: "Way of life", href: "/way-of-life" },
-  { label: "Our members", href: "/our-members" },
+  { label: "People", href: "/people", exists: true },
   { label: "News", href: "/news" },
   { label: "Reporting", href: "/news" },
   { label: "Resources", href: "/resources", exists: true },

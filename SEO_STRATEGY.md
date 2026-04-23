@@ -1,8 +1,8 @@
-# SEO Strategy — PBCC Parody / Criticism Site
+# SEO Strategy. The Facts, the public record of the PBCC.
 
-The strategic goal: **rank on branded PBCC searches so that researchers investigating the church find this site as a counterweight to the PR rebrand.** Secondary goal: rank on doctrine-specific and practice-specific long-tail queries so that ex-members and journalists land on explanatory content.
+Strategic goal: **rank on branded PBCC searches so that researchers investigating the church find this site as the sourced, open-source companion to the fellowship's PR rebrand.** Secondary goal: rank on doctrine-specific and practice-specific long-tail queries so that ex-members and journalists land on cited, linkable content.
 
-Parody alone doesn't rank. Depth + structure + schema + internal linking + page speed + a sustained supporting content library is what does.
+Depth, structure, schema, internal linking, page speed, and a sustained supporting content library are what ranks. The aggregator framing (the site organises others' reporting with a citation on every claim) is the editorial and legal posture; the SEO posture is head-term-targeted and long-tail-dense.
 
 ---
 
@@ -11,22 +11,22 @@ Parody alone doesn't rank. Depth + structure + schema + internal linking + page 
 **Title formula (all pages):**
 
 ```
-{page-topic} — Plymouth Brethren Christian Church (parody · criticism · survivor resources)
+{page-topic} · Plymouth Brethren Christian Church · the public record
 ```
 
-Keeps the brand term in every title (essential for ranking on it) while making the parody/criticism nature unambiguous to both Google's deceptive-content classifier and human readers.
+Keeps the brand term in every title (essential for ranking on it) and positions the site as the record of what's already public. Punctuation uses middle-dot separators, not em-dashes.
 
 **Meta description formula:**
 
 ```
-A satirical mirror and critical companion to the Plymouth Brethren Christian Church's PR site. Original parody and documented commentary on {page topic}, with sources. Not affiliated with the PBCC.
+An independent, open-source record of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). Every claim linked to a public source. {page-specific sentence}. Not affiliated with the PBCC.
 ```
 
 Both formulas are enforced by `src/lib/seo.ts` via a `buildPageMetadata({ topic, description, slug })` helper. Any page that opts out of the formula has to do so explicitly and document why.
 
 **Slug strategy:**
 
-- Mirror PBCC slugs where they exist (`/way-of-life`, `/our-members`, `/news`, `/contact`) to concentrate topical authority on the same URL tokens PBCC targets.
+- Mirror PBCC slugs where they still align (`/way-of-life`, `/news`, `/contact`) to concentrate topical authority on the same URL tokens. PBCC's own-voice paths (originally `/our-members` and `/way-of-life/our-beliefs` siblings) were renamed in April 2026 to `/people` and `/way-of-life/{beliefs,history,network,neighbours}`; 301 redirects in `next.config.ts` preserve equity.
 - New slugs for supporting content, chosen for keyword match (`/glossary`, `/faq`, `/timeline`, `/doctrine/separation`, `/litigation`, `/about-this-site`).
 
 ---
@@ -35,7 +35,7 @@ Both formulas are enforced by `src/lib/seo.ts` via a `buildPageMetadata({ topic,
 
 Clusters ordered by strategic priority. Each cluster has a **primary** target page (the one we're optimizing to rank) and **supporting** pages (where internal links flow from and from which topical authority accumulates to the primary).
 
-### Cluster A — Brand head terms (highest priority)
+### Cluster A. Brand head terms (highest priority)
 
 Primary target: **Homepage** `/`
 
@@ -49,7 +49,7 @@ exclusive brethren | informational | Former name; enormous search volume histori
 
 Supporting: `/about-this-site`, `/timeline`, `/faq`, `/glossary`.
 
-### Cluster B — Brand + investigative modifiers (highest commercial SEO value)
+### Cluster B. Brand + investigative modifiers (highest commercial SEO value)
 
 Primary targets: **Homepage**, **FAQ**, **doctrine pages**.
 
@@ -59,11 +59,11 @@ is plymouth brethren a cult | FAQ (anchor question), Homepage | Classic PAA quer
 plymouth brethren cult | FAQ, Homepage | High intent.
 plymouth brethren shunning | /doctrine/withdrawing-from | Long-tail, very high intent.
 leaving plymouth brethren | FAQ (anchor) + future /leaving page | Survivor-intent; serve them seriously.
-plymouth brethren abuse | /litigation + FAQ | Tread carefully — source every claim.
+plymouth brethren abuse | /litigation + FAQ | Tread carefully. source every claim.
 plymouth brethren controversy | Homepage + /timeline | Broad.
 exclusive brethren cult | FAQ, Homepage | Former-name variant.
 
-### Cluster C — Doctrine and practice (long-tail, sustained traffic)
+### Cluster C. Doctrine and practice (long-tail, sustained traffic)
 
 Primary targets: **`/doctrine/[slug]`** and **`/glossary`**.
 
@@ -81,7 +81,7 @@ can plymouth brethren vote | /faq
 can plymouth brethren use the internet | /faq
 brethren streamline3 | /doctrine/technology (future)
 
-### Cluster D — People
+### Cluster D. People
 
 Primary targets: specific pages.
 
@@ -96,7 +96,7 @@ aberdeen incident brethren | /timeline
 
 Author pages for living non-public persons are not created. We describe roles and cite public events.
 
-### Cluster E — Adjacent institutions
+### Cluster E. Adjacent institutions
 
 Queries | Target
 --- | ---
@@ -105,7 +105,7 @@ universal business team | /doctrine/business-network (future)
 ubt brethren | same
 rapid relief team | mentioned on /way-of-life with critical context + footnotes
 
-### Cluster F — Litigation and regulation
+### Cluster F. Litigation and regulation
 
 Primary target: **`/litigation`**.
 
@@ -117,7 +117,7 @@ australian senate inquiry brethren | /litigation
 ato raid ubt | /litigation (March 2024 ATO access-without-notice action)
 plymouth brethren charity commission | /litigation
 
-### Cluster G — Documentary / media
+### Cluster G. Documentary / media
 
 Primary targets: **FAQ**, **news commentary** (future).
 
@@ -137,13 +137,13 @@ new statesman plymouth brethren | /about-this-site (press-citations section)
 - [ ] `<link rel="canonical">` points to the page itself.
 - [ ] One H1, cluster-primary keyword in it.
 - [ ] At least 2 H2s referencing secondary keywords from the cluster map.
-- [ ] Article schema (JSON-LD). Parody pages use `genre: "satire"`.
+- [ ] Article schema (JSON-LD). Register is `"record"` on `/` and the profile pages, `"explanatory"` elsewhere.
 - [ ] BreadcrumbList schema.
 - [ ] Per-page Open Graph: title, description, image with "PARODY" or "CRITICISM" overlay.
 - [ ] First mention of "Plymouth Brethren Christian Church" in body copy links to homepage.
 - [ ] First mention of any doctrine links to its explainer page.
 - [ ] `RelatedReading` block at bottom with 3–5 internal links.
-- [ ] All outbound citations use `rel="noopener"` (not `nofollow` — journalism, not manipulation).
+- [ ] All outbound citations use `rel="noopener"` (not `nofollow`. journalism, not manipulation).
 - [ ] LCP image has explicit width/height.
 - [ ] No client-side JS except what the page actually needs.
 
@@ -163,13 +163,13 @@ new statesman plymouth brethren | /about-this-site (press-citations section)
 
 PBCC topics sit next to YMYL (life decisions, mental health, family separation). Google rewards Experience, Expertise, Authoritativeness, Trust on these. Our signals:
 
-- **Publisher identity:** full name, credentials, attorney relationship, documentary contribution — on `/about-this-site` with Person schema and `sameAs` links to press appearances.
+- **Publisher identity:** full name, credentials, attorney relationship, documentary contribution. on `/about-this-site` with Person schema and `sameAs` links to press appearances.
 - **Sources on every claim.** Public, checkable, stable URLs where possible.
 - **Clear statement of purpose and non-affiliation.**
 - **Contact page with real response.** (Low-friction for journalists and regulators.)
 - **Consistent update cadence.** `dateModified` on every page; at least quarterly review.
 
-## 6. Off-site (post-launch — out of scope for session 1, tracked here)
+## 6. Off-site (post-launch. out of scope for session 1, tracked here)
 
 - Outreach to ex-PBCC bloggers/podcasters for organic links.
 - Wikipedia "Further reading" pitch via talk page with full disclosure; do not edit main article ourselves.
@@ -194,7 +194,7 @@ When two pages could target the same query, decide up-front which one owns it. T
 ## 9. Questions for you before I start optimizing
 
 1. Is there anything on the keyword cluster list you'd rather not target yet (e.g. litigation-specific terms that might be premature, or people's names where you want to defer until counsel weighs in)?
-2. Do you want the homepage to target the head term `plymouth brethren christian church` directly, or to target a slightly softer variant like `plymouth brethren christian church — criticism and survivor resources` and push the head term onto `/about-this-site`? Head-term targeting maximizes reach but is the most legally visible posture.
+2. Do you want the homepage to target the head term `plymouth brethren christian church` directly, or to target a slightly softer variant like `plymouth brethren christian church. criticism and survivor resources` and push the head term onto `/about-this-site`? Head-term targeting maximizes reach but is the most legally visible posture.
 3. Are there keyword clusters we should add that aren't in my map (e.g. specific countries, specific congregations, Rapid Relief Team scrutiny)?
 
 Once I have answers (or "proceed with the map as drafted"), I'll wire `lib/seo.ts` to enforce the formulas and start on components.
@@ -207,19 +207,19 @@ Trent confirmed:
 
 - **Homepage head term.** Target `plymouth brethren christian church` directly on `/`. Accept the legal visibility; the whole posture of this project is explicit criticism in public.
 - **Co-primary secondaries (elevated within Cluster A).**
-  1. `exclusive brethren` — the legacy label journalists, ex-members, and academics still use; the PBCC actively pushes back on it, which means the label itself is a high-intent signal. We put it in the site-wide description wrapper ("formerly Exclusive Brethren") so every page matches on the former brand.
-  2. `bruce hales` / `bruce d hales` — the current "Man of God" and the single most-searched PBCC-adjacent person. Cluster D's `/doctrine/man-of-god` page remains the long-term canonical, but until it ships, homepage + mission + `/our-members` descriptions name him explicitly so those pages pick up the traffic.
+  1. `exclusive brethren`. the legacy label journalists, ex-members, and academics still use; the PBCC actively pushes back on it, which means the label itself is a high-intent signal. We put it in the site-wide description wrapper ("formerly Exclusive Brethren") so every page matches on the former brand.
+  2. `bruce hales` / `bruce d hales`. the current "Man of God" and the single most-searched PBCC-adjacent person. Cluster D's `/doctrine/man-of-god` page remains the long-term canonical, but until it ships, homepage + mission + `/people` descriptions name him explicitly so those pages pick up the traffic.
 - **ComingSoon pages.** Indexable:false in `src/lib/routes.ts` and `noindex: true` via `buildPageMetadata`. Flip both when real copy lands.
 - **OG images.** Auto-generated at `/og?title=…&tag=…` via `src/app/og/route.tsx` using `next/og`'s `ImageResponse`. One generator, per-page title from `buildPageMetadata`.
 - **Canonical origin.** `https://factsaboutplymouthbrethrenchristianchurch.org` (from `src/lib/site.ts`).
 
-## 11. Title / description formula — implementation
+## 11. Title / description formula. implementation
 
 Implemented in `src/lib/seo.ts::buildPageMetadata()`.
 
 ```
-<title>:       {topic} — Plymouth Brethren Christian Church (parody · criticism · survivor resources)
-<meta desc>:   A satirical mirror and critical companion to the Plymouth Brethren
+<title>:       {topic} · Plymouth Brethren Christian Church · the public record
+<meta desc>:   An independent, open-source record of the Plymouth Brethren
                Christian Church (formerly Exclusive Brethren). {page sentence}
                Not affiliated with the PBCC.
 ```

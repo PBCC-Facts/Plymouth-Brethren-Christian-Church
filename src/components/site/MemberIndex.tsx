@@ -8,9 +8,9 @@ import { getSource } from "@/lib/sources";
 import { GITHUB_URL } from "@/lib/site";
 
 /**
- * /our-members landing. Register B, plainspoken. The page's first job is
- * to declare the inclusion rule so readers see the editorial gate before
- * the roster; the second is to list the roster.
+ * /people landing. Plainspoken. The page's first job is to declare the
+ * inclusion rule so readers see the editorial gate before the roster;
+ * the second is to list the roster.
  */
 export function MemberIndex() {
   const published = listPublishedMembers();
@@ -22,11 +22,11 @@ export function MemberIndex() {
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">The Facts. &mdash; our members</p>
-            <h1 className="hero__title">Our members.</h1>
+            <p className="hero__eyebrow">The Facts. People</p>
+            <h1 className="hero__title">People.</h1>
             <p className="hero__sub">
-              Sourced profiles of named figures in the Plymouth Brethren
-              Christian Church &mdash; leadership, historical leaders, and
+              Sourced profiles of named figures in and around the Plymouth
+              Brethren Christian Church: leadership, historical leaders, and
               executives of the commercial network. Every claim on every
               profile footnotes to a public source. Inclusion is bright-line
               and published.
@@ -74,7 +74,7 @@ export function MemberIndex() {
               <li>
                 <strong>Named executives of the commercial network</strong>{" "}
                 (UBT, OneSchool Global, Rapid Relief Team) who appear by name
-                in regulatory actions &mdash; including the 2024 ATO raid on
+                in regulatory actions. including the 2024 ATO raid on
                 UBT offices.
               </li>
             </ul>
@@ -215,7 +215,7 @@ export function MemberIndex() {
                 >
                   Propose a new profile
                 </a>{" "}
-                &mdash; name + inclusion bucket + at least one public source URL.
+               . name + inclusion bucket + at least one public source URL.
               </li>
               <li>
                 <a
@@ -226,13 +226,13 @@ export function MemberIndex() {
                 >
                   File a correction
                 </a>{" "}
-                &mdash; for any factual error on a published profile.
+               . for any factual error on a published profile.
               </li>
               <li>
                 <Link href="/contact" style={{ color: "var(--color-brand)" }}>
                   Send a confidential tip
                 </Link>{" "}
-                &mdash; when GitHub is not appropriate.
+               . when GitHub is not appropriate.
               </li>
             </ul>
           </div>

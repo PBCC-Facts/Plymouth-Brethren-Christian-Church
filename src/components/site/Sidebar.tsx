@@ -25,7 +25,7 @@ export function Sidebar({ open, setOpen }: Props) {
       <Link
         href="/"
         className="sidebar__brand"
-        aria-label="The Facts — Plymouth Brethren Christian Church (parody) — home"
+        aria-label="The Facts. Plymouth Brethren Christian Church (parody). home"
       >
         <span className="sidebar__brand-facts">The Facts.</span>
         <span className="sidebar__brand-name">

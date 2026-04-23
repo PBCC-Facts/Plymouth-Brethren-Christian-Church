@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 @theme {
-  /* Primary brand — teal. Sidebar, CTAs, active nav, pagination current. */
+  /* Primary brand. teal. Sidebar, CTAs, active nav, pagination current. */
   --color-brand: #4c868f;
   --color-brand-hover: #3e6f77;
 
@@ -15,7 +15,7 @@
   --color-purple: #534588;     /* news headings, pagination active, slider strong */
   --color-blueviolet: #5f6eb3; /* featured-card date only */
   --color-rust: #a44200;       /* link hover / form focus border only */
-  --color-facts: #1e3a5f;      /* "The Facts." pre-header tagline — darker navy, ours */
+  --color-facts: #1e3a5f;      /* "The Facts." pre-header tagline. darker navy, ours */
 
   /* Rule / neutral gray. */
   --color-rule: #dfe1e1;
@@ -75,7 +75,7 @@
   padding-inline: 1.25rem;
 }
 
-/* Sidebar — the real site uses two stacked blocks:
+/* Sidebar. the real site uses two stacked blocks:
    a charcoal hamburger nub on top, then a teal strip with a vertical logo. */
 .sidebar {
   position: sticky;
@@ -152,7 +152,7 @@
   letter-spacing: 0.04em;
 }
 
-/* Section label — matches real .heading__separator */
+/* Section label. matches real .heading__separator */
 .section-label {
   font-family: var(--font-sans);
   font-weight: 700;
@@ -185,7 +185,7 @@
   .rich-media.reverse > :first-child { order: 2; }
 }
 
-/* Button — teal, white text, square corners like the source site */
+/* Button. teal, white text, square corners like the source site */
 .btn {
   display: inline-block;
   padding: 0.9rem 1.6rem;
@@ -205,7 +205,7 @@
 }
 .btn--on-dark { box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08); }
 
-/* Footnotes — superscript source citations */
+/* Footnotes. superscript source citations */
 .footnote {
   font-size: 0.65em;
   line-height: 0;
@@ -228,7 +228,7 @@
   cursor: help;
 }
 
-/* Browse-everything strip — thin link row between last section and footer */
+/* Browse-everything strip. thin link row between last section and footer */
 .browse-strip {
   background: color-mix(in srgb, var(--color-ink) 92%, var(--color-brand));
   color: var(--color-surface);
@@ -262,6 +262,56 @@
   opacity: 0.55;
   font-size: 0.7rem;
   margin-left: 0.25rem;
+}
+
+/* By-the-numbers stat strip on homepage */
+.stat-strip {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+@media (min-width: 640px) {
+  .stat-strip { grid-template-columns: 1fr 1fr; }
+}
+@media (min-width: 1024px) {
+  .stat-strip { grid-template-columns: repeat(5, 1fr); gap: 1.5rem; }
+}
+
+.stat-block {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--color-rule);
+}
+.stat-block__glyph {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 0.5rem;
+}
+.stat-block__value {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  line-height: 1;
+  color: var(--color-ink);
+}
+.stat-block__label {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.7rem;
+  color: var(--color-brand);
+  margin-top: 0.5rem;
+}
+.stat-block__gloss {
+  margin-top: 0.4rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--color-ink) 80%, var(--color-surface));
 }
 
 /* Open-by-design action cards on homepage */
@@ -337,7 +387,7 @@
   color: color-mix(in srgb, var(--color-ink) 85%, var(--color-surface));
 }
 
-/* Hero — dark charcoal surface with white serif display type */
+/* Hero. dark charcoal surface with white serif display type */
 .hero {
   position: relative;
   background: var(--color-ink);

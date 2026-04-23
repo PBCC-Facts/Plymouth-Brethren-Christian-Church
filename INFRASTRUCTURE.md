@@ -1,4 +1,4 @@
-# Infrastructure — PBCC Parody / Criticism Site
+# Infrastructure. PBCC Parody / Criticism Site
 
 ## Summary
 
@@ -15,7 +15,7 @@ Both services are chosen for the same reason: they give us speed-to-launch and l
 
 ### Why
 
-- Native Next.js deployment — SSG + ISR + Edge Middleware all first-class.
+- Native Next.js deployment. SSG + ISR + Edge Middleware all first-class.
 - Preview deployments on every PR (so corrections land in a reviewable URL, not a local-only diff).
 - Edge cache and image optimization covered without extra config.
 - Free tier is fine for initial traffic; Pro is inexpensive if traffic grows.
@@ -30,13 +30,13 @@ Both services are chosen for the same reason: they give us speed-to-launch and l
 - **Environment variables** (see Secrets section):
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-  - `SUPABASE_SERVICE_ROLE_KEY` (server-only — used by Edge Functions / Route Handlers for privileged operations)
-  - `NEXT_PUBLIC_SITE_URL` (canonical origin — used by sitemap, OG, schema)
+  - `SUPABASE_SERVICE_ROLE_KEY` (server-only. used by Edge Functions / Route Handlers for privileged operations)
+  - `NEXT_PUBLIC_SITE_URL` (canonical origin. used by sitemap, OG, schema)
 - **Preview deployments:** enabled for every PR. Use a password-protected preview if counsel prefers pre-launch review to be unindexed.
 - **Production branch:** `main` (after we merge Step 1 and subsequent step PRs).
 - **Git integration:** connect the repo; auto-deploy on merge to `main`.
 - **Headers (`next.config.js`):** Content-Security-Policy including `supabase.co`, `*.supabase.co` for the backend, plus the standard `X-Content-Type-Options`, `Referrer-Policy: strict-origin-when-cross-origin`, `Permissions-Policy` minimal.
-- **Redirects:** placeholder — mirror any structural URLs PBCC redirects for, and catch common ex-member search queries (`/cult`, `/shunning`, `/leaving`) → appropriate canonical pages.
+- **Redirects:** placeholder. mirror any structural URLs PBCC redirects for, and catch common ex-member search queries (`/cult`, `/shunning`, `/leaving`) → appropriate canonical pages.
 
 ### Pages strategy
 
@@ -142,8 +142,8 @@ RLS policies:
 
 ### Supabase integration pattern
 
-- `src/lib/supabase/server.ts` — service-role client for Route Handlers / Edge Functions.
-- `src/lib/supabase/browser.ts` — anon client for any isolated client-side reads (likely none in session 1).
+- `src/lib/supabase/server.ts`. service-role client for Route Handlers / Edge Functions.
+- `src/lib/supabase/browser.ts`. anon client for any isolated client-side reads (likely none in session 1).
 - Zod schemas in `src/lib/schemas/` for every insert payload. Server-side validation before DB write.
 - Rate limiting on the `submissions` and `testimonies` intake endpoints via Vercel Edge Middleware (IP + Upstash Redis if volumes grow; initially a simple per-IP daily cap in Postgres is fine).
 
@@ -176,7 +176,7 @@ Recommend **Plausible** (self-hosted or cloud):
 - Clean CSP story.
 - Good SEO/engagement signals without turning the site into a tracking surface (which would undermine our survivor-advocacy posture).
 
-Alternative: Vercel Web Analytics (first-party) — simpler to wire; fewer detailed event capabilities.
+Alternative: Vercel Web Analytics (first-party). simpler to wire; fewer detailed event capabilities.
 
 Decision deferred to post-launch; neither blocks the build.
 
@@ -193,7 +193,7 @@ Decision deferred to post-launch; neither blocks the build.
 
 ## 6. Questions for you
 
-1. **Supabase scope:** the initial-scope list above (intake, newsletter, testimony moderation, rank tracking, litigation) — drop anything you don't want?
+1. **Supabase scope:** the initial-scope list above (intake, newsletter, testimony moderation, rank tracking, litigation). drop anything you don't want?
 2. **Testimony intake:** survivor stories are being brought in-site at `/stories` under explicit written consent. Confirm the Supabase-backed moderation queue remains the right mechanism (draft → consent-on-file → publish → removable on request), or whether a lighter form-only intake is sufficient for launch.
 3. **Newsletter:** is that a channel you actually want to operate? It's valuable for launch announcements and litigation updates, but it's also an ongoing commitment.
 4. **Analytics:** Plausible (cookieless, paid) vs Vercel Web Analytics (free, first-party, simpler) vs no analytics?

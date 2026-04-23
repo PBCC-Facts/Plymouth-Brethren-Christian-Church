@@ -1,8 +1,8 @@
-# MEMBERS_POLICY.md — inclusion rule for `/our-members`
+# MEMBERS_POLICY.md. inclusion rule for `/people`
 
-This is the editorial and legal gate for the `/our-members` section. Read this before proposing, drafting, or merging a profile.
+This is the editorial and legal gate for the `/people` section. Read this before proposing, drafting, or merging a profile.
 
-The page exists to document, with sources, the named individuals who shape public-facing PBCC activity — leadership, historical leaders, and executives of the commercial network. It is deliberately narrow. Private members of the fellowship who have not chosen to be public do not appear here and never will.
+The page exists to document, with sources, the named individuals who shape public-facing PBCC activity. leadership, historical leaders, and executives of the commercial network. It is deliberately narrow. Private members of the fellowship who have not chosen to be public do not appear here and never will.
 
 ## 1. Inclusion buckets
 
@@ -11,7 +11,7 @@ A person may be profiled if they clear **at least one** of the following:
 1. **Self-disclosed by PBCC.** Named on the church's own resource pages, press releases, official publications, or affiliated charity filings.
 2. **Documented leadership role.** Current or former office within the fellowship, established by independent reporting, court record, or the church's own record. Dead leaders are in scope.
 3. **Substantive naming in major journalism, or in court / regulator filings.** Named (not merely referenced in passing) in ABC Four Corners, New Statesman, The Guardian, NYT, The Post (NZ), SMH, or equivalent outlets; or a named party in public court, charity-regulator, tax, or parliamentary-inquiry proceedings.
-4. **Named executives of the commercial network.** Directors or senior officers of Brethren-linked business entities (UBT, OneSchool Global, Rapid Relief Team, and the like) who appear by name in regulatory actions — including the 2024 ATO raid on UBT offices — or in sworn filings.
+4. **Named executives of the commercial network.** Directors or senior officers of Brethren-linked business entities (UBT, OneSchool Global, Rapid Relief Team, and the like) who appear by name in regulatory actions. including the 2024 ATO raid on UBT offices. or in sworn filings.
 
 A person who does not clear any bucket is not profiled, regardless of what we believe.
 
@@ -19,7 +19,7 @@ A person who does not clear any bucket is not profiled, regardless of what we be
 
 No row is merged without every one of these:
 
-- **`inclusion_basis`** — one or two sentences stating which bucket(s) the subject clears and why. This text renders on the profile page; the reader sees the editorial gate.
+- **`inclusion_basis`**. one or two sentences stating which bucket(s) the subject clears and why. This text renders on the profile page; the reader sees the editorial gate.
 - **At least one registered source.** Every `source_id` on a row must exist in `src/lib/sources.ts`.
 - **Every factual claim footnoted.** Any `[[cite:id]]` token in the body must reference a registered source; any claim we cannot pin to a URL uses `[[pending:note]]` and renders a visible ⚠︎ marker.
 - **FACTS.md row for every claim.** The profile and FACTS.md move together. A claim that is not in FACTS.md does not ship in a profile.
@@ -50,7 +50,7 @@ Anyone reading the site can file a correction. The profile footer carries a pre-
 
 ## 6. Hard lines
 
-- Private members of PBCC who have not chosen to be public are never listed — not in profiles, not in the roadmap, not in bare-name lists.
+- Private members of PBCC who have not chosen to be public are never listed. not in profiles, not in the roadmap, not in bare-name lists.
 - No family members, spouses, or children of public figures appear by name unless they independently clear the inclusion rule.
 - No claim is shipped without a source. The `[[pending:…]]` escape hatch renders a visible warning; it does not substitute for a citation.
 - No profile may carry Register C (snarky mirror) on the individual. Register C stays on the institutional mirror pages (home, `/way-of-life`).

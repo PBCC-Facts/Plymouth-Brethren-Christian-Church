@@ -24,7 +24,7 @@ export function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
 
   const rawTitle = searchParams.get("title") ?? "Plymouth Brethren Christian Church";
-  const rawTag = searchParams.get("tag") ?? "PARODY · CRITICISM";
+  const rawTag = searchParams.get("tag") ?? "THE FACTS · INDEPENDENT";
 
   const title = rawTitle.slice(0, MAX_TITLE_LENGTH);
   const tag = rawTag.slice(0, MAX_TAG_LENGTH);

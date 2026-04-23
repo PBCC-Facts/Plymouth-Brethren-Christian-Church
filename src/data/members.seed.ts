@@ -1,7 +1,7 @@
 import type { Member } from "@/lib/members";
 
 /**
- * Source of truth for /our-members content in v1.
+ * Source of truth for /people content in v1.
  *
  * This file mirrors public.members (see
  * supabase/migrations/20260423052145_add_members_table.sql). When the
@@ -35,7 +35,7 @@ export const members: Member[] = [
       quote:
         "He\u2019d be better to take arsenic, or go and get some rat poison or something, take a bottle of it. \u2026 that would be better, to finish yourself off that way than having to do with the opponents of the truth.",
       attribution:
-        "Bruce D. Hales, UK ministry meeting, September 2015 \u2014 addressing the case of a 25-year-old New Zealand member in contact with ex-member family",
+        "Bruce D. Hales, UK ministry meeting, September 2015, addressing the case of a 25-year-old New Zealand member in contact with ex-member family",
       sourceIds: [
         "hales-ratpoison-stuff",
         "hales-ratpoison-cessnock",
@@ -82,55 +82,55 @@ export const members: Member[] = [
       },
       {
         heading:
-          "Conversion therapy \u2014 the Craig Hoyle meeting (December 2007)",
+          "Conversion therapy, the Craig Hoyle meeting (December 2007)",
         paragraphs: [
-          "In December 2007, Bruce Hales personally met 19-year-old Craig Hoyle in Sydney after Hoyle had disclosed he was gay. Hoyle \u2014 now Chief News Editor of New Zealand\u2019s Sunday Star-Times and author of a HarperCollins memoir \u2014 has testified publicly, in his book, in The Times (London) and to the NZ Royal Commission of Inquiry into Abuse in Care that Hales told him to \u201Cnever accept\u201D his homosexuality and said: \u201CThere\u2019s medication you can go on for these things.\u201D [[cite:hoyle-excommunicated-memoir]] [[cite:hoyle-times-cyprostat]]",
-          "Hales directed Hoyle to two Brethren-member doctors. One \u2014 Dr Mark Craddock, Hales\u2019s cousin \u2014 after a ten-minute consultation prescribed Cyprostat, a chemical-castration agent ordinarily used in the treatment of prostate cancer and sex offenders. Craddock was later found guilty of unsatisfactory professional conduct by the NSW Medical Professional Standards Committee. [[cite:hoyle-times-cyprostat]]",
+          "In December 2007, Bruce Hales personally met 19-year-old Craig Hoyle in Sydney after Hoyle had disclosed he was gay. Hoyle, now Chief News Editor of New Zealand\u2019s Sunday Star-Times and author of a HarperCollins memoir, has testified publicly, in his book, in The Times (London) and to the NZ Royal Commission of Inquiry into Abuse in Care that Hales told him to \u201Cnever accept\u201D his homosexuality and said: \u201CThere\u2019s medication you can go on for these things.\u201D [[cite:hoyle-excommunicated-memoir]] [[cite:hoyle-times-cyprostat]]",
+          "Hales directed Hoyle to two Brethren-member doctors. One, Dr Mark Craddock, Hales\u2019s cousin, after a ten-minute consultation prescribed Cyprostat, a chemical-castration agent ordinarily used in the treatment of prostate cancer and sex offenders. Craddock was later found guilty of unsatisfactory professional conduct by the NSW Medical Professional Standards Committee. [[cite:hoyle-times-cyprostat]]",
           "The NZ Royal Commission\u2019s 2024 final report, \u201CWhanaketia,\u201D records in its PBCC chapter that \u201Cthere is no tolerance for alternative sexual and or gender identification \u2026 conversion therapy is imposed.\u201D [[cite:whanaketia-royalcommission-nz]]",
           "Hoyle himself, on RNZ: \u201CWe believed that Bruce Hales was God\u2019s voice on Earth, that literally everything that came out of his mouth was God speaking to us through a man \u2026 It was unthinkable for me that I would refuse even what they would call a \u2018suggestion\u2019 from the man of God.\u201D [[cite:hoyle-excommunicated-memoir]]",
         ],
       },
       {
         heading:
-          "A child abuser restored to fellowship \u2014 the Lindsay Jensen case",
+          "A child abuser restored to fellowship, the Lindsay Jensen case",
         paragraphs: [
           "Brethren elder Lindsay Jensen sexually abused two sisters placed in his Sydney home. Jensen was briefly \u201Cshut up\u201D by the fellowship in August 2003 and was restored to fellowship in December 2003. He was convicted in 2005 and again in 2007 for offences including against a child under ten. [[cite:jensen-smh-goodweekend-2016]]",
-          "Between the ages of ten and thirteen, the younger victim met Bruce Hales personally five times in his Sydney office. The Sydney Morning Herald reports that Hales \u201Cran through every humiliating detail of the abuse\u201D and told her he was \u201Ca bit like a judge\u201D who had to \u201Chear both sides.\u201D While Hales conducted those meetings, the girls\u2019 older sister wrote to him begging the fellowship not to reinstate Jensen \u2014 writing of the younger victim: \u201CShe has lost faith in the Brethren \u2026 She talks of killing herself.\u201D [[cite:jensen-smh-goodweekend-2016]]",
+          "Between the ages of ten and thirteen, the younger victim met Bruce Hales personally five times in his Sydney office. The Sydney Morning Herald reports that Hales \u201Cran through every humiliating detail of the abuse\u201D and told her he was \u201Ca bit like a judge\u201D who had to \u201Chear both sides.\u201D While Hales conducted those meetings, the girls\u2019 older sister wrote to him begging the fellowship not to reinstate Jensen, writing of the younger victim: \u201CShe has lost faith in the Brethren \u2026 She talks of killing herself.\u201D [[cite:jensen-smh-goodweekend-2016]]",
           "The same reporting records a senior Brethren woman telling the victims\u2019 mother: \u201CIt would be better for a millstone to be hung around your neck and for you to be cast into the depths of the sea rather than go to the police.\u201D Justice William Knight, sentencing Jensen, said: \u201CReligious groups seem to feel that they have some particular right to avoid the responsibilities of the laws of the land. It annoys the tripe out of me.\u201D [[cite:jensen-smh-goodweekend-2016]]",
-          "In 2016-17, a PBCC entity signed a Services and Confidentiality Deed worth a proposed $920,000 with PR consultant Tony McCorkell. Bank records and texts reported by the Sydney Morning Herald show two transfers totalling $275,000 in October and November 2016. Michael Bachelard \u2014 the journalist who reported the Jensen case \u2014 is named in Schedule 3 of the deed as the sole prohibited recipient of anything McCorkell might disclose. [[cite:mccorkell-smh-bachelard-2017]]",
+          "In 2016-17, a PBCC entity signed a Services and Confidentiality Deed worth a proposed $920,000 with PR consultant Tony McCorkell. Bank records and texts reported by the Sydney Morning Herald show two transfers totalling $275,000 in October and November 2016. Michael Bachelard, the journalist who reported the Jensen case, is named in Schedule 3 of the deed as the sole prohibited recipient of anything McCorkell might disclose. [[cite:mccorkell-smh-bachelard-2017]]",
         ],
       },
       {
         heading:
-          "\u201CNo mercy\u201D \u2014 lobbying the UK Charity Commission",
+          "\u201CNo mercy\u201D, lobbying the UK Charity Commission",
         paragraphs: [
           "After the UK Charity Commission refused charitable registration to the Preston Down Trust (a PBCC congregation) on 7 June 2012, citing harm arising from the doctrine of separation, the fellowship mounted what The Times (London) later called a \u201CNo mercy\u201D lobbying campaign against the regulator. [[cite:hales-times-infiltrate]]",
           "The Times\u2019s investigation, based on leaked internal documents, reports that Hales \u201Chad instructed members to infiltrate the meeting, to take a tape recorder and dress up as an out [ex-member],\u201D and that the campaign produced a 76-slide internal deck captioned \u201CNo mercy. Nothing else will do.\u201D Members were instructed to \u201Cgo for the jugular, go for the underbelly.\u201D [[cite:hales-times-infiltrate]]",
           "In the course of the lobbying, 449 MPs were visited by Brethren members, more than 3,000 letters reached the Commission and at least 233 MPs wrote to the regulator on the fellowship\u2019s behalf. Conservative MP Peter Bone emailed the Brethren: \u201CYour wish is my command.\u201D [[cite:hales-times-infiltrate]]",
-          "On 3 January 2014 the Commission reversed and registered Preston Down Trust under a binding Deed of Variation. The full decision records \u201Cconsiderable evidence of significant \u2018detriment or harm\u2019\u201D emanating from the doctrine and practices of the Plymouth Brethren Christian Church, and discusses the authority held by the \u201Cworldwide leader of the Brethren\u201D \u2014 the office Hales holds. [[cite:pdt-charitycommission-2014]]",
+          "On 3 January 2014 the Commission reversed and registered Preston Down Trust under a binding Deed of Variation. The full decision records \u201Cconsiderable evidence of significant \u2018detriment or harm\u2019\u201D emanating from the doctrine and practices of the Plymouth Brethren Christian Church, and discusses the authority held by the \u201Cworldwide leader of the Brethren\u201D, the office Hales holds. [[cite:pdt-charitycommission-2014]]",
         ],
       },
       {
-        heading: "A seven-figure NDA \u2014 the Mick Dover case (2024\u20132025)",
+        heading: "A seven-figure NDA, the Mick Dover case (2024\u20132025)",
         paragraphs: [
           "ABC Four Corners\u2019 \u201CBig Brethren\u201D (Louise Milligan, 15 September 2025) reported that Mick Dover, who alleges repeated childhood sexual abuse starting at age five by multiple church members, is suing 75 PBCC individuals he says did nothing to stop it. The program reports that in October 2024 the church offered Dover a settlement of approximately $1 million conditional on a non-disclosure and non-disparagement clause. [[cite:bigbrethren-fourcorners-2025]]",
-          "Dover on the broadcast: \u201CI\u2019m here today because I don\u2019t give a damn about a million dollars.\u201D The PBCC\u2019s formal rebuttal, posted on its own website, admits awareness of the matter \u201Caround two years ago\u201D and confirms \u201Cinformal mediation\u201D while disputing the specific $1 million figure \u2014 without denying that a settlement process with an NDA attached exists. [[cite:bigbrethren-fourcorners-2025]]",
+          "Dover on the broadcast: \u201CI\u2019m here today because I don\u2019t give a damn about a million dollars.\u201D The PBCC\u2019s formal rebuttal, posted on its own website, admits awareness of the matter \u201Caround two years ago\u201D and confirms \u201Cinformal mediation\u201D while disputing the specific $1 million figure, without denying that a settlement process with an NDA attached exists. [[cite:bigbrethren-fourcorners-2025]]",
         ],
       },
       {
-        heading: "The commercial arm \u2014 UBT, the Hales family, and the ATO raid",
+        heading: "The commercial arm, UBT, the Hales family, and the ATO raid",
         paragraphs: [
           "Universal Business Team (UBT) is, in Guardian Australia\u2019s description, \u201Cthe umbrella organisation for the various businesses and charities run by the sect under the leadership of Bruce Hales.\u201D UBT claims to service 3,000 Brethren-owned businesses across 19 countries with combined revenue above NZ$12 billion. [[cite:ubt-atoraid-guardian-2024]]",
-          "On 19 March 2024, the Australian Taxation Office raided UBT\u2019s Sydney Olympic Park offices under the ATO\u2019s \u201CPrivate Wealth \u2014 Behaviours of Concern\u201D programme, used (in the ATO\u2019s own description) \u201Conly in exceptional circumstances including suspected tax evasion, fraud, secrecy or concealment.\u201D UBT\u2019s Australian accounting arm, UBTA, closed within weeks. [[cite:ubt-atoraid-guardian-2024]]",
-          "During the COVID-19 pandemic, companies controlled by Bruce Hales\u2019s sons were awarded UK Department of Health and Social Care PPE contracts reported at a combined value exceeding \u00A32.5 billion \u2014 including Sante Global LLP (99% owned by Charles and Gareth Hales) and Medco Solutions \u2014 routed in part through the government\u2019s so-called \u201CVIP lane.\u201D [[cite:byline-ppe-halessons-2020]]",
-          "The Post (NZ) and RNZ report that leaked UBT material and named ex-members describe a \u201Cmoney-go-round\u201D in which Brethren congregations sent cash payments \u2014 described by RNZ sources as varied in size to avoid looking like wages \u2014 flowing upward toward Hales and his family, the sums putatively totalling millions of dollars a year worldwide. [[cite:hales-manofgod-thepost]] [[cite:hales-rnz-moneygoround]]",
+          "On 19 March 2024, the Australian Taxation Office raided UBT\u2019s Sydney Olympic Park offices under the ATO\u2019s \u201CPrivate Wealth, Behaviours of Concern\u201D programme, used (in the ATO\u2019s own description) \u201Conly in exceptional circumstances including suspected tax evasion, fraud, secrecy or concealment.\u201D UBT\u2019s Australian accounting arm, UBTA, closed within weeks. [[cite:ubt-atoraid-guardian-2024]]",
+          "During the COVID-19 pandemic, companies controlled by Bruce Hales\u2019s sons were awarded UK Department of Health and Social Care PPE contracts reported at a combined value exceeding \u00A32.5 billion, including Sante Global LLP (99% owned by Charles and Gareth Hales) and Medco Solutions, routed in part through the government\u2019s so-called \u201CVIP lane.\u201D [[cite:byline-ppe-halessons-2020]]",
+          "The Post (NZ) and RNZ report that leaked UBT material and named ex-members describe a \u201Cmoney-go-round\u201D in which Brethren congregations sent cash payments, described by RNZ sources as varied in size to avoid looking like wages, flowing upward toward Hales and his family, the sums putatively totalling millions of dollars a year worldwide. [[cite:hales-manofgod-thepost]] [[cite:hales-rnz-moneygoround]]",
           "Hales tours New Zealand Brethren congregations by private jet, arriving from Sydney. [[cite:hales-jet-nzherald]]",
         ],
       },
       {
-        heading: "Schools and surveillance \u2014 OneSchool Global and Streamline3",
+        heading: "Schools and surveillance, OneSchool Global and Streamline3",
         paragraphs: [
-          "OneSchool Global \u2014 the fellowship\u2019s 120-plus-campus international school network, serving ~10,000 students in 20 countries \u2014 operates under what former teachers tell Guardian Australia is a community-volunteer review of every teaching resource. Biology, dance, visual arts, music and sociology are not offered in Australian years 11\u201312; UK campuses exclude evolution, sex education, and IT at GCSE. [[cite:osg-guardian-surveillance-2023]]",
+          "OneSchool Global, the fellowship\u2019s 120-plus-campus international school network, serving ~10,000 students in 20 countries, operates under what former teachers tell Guardian Australia is a community-volunteer review of every teaching resource. Biology, dance, visual arts, music and sociology are not offered in Australian years 11\u201312; UK campuses exclude evolution, sex education, and IT at GCSE. [[cite:osg-guardian-surveillance-2023]]",
           "Devices issued to students and teachers run Streamline3, the UBT-distributed filtering, monitoring and device-lockdown system, which alerts staff in real time when flagged searches occur. One teacher, Guardian Australia reports, was disciplined after the system flagged the teacher\u2019s search related to a famous person who was gay. [[cite:osg-guardian-surveillance-2023]]",
           "Hales in a March 2022 US ministry, as reported by Guardian Australia: \u201CThe devil is against them \u2026 We have to be very watchful in regard of our schooling.\u201D [[cite:osg-guardian-surveillance-2023]]",
         ],
@@ -147,7 +147,7 @@ export const members: Member[] = [
       {
         heading: "How this profile is sourced",
         paragraphs: [
-          "Every claim above footnotes to a public source registered in src/lib/sources.ts. Verbatim quotes from Hales are presented as the reporting names them \u2014 leaked recording, leaked internal document, or named-witness testimony \u2014 not as our paraphrase. Anything we cannot pin to a public URL renders with a visible warning marker rather than ship silently. Corrections are welcomed via the repository; see MEMBERS_POLICY.md for inclusion rules and the correction protocol.",
+          "Every claim above footnotes to a public source registered in src/lib/sources.ts. Verbatim quotes from Hales are presented as the reporting names them, leaked recording, leaked internal document, or named-witness testimony, not as our paraphrase. Anything we cannot pin to a public URL renders with a visible warning marker rather than ship silently. Corrections are welcomed via the repository; see MEMBERS_POLICY.md for inclusion rules and the correction protocol.",
         ],
       },
     ],

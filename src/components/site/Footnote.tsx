@@ -40,7 +40,7 @@ export function SourcePending({ note }: { note?: string }) {
   return (
     <sup
       className="footnote footnote--pending"
-      title={note ?? "Source pending — see FACTS.md"}
+      title={note ?? "Source pending. see FACTS.md"}
       aria-label={note ?? "Source pending"}
     >
       ⚠︎

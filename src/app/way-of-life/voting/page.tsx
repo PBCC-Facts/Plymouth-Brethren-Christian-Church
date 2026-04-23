@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   topic: "Politics and voting",
   description:
-    "The PBCC on politics and voting — the historical non-voting stance, the political donations and campaigning that have nonetheless drawn public scrutiny.",
+    "The PBCC on politics and voting. the historical non-voting stance, the political donations and campaigning that have nonetheless drawn public scrutiny.",
   slug: "/way-of-life/voting",
   cluster: "C",
   noindex: true,

@@ -100,16 +100,15 @@ export interface ArticleSchemaInput {
   slug: string;
   datePublished: string; // ISO
   dateModified: string; // ISO
-  register?: "parody" | "criticism" | "explanatory";
+  register?: "record" | "explanatory";
   authorName?: string;
 }
 
 export function articleSchema(input: ArticleSchemaInput) {
   const url = absolute(input.slug);
-  const satire = input.register === "parody";
   return {
     "@context": "https://schema.org",
-    "@type": satire ? "SatiricalArticle" : "Article",
+    "@type": "Article",
     headline: input.headline,
     description: input.description,
     mainEntityOfPage: { "@type": "WebPage", "@id": url },
@@ -117,7 +116,6 @@ export function articleSchema(input: ArticleSchemaInput) {
     datePublished: input.datePublished,
     dateModified: input.dateModified,
     inLanguage: "en",
-    ...(satire ? { genre: "satire" } : {}),
     author: {
       "@type": "Person",
       name: input.authorName ?? "Trent Waskey",

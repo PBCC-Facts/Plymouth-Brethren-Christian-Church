@@ -65,7 +65,7 @@ export function glyphFor(kind: ArtworkKind, size = 48): ReactNode {
         </svg>
       );
     case "inquiry":
-      // Classical building — columns
+      // Classical building. columns
       return (
         <svg width={size} height={size} viewBox={viewBox} aria-hidden="true">
           <path {...common} d="M4 10 L16 4 L28 10" />

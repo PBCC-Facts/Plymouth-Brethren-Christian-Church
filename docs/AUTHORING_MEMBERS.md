@@ -1,6 +1,6 @@
-# Authoring `/our-members` profiles
+# Authoring `/people` profiles
 
-Short runbook for adding or editing a member profile. The editorial rule — **who** qualifies and **what** must accompany them — lives in [MEMBERS_POLICY.md](../MEMBERS_POLICY.md). This file is the mechanical "how."
+Short runbook for adding or editing a member profile. The editorial rule. **who** qualifies and **what** must accompany them. lives in [MEMBERS_POLICY.md](../MEMBERS_POLICY.md). This file is the mechanical "how."
 
 ## Where the data lives
 
@@ -10,8 +10,8 @@ Short runbook for adding or editing a member profile. The editorial rule — **w
 
 ## Add a new profile
 
-1. **Confirm inclusion.** The subject must clear at least one bucket in [MEMBERS_POLICY.md §1](../MEMBERS_POLICY.md). Write the one-sentence `inclusionBasis` first — if you can't write it clearly, the subject probably shouldn't be on the page.
-2. **Register sources.** For every URL you plan to cite, add an entry to `src/lib/sources.ts` with `id`, `label`, `url`, `accessedOn`. The id is used in `[[cite:id]]` tokens. If the source isn't registered, the build fails when the profile renders — that's intentional.
+1. **Confirm inclusion.** The subject must clear at least one bucket in [MEMBERS_POLICY.md §1](../MEMBERS_POLICY.md). Write the one-sentence `inclusionBasis` first. if you can't write it clearly, the subject probably shouldn't be on the page.
+2. **Register sources.** For every URL you plan to cite, add an entry to `src/lib/sources.ts` with `id`, `label`, `url`, `accessedOn`. The id is used in `[[cite:id]]` tokens. If the source isn't registered, the build fails when the profile renders. that's intentional.
 3. **Add FACTS.md rows.** Every factual claim in the profile body needs a row in `FACTS.md`, status ✅ verified (or 🟡 single-source for uncontested matters). See the existing §2 "Leadership & doctrine" rows for shape.
 4. **Draft the row.** Append to `members` in `src/data/members.seed.ts`:
 
@@ -59,16 +59,16 @@ Same shape as a full profile, but `isPublished: false, isRoadmapOnly: true`. `bo
 npm run typecheck
 npm run build
 npm run dev
-# visit http://localhost:3000/our-members and click through to the profile
+# visit http://localhost:3000/people and click through to the profile
 ```
 
-The build fails if any `[[cite:id]]` references an unknown source — that catch lives in `assertCitationsResolve` in `src/lib/members.tsx` and runs when the profile renders.
+The build fails if any `[[cite:id]]` references an unknown source. that catch lives in `assertCitationsResolve` in `src/lib/members.tsx` and runs when the profile renders.
 
 ## Citation tokens
 
 Two tokens are supported inside paragraph strings:
 
-- `[[cite:source-id]]` — renders a numbered footnote linking to the URL registered for `source-id`. Ordinals run sequentially down the profile.
-- `[[pending:short note]]` — renders the red ⚠︎ marker (`SourcePending`) with the note as hover text. Use when a claim is true but a public URL is not yet pinned.
+- `[[cite:source-id]]`. renders a numbered footnote linking to the URL registered for `source-id`. Ordinals run sequentially down the profile.
+- `[[pending:short note]]`. renders the red ⚠︎ marker (`SourcePending`) with the note as hover text. Use when a claim is true but a public URL is not yet pinned.
 
 No other tokens exist. No Markdown is parsed. Keep paragraphs as plain strings; break them into new entries in `paragraphs: []` instead of inline newlines.

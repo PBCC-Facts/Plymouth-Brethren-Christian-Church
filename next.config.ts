@@ -34,6 +34,19 @@ const nextConfig: NextConfig = {
       },
     ];
   },
+  // Permanent redirects for the slug rename (2026-04-23). Any link to an old
+  // path migrates to its new home. Keeps search engine equity and external
+  // referrers working without 404ing.
+  async redirects() {
+    return [
+      { source: "/our-members", destination: "/people", permanent: true },
+      { source: "/our-members/:slug*", destination: "/people/:slug*", permanent: true },
+      { source: "/way-of-life/our-beliefs", destination: "/way-of-life/beliefs", permanent: true },
+      { source: "/way-of-life/our-history", destination: "/way-of-life/history", permanent: true },
+      { source: "/way-of-life/our-network", destination: "/way-of-life/network", permanent: true },
+      { source: "/way-of-life/our-neighbours", destination: "/way-of-life/neighbours", permanent: true },
+    ];
+  },
 };
 
 export default nextConfig;

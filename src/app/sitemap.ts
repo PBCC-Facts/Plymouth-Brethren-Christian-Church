@@ -3,7 +3,7 @@ import { SITE_URL } from "@/lib/site";
 import { ROUTES } from "@/lib/routes";
 
 /**
- * Sitemap — only indexable routes go in here. ComingSoon placeholders stay
+ * Sitemap. only indexable routes go in here. ComingSoon placeholders stay
  * out until they have real copy (they also emit `noindex` at the page level).
  */
 export default function sitemap(): MetadataRoute.Sitemap {

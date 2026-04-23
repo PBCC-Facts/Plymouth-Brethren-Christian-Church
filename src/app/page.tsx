@@ -3,69 +3,157 @@ import { Footnote, SourcePending } from "@/components/site/Footnote";
 import { GITHUB_URL } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { Artwork } from "@/components/site/Artwork";
-import type { ArtworkKind } from "@/lib/glyphs";
+import { glyphFor, type ArtworkKind } from "@/lib/glyphs";
+import { getSource } from "@/lib/sources";
 import { JsonLd, websiteSchema, breadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata = buildPageMetadata({
   topic: "The Facts",
   description:
-    "Sourced, survivor-first documentation of doctrine, practice, and leadership — from John Nelson Darby's Doctrine of Separation to the current Man of God, Bruce D. Hales. Every claim footnoted. Contributable on GitHub.",
+    "The journalism, court filings, regulator decisions, and survivor testimony already on the public record about the Plymouth Brethren Christian Church. Organised with a citation on every claim.",
   slug: "/",
   cluster: "A",
-  register: "criticism",
-  ogTag: "THE FACTS · CRITICISM",
+  register: "record",
+  ogTag: "THE FACTS · INDEPENDENT",
 });
 
-const communityCards = [
+type Stat = {
+  value: string;
+  label: string;
+  gloss: React.ReactNode;
+  kind: ArtworkKind;
+};
+
+const stats: Stat[] = [
   {
-    accent: "var(--color-purple)",
-    title:
-      "We care about our neighbours — at a doctrinally-mandated distance.",
-    body: (
+    value: "55,000+",
+    label: "Members",
+    gloss: (
       <>
-        Members do not share meals, accommodation, marriage, or business
-        partnership with those outside the fellowship. Good neighbourliness is
-        expressed through service at a respectful distance.
+        Self-reported, across 19 countries
+        <Footnote id="pbcc-members-selfreport" n={1} />.
       </>
     ),
-    footnotes: ["separation-cdamm", "separation-pbcc-statement"] as const,
+    kind: "person",
   },
   {
+    value: "1",
+    label: "Man of God",
+    gloss: (
+      <>
+        Bruce D. Hales, current World Leader, since 2002
+        <Footnote id="hales-manofgod-pbcc" n={2} />
+        <Footnote id="hales-manofgod-newstatesman" n={3} />.
+      </>
+    ),
+    kind: "person",
+  },
+  {
+    value: "£2.5B+",
+    label: "UK PPE contracts",
+    gloss: (
+      <>
+        To Hales-family-linked firms during COVID
+        <Footnote id="byline-ppe-halessons-2020" n={4} />.
+      </>
+    ),
+    kind: "document",
+  },
+  {
+    value: "March 2024",
+    label: "ATO raid",
+    gloss: (
+      <>
+        Australian Taxation Office action at UBT offices
+        <Footnote id="ubt-atoraid-guardian-2024" n={5} />.
+      </>
+    ),
+    kind: "regulator",
+  },
+  {
+    value: "449",
+    label: "MPs visited",
+    gloss: (
+      <>
+        Charity Commission lobbying campaign, 2012 to 2014
+        <Footnote id="hales-times-infiltrate" n={6} />.
+      </>
+    ),
+    kind: "inquiry",
+  },
+];
+
+type Tile = {
+  eyebrow: string;
+  title: string;
+  body: React.ReactNode;
+  accent: string;
+  kind: ArtworkKind;
+};
+
+const topicTiles: Tile[] = [
+  {
+    eyebrow: "Shunning",
+    title: "Families split by doctrine.",
+    body: (
+      <>
+        UK Parliament submissions and major long-form reporting document
+        spouses, parents, and children cut off from a "withdrawn" relative
+        while separation stands
+        <Footnote id="withdrawing-ukparliament-2012" n={7} />
+        <Footnote id="hales-manofgod-newstatesman" n={8} />.
+      </>
+    ),
     accent: "var(--color-brand)",
-    title: "We help drive local economies — our own.",
-    body: (
-      <>
-        Member-owned businesses coordinate under the Universal Business Team.
-        In March 2024 the Australian Taxation Office raided UBT offices.
-      </>
-    ),
-    footnotes: [] as const,
-    pending: "ATO raid primary URL pending — FACTS.md §3",
+    kind: "person",
   },
   {
-    accent: "var(--color-blueviolet)",
-    title: "We are a connected global Community — under one man.",
+    eyebrow: "Allegations of abuse",
+    title: "A documented child-protection record.",
     body: (
       <>
-        More than 54,000 members across 19 countries live under a single global
-        leadership structure, led by the current World Leader, Bruce D. Hales,
-        known within the fellowship as the Man of God.
+        The NZ Royal Commission of Inquiry into Abuse in Care's 2024
+        Whanaketia report names PBCC conversion-therapy practice
+        <Footnote id="whanaketia-royalcommission-nz" n={9} />. ABC Four
+        Corners' 2025 investigation reports a ~$1 million NDA offer to
+        survivor Mick Dover
+        <Footnote id="bigbrethren-fourcorners-2025" n={10} />.
       </>
     ),
-    footnotes: ["hales-manofgod-pbcc", "hales-manofgod-newstatesman"] as const,
-  },
-  {
     accent: "var(--color-rust)",
-    title: "We understand the importance of limiting education.",
+    kind: "document",
+  },
+  {
+    eyebrow: "Litigation against critics",
+    title: "Defamation and injunctions against journalists and ex-members.",
     body: (
       <>
-        OneSchool Global serves member families on campuses staffed primarily
-        by members, under restrictions on technology, external contact, and
-        mixed-faith activities.
+        Bank records and text messages reported by Sydney Morning Herald
+        document a $275,000 payment to a PR consultant as part of a
+        proposed $920,000 Services and Confidentiality Deed that named
+        journalist Michael Bachelard as the sole prohibited recipient
+        <Footnote id="mccorkell-smh-bachelard-2017" n={11} />.
+        <SourcePending note="Additional SLAPP-style cases being pinned in FACTS.md §5 before expansion." />
       </>
     ),
-    footnotes: [] as const,
-    pending: "OneSchool Global governance sources pending — FACTS.md §4",
+    accent: "var(--color-purple)",
+    kind: "regulator",
+  },
+  {
+    eyebrow: "Regulators",
+    title: "Tax and charity regulators have opened the doors, more than once.",
+    body: (
+      <>
+        In March 2024 the Australian Taxation Office raided UBT offices
+        under its Private-Wealth Behaviours-of-Concern programme
+        <Footnote id="ubt-atoraid-guardian-2024" n={12} />. In 2012 to 2014
+        the UK Charity Commission found "considerable evidence of significant
+        detriment or harm" emanating from PBCC doctrine and practice
+        <Footnote id="pdt-charitycommission-2014" n={13} />.
+      </>
+    ),
+    accent: "var(--color-blueviolet)",
+    kind: "inquiry",
   },
 ];
 
@@ -84,7 +172,7 @@ const reportingItems: Array<{
     title: "Behind the Exclusive Brethren",
     url: "https://en.wikipedia.org/wiki/Behind_the_Exclusive_Brethren",
     gloss:
-      "Bachelard and Whitmont’s documentary: the baseline public-interest investigation still cited twenty years later.",
+      "Bachelard and Whitmont's documentary: the baseline public-interest investigation still cited twenty years later.",
     kind: "broadcast",
   },
   {
@@ -93,7 +181,7 @@ const reportingItems: Array<{
     title: "Escaping Eden: the Exclusive Brethren",
     url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
     gloss:
-      "Long-read on the “Man of God” office, leadership succession, and family separation practice.",
+      "Long-read on the \u201CMan of God\u201D office, leadership succession, and family separation practice.",
     kind: "journalism",
   },
   {
@@ -112,7 +200,7 @@ const reportingItems: Array<{
       "Public Administration Committee submission on PBCC charitable status",
     url: "https://publications.parliament.uk/pa/cm201213/cmselect/cmpubadm/writev/charity/m49.htm",
     gloss:
-      "Written evidence describing separation practice in members’ own words.",
+      "Written evidence describing separation practice in members' own words.",
     kind: "inquiry",
   },
   {
@@ -121,7 +209,7 @@ const reportingItems: Array<{
     title: "Preston Down Trust decision (compromise agreement)",
     url: "https://www.gov.uk/government/organisations/charity-commission",
     gloss:
-      "Charitable-status dispute closure. Primary-document URL TBC — landing page shown.",
+      "Charitable-status dispute closure. Primary-document URL pending; landing page shown.",
     kind: "regulator",
     pending: true,
   },
@@ -131,40 +219,47 @@ const reportingItems: Array<{
     title: "ATO raid on Universal Business Team offices",
     url: "https://www.ato.gov.au/",
     gloss:
-      "Australian Taxation Office action at UBT offices. Primary reporting URL TBC — ATO landing shown.",
+      "Australian Taxation Office action at UBT offices. Primary reporting URL pending; ATO landing shown.",
     kind: "regulator",
     pending: true,
   },
 ];
 
+// Homepage-scoped footnote counter starts after the stat strip + topic
+// tiles have already allocated 1..13 in the order they render above.
+const HEADER_FOOTNOTE_COUNT = 13;
+
 export default function HomePage() {
-  // Page-scoped footnote counter. Increments as we render.
-  let n = 0;
+  let n = HEADER_FOOTNOTE_COUNT;
   const nextN = () => ++n;
+
+  // Pull-quote footnote ordinals sit between the topic tiles (1..13) and
+  // the About-this paragraph. We allocate them now so the About section
+  // continues from the correct number.
+  const quoteN1 = nextN();
+  const quoteN2 = nextN();
 
   return (
     <>
       <JsonLd data={websiteSchema()} />
       <JsonLd data={breadcrumbSchema([{ name: "Home", path: "/" }])} />
-      {/* Hero — tight, direct message in the fellowship's reframed voice */}
+
+      {/* Hero. Aggregator framing, direct. */}
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
             <p className="hero__eyebrow">
-              A global high-control religious fellowship &mdash; on the public
-              record since 1848
+              The Facts. The public record of the Plymouth Brethren Christian Church.
             </p>
             <h1 className="hero__title">
-              We spend real money softening what we do to our own members.
+              Everything they spend real money softening.
             </h1>
             <p className="hero__sub">
-              The Plymouth Brethren Christian Church runs a global PR operation
-              to file down the edges of a documented Doctrine of Separation,
-              a shunning practice called &ldquo;withdrawing from,&rdquo; a
-              leadership cult around the current &ldquo;Man of God,&rdquo; and
-              a growing public record of abuse allegations, defamation suits
-              against critics, and a 2024 Australian Tax Office raid. This
-              site puts every claim back on the page, with a source.
+              The journalism, court filings, regulator decisions, and survivor
+              testimony already exist: ABC Four Corners, The Times, Stuff NZ,
+              Guardian Australia, the NZ Royal Commission, the UK Charity
+              Commission, the ATO. This site is the central, open-source
+              library that points to all of it. One citation per claim.
             </p>
             <Link href="#reporting" className="hero__cta">
               See what&rsquo;s on the record &rarr;
@@ -182,75 +277,125 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* About this */}
-      <section className="section" style={{ background: "var(--color-surface)" }}>
+      {/* By the numbers. Stat strip. */}
+      <section
+        className="section"
+        style={{
+          background: "var(--color-surface)",
+          paddingBlock: "clamp(3rem, 5vw, 5rem)",
+        }}
+      >
         <div className="site-container">
-          <h2 className="section-label">About this.</h2>
-          <div className="rich-media">
-            <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
-              <p>
-                Founded around 200 years ago by John Nelson Darby, the Plymouth
-                Brethren Christian Church (PBCC, formerly the Exclusive
-                Brethren) still governs its 54,000-plus members
-                <Footnote id="pbcc-members-selfreport" n={nextN()} />{" "}
-                through the Doctrine of Separation: a rule on who members may
-                eat with, live with, marry, and do business with
-                <Footnote id="separation-cdamm" n={nextN()} />
-                <Footnote id="separation-pbcc-statement" n={nextN()} />.
-              </p>
-              <p>
-                Community life is organised around the recorded ministry of
-                the current World Leader, Bruce D. Hales, known within the
-                fellowship as the Man of God
-                <Footnote id="hales-manofgod-pbcc" n={nextN()} />
-                <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. His
-                addresses are studied in homes and meetings as the
-                authoritative current expression of scriptural guidance.
-              </p>
-              <p>
-                Members who depart, or who are deemed out of fellowship, are
-                &ldquo;withdrawn from&rdquo; &mdash; the PBCC term for
-                excommunication. The remaining members decline to share meals,
-                accommodation, or marriage with them while separation stands
-                <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
-                <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
-                Families split. Minor children are commonly retained with the
-                in-fellowship parent.
-              </p>
-              <p>
-                Every claim below is sourced. Anyone can file a correction as
-                a{" "}
-                <a
-                  href={`${GITHUB_URL}/issues/new?labels=correction&title=Correction:+`}
-                  target="_blank"
-                  rel="noopener noreferrer"
+          <h2 className="section-label">By the numbers.</h2>
+          <ul className="stat-strip">
+            {stats.map((s) => (
+              <li key={s.label} className="stat-block">
+                <div
+                  className="stat-block__glyph"
+                  aria-hidden="true"
+                  style={{ color: "var(--color-brand)" }}
                 >
-                  GitHub issue
-                </a>{" "}
-                or{" "}
-                <a
-                  href={`${GITHUB_URL}/pulls`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  pull request
-                </a>
-                .
-              </p>
-            </div>
-            <div
-              aria-hidden="true"
-              className="aspect-[4/3] w-full"
-              style={{
-                background:
-                  "linear-gradient(135deg, color-mix(in srgb, var(--color-brand) 30%, var(--color-ink)), var(--color-ink))",
-              }}
-            />
-          </div>
+                  {glyphFor(s.kind, 28)}
+                </div>
+                <p className="stat-block__value">{s.value}</p>
+                <p className="stat-block__label">{s.label}</p>
+                <p className="stat-block__gloss">{s.gloss}</p>
+              </li>
+            ))}
+          </ul>
         </div>
       </section>
 
-      {/* What the record says — harder-edged severity band, Register C */}
+      {/* Featured pull-quote. Hales, September 2015. */}
+      <section
+        className="section"
+        style={{
+          background:
+            "color-mix(in srgb, var(--color-rust) 10%, var(--color-surface))",
+          borderTop: "4px solid var(--color-rust)",
+          paddingBlock: "clamp(3rem, 5vw, 5rem)",
+        }}
+      >
+        <div className="site-container">
+          <blockquote
+            className="max-w-4xl mx-auto"
+            style={{ color: "var(--color-ink)" }}
+          >
+            <p
+              aria-hidden="true"
+              className="font-[family-name:var(--font-serif)] leading-none"
+              style={{
+                fontSize: "clamp(3rem, 6vw, 5rem)",
+                color: "var(--color-rust)",
+                marginBottom: "-0.75rem",
+              }}
+            >
+              &ldquo;
+            </p>
+            <p
+              className="font-[family-name:var(--font-serif)] leading-[1.15]"
+              style={{ fontSize: "clamp(1.5rem, 3vw, 2.25rem)" }}
+            >
+              He&rsquo;d be better to take arsenic, or go and get some rat
+              poison or something, take a bottle of it. &hellip; that would
+              be better, to finish yourself off that way than having to do
+              with the opponents of the truth.
+            </p>
+            <footer className="mt-6 flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+              <span
+                className="font-sans font-bold uppercase tracking-[0.15em]"
+                style={{ color: "var(--color-rust)" }}
+              >
+                Bruce D. Hales, UK ministry meeting, September 2015
+              </span>
+              <span className="text-sm">
+                <a
+                  href={getSource("hales-ratpoison-stuff").url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footnote"
+                  style={{ color: "var(--color-rust)" }}
+                  aria-label={`Source ${quoteN1}: ${getSource("hales-ratpoison-stuff").label}`}
+                  title={getSource("hales-ratpoison-stuff").label}
+                >
+                  <sup>
+                    <strong>{quoteN1}</strong>
+                  </sup>
+                </a>
+                <a
+                  href={getSource("hales-ratpoison-cessnock").url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="footnote"
+                  style={{ color: "var(--color-rust)", marginLeft: "0.15em" }}
+                  aria-label={`Source ${quoteN2}: ${getSource("hales-ratpoison-cessnock").label}`}
+                  title={getSource("hales-ratpoison-cessnock").label}
+                >
+                  <sup>
+                    <strong>{quoteN2}</strong>
+                  </sup>
+                </a>
+              </span>
+            </footer>
+            <p className="mt-4 text-sm opacity-75 max-w-prose">
+              Addressing a 25-year-old New Zealand member in contact with
+              ex-member family. The PBCC&rsquo;s on-record response was that
+              the remarks &ldquo;should not be given a literal interpretation.&rdquo;
+              The church did not deny the words.
+            </p>
+            <p className="mt-4 text-sm">
+              <Link
+                href="/people/bruce-d-hales"
+                style={{ color: "var(--color-rust)" }}
+              >
+                Read the full sourced profile on Bruce D. Hales &rarr;
+              </Link>
+            </p>
+          </blockquote>
+        </div>
+      </section>
+
+      {/* What's on the record. Four topic tiles with category glyphs. */}
       <section
         id="on-the-record"
         className="section"
@@ -261,141 +406,58 @@ export default function HomePage() {
             className="section-label"
             style={{ color: "var(--color-surface)" }}
           >
-            What the record says.
+            What&rsquo;s on the record.
           </h2>
           <p
             className="max-w-prose text-[1rem] leading-[1.8]"
             style={{ opacity: 0.85 }}
           >
-            Four strands of public reporting the rebrand has to keep absorbing.
-            We quote what&rsquo;s been printed and what&rsquo;s been filed;
-            nothing on this page is our claim &mdash; it&rsquo;s someone
-            else&rsquo;s, footnoted.
+            Four threads of the public record the fellowship&rsquo;s PR has to
+            keep absorbing. Every sentence below attributes the outlet that
+            reported it.
           </p>
 
-          <ul className="mt-10 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            <li>
-              <article
-                className="h-full p-6"
-                style={{
-                  borderTop: "4px solid var(--color-brand)",
-                  background:
-                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
-                }}
-              >
-                <p
-                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-                  style={{ color: "var(--color-brand)" }}
+          <ul className="mt-10 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {topicTiles.map((t) => (
+              <li key={t.eyebrow}>
+                <article
+                  className="h-full p-6"
+                  style={{
+                    borderTop: `4px solid ${t.accent}`,
+                    background:
+                      "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
+                  }}
                 >
-                  Shunning
-                </p>
-                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
-                  Families are split by doctrine, not by choice.
-                </h3>
-                <p className="mt-3 text-sm leading-[1.7]">
-                  UK Parliament submissions and major long-form reporting
-                  describe spouses, parents, and children cut off from a
-                  withdrawn relative while separation stands
-                  <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
-                  <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
-                </p>
-              </article>
-            </li>
-            <li>
-              <article
-                className="h-full p-6"
-                style={{
-                  borderTop: "4px solid var(--color-rust)",
-                  background:
-                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
-                }}
-              >
-                <p
-                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-                  style={{ color: "var(--color-rust)" }}
-                >
-                  Abuse allegations
-                </p>
-                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
-                  Allegations of sexual and physical abuse within the fellowship.
-                </h3>
-                <p className="mt-3 text-sm leading-[1.7]">
-                  Allegations of child sexual abuse, domestic violence, and
-                  coercive control within member households and institutions
-                  have surfaced in mainstream reporting and in survivor
-                  accounts across multiple jurisdictions
-                  <SourcePending note="Abuse-allegations severity claim — specific cases and citations to be pinned in FACTS.md §5 before ship." />
-                  . Specific cases and citations are being pinned before
-                  anything ships to production.
-                </p>
-              </article>
-            </li>
-            <li>
-              <article
-                className="h-full p-6"
-                style={{
-                  borderTop: "4px solid var(--color-purple)",
-                  background:
-                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
-                }}
-              >
-                <p
-                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-                  style={{ color: "var(--color-purple)" }}
-                >
-                  Litigation against critics
-                </p>
-                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
-                  Defamation suits and injunctions used against journalists
-                  and ex-members.
-                </h3>
-                <p className="mt-3 text-sm leading-[1.7]">
-                  The fellowship and entities associated with it have pursued
-                  defamation proceedings, takedown demands, and SLAPP-style
-                  litigation against journalists, former members, and academic
-                  critics
-                  <SourcePending note="SLAPP-style litigation claim — specific case references pending in FACTS.md §5 before ship." />
-                  . Specific cases are being cited before this card leaves
-                  draft.
-                </p>
-              </article>
-            </li>
-            <li>
-              <article
-                className="h-full p-6"
-                style={{
-                  borderTop: "4px solid var(--color-blueviolet)",
-                  background:
-                    "color-mix(in srgb, var(--color-surface) 6%, var(--color-ink))",
-                }}
-              >
-                <p
-                  className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-                  style={{ color: "var(--color-blueviolet)" }}
-                >
-                  Regulators
-                </p>
-                <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
-                  Tax and charity regulators have opened the doors, more than
-                  once.
-                </h3>
-                <p className="mt-3 text-sm leading-[1.7]">
-                  In March 2024, the Australian Taxation Office raided
-                  Universal Business Team offices
-                  <SourcePending note="ATO raid primary URL pending — FACTS.md §3." />
-                  . In 2012&ndash;2014, the UK Charity Commission contested
-                  PBCC charitable status before closing with a compromise
-                  agreement
-                  <SourcePending note="Preston Down Trust primary document URL pending — FACTS.md §5." />
-                  .
-                </p>
-              </article>
-            </li>
+                  <div
+                    className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded"
+                    style={{
+                      color: t.accent,
+                      background:
+                        "color-mix(in srgb, var(--color-surface) 8%, transparent)",
+                      border: `1px solid ${t.accent}`,
+                    }}
+                    aria-hidden="true"
+                  >
+                    {glyphFor(t.kind, 26)}
+                  </div>
+                  <p
+                    className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
+                    style={{ color: t.accent }}
+                  >
+                    {t.eyebrow}
+                  </p>
+                  <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl leading-snug">
+                    {t.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-[1.7]">{t.body}</p>
+                </article>
+              </li>
+            ))}
           </ul>
         </div>
       </section>
 
-      {/* Read the reporting — outside journalism / records index */}
+      {/* Read the reporting. Six cards with Artwork placeholders. */}
       <section
         id="reporting"
         className="section"
@@ -452,65 +514,76 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Get to know about this */}
-      <section className="section">
+      {/* About this. Shrunk to two paragraphs. */}
+      <section className="section" style={{ background: "var(--color-surface)" }}>
         <div className="site-container">
-          <h2 className="section-label">Get to know about this.</h2>
-          <ul className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {communityCards.map((c) => (
-              <li key={c.title}>
-                <article
-                  className="h-full p-6"
-                  style={{
-                    borderTop: `4px solid ${c.accent}`,
-                    background:
-                      "color-mix(in srgb, var(--color-rule) 25%, var(--color-surface))",
-                  }}
-                >
-                  <h3
-                    className="font-[family-name:var(--font-serif)] text-xl leading-snug"
-                    style={{ color: "var(--color-ink)" }}
-                  >
-                    {c.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-[1.7]">
-                    {c.body}
-                    {c.footnotes.map((id) => (
-                      <Footnote key={id} id={id} n={nextN()} />
-                    ))}
-                    {c.pending && <SourcePending note={c.pending} />}
-                  </p>
-                </article>
-              </li>
-            ))}
-          </ul>
+          <h2 className="section-label">About this.</h2>
+          <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
+            <p>
+              The Plymouth Brethren Christian Church (PBCC, formerly the
+              Exclusive Brethren) is an international religious community of
+              roughly 55,000 members across 19 countries
+              <Footnote id="pbcc-members-selfreport" n={nextN()} />. Its
+              Doctrine of Separation, rooted in 2 Timothy 2:19 to 22, governs
+              who members may eat, live, marry, and do business with
+              <Footnote id="separation-cdamm" n={nextN()} />
+              <Footnote id="separation-pbcc-statement" n={nextN()} />.
+            </p>
+            <p>
+              This site is an independent, open-source record of what
+              journalists, regulators, courts, and survivors have already put
+              on the public record about the PBCC. Nothing here is original
+              reporting. Everything here is already public, footnoted, and
+              open for correction on GitHub. Anyone can file a correction as
+              a{" "}
+              <a
+                href={`${GITHUB_URL}/issues/new?labels=correction&title=Correction:+`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                GitHub issue
+              </a>{" "}
+              or{" "}
+              <a
+                href={`${GITHUB_URL}/pulls`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                pull request
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Stories — in-site survivor testimony stub */}
+      {/* Stories. In-site survivor testimony stub. */}
       <section
         className="section"
-        style={{ background: "var(--color-surface)" }}
+        style={{
+          background:
+            "color-mix(in srgb, var(--color-rule) 30%, var(--color-surface))",
+        }}
       >
         <div className="site-container">
           <h2 className="section-label">Stories.</h2>
           <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:items-start">
             <p className="font-[family-name:var(--font-serif)] text-3xl leading-tight">
-              First-person survivor testimony will live here, on this site,
-              under consent controls we publish.
+              First-person survivor testimony will live here, under consent
+              controls this site publishes.
             </p>
             <div className="space-y-4 text-[1rem] leading-[1.8]">
               <p>
                 Testimony is editorial work, not traffic. Every story that
-                lands here will be on-record by explicit written consent,
-                reviewed by the contributor before it ships, and removable at
-                their request. Where a survivor prefers to stay anonymous, we
-                use composite or redacted forms and mark them clearly. Nothing
-                on this site trades a survivor&rsquo;s dignity for a joke.
+                lands here is on-record by explicit written consent, reviewed
+                by the contributor before it ships, and removable at their
+                request. Where a survivor prefers to stay anonymous, composite
+                or redacted forms are used and marked clearly. Nothing on this
+                site trades a survivor&rsquo;s dignity for attention.
               </p>
               <p>
                 <Link href="/stories" className="btn">
-                  How we&rsquo;ll publish stories &rarr;
+                  How stories are published &rarr;
                 </Link>
               </p>
             </div>
@@ -518,7 +591,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Open by design */}
+      {/* Open by design. */}
       <section
         className="section"
         style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
@@ -532,8 +605,8 @@ export default function HomePage() {
           </h2>
           <div className="grid gap-10 md:grid-cols-[2fr_3fr] md:items-start">
             <p className="font-[family-name:var(--font-serif)] text-3xl leading-tight">
-              Every claim on this site links to its source. The whole site is a
-              public GitHub repo. Anyone can read it, cite it, file a
+              Every claim on this site links to its source. The whole site is
+              a public GitHub repo. Anyone can read it, cite it, file a
               correction, or add a fact.
             </p>
             <ul className="grid gap-4 md:grid-cols-3">
@@ -542,7 +615,7 @@ export default function HomePage() {
                   <p className="open-card__eyebrow">Methodology</p>
                   <p className="open-card__title">Read the sources</p>
                   <p className="open-card__body">
-                    How every claim on the site maps to a row in our public
+                    How every claim on the site maps to a row in the public
                     FACTS.md intake.
                   </p>
                 </Link>
@@ -571,7 +644,7 @@ export default function HomePage() {
                   <p className="open-card__eyebrow">Add a fact</p>
                   <p className="open-card__title">Contribute a fact</p>
                   <p className="open-card__body">
-                    Sourced claim with a public citation? PR it or open an
+                    Sourced claim with a public citation? Open a PR or an
                     issue.
                   </p>
                 </a>
@@ -580,12 +653,11 @@ export default function HomePage() {
           </div>
           <p className="mt-10 max-w-prose text-sm opacity-75">
             This site is maintained openly. Every change is reviewable in git
-            history. Every source is linkable. Every page is contributable. We
-            treat survivors&rsquo; testimony as testimony, not as material.
+            history. Every source is linkable. Every page is contributable.
+            Survivors&rsquo; testimony is testimony, not material.
           </p>
         </div>
       </section>
-
     </>
   );
 }

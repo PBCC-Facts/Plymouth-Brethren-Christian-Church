@@ -7,12 +7,12 @@ import {
 import { buildPageMetadata } from "@/lib/seo";
 
 export const metadata = buildPageMetadata({
-  topic: "Our members",
+  topic: "People",
   description:
-    "Sourced profiles of named figures in the Plymouth Brethren Christian Church: leadership, historical leaders, and executives of the commercial network. Every claim footnoted. Inclusion rule published.",
-  slug: "/our-members",
+    "Sourced profiles of named figures in and around the Plymouth Brethren Christian Church: leadership, historical leaders, and executives of the commercial network. Every claim footnoted. Inclusion rule published.",
+  slug: "/people",
   cluster: "D",
-  register: "criticism",
+  register: "record",
 });
 
 export default function Page() {
@@ -21,19 +21,19 @@ export default function Page() {
       <JsonLd
         data={articleSchema({
           headline:
-            "Our members — sourced profiles of named PBCC figures",
+            "People. Sourced profiles of named PBCC figures.",
           description:
             "Index of sourced profiles of named Plymouth Brethren Christian Church leadership, historical leaders, and executives of the commercial network. Each profile carries a citation on every claim.",
-          slug: "/our-members",
+          slug: "/people",
           datePublished: "2026-04-23",
           dateModified: "2026-04-23",
-          register: "criticism",
+          register: "record",
         })}
       />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Our members", path: "/our-members" },
+          { name: "People", path: "/people" },
         ])}
       />
       <MemberIndex />

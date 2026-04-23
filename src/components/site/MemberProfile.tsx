@@ -12,7 +12,7 @@ import { Artwork } from "@/components/site/Artwork";
 /**
  * Register B, plainspoken. The structure is a reference entry:
  *   1. Name + role + overview.
- *   2. Inclusion basis — why this person is profiled, visible to the reader.
+ *   2. Inclusion basis. why this person is profiled, visible to the reader.
  *   3. Body sections (walked in order, footnotes numbered sequentially).
  *   4. Sources list (deduped, preserving first-mention order).
  *   5. Correction + review metadata footer.
@@ -36,7 +36,7 @@ export function MemberProfile({ member }: { member: Member }) {
               className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
               style={{ color: "var(--color-brand)" }}
             >
-              Our members &mdash; {categoryLabel(member.category)}
+              Our members. {categoryLabel(member.category)}
             </p>
             <h1
               className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]"
@@ -64,7 +64,7 @@ export function MemberProfile({ member }: { member: Member }) {
         </div>
       </section>
 
-      {/* Headline pull-quote — the single most damning, best-sourced statement */}
+      {/* Headline pull-quote. the single most damning, best-sourced statement */}
       {member.pullQuote ? (
         <section
           className="section"
@@ -103,7 +103,7 @@ export function MemberProfile({ member }: { member: Member }) {
                   className="font-sans font-bold uppercase tracking-[0.15em]"
                   style={{ color: "var(--color-rust)" }}
                 >
-                  &mdash;&nbsp;{member.pullQuote.attribution}
+                  {member.pullQuote.attribution}
                 </span>
                 <span className="text-sm">
                   {member.pullQuote.sourceIds.map((id, i) => {
@@ -135,7 +135,7 @@ export function MemberProfile({ member }: { member: Member }) {
         </section>
       ) : null}
 
-      {/* Inclusion basis — the reader sees why this person is profiled */}
+      {/* Inclusion basis. the reader sees why this person is profiled */}
       <section
         className="section"
         style={{
@@ -188,7 +188,7 @@ export function MemberProfile({ member }: { member: Member }) {
         );
       })}
 
-      {/* Sources block — every registered source cited on this profile */}
+      {/* Sources block. every registered source cited on this profile */}
       <section
         className="section"
         style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}

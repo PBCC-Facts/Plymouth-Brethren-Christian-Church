@@ -29,16 +29,16 @@ export async function generateMetadata({
     return buildPageMetadata({
       topic: "Profile not found",
       description: "This profile does not exist.",
-      slug: `/our-members/${slug}`,
+      slug: `/people/${slug}`,
       noindex: true,
     });
   }
   return buildPageMetadata({
-    topic: `${member.name} — ${member.currentRole ?? "Profile"}`,
+    topic: `${member.name}. ${member.currentRole ?? "Profile"}`,
     description: member.overview,
-    slug: `/our-members/${member.slug}`,
+    slug: `/people/${member.slug}`,
     cluster: "D",
-    register: "criticism",
+    register: "record",
     ogType: "article",
   });
 }
@@ -56,19 +56,19 @@ export default async function Page({
     <>
       <JsonLd
         data={articleSchema({
-          headline: `${member.name} — ${member.currentRole ?? "Profile"}`,
+          headline: `${member.name}. ${member.currentRole ?? "Profile"}`,
           description: member.overview,
-          slug: `/our-members/${member.slug}`,
+          slug: `/people/${member.slug}`,
           datePublished: member.publishedAt ?? "2026-04-23",
           dateModified: member.lastReviewedAt ?? member.publishedAt ?? "2026-04-23",
-          register: "criticism",
+          register: "record",
         })}
       />
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Our members", path: "/our-members" },
-          { name: member.name, path: `/our-members/${member.slug}` },
+          { name: "People", path: "/people" },
+          { name: member.name, path: `/people/${member.slug}` },
         ])}
       />
       <MemberProfile member={member} />

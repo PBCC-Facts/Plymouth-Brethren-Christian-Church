@@ -1,10 +1,14 @@
 import Link from "next/link";
 
-export function ParodyBanner() {
+/**
+ * Site-wide top banner. Identifies the project as independent and
+ * unaffiliated; links to the mission page.
+ */
+export function SiteBanner() {
   return (
     <div
       role="note"
-      aria-label="Parody and criticism notice"
+      aria-label="Independent, open-source record. Not affiliated with the Plymouth Brethren Christian Church."
       className="sticky top-0 z-50 w-full border-b border-[color:var(--color-banner-ink)]/10"
       style={{
         background: "var(--color-banner-bg)",
@@ -13,13 +17,13 @@ export function ParodyBanner() {
     >
       <div className="site-container flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-2 text-sm">
         <p className="font-bold uppercase tracking-wide">
-          Parody / Criticism Site
+          The Facts
           <span className="ml-2 font-normal normal-case tracking-normal">
-            Not affiliated with the Plymouth Brethren Christian Church.
+            · Independent journalism and open-source transparency · Not affiliated with the PBCC.
           </span>
         </p>
         <Link
-          href="/about-this-site"
+          href="/mission"
           className="underline decoration-2 underline-offset-2"
           style={{ color: "var(--color-banner-ink)" }}
         >

@@ -3,7 +3,7 @@ import { Footnote, SourcePending } from "@/components/site/Footnote";
 import { sources } from "@/lib/sources";
 
 /**
- * Shape of a row on /our-members.
+ * Shape of a row on /people.
  *
  * Matches the columns of public.members (see the add_members_table
  * migration). `body` is structured rather than Markdown so we don't pull
@@ -96,8 +96,8 @@ export function listPublishedSlugs(): string[] {
 
 // ---------------------------------------------------------------------------
 // Citation-token rendering. Paragraph text can contain two tokens:
-//   [[cite:source-id]]   — renders <Footnote id="source-id" n={n} />
-//   [[pending:note]]     — renders <SourcePending note="note" />
+//   [[cite:source-id]]  . renders <Footnote id="source-id" n={n} />
+//   [[pending:note]]    . renders <SourcePending note="note" />
 // Footnote ordinals are page-scoped and assigned in document order.
 // Referenced source ids are validated up-front; a missing id fails the
 // build loudly rather than rendering a broken link.

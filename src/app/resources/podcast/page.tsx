@@ -4,7 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 export const metadata = buildPageMetadata({
   topic: "Podcast",
   description:
-    "Podcast coverage of the Plymouth Brethren Christian Church — ex-member, journalist, and researcher interviews. Coming soon.",
+    "Podcast coverage of the Plymouth Brethren Christian Church. ex-member, journalist, and researcher interviews. Coming soon.",
   slug: "/resources/podcast",
   cluster: "B",
   noindex: true,

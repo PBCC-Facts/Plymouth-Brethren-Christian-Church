@@ -21,7 +21,7 @@ export default function StoriesPage() {
             className="hero__eyebrow"
             style={{ color: "var(--color-brand)" }}
           >
-            The Facts. &mdash; stories
+            The Facts.. stories
           </p>
           <h1
             className="hero__title"
@@ -44,7 +44,7 @@ export default function StoriesPage() {
               border: "1px solid var(--color-brand)",
             }}
           >
-            Intake open &mdash; first stories in review
+            Intake open. first stories in review
           </p>
         </div>
       </section>
@@ -139,7 +139,7 @@ export default function StoriesPage() {
             </p>
             <ul className="list-disc pl-5 space-y-2">
               <li>
-                <Link href="/contact">Send a confidential tip</Link> &mdash;
+                <Link href="/contact">Send a confidential tip</Link>.
                 the primary intake. This is the route to use if you want any
                 identifying detail off GitHub.
               </li>
@@ -151,7 +151,7 @@ export default function StoriesPage() {
                 >
                   Open a GitHub issue
                 </a>{" "}
-                &mdash; only when there is no identifying detail you need to
+               . only when there is no identifying detail you need to
                 keep off a public repo. We will move the conversation off
                 GitHub before any draft is written.
               </li>

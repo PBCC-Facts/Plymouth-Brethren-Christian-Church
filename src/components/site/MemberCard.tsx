@@ -3,7 +3,7 @@ import type { Member } from "@/lib/members";
 import { Artwork } from "@/components/site/Artwork";
 
 /**
- * Listing-card for /our-members. Plainspoken: name, role, one-sentence
+ * Listing-card for /people. Plainspoken: name, role, one-sentence
  * overview, category chip. No snark. Profile links live here.
  */
 export function MemberCard({ member }: { member: Member }) {
@@ -12,7 +12,7 @@ export function MemberCard({ member }: { member: Member }) {
       className="flex flex-col border overflow-hidden"
       style={{ borderColor: "var(--color-rule)" }}
     >
-      <Link href={`/our-members/${member.slug}`} className="block" aria-label={member.name}>
+      <Link href={`/people/${member.slug}`} className="block" aria-label={member.name}>
         <Artwork
           title={member.name}
           kind="person"
@@ -28,7 +28,7 @@ export function MemberCard({ member }: { member: Member }) {
           {categoryLabel(member.category)}
         </p>
         <h3 className="mt-2 font-[family-name:var(--font-serif)] text-2xl leading-tight">
-          <Link href={`/our-members/${member.slug}`}>{member.name}</Link>
+          <Link href={`/people/${member.slug}`}>{member.name}</Link>
         </h3>
         {member.currentRole ? (
           <p className="mt-1 text-sm opacity-75">{member.currentRole}</p>
@@ -36,7 +36,7 @@ export function MemberCard({ member }: { member: Member }) {
         <p className="mt-4 text-[0.95rem] leading-[1.7]">{member.overview}</p>
         <p className="mt-5">
           <Link
-            href={`/our-members/${member.slug}`}
+            href={`/people/${member.slug}`}
             className="font-sans text-sm font-bold uppercase tracking-[0.05em]"
             style={{ color: "var(--color-brand)" }}
           >

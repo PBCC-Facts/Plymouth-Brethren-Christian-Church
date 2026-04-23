@@ -1,4 +1,4 @@
-# Fetch Plan — capturing the live PBCC site for authentic mirroring
+# Fetch Plan. capturing the live PBCC site for authentic mirroring
 
 ## Why this document exists
 
@@ -14,8 +14,8 @@ This takes **~20 minutes end-to-end** if done once, and each output is small eno
 
 Primary (structural mirror targets):
 
-1. `https://www.plymouthbrethrenchristianchurch.org/` — homepage
-2. `https://www.plymouthbrethrenchristianchurch.org/way-of-life/` — priority parody target
+1. `https://www.plymouthbrethrenchristianchurch.org/`. homepage
+2. `https://www.plymouthbrethrenchristianchurch.org/way-of-life/` (priority mirror target for SEO head-term match)
 3. `https://www.plymouthbrethrenchristianchurch.org/way-of-life/our-beliefs/`
 4. `https://www.plymouthbrethrenchristianchurch.org/way-of-life/our-neighbours/`
 5. `https://www.plymouthbrethrenchristianchurch.org/our-members/`
@@ -27,13 +27,13 @@ Secondary (context, optional):
 
 9. `https://www.plymouthbrethrenchristianchurch.org/resource/statement-of-belief/`
 10. `https://www.plymouthbrethrenchristianchurch.org/resource/bruce-d-hales/`
-11. `https://staging.plymouthbrethrenchristianchurch.org/home/community/` (staging variant that surfaced in search — confirm it's live)
+11. `https://staging.plymouthbrethrenchristianchurch.org/home/community/` (staging variant that surfaced in search. confirm it's live)
 
 ---
 
 ## What I need from each page
 
-### A. Design tokens (capture once, from the homepage — they're site-wide)
+### A. Design tokens (capture once, from the homepage. they're site-wide)
 
 1. **Brand hex values.** DevTools → Elements → pick any brand-colored element (nav link, CTA, heading accent) → Computed → copy `color` / `background-color` hex. Do this for:
    - Primary brand color (the green).
@@ -45,7 +45,7 @@ Secondary (context, optional):
 2. **Font families.** Elements → `<head>` → find the Google Fonts `<link>` OR the stylesheet URL that contains `@font-face`. Paste:
    - The full `href` of the Google Fonts link (tells me exact families and weights), OR
    - `font-family` computed values for: a H1, a body paragraph, a nav link.
-3. **Type scale.** For H1, H2, H3, body, small — copy Computed `font-size`, `line-height`, `font-weight`. Five elements × three values = 15 numbers. I can paste a DevTools snippet below to dump them all at once.
+3. **Type scale.** For H1, H2, H3, body, small. copy Computed `font-size`, `line-height`, `font-weight`. Five elements × three values = 15 numbers. I can paste a DevTools snippet below to dump them all at once.
 4. **Container widths.** Right-click main content → Computed → `width` and `max-width`. Do it at desktop width (1440px window) and mobile (375px window).
 5. **Section padding.** Computed `padding-top` and `padding-bottom` on a main section wrapper.
 
@@ -53,7 +53,7 @@ Secondary (context, optional):
 
 For each page:
 
-1. **Full HTML.** In DevTools Elements panel: right-click `<html>` → Copy → Copy outerHTML. Paste into a file named `/tmp/pbcc/{slug}.html` and commit to a `research/captures/` branch or gist (not main — these are for reference only, we do not serve them). Or attach as PR comment.
+1. **Full HTML.** In DevTools Elements panel: right-click `<html>` → Copy → Copy outerHTML. Paste into a file named `/tmp/pbcc/{slug}.html` and commit to a `research/captures/` branch or gist (not main. these are for reference only, we do not serve them). Or attach as PR comment.
 2. **Nav markup.** Right-click the `<nav>` → Copy outerHTML. Paste here or commit. This gives me the exact dropdown structure.
 3. **Footer markup.** Same, for the `<footer>`.
 4. **Section order.** List the H1 and every H2 on the page in order, with a one-line gloss of what each section is about.
@@ -161,6 +161,6 @@ Total turnaround after you paste the outputs: ~30 min of build work, then I hand
 
 - We are **capturing the public markup of a website for the purpose of criticism and commentary**. This is fine under both U.S. and most Commonwealth law.
 - We are **not** scraping logged-in pages, evading access controls, or publishing the captured markup.
-- Captures live in your local filesystem (or gitignored `research/captures/`) — **never** in the deployed site's `public/` directory or the git-tracked tree.
-- All images shipped with the parody site are original or licensed stock, not mirrored from the source.
-- When in doubt, paste excerpts into a PR comment rather than committing files — comment contents are still auditable but don't ship.
+- Captures live in your local filesystem (or gitignored `research/captures/`). **never** in the deployed site's `public/` directory or the git-tracked tree.
+- All images shipped with this site are original or licensed stock, not mirrored from the source.
+- When in doubt, paste excerpts into a PR comment rather than committing files. comment contents are still auditable but don't ship.

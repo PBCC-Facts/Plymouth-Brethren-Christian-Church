@@ -4,34 +4,37 @@ Light orientation for Claude. Expand as the project grows.
 
 ## What this is
 
-A public GitHub project for a strategic parody / criticism site targeting the Plymouth Brethren Christian Church's PR rebrand. The site structurally mirrors the official PBCC site to win branded search, while the content is original satire + sourced journalism. The repo is deliberately open so researchers, ex-members, journalists, and contributors can file issues, PRs, and corrections.
+A public GitHub project for an independent, open-source record of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). The site organises the investigative journalism, court filings, parliamentary and regulator findings, and survivor testimony that already exist in public, and puts a citation on every claim. Branded **The Facts.** The repo is deliberately open so researchers, ex-members, journalists, and contributors can file issues, PRs, and corrections.
 
-## Draft mission (pending Trent's sign-off)
+## Mission
 
-> Document — in public, on the same search terms, with a citation on every sentence — the doctrines, practices, and recent reporting the Plymouth Brethren Christian Church spends real money to soften. Family separation. Allegations of abuse. Defamation suits against critics. Tax and charity regulators at the door. Not vibes: footnotes. Every page a pull request away. First-person survivor testimony lives on this site, under explicit written consent, via `/stories`.
+> Organise, in public and on the same search terms, the record that journalists, regulators, courts, and survivors have already put on the public record about the Plymouth Brethren Christian Church. The original reporting happens elsewhere: ABC Four Corners, The Times, Stuff NZ, Guardian Australia, Byline Times, the NZ Royal Commission, the UK Charity Commission, the ATO, and survivor-run archives like PBCCstories.org and the Get A Life podcast. This site is the library that points to all of it, one citation per claim. First-person survivor testimony lives on this site via `/stories`, on-record by explicit written consent.
 
-Four load-bearing commitments inside that mission:
+Four load-bearing commitments:
 
-1. **Sourced, not strident.** Documented practice, not adjectives. Register discipline per [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md). Severity claims (abuse, SLAPP-style litigation) cite a specific named case or ship with a visible `SourcePending` marker — never silently.
-2. **Name what's in the reporting.** Abuse allegations, defamation proceedings against journalists and ex-members, regulatory action (e.g. the 2024 ATO raid on UBT) are not subtext. Where the public record carries the claim, we carry it too, with the same citation.
+1. **Sourced, not strident.** Documented practice, not adjectives. Register discipline per [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md). Severity claims cite a specific named case or ship with a visible `SourcePending` marker. Never silently.
+2. **Aggregator, not originator.** The site does not claim original reporting. Every body paragraph attributes the reporting outlet that said it first. This is the fair-use posture: news reporting, criticism and commentary, research and education, stacked under § 107.
 3. **Open by design.** Issues, PRs, corrections, and new evidence are welcome from anyone. A `CONTRIBUTING.md` and issue templates are a near-term must.
-4. **Survivor-first, in-site.** First-person testimony is hosted on this site via `/stories`, on-record by explicit written consent, reviewed by the contributor before ship, and removable on request. Nothing on this site trades a survivor's dignity for a joke. When in doubt, cut the joke.
+4. **Survivor-first, in-site.** First-person testimony is hosted on this site via `/stories`, on-record by explicit written consent, reviewed by the contributor before ship, and removable on request. The subject of every sharp sentence is the fellowship's rebrand, its leadership, or its institutions. Never a survivor.
 
 ## Status
 
-Pre-code. Only planning docs exist:
+Live: `/`, `/mission`, `/resources`, `/people`, `/people/bruce-d-hales`, `/legal`. ComingSoon placeholders elsewhere.
 
-- [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md) — provisional tokens (pending live-site fetch)
-- [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md) — the editorial spine; read this before writing any copy
-- [SEO_STRATEGY.md](SEO_STRATEGY.md) — keyword clusters, title/meta formulas, schema plan
-- [INFRASTRUCTURE.md](INFRASTRUCTURE.md) — Next.js on Vercel + Supabase
-- [FETCH_PLAN.md](FETCH_PLAN.md) — runbook to capture real PBCC tokens from an open-egress machine
-- [RESEARCH_NOTES.md](RESEARCH_NOTES.md) — verified sources gathered so far
-- [MEMBERS_POLICY.md](MEMBERS_POLICY.md) — inclusion rule for `/our-members` profiles; read before adding a person
-- [docs/AUTHORING_MEMBERS.md](docs/AUTHORING_MEMBERS.md) — mechanical how-to for member profile rows
+Planning docs:
+
+- [DESIGN_SYSTEM.md](DESIGN_SYSTEM.md). Tokens, typography, component patterns.
+- [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md). The editorial spine; read this before writing any copy.
+- [SEO_STRATEGY.md](SEO_STRATEGY.md). Keyword clusters, title/meta formulas, schema plan.
+- [INFRASTRUCTURE.md](INFRASTRUCTURE.md). Next.js on Vercel plus Supabase.
+- [FETCH_PLAN.md](FETCH_PLAN.md). Runbook to capture real PBCC tokens from an open-egress machine.
+- [RESEARCH_NOTES.md](RESEARCH_NOTES.md). Verified sources gathered so far.
+- [MEMBERS_POLICY.md](MEMBERS_POLICY.md). Inclusion rule for `/people` profiles; read before adding a person.
+- [FACTS.md](FACTS.md). The claims intake; every ✅ row is a candidate for `src/lib/sources.ts`.
 
 ## Working agreements
 
-- Every factual claim gets a footnote. No invented citations — mark `{/* TODO: source */}` and render `<SourcePending />` instead.
-- Never mix Register C (snarky mirror) and Register B (explanatory) on the same page.
+- Every factual claim gets a footnote. No invented citations: mark `{/* TODO: source */}` and render `<SourcePending />` instead.
+- One register only (see EDITORIAL_GUIDE.md §1). Third-person, named subject, aggregator framing.
+- No em-dashes in body copy. Colon, full stop, or parenthetical comma. Verbatim quotations from primary sources are the sole exception.
 - Keep this file light. Long-form guidance lives in the docs above.
