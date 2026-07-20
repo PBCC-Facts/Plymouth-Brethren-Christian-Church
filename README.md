@@ -2,7 +2,7 @@
 
 An independent, open-source record of the Plymouth Brethren Christian Church (PBCC), formerly known as the Exclusive Brethren.
 
-**Live site:** https://factsaboutplymouthbrethrenchristianchurch.org
+**Live site:** https://pbccfacts.com
 
 ## What this is
 
@@ -23,7 +23,7 @@ Corrections, new evidence, and new sources are welcome from researchers, journal
 
 - **Factual error on the site:** open a [correction issue](../../issues/new?labels=correction&title=Correction:+).
 - **New evidence or source:** open a [new-fact issue](../../issues/new?labels=new-fact&title=New+fact:+).
-- **Survivor story:** do not open a public issue. Use the consent-controlled intake described at [/stories](https://factsaboutplymouthbrethrenchristianchurch.org/stories).
+- **Survivor story:** do not open a public issue. Use the consent-controlled intake described at [/stories](https://pbccfacts.com/stories).
 
 ## Repository map
 

@@ -16,7 +16,7 @@ Open an issue with the `correction` label. Include:
 - What is factually wrong.
 - Ideally, the public source that establishes the correct fact.
 
-Factually wrong sentences get corrected or removed, as a public pull request. Accurate, sourced sentences do not get removed on request; see [/legal](https://factsaboutplymouthbrethrenchristianchurch.org/legal).
+Factually wrong sentences get corrected or removed, as a public pull request. Accurate, sourced sentences do not get removed on request; see [/legal](https://pbccfacts.com/legal).
 
 ### 2. Add a fact or source
 
@@ -36,7 +36,7 @@ Read [MEMBERS_POLICY.md](MEMBERS_POLICY.md) first. Private members of the fellow
 
 ### 4. Survivor stories
 
-Not via GitHub. First-person testimony runs through the consent-controlled intake at [/stories](https://factsaboutplymouthbrethrenchristianchurch.org/stories): on-record by explicit written consent, contributor-reviewed before ship, removable on request. Do not post testimony, yours or anyone else's, in a public issue.
+Not via GitHub. First-person testimony runs through the consent-controlled intake at [/stories](https://pbccfacts.com/stories): on-record by explicit written consent, contributor-reviewed before ship, removable on request. Do not post testimony, yours or anyone else's, in a public issue.
 
 ### 5. Code
 
@@ -55,5 +55,5 @@ Full rulebook: [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md).
 ## Safety notes for contributors
 
 - Contributor identities are never published without explicit written consent.
-- If you are a current or recent member and contributing could expose you, consider contributing through the confidential channel at [/contact](https://factsaboutplymouthbrethrenchristianchurch.org/contact) instead of a public GitHub account.
+- If you are a current or recent member and contributing could expose you, consider contributing through the confidential channel at [/contact](https://pbccfacts.com/contact) instead of a public GitHub account.
 - Correspondence intended to identify or pressure contributors is treated as part of the public record of the project.

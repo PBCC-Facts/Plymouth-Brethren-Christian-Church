@@ -8,7 +8,7 @@ body:
     attributes:
       label: Page URL
       description: The page on the live site where the error appears.
-      placeholder: https://factsaboutplymouthbrethrenchristianchurch.org/...
+      placeholder: https://pbccfacts.com/...
     validations:
       required: true
   - type: textarea

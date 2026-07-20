@@ -211,7 +211,7 @@ Trent confirmed:
   2. `bruce hales` / `bruce d hales`. the current "Man of God" and the single most-searched PBCC-adjacent person. Cluster D's `/doctrine/man-of-god` page remains the long-term canonical, but until it ships, homepage + mission + `/people` descriptions name him explicitly so those pages pick up the traffic.
 - **ComingSoon pages.** Indexable:false in `src/lib/routes.ts` and `noindex: true` via `buildPageMetadata`. Flip both when real copy lands.
 - **OG images.** Auto-generated at `/og?title=…&tag=…` via `src/app/og/route.tsx` using `next/og`'s `ImageResponse`. One generator, per-page title from `buildPageMetadata`.
-- **Canonical origin.** `https://factsaboutplymouthbrethrenchristianchurch.org` (from `src/lib/site.ts`).
+- **Canonical origin.** `https://pbccfacts.com` (from `src/lib/site.ts`).
 
 ## 11. Title / description formula. implementation
 
