@@ -49,7 +49,7 @@ npm run dev
 
 ## Maintainer
 
-Primary maintainer: [@trentwaskey](https://github.com/trentwaskey). Issues and pull requests are triaged by the maintainer; profile and severity-claim changes require the sourcing bar described in [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md) §2 before merge.
+This project is owned and maintained by the [PBCC-Facts](https://github.com/PBCC-Facts) organization and its contributors. Issues and pull requests are triaged by the project maintainers; profile and severity-claim changes require the sourcing bar described in [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md) §2 before merge.
 
 ## Licence
 

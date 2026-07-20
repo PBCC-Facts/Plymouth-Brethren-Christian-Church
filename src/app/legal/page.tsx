@@ -86,7 +86,7 @@ export default function LegalPage() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                github.com/trentwaskey/Plymouth-Brethren-Christian-Church
+                github.com/PBCC-Facts/Plymouth-Brethren-Christian-Church
               </a>
               .
             </p>

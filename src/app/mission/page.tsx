@@ -8,7 +8,7 @@ import {
 } from "@/components/seo/JsonLd";
 
 const REPO_URL =
-  "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church";
+  "https://github.com/PBCC-Facts/Plymouth-Brethren-Christian-Church";
 
 export const metadata = buildPageMetadata({
   topic: "Mission",
