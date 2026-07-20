@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Footnote } from "@/components/site/Footnote";
 import { GITHUB_URL } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
@@ -23,11 +24,17 @@ export const metadata = buildPageMetadata({
 type Basic = {
   label: string;
   render: (nextN: () => number) => React.ReactNode;
+  /** Marker illustration (public/images/illustrations) + descriptive alt. */
+  art: { src: string; alt: string };
 };
 
 const basics: Basic[] = [
   {
     label: "Who they are",
+    art: {
+      src: "/images/illustrations/community-circle.webp",
+      alt: "Hand-drawn marker illustration: a tight cluster of identical figures stands inside a drawn circle; the paper outside the circle is empty.",
+    },
     render: (nextN) => (
       <>
         A conservative Christian group of roughly 55,000 members across 19
@@ -40,6 +47,10 @@ const basics: Basic[] = [
   },
   {
     label: "Who leads it",
+    art: {
+      src: "/images/illustrations/one-leader.webp",
+      alt: "Hand-drawn marker illustration: one large figure points from above; rows of small identical figures stand below, facing up at him.",
+    },
     render: (nextN) => (
       <>
         One man: Bruce D. Hales, a Sydney businessman known within the
@@ -52,6 +63,10 @@ const basics: Basic[] = [
   },
   {
     label: "The rule everything runs on",
+    art: {
+      src: "/images/illustrations/eating-separation.webp",
+      alt: "Hand-drawn marker illustration: a family eats at one end of a table; a lone figure with an empty plate sits at the other end, separated by a heavy drawn line, with a bold X above the gap.",
+    },
     render: (nextN) => (
       <>
         The Doctrine of Separation: members may not eat with, live with,
@@ -64,6 +79,10 @@ const basics: Basic[] = [
   },
   {
     label: "What daily life looks like",
+    art: {
+      src: "/images/illustrations/detached-house.webp",
+      alt: "Hand-drawn marker illustration: a single detached house stands alone inside a drawn fence; a row of connected townhouses and a television are crossed out with bold X marks.",
+    },
     render: (nextN) => (
       <>
         Members live in detached houses with no shared walls or drains
@@ -79,6 +98,10 @@ const basics: Basic[] = [
   },
   {
     label: "What happens if you leave",
+    art: {
+      src: "/images/illustrations/leaving.webp",
+      alt: "Hand-drawn marker illustration: a family stands together on one side of a heavy drawn line; on the other side, a lone figure walks away carrying a suitcase, head bowed.",
+    },
     render: (nextN) => (
       <>
         Those who leave or are expelled (&ldquo;withdrawn from&rdquo;) are
@@ -220,11 +243,22 @@ export default function HomePage() {
           <h2 className="section-label">The basics.</h2>
           <ul className="record-wall">
             {basics.map((b) => (
-              <li key={b.label} className="record-row">
+              <li
+                key={b.label}
+                className="record-row md:!grid-cols-[140px_1fr_170px]"
+              >
                 <div className="record-row__outlet" style={{ alignSelf: "start", paddingTop: "0.3rem" }}>
                   {b.label}
                 </div>
                 <p className="record-row__prose">{b.render(nextN)}</p>
+                <Image
+                  src={b.art.src}
+                  alt={b.art.alt}
+                  width={170}
+                  height={170}
+                  className="hidden md:block justify-self-end"
+                  style={{ mixBlendMode: "multiply" }}
+                />
               </li>
             ))}
           </ul>

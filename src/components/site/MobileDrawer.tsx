@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { Dispatch, SetStateAction, useEffect } from "react";
-import { primaryNav } from "@/lib/nav";
+import { drawerNav } from "@/lib/nav";
 
 type Props = {
   open: boolean;
@@ -86,7 +86,7 @@ export function MobileDrawer({ open, setOpen }: Props) {
         </div>
 
         <ul className="flex-1 overflow-y-auto p-6 space-y-4">
-          {primaryNav.map((item) => (
+          {drawerNav.map((item) => (
             <li key={item.href}>
               <Link
                 href={item.href}

@@ -5,12 +5,20 @@ export type NavItem = {
   children?: NavItem[];
 };
 
-// Nav structure mirrors the PBCC site's URL space for SEO head-term match,
-// but label text is ours (third-person, journalism flavour). Source of
-// truth for the PBCC nav capture: research/tokens.json > nav.primary.
+// Masthead nav: five destinations, nothing else. Home lives on the
+// wordmark; everything secondary is reachable through the "All pages"
+// drawer (drawerNav) and the footer.
 export const primaryNav: NavItem[] = [
+  { label: "Way of life", href: "/way-of-life" },
+  { label: "The Money", href: "/money" },
+  { label: "People", href: "/people" },
+  { label: "The Record", href: "/news" },
+  { label: "What we need", href: "/what-we-need" },
+];
+
+// Full site map for the "All pages" drawer. Grouped, complete.
+export const drawerNav: NavItem[] = [
   { label: "Home", href: "/" },
-  { label: "Mission", href: "/mission" },
   {
     label: "Way of life",
     href: "/way-of-life",
@@ -47,60 +55,32 @@ export const primaryNav: NavItem[] = [
   {
     label: "The Record",
     href: "/news",
-    children: [
-      { label: "Podcast", href: "/resources/podcast" },
-      {
-        label: "Videos",
-        href: "https://www.youtube.com/channel/UC76fGueDJBbLvhs988yTBXQ",
-        external: true,
-      },
-    ],
+    children: [{ label: "Podcast", href: "/resources/podcast" }],
   },
-  { label: "Resources", href: "/resources" },
+  { label: "Stories", href: "/stories" },
   { label: "What we need", href: "/what-we-need" },
+  { label: "Resources", href: "/resources" },
+  { label: "Mission", href: "/mission" },
+  { label: "Legal", href: "/legal" },
   { label: "Contact", href: "/contact" },
 ];
 
 export const footerNav: NavItem[] = [
-  { label: "Mission", href: "/mission" },
-  { label: "Resources", href: "/resources" },
   { label: "Way of life", href: "/way-of-life" },
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
-  { label: "News", href: "/news" },
+  { label: "The Record", href: "/news" },
+  { label: "Stories", href: "/stories" },
   { label: "What we need", href: "/what-we-need" },
+  { label: "Resources", href: "/resources" },
+  { label: "Mission", href: "/mission" },
   { label: "Legal", href: "/legal" },
-  { label: "Terms & Conditions", href: "/terms" },
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Cookies Policy", href: "/cookies" },
   { label: "Contact", href: "/contact" },
 ];
 
-/**
- * Browse-everything strip. Every top-level destination on the site, grouped
- * by build status. Items with {exists:false} render with an "(in progress)" tag.
- */
-export type BrowseItem = NavItem & { exists?: boolean };
-
-export const browseAll: BrowseItem[] = [
-  { label: "Home", href: "/", exists: true },
-  { label: "Mission", href: "/mission", exists: true },
-  { label: "Way of life", href: "/way-of-life" },
-  { label: "The Money", href: "/money" },
-  { label: "People", href: "/people", exists: true },
-  { label: "The record", href: "/news", exists: true },
-  { label: "Resources", href: "/resources", exists: true },
-  { label: "Doctrine", href: "/doctrine" },
-  { label: "Timeline", href: "/timeline" },
-  { label: "FAQ", href: "/faq" },
-  { label: "Litigation", href: "/litigation" },
-  { label: "Glossary", href: "/glossary" },
-  { label: "What we need", href: "/what-we-need", exists: true },
-  { label: "Contact", href: "/contact", exists: true },
-  {
-    label: "GitHub",
-    href: "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church",
-    external: true,
-    exists: true,
-  },
+/** Small-print row at the very bottom of the footer. */
+export const policyNav: NavItem[] = [
+  { label: "Terms", href: "/terms" },
+  { label: "Privacy", href: "/privacy" },
+  { label: "Cookies", href: "/cookies" },
 ];

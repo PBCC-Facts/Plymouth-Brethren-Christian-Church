@@ -1,5 +1,6 @@
 import Link from "next/link";
-import { footerNav } from "@/lib/nav";
+import { footerNav, policyNav } from "@/lib/nav";
+import { GITHUB_URL } from "@/lib/site";
 
 export function Footer() {
   return (
@@ -7,32 +8,18 @@ export function Footer() {
       className="mt-auto"
       style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
     >
-      <div className="site-container py-20">
-        <div className="grid gap-12 md:grid-cols-[2fr_3fr] md:items-center">
-          <div>
-            <p
-              className="font-[family-name:var(--font-mono)] text-[0.65rem] font-medium uppercase tracking-[0.15em] opacity-70"
-            >
-              Contact
-            </p>
-            <h2
-              className="mt-3 font-[family-name:var(--font-serif)] text-3xl leading-tight"
-              style={{ color: "var(--color-surface)" }}
-            >
-              Corrections, new evidence, and tips make this record better.
-            </h2>
-            <Link href="/contact" className="btn btn--on-dark mt-6">
-              Get in touch
-            </Link>
-          </div>
-
+      <div className="site-container py-14">
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4">
+          <p className="font-[family-name:var(--font-serif)] text-2xl font-semibold m-0">
+            The Facts.
+          </p>
           <nav aria-label="Footer">
-            <ul className="grid grid-cols-2 gap-x-8 gap-y-3 text-sm">
+            <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
               {footerNav.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}
-                    className="opacity-80 hover:opacity-100"
+                    className="no-underline opacity-80 hover:opacity-100 hover:underline"
                     style={{ color: "var(--color-surface)" }}
                   >
                     {item.label}
@@ -43,24 +30,35 @@ export function Footer() {
           </nav>
         </div>
 
-        <hr className="my-12 border-white/10" />
+        <hr className="my-8 border-white/10" />
 
-        <div className="flex flex-wrap items-center justify-between gap-4 text-xs opacity-70">
-          <p>
+        <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-3 text-xs opacity-70">
+          <p className="m-0">
             © {new Date().getFullYear()} The Facts. An independent,
-            open-source record of the Plymouth Brethren Christian Church.
-            Not affiliated with the PBCC.
-          </p>
-          <p>
-            Source:{" "}
+            open-source record of the Plymouth Brethren Christian Church. Not
+            affiliated with the PBCC. Source on{" "}
             <a
-              href="https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church"
+              href={GITHUB_URL}
               className="underline"
               style={{ color: "var(--color-surface)" }}
             >
-              github.com/trentwaskey/Plymouth-Brethren-Christian-Church
+              GitHub
             </a>
+            .
           </p>
+          <ul className="flex gap-x-5">
+            {policyNav.map((item) => (
+              <li key={item.href}>
+                <Link
+                  href={item.href}
+                  className="no-underline opacity-80 hover:opacity-100 hover:underline"
+                  style={{ color: "var(--color-surface)" }}
+                >
+                  {item.label}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </footer>

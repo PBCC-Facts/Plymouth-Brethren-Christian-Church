@@ -51,10 +51,20 @@ Links in prose: ink with a visible underline; accent red on hover. Links are nev
 - **Ex-member badge** (`ExMemberBadge.tsx` / `.exmember-badge`): bordered mono chip with a red dot and report count ("2 verified ex-member reports"). The visible form of the 🟣 tier in docs/REPORTS_SYSTEM.md. It is an evidentiary marker: never decorate with it.
 - **Cards**: 1px ink border on paper (contact channels), or 1px paper-alpha border on ink (`.open-card`). Square corners everywhere. No shadows, no rounding, no gradients.
 
-## 5. Iconography and imagery
+## 5. Iconography, imagery, and the marker illustration style
 
 - Iconography: line glyphs (`src/lib/glyphs.tsx`) inherit currentColor; use ink on paper, paper on ink, red only when the glyph itself marks evidence class.
 - Imagery: original or licensed only, no PBCC photography (unchanged from v1). Diagrams (the /money graphs) are original SVG in this palette: ink nodes/edges on paper, red for flagged flows, mono labels.
+
+### The marker illustrations
+
+The site's illustration voice, adopted 2026-07-19: **hand-drawn thick black felt-tip marker on the paper tone**. Solid faceless silhouette figures, wobbly imperfect strokes, no shading, no gray, no color, generous negative space. Symbolic, somber, quiet: a family at a table and a lone figure cut off by a single drawn line says what a paragraph cannot. The subject of an illustration is always a practice or a structure, never a caricature of an individual (MEMBERS_POLICY.md and EDITORIAL_GUIDE.md anti-patterns apply to pictures exactly as to prose).
+
+Production: generated via Higgsfield with **Recraft V4.1** (`model_type: standard`, `colors: ["#171512"]`, `background_color: "#f9f7f2"`, aspect 1:1). Style prompt prefix, verbatim:
+
+> Hand-drawn editorial illustration in thick black felt-tip marker on warm cream paper. Bold, slightly wobbly ink strokes with visible marker texture, flat solid black silhouette figures, no shading, no gray tones, no color, generous empty negative space, faceless simple figures, somber quiet emotional tone, stark minimalist op-ed sketch style, no text anywhere. Subject: …
+
+Files live in `public/images/illustrations/` as compressed WebP with descriptive kebab-case names (`eating-separation.webp`). Every placement carries meaningful alt text describing the drawing, and illustrations annotate understanding: they sit beside sourced copy, never replace it.
 
 ## 6. Layout
 

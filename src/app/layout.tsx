@@ -5,7 +5,6 @@ import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { SiteBanner } from "@/components/site/SiteBanner";
 import { Shell } from "@/components/site/Shell";
 import { Footer } from "@/components/site/Footer";
-import { BrowseStrip } from "@/components/site/BrowseStrip";
 import { JsonLd, organizationSchema } from "@/components/seo/JsonLd";
 import { ogImageUrl } from "@/lib/seo";
 
@@ -48,7 +47,6 @@ export default function RootLayout({
         <SiteBanner />
         <Shell>
           <main className="flex-1">{children}</main>
-          <BrowseStrip />
           <Footer />
         </Shell>
       </body>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { buildPageMetadata } from "@/lib/seo";
 import { getInfoRequests, type InfoRequest } from "@/lib/supabase";
 import { GITHUB_URL } from "@/lib/site";
@@ -71,7 +72,8 @@ export default async function WhatWeNeedPage() {
       </section>
 
       <section className="section">
-        <div className="site-container">
+        <div className="site-container grid gap-10 md:grid-cols-[1fr_280px] md:items-start">
+          <div>
           <h2 className="section-label">Before you send anything.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
@@ -88,6 +90,15 @@ export default async function WhatWeNeedPage() {
               title page or spine where possible, so the citation is complete.
             </p>
           </div>
+          </div>
+          <Image
+            src="/images/illustrations/document-through-wall.webp"
+            alt="Hand-drawn marker illustration: through a small gap in a heavy brick wall, one hand passes a folded document to an open hand waiting on the other side."
+            width={280}
+            height={280}
+            className="hidden md:block"
+            style={{ mixBlendMode: "multiply" }}
+          />
         </div>
       </section>
 
