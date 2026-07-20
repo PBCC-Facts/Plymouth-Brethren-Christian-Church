@@ -1,42 +1,39 @@
 import Link from "next/link";
+import Image from "next/image";
 import { buildPageMetadata } from "@/lib/seo";
-import { getInfoRequests } from "@/lib/supabase";
 import { GITHUB_URL } from "@/lib/site";
 import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata = buildPageMetadata({
-  topic: "Contact",
+  topic: "Get in touch",
   description:
-    "How to reach the editor of The Facts: corrections, new evidence, confidential tips, and survivor stories about the Plymouth Brethren Christian Church. Journalists and researchers welcome.",
+    "How to contact The Facts safely: confidential tips from current and former Plymouth Brethren Christian Church members, survivor stories, and factual corrections from anyone, including the church.",
   slug: "/contact",
   noindex: true,
 });
 
-export const revalidate = 300;
-
-export default async function ContactPage() {
-  const requests = await getInfoRequests();
-  const top = requests.filter((r) => r.status === "open").slice(0, 4);
-
+export default function ContactPage() {
   return (
     <>
       <JsonLd
         data={breadcrumbSchema([
           { name: "Home", path: "/" },
-          { name: "Contact", path: "/contact" },
+          { name: "Get in touch", path: "/contact" },
         ])}
       />
 
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">Contact</p>
-            <h1 className="hero__title">Reach the editor.</h1>
+            <p className="hero__eyebrow">Get in touch</p>
+            <h1 className="hero__title">
+              This record grows by what people send it.
+            </h1>
             <p className="hero__sub">
-              Corrections, new evidence, tips, and testimony all make this
-              record better. Choose the channel that matches how public you
-              want to be. Contributor identities are never published without
-              explicit written consent.
+              Whether you are still inside, recently out, or just spotted a
+              mistake: what you know matters here. Your identity is never
+              published without your explicit written consent, and factual
+              corrections are welcome from anyone, including the church.
             </p>
           </div>
         </div>
@@ -44,114 +41,103 @@ export default async function ContactPage() {
 
       <section className="section">
         <div className="site-container">
-          <h2 className="section-label">Channels.</h2>
-          <ul className="grid gap-6 md:grid-cols-3">
-            <li
-              className="p-6"
-              style={{ border: "1px solid var(--color-ink)" }}
-            >
-              <p className="record-row__outlet">Public · fastest</p>
-              <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl">
-                GitHub issues
-              </h3>
-              <p className="mt-2 text-sm leading-[1.7]">
-                For factual corrections and new sourced facts. Public,
-                trackable, and resolved in the open.
-              </p>
-              <p className="mt-4 text-sm">
-                <a
-                  href={`${GITHUB_URL}/issues/new?labels=correction&title=Correction:+`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  File a correction &rarr;
-                </a>
-                <br />
-                <a
-                  href={`${GITHUB_URL}/issues/new?labels=new-fact&title=New+fact:+`}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Submit a new fact &rarr;
-                </a>
-              </p>
-            </li>
-            <li
-              className="p-6"
-              style={{ border: "1px solid var(--color-ink)" }}
-            >
-              <p className="record-row__outlet">Confidential</p>
-              <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl">
-                Direct to the editor
-              </h3>
-              <p className="mt-2 text-sm leading-[1.7]">
-                For documents, recordings, and anything you do not want on
-                the public record. Identity can be verified by the editor and
-                withheld from the site. A dedicated encrypted channel is being
-                set up; until it is announced here, open a GitHub issue asking
-                for a private channel without including the material itself.
-              </p>
-            </li>
-            <li
-              className="p-6"
-              style={{ border: "1px solid var(--color-ink)" }}
-            >
-              <p className="record-row__outlet">Survivor stories</p>
-              <h3 className="mt-2 font-[family-name:var(--font-serif)] text-xl">
-                The stories intake
-              </h3>
-              <p className="mt-2 text-sm leading-[1.7]">
-                First-person testimony is published only with explicit
-                written consent, reviewed by you before it ships, and
-                removable on request.
-              </p>
-              <p className="mt-4 text-sm">
-                <Link href="/stories">How stories are published &rarr;</Link>
-              </p>
-            </li>
-          </ul>
-          <p className="mt-8 max-w-prose text-sm leading-[1.7] opacity-80">
-            If you are a current member: assume devices and accounts managed
-            through the church&rsquo;s commercial network are filtered and may
-            be monitored. Use a device the community did not supply.
-          </p>
+          <div className="grid gap-12 md:grid-cols-[1fr_300px] md:items-start">
+            <div className="max-w-prose space-y-8 text-[1rem] leading-[1.8]">
+              <div>
+                <h2 className="section-label">If you are inside, or just out.</h2>
+                <p>
+                  You are the person this page is for, and your safety comes
+                  before anything this site wants to publish.
+                </p>
+                <ul className="mt-3 list-disc pl-5 space-y-2">
+                  <li>
+                    Use a device and account the community did not supply.
+                    Devices managed through the church&rsquo;s commercial
+                    network are filtered and may be monitored.
+                  </li>
+                  <li>
+                    You can stay anonymous. The editor can verify who you are
+                    and still keep your name entirely off the site.
+                  </li>
+                  <li>
+                    Anything you share can be used quietly, held back, or
+                    deleted at your request. Nothing is published without
+                    your written consent.
+                  </li>
+                </ul>
+                <p className="mt-3">
+                  A dedicated encrypted channel is being set up and will be
+                  announced here. Until then, open a{" "}
+                  <a
+                    href={`${GITHUB_URL}/issues/new?title=Private+channel+request`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    private-channel request on GitHub
+                  </a>{" "}
+                  without including anything sensitive, and the conversation
+                  moves somewhere safe from there.
+                </p>
+              </div>
+
+              <div>
+                <h2 className="section-label">If you spotted an error.</h2>
+                <p>
+                  This site wants to be corrected. A factual mistake, a dead
+                  link, a claim that overreaches its source: file it and it
+                  gets fixed in the open, with the change visible in the
+                  public edit history. That offer extends to the PBCC itself.
+                </p>
+                <p className="mt-3">
+                  <a
+                    href={`${GITHUB_URL}/issues/new?labels=correction&title=Correction:+`}
+                    className="btn"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    File a correction
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <Image
+              src="/images/illustrations/reaching-hands.webp"
+              alt="Hand-drawn marker illustration: two hands reach toward each other across a wide gap, fingertips almost touching, a small envelope floating between them."
+              width={300}
+              height={300}
+              className="hidden md:block"
+              style={{ mixBlendMode: "multiply" }}
+            />
+          </div>
         </div>
       </section>
 
-      {/* What we need. live preview from the database. */}
       <section
         className="section"
         style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
       >
         <div className="site-container">
-          <h2
-            className="section-label"
-            style={{ color: "var(--color-surface)" }}
-          >
-            What we need right now.
-          </h2>
-          <p className="max-w-prose text-[1rem] leading-[1.8]" style={{ opacity: 0.85 }}>
-            The project keeps a public list of the specific documents,
-            recordings, and first-hand accounts that would move reported
-            claims to documented record.
-          </p>
-          <ul className="mt-8 grid gap-4 md:grid-cols-2">
-            {top.map((r) => (
-              <li key={r.slug}>
-                <Link href={`/what-we-need#${r.slug}`} className="open-card">
-                  <p className="open-card__eyebrow">
-                    {r.category.replace("-", " ")}
-                  </p>
-                  <p className="open-card__title">{r.title}</p>
-                </Link>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-8">
-            <Link href="/what-we-need" className="btn btn--on-dark">
-              See the full list &rarr;
+          <div className="grid gap-6 md:grid-cols-2">
+            <Link href="/what-we-need" className="open-card">
+              <p className="open-card__eyebrow">Know something specific?</p>
+              <p className="open-card__title">What we need &rarr;</p>
+              <p className="open-card__body">
+                The public list of documents, recordings, and first-hand
+                accounts that would settle open questions. See if you
+                recognise something.
+              </p>
             </Link>
-          </p>
+            <Link href="/stories" className="open-card">
+              <p className="open-card__eyebrow">Have a story to tell?</p>
+              <p className="open-card__title">Stories &rarr;</p>
+              <p className="open-card__body">
+                First-person testimony, published only with your written
+                consent, reviewed by you before it ships, removable whenever
+                you say.
+              </p>
+            </Link>
+          </div>
         </div>
       </section>
     </>
