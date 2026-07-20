@@ -843,7 +843,140 @@ Published Hales ministry describes the radio as a "pipeline of filth"; internet 
 
 ---
 
-## 9. Open research questions (not yet claims)
+## 9. Rules research pass, 2026-07-20 (agent-team sourcing, issue #9)
+
+### Claim
+University is banned; the PBCC's own education page says on-campus tertiary study is "not compatible with our lifestyle" and members study by correspondence/online instead.
+
+**Status**. ✅ verified (PBCC primary + journalism) — 🚢 shipped (way-of-life, homepage)
+**Sources**
+- https://www.plymouthbrethrenchristianchurch.org/resource/the-plymouth-brethren-christian-church-and-education/ . PBCC own publication, accessed 2026-07-20. Verbatim: "not encouraged to attend on-campus tertiary education, as it is not compatible with our lifestyle."
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren . New Statesman, Aug 2023: "University attendance was banned."
+
+**Pages**
+- `/way-of-life` School and work, `/` daily-life bullets.
+
+---
+
+### Claim
+Membership of professional bodies and trade unions is not allowed; doctors, pharmacists, and lawyers had to give up practising.
+
+**Status**. ✅ verified (quote confirmed against live article 2026-07-20) — 🚢 shipped (way-of-life)
+**Sources**
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren . New Statesman, Aug 2023, verbatim: "Membership of professional bodies was no longer allowed (unions were already outlawed), meaning doctors, pharmacists and lawyers had to give up practising."
+- Historical corroboration: 1964 UK press via the Wikipedia PBCC article's footnotes. _Pin the original outlet for a second leg if this ever carries a severity claim._
+
+**Pages**
+- `/way-of-life` School and work.
+
+---
+
+### Claim
+Internet access on member devices runs through UBT's Streamline3 filtering/monitoring product; an ex-member recalled it blocking "a Wikipedia page on whales."
+
+**Status**. ✅ verified (UBT primary + two journalism sources) — 🚢 shipped (way-of-life)
+**Sources**
+- https://streamline3.com/home . Streamline3 product site (UBT company), accessed 2026-07-20.
+- https://www.theguardian.com/australia-news/2023/apr/15/oneschool-global-plymouth-brethren-christian-church-investigation . Guardian Australia OSG series: Streamline3 real-time alerting.
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren . New Statesman: whale-Wikipedia anecdote (article describes the filtering; does not name Streamline3 — keep the product attribution on the Guardian/UBT legs).
+
+**Notes**
+- This also upgrades the device-filtering half of the §8 "pipeline of filth" intake row: Streamline3 URL now pinned.
+
+**Pages**
+- `/way-of-life` Technology, `/money` (UBT device revenue, future).
+
+---
+
+### Claim
+Court documents reported by ABC Four Corners list places members are told not to attend, including cinemas, restaurants, hotels, sporting events, universities, and zoos.
+
+**Status**. ✅ verified (court documents via Four Corners) — 🚢 shipped (way-of-life)
+**Sources**
+- https://www.abc.net.au/4corners/big-brethren/105776802 . ABC Four Corners "Big Brethren", 15 Sep 2025.
+
+**Notes / caveats**
+- Do NOT publish a reconstructed count ("27 places") or any place not actually named in the broadcast/court source. Ship only the named examples. A transcript pull to extract the full list is an open task.
+- The PBCC's own "what not allowed" page does NOT enumerate cinemas or sporting events, and explicitly denies a pop-music ban ("Choices about what type of music to listen to, including pop music, are made by individuals") — verified 2026-07-20. Never cite that page for this claim; the prior site copy did and was corrected.
+
+**Pages**
+- `/way-of-life` Technology and entertainment.
+
+---
+
+### Claim
+Dress rules: men do not wear shorts ("the Lord takes no pleasure in the legs of a man") or facial hair; for a woman to cut her hair was "an affront to God."
+
+**Status**. ✅ verified (quotes confirmed against live article 2026-07-20; facial hair corroborated by 1965 UK press via Wikipedia footnotes) — 🚢 shipped (way-of-life)
+**Sources**
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren . New Statesman, Aug 2023, both quotes verbatim.
+
+**Pages**
+- `/way-of-life` Clothing and appearance. Strong rules-wall candidates (his/hers pairing).
+
+---
+
+### Claim
+Under James Symington (1970–87) a total ban on computers applied, plus fax/telex and early mobile phones; relaxed only in the 2000s.
+
+**Status**. 🟡 single source (Wikipedia summarizing CDAMM + press) — pin the underlying academic/press citation before shipping
+**Sources**
+- https://en.wikipedia.org/wiki/Plymouth_Brethren_Christian_Church . Pointer only; chase the CDAMM article and cited press.
+
+**Pages**
+- `/way-of-life` Technology (historical framing), timeline page (future).
+
+---
+
+### Claim
+The PBCC runs a members-only smartphone app holding contact details and photographs of Brethren families worldwide.
+
+**Status**. 🟡 single source (Telegraph, 9 Mar 2025, paywalled; cited via Wikipedia) — pin the Telegraph article directly before shipping
+**Sources**
+- Telegraph, 9 March 2025, via https://en.wikipedia.org/wiki/Plymouth_Brethren_Christian_Church footnotes.
+
+**Pages**
+- `/way-of-life` Technology (future).
+
+---
+
+### Claim
+Historical reporting: a child reaching ~12 without "breaking bread" was treated as an outsider, at times ignored by their own parents and siblings.
+
+**Status**. 🟡 single source (Daily Express, Jan 1965, via Wikipedia) — severity-adjacent; pin original and frame as era-specific
+**Sources**
+- Daily Express, January 1965, via Wikipedia PBCC article footnotes.
+
+**Pages**
+- Timeline page (future), not current-rules copy without a present-day source.
+
+---
+
+### Claim
+Historical reporting of estates of deceased members expected to be bequeathed to Brethren funds, with the sect asserting control over funeral arrangements.
+
+**Status**. 🟡 single source (Daily Telegraph, Mar 1965, via Wikipedia) — historical; pin original before shipping
+**Sources**
+- Daily Telegraph, March 1965, via Wikipedia PBCC article footnotes.
+
+**Pages**
+- `/money` (future), timeline page — era-labelled only.
+
+---
+
+### Claim
+Under James Taylor Jr (1970), members were directed to drink alcohol "freely," characterised as a "gift of God."
+
+**Status**. 🟡 single source (Scottish Daily Express, Jul 1970, via Wikipedia) — historical/era-specific; label as Taylor-Jr-era, never as a current rule
+**Sources**
+- Scottish Daily Express, July 1970, via Wikipedia PBCC article footnotes.
+
+**Pages**
+- Timeline page (future).
+
+---
+
+## 10. Open research questions (not yet claims)
 
 Things we know are true but don't yet have the citation for. Add a source URL inline as you find them and I'll promote them to claim rows.
 
@@ -855,7 +988,7 @@ Things we know are true but don't yet have the citation for. Add a source URL in
 
 ---
 
-## 10. How this feeds the site
+## 11. How this feeds the site
 
 When a row here reaches ✅:
 1. Convert to a typed entry in `src/lib/sources.ts` with `{id, label, url, accessed}`.

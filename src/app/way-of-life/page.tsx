@@ -70,16 +70,23 @@ const rules: Rule[] = [
     label: "Technology and entertainment",
     render: (nextN) => (
       <>
-        No televisions. No radio. The church&rsquo;s own page says television
-        &ldquo;viewed primarily as entertainment &hellip; is generally
+        Television and radio are banned. Bruce Hales has called television
+        an &ldquo;instrument of hell&rdquo;
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />; the
+        church&rsquo;s own page softens the rule to &ldquo;generally
         avoided&rdquo;
-        <Footnote id="pbcc-whatnotallowed" n={nextN()} />; ex-members are
-        blunter about how optional that is. Internet access runs through
-        church-linked filtering and monitoring (Streamline3, distributed by
-        the church&rsquo;s own UBT), which flags searches in real time
-        <Footnote id="osg-guardian-surveillance-2023" n={nextN()} />. Cinemas,
-        pop music, and sporting events are off-limits too
-        <Footnote id="pbcc-whatnotallowed" n={nextN()} />.
+        <Footnote id="pbcc-whatnotallowed" n={nextN()} />. Internet access
+        runs through church-controlled filtering and monitoring
+        (Streamline3, sold by the church&rsquo;s own UBT), which flags
+        searches in real time
+        <Footnote id="osg-guardian-surveillance-2023" n={nextN()} />
+        <Footnote id="streamline3-ubt" n={nextN()} />; one ex-member
+        recalled it blocking a Wikipedia page on whales
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. Court
+        documents reported by ABC Four Corners list places members are told
+        not to attend, including cinemas, restaurants, hotels, sporting
+        events, universities, and zoos
+        <Footnote id="bigbrethren-fourcorners-2025" n={nextN()} />.
       </>
     ),
   },
@@ -91,7 +98,11 @@ const rules: Rule[] = [
         (a hair item) the rest of the time, by the church&rsquo;s own
         description
         <Footnote id="pbcc-clothing" n={nextN()} />. Women wear skirts, not
-        trousers; men are clean-shaven
+        trousers, and do not cut their hair: doing so was &ldquo;an affront
+        to God&rdquo;
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. Men are
+        clean-shaven and do not wear shorts: &ldquo;the Lord takes no
+        pleasure in the legs of a man&rdquo;
         <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
       </>
     ),
@@ -100,8 +111,8 @@ const rules: Rule[] = [
     label: "Marriage and family",
     render: (nextN) => (
       <>
-        Members marry inside the church, full stop: marriage to an outsider
-        is excluded by the Doctrine of Separation
+        Members marry inside the church, full stop: the Doctrine of
+        Separation excludes marriage to an outsider
         <Footnote id="separation-pbcc-statement" n={nextN()} />. Weddings
         happen on Tuesdays. Verified ex-members describe a formal approval
         process running through local priests to Sydney
@@ -116,13 +127,20 @@ const rules: Rule[] = [
     label: "School and work",
     render: (nextN) => (
       <>
-        Children attend the church&rsquo;s own school network, OneSchool
-        Global: 120-plus campuses where every teaching resource passes a
-        community-volunteer review, and subjects like biology, music, and
-        visual arts simply aren&rsquo;t offered at senior level
+        University is banned
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. The
+        church&rsquo;s own page: on-campus study is &ldquo;not compatible
+        with our lifestyle&rdquo;
+        <Footnote id="pbcc-education" n={nextN()} />. Children attend the
+        church&rsquo;s own school network, OneSchool Global: 120-plus
+        campuses where community volunteers vet every teaching resource,
+        and biology, music, and visual arts are not taught at senior level
         <Footnote id="osg-guardian-surveillance-2023" n={nextN()} />.
-        University is out. Adults work inside the church&rsquo;s network of
-        member-owned businesses, coordinated by UBT
+        Professional bodies and trade unions are banned too: doctors,
+        pharmacists, and lawyers had to give up practising
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. Adults
+        work inside the church&rsquo;s network of member-owned businesses,
+        coordinated by UBT
         <Footnote id="hales-manofgod-newstatesman" n={nextN()} />
         <Footnote id="hales-rnz-moneygoround" n={nextN()} />.
       </>

@@ -102,9 +102,20 @@ const basics: Basic[] = [
             aren&rsquo;t allowed to have televisions or listen to the radio
             <Footnote id="pbcc-whatnotallowed" n={nextN()} />
           </li>
-          <li>send their children to the church&rsquo;s own schools</li>
-          <li>work inside the church&rsquo;s network of member-owned businesses</li>
-          <li>don&rsquo;t vote, don&rsquo;t go to university, don&rsquo;t join clubs</li>
+          <li>
+            send their children to the church&rsquo;s own schools
+            <Footnote id="osg-guardian-surveillance-2023" n={nextN()} />
+          </li>
+          <li>
+            work inside the church&rsquo;s network of member-owned businesses
+            <Footnote id="hales-rnz-moneygoround" n={nextN()} />
+          </li>
+          <li>
+            don&rsquo;t vote
+            <Footnote id="albanese-cult-2025-sbs" n={nextN()} />, and
+            don&rsquo;t go to university
+            <Footnote id="hales-manofgod-newstatesman" n={nextN()} />
+          </li>
         </ul>
         <span className="mt-3 block text-[0.95rem]">
           The <Link href="/way-of-life">Way of life</Link> section documents
@@ -244,7 +255,7 @@ export default function HomePage() {
               known as the Exclusive Brethren. Members live under rules that
               control who they can eat with, who they can marry, where they
               can live, and what they can watch and listen to. Leaving
-              usually means losing your family.{" "}
+              means losing your family.{" "}
               <strong className="underline underline-offset-4">
                 Two prime ministers have publicly called it a cult
                 <Footnote id="rudd-cult-2007-age" n={nextN()} />

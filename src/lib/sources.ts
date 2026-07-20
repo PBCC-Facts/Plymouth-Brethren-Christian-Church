@@ -33,6 +33,23 @@ export const sources: Record<string, Source> = {
     notes:
       "PBCC's own page: women wear headscarves at church services and a token (hair item) otherwise.",
   },
+  "pbcc-education": {
+    id: "pbcc-education",
+    label:
+      "Plymouth Brethren Christian Church: The PBCC and education (own publication)",
+    url: "https://www.plymouthbrethrenchristianchurch.org/resource/the-plymouth-brethren-christian-church-and-education/",
+    accessedOn: "2026-07-20",
+    notes:
+      "PBCC's own page: members 'are not encouraged to attend on-campus tertiary education, as it is not compatible with our lifestyle'; further study happens through online/correspondence courses.",
+  },
+  "streamline3-ubt": {
+    id: "streamline3-ubt",
+    label: "Streamline3: product site (UBT company, own publication)",
+    url: "https://streamline3.com/home",
+    accessedOn: "2026-07-20",
+    notes:
+      "Primary evidence that the church-linked device/filtering product exists and is sold through the UBT network. Pair with osg-guardian-surveillance-2023 for how it is used on member devices.",
+  },
   "pbcc-whatnotallowed": {
     id: "pbcc-whatnotallowed",
     label:
