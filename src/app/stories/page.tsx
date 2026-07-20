@@ -21,7 +21,7 @@ export default function StoriesPage() {
             className="hero__eyebrow"
             style={{ color: "var(--color-brand)" }}
           >
-            The Facts.. stories
+            Stories
           </p>
           <h1
             className="hero__title"

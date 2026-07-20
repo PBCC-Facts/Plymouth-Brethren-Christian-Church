@@ -34,6 +34,9 @@ export function Masthead({ open, setOpen }: Props) {
               Plymouth Brethren Christian Church &middot; the public record
             </span>
           </Link>
+          <Link href="/contact" className="btn masthead__cta">
+            Submit information
+          </Link>
         </div>
         <nav className="masthead__nav" aria-label="Primary">
           {primaryNav.map((item) => (

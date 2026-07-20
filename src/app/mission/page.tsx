@@ -43,7 +43,7 @@ export default function MissionPage() {
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">The Facts. Why this exists.</p>
+            <p className="hero__eyebrow">Why this exists</p>
             <h1 className="hero__title">Mission.</h1>
             <p className="hero__sub">
               Organise, in public and on the same search terms, the record that

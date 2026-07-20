@@ -16,36 +16,10 @@ export const primaryNav: NavItem[] = [
   { label: "What we need", href: "/what-we-need" },
 ];
 
-// Full site map for the "All pages" drawer. Grouped, complete.
+// Full site map for the "All pages" drawer. Flat and essential.
 export const drawerNav: NavItem[] = [
   { label: "Home", href: "/" },
-  {
-    label: "Way of life",
-    href: "/way-of-life",
-    children: [
-      { label: "Dining", href: "/way-of-life/dining" },
-      { label: "Alcohol", href: "/way-of-life/alcohol" },
-      { label: "Marriage", href: "/way-of-life/marriage" },
-      { label: "Burials and Funerals", href: "/way-of-life/funerals" },
-      {
-        label: "Technology and Entertainment",
-        href: "/way-of-life/technology-and-entertainment",
-      },
-      {
-        label: "Holidays and Celebrations",
-        href: "/way-of-life/holidays-and-celebrations",
-      },
-      {
-        label: "Clothing, Hair and Fashion",
-        href: "/way-of-life/clothing-hair-and-fashion",
-      },
-      { label: "Politics and Voting", href: "/way-of-life/voting" },
-      { label: "Beliefs", href: "/way-of-life/beliefs" },
-      { label: "History", href: "/way-of-life/history" },
-      { label: "Network", href: "/way-of-life/network" },
-      { label: "Neighbours", href: "/way-of-life/neighbours" },
-    ],
-  },
+  { label: "Way of life", href: "/way-of-life" },
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
   { label: "The Record", href: "/news" },

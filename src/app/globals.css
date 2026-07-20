@@ -133,6 +133,13 @@
   .masthead__subject { display: none; }
 }
 
+/* Primary CTA in the masthead. slightly smaller than the base .btn. */
+.masthead__cta {
+  padding: 0.55rem 1rem;
+  font-size: 0.75rem;
+  align-self: center;
+}
+
 .masthead__nav {
   border-top: 1px solid var(--color-rule);
   display: flex;

@@ -72,7 +72,7 @@ export function organizationSchema() {
     url: SITE_URL,
     sameAs: [GITHUB_URL, "https://pbccstories.org/"],
     description:
-      "An independent, open-source parody and criticism project documenting the doctrines and practices of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). Every claim is sourced; the full repository is public on GitHub.",
+      "An independent, open-source record documenting the doctrines and practices of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). Every claim is sourced; the full repository is public on GitHub.",
   };
 }
 

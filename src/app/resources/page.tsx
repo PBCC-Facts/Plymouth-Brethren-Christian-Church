@@ -165,38 +165,26 @@ export default function ResourcesPage() {
           { name: "Resources", path: "/resources" },
         ])}
       />
-      <section
-        className="section"
-        style={{ background: "var(--color-ink)", color: "var(--color-surface)" }}
-      >
-        <div className="site-container">
-          <p
-            className="hero__eyebrow"
-            style={{ color: "var(--color-brand)" }}
-          >
-            The Facts.. resources
-          </p>
-          <h1
-            className="hero__title"
-            style={{ color: "var(--color-surface)" }}
-          >
-            Resources.
-          </h1>
-          <p className="hero__sub" style={{ maxWidth: "58ch" }}>
-            Support for people leaving high-control groups, PBCC-specific
-            references, investigative journalism, and official records.
-            Linked, not endorsed. This is a starter list. if a resource
-            belongs here and is missing,{" "}
-            <a
-              href={`${GITHUB_URL}/issues/new?labels=resources&title=Resource+suggestion:+`}
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ color: "var(--color-brand)" }}
-            >
-              open an issue on GitHub
-            </a>
-            .
-          </p>
+      <section className="hero">
+        <div className="site-container hero__grid">
+          <div>
+            <p className="hero__eyebrow">Resources</p>
+            <h1 className="hero__title">Support and further reading.</h1>
+            <p className="hero__sub">
+              Support for people leaving high-control groups, PBCC-specific
+              references, investigative journalism, and official records.
+              Linked, not endorsed. If a resource belongs here and is
+              missing,{" "}
+              <a
+                href={`${GITHUB_URL}/issues/new?labels=resources&title=Resource+suggestion:+`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                open an issue on GitHub
+              </a>
+              .
+            </p>
+          </div>
         </div>
       </section>
 
@@ -260,18 +248,6 @@ export default function ResourcesPage() {
                       </a>
                     </h3>
                     <p className="mt-2 text-sm leading-[1.6]">{entry.gloss}</p>
-                    {!entry.approved && (
-                      <p
-                        className="mt-3 inline-block text-[0.625rem] font-bold uppercase tracking-[0.2em]"
-                        style={{
-                          color: "var(--color-rust)",
-                          padding: "0.2rem 0.45rem",
-                          border: "1px solid var(--color-rust)",
-                        }}
-                      >
-                        Editor review pending
-                      </p>
-                    )}
                   </article>
                 </li>
               ))}
@@ -305,8 +281,8 @@ export default function ResourcesPage() {
               >
                 Open an issue
               </a>{" "}
-              <Link href="/mission" className="btn btn--on-dark ml-3">
-                Read the mission
+              <Link href="/contact" className="btn btn--on-dark ml-3">
+                Get in touch
               </Link>
             </div>
           </div>

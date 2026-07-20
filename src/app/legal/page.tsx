@@ -43,7 +43,7 @@ export default function LegalPage() {
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">The Facts.. legal posture</p>
+            <p className="hero__eyebrow">Legal posture</p>
             <h1 className="hero__title">Legal.</h1>
             <p className="hero__sub">
               This site is news aggregation, criticism, and research about a

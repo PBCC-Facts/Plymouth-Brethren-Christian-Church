@@ -38,20 +38,10 @@ export const ROUTES: RouteDef[] = [
   // Cluster B. brand + investigative
   { path: "/news", topic: "The record", cluster: "B", indexable: true, priority: 0.8, changefreq: "weekly" },
 
-  // Cluster C. doctrine / practice
-  { path: "/way-of-life", topic: "Way of life", cluster: "C", indexable: false, priority: 0.8, changefreq: "monthly" },
-  { path: "/way-of-life/beliefs", topic: "Beliefs", cluster: "C", indexable: false, priority: 0.6, changefreq: "monthly" },
-  { path: "/way-of-life/history", topic: "History", cluster: "C", indexable: false, priority: 0.6, changefreq: "monthly" },
-  { path: "/way-of-life/network", topic: "Network", cluster: "E", indexable: false, priority: 0.6, changefreq: "monthly" },
-  { path: "/way-of-life/neighbours", topic: "Neighbours", cluster: "C", indexable: false, priority: 0.6, changefreq: "monthly" },
-  { path: "/way-of-life/dining", topic: "Dining", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/alcohol", topic: "Alcohol", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/marriage", topic: "Marriage", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/funerals", topic: "Burials and funerals", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/technology-and-entertainment", topic: "Technology and entertainment", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/holidays-and-celebrations", topic: "Holidays and celebrations", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/clothing-hair-and-fashion", topic: "Clothing, hair and fashion", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
-  { path: "/way-of-life/voting", topic: "Politics and voting", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
+  // Cluster C. doctrine / practice. One consolidated page: the rules, by
+  // topic, each section sourced. The old per-topic children (which mirrored
+  // the PBCC's own nav) were removed 2026-07-19.
+  { path: "/way-of-life", topic: "The rules members live under", cluster: "C", indexable: true, priority: 0.8, changefreq: "monthly" },
 
   // Cluster E. money / business network
   { path: "/money", topic: "The money", cluster: "E", indexable: false, priority: 0.9, changefreq: "weekly" },

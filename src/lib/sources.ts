@@ -24,6 +24,15 @@ export const sources: Record<string, Source> = {
     url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
     accessedOn: "2026-04-23",
   },
+  "pbcc-clothing": {
+    id: "pbcc-clothing",
+    label:
+      "Plymouth Brethren Christian Church: Clothing, hair and fashion (own publication)",
+    url: "https://www.plymouthbrethrenchristianchurch.org/way-of-life/clothing-hair-and-fashion/",
+    accessedOn: "2026-07-19",
+    notes:
+      "PBCC's own page: women wear headscarves at church services and a token (hair item) otherwise.",
+  },
   "pbcc-whatnotallowed": {
     id: "pbcc-whatnotallowed",
     label:

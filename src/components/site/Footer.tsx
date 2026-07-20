@@ -58,6 +58,16 @@ export function Footer() {
                 </Link>
               </li>
             ))}
+            <li>
+              <a
+                href="/llms-full.txt"
+                className="no-underline opacity-80 hover:opacity-100 hover:underline"
+                style={{ color: "var(--color-surface)" }}
+                title="The site's full content as one markdown document, for AI agents and LLMs"
+              >
+                For AI agents: llms-full.txt
+              </a>
+            </li>
           </ul>
         </div>
       </div>

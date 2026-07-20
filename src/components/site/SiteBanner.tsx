@@ -16,11 +16,9 @@ export function SiteBanner() {
       }}
     >
       <div className="site-container flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-2 text-sm">
-        <p className="font-bold uppercase tracking-wide">
-          The Facts
-          <span className="ml-2 font-normal normal-case tracking-normal">
-            · Independent journalism and open-source transparency · Not affiliated with the PBCC.
-          </span>
+        <p>
+          Independent journalism and open-source transparency &middot; Not
+          affiliated with the PBCC.
         </p>
         <Link
           href="/mission"
