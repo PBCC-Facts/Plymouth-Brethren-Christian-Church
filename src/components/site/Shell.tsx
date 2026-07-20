@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode, useState } from "react";
-import { Sidebar } from "./Sidebar";
+import { Masthead } from "./Masthead";
 import { MobileDrawer } from "./MobileDrawer";
 
 export function Shell({ children }: { children: ReactNode }) {
@@ -10,9 +10,9 @@ export function Shell({ children }: { children: ReactNode }) {
   return (
     <>
       <MobileDrawer open={open} setOpen={setOpen} />
-      <div className="site-shell">
-        <Sidebar open={open} setOpen={setOpen} />
-        <div className="min-w-0">{children}</div>
+      <div className="site-shell flex min-h-dvh flex-col">
+        <Masthead open={open} setOpen={setOpen} />
+        <div className="min-w-0 flex flex-1 flex-col">{children}</div>
       </div>
     </>
   );

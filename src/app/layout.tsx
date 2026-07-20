@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { openSans } from "@/lib/fonts";
+import { newsreader, plexSans, plexMono } from "@/lib/fonts";
 import { SITE_NAME, SITE_URL } from "@/lib/site";
 import { SiteBanner } from "@/components/site/SiteBanner";
 import { Shell } from "@/components/site/Shell";
@@ -39,7 +39,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={openSans.variable}>
+    <html
+      lang="en"
+      className={`${newsreader.variable} ${plexSans.variable} ${plexMono.variable}`}
+    >
       <body className="min-h-dvh flex flex-col">
         <JsonLd data={organizationSchema()} />
         <SiteBanner />

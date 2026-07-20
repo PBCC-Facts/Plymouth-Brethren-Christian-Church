@@ -11,8 +11,7 @@ export function Footer() {
         <div className="grid gap-12 md:grid-cols-[2fr_3fr] md:items-center">
           <div>
             <p
-              className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
-              style={{ color: "var(--color-brand)" }}
+              className="font-[family-name:var(--font-mono)] text-[0.65rem] font-medium uppercase tracking-[0.15em] opacity-70"
             >
               Contact
             </p>
@@ -20,8 +19,7 @@ export function Footer() {
               className="mt-3 font-[family-name:var(--font-serif)] text-3xl leading-tight"
               style={{ color: "var(--color-surface)" }}
             >
-              If you have any questions or just want more information about us,
-              please click below, and we&rsquo;ll be happy to help!
+              Corrections, new evidence, and tips make this record better.
             </h2>
             <Link href="/contact" className="btn btn--on-dark mt-6">
               Get in touch
@@ -49,8 +47,9 @@ export function Footer() {
 
         <div className="flex flex-wrap items-center justify-between gap-4 text-xs opacity-70">
           <p>
-            © {new Date().getFullYear()} Plymouth Brethren Christian Church
-            parody / criticism project. Independent. Not affiliated.
+            © {new Date().getFullYear()} The Facts. An independent,
+            open-source record of the Plymouth Brethren Christian Church.
+            Not affiliated with the PBCC.
           </p>
           <p>
             Source:{" "}

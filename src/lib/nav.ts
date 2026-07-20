@@ -45,7 +45,7 @@ export const primaryNav: NavItem[] = [
     children: [{ label: "Any questions?", href: "/people/any-questions" }],
   },
   {
-    label: "News",
+    label: "The Record",
     href: "/news",
     children: [
       { label: "Podcast", href: "/resources/podcast" },
@@ -57,6 +57,7 @@ export const primaryNav: NavItem[] = [
     ],
   },
   { label: "Resources", href: "/resources" },
+  { label: "What we need", href: "/what-we-need" },
   { label: "Contact", href: "/contact" },
 ];
 
@@ -67,6 +68,7 @@ export const footerNav: NavItem[] = [
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
   { label: "News", href: "/news" },
+  { label: "What we need", href: "/what-we-need" },
   { label: "Legal", href: "/legal" },
   { label: "Terms & Conditions", href: "/terms" },
   { label: "Privacy Policy", href: "/privacy" },
@@ -86,15 +88,15 @@ export const browseAll: BrowseItem[] = [
   { label: "Way of life", href: "/way-of-life" },
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people", exists: true },
-  { label: "News", href: "/news" },
-  { label: "Reporting", href: "/news" },
+  { label: "The record", href: "/news", exists: true },
   { label: "Resources", href: "/resources", exists: true },
   { label: "Doctrine", href: "/doctrine" },
   { label: "Timeline", href: "/timeline" },
   { label: "FAQ", href: "/faq" },
   { label: "Litigation", href: "/litigation" },
   { label: "Glossary", href: "/glossary" },
-  { label: "Contact", href: "/contact" },
+  { label: "What we need", href: "/what-we-need", exists: true },
+  { label: "Contact", href: "/contact", exists: true },
   {
     label: "GitHub",
     href: "https://github.com/trentwaskey/Plymouth-Brethren-Christian-Church",

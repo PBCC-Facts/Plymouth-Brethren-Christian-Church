@@ -24,6 +24,15 @@ export const sources: Record<string, Source> = {
     url: "https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren",
     accessedOn: "2026-04-23",
   },
+  "pbcc-whatnotallowed": {
+    id: "pbcc-whatnotallowed",
+    label:
+      "Plymouth Brethren Christian Church: What are Brethren members not allowed to do? (own publication)",
+    url: "https://www.plymouthbrethrenchristianchurch.org/resource/what-are-brethren-members-not-allowed-to-do/",
+    accessedOn: "2026-07-19",
+    notes:
+      "PBCC's own framing: television 'viewed primarily as entertainment… is generally avoided'; members 'choose to eat meals only with those with whom they would also share the Lord's Supper.'",
+  },
   "hales-manofgod-thepost": {
     id: "hales-manofgod-thepost",
     label: "The Post (NZ): Exclusive Brethren told to create crisis, generate profits",

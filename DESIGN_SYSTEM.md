@@ -1,153 +1,67 @@
-# Design System. PBCC Parody / Criticism Site
+# Design System. The Record
 
-Status: **measured** against the live PBCC site (re-captured 2026-04-23). Canonical token source is [`research/tokens.json`](research/tokens.json), derived from `research/captures/theme-public_frontend.css` and verified by mapping every NATO-lettered custom property (`--color-alpha` … `--color-hotel`) to the selectors and properties that consume it.
+Status: **v2, shipped 2026-07-19.** This replaces the retired parody-era system that mirrored the PBCC's own site chrome (teal sidebar, Rockwell display, yellow parody banner). The site no longer imitates anyone. It looks like what it is: an independent record.
 
-See [INFRASTRUCTURE.md](INFRASTRUCTURE.md) for hosting and [EDITORIAL_GUIDE.md](EDITORIAL_GUIDE.md) for voice.
+The identity in one line: **a black-and-white broadsheet on warm paper, with one brick-red accent and monospace citation chrome.**
 
-> **Earlier confusion (worth flagging):** the theme's utility classes are legacy-named and misleading. `.bg-orange` paints **teal** `#4c868f`; `.bg-brown` paints **rust** `#a44200`. Trust the hex values, not the class names. This design system uses semantic names (`--color-brand`, `--color-ink`, …) that match the actual visual role.
+Canonical token source: `src/app/globals.css` (`@theme` block). Variable *names* are inherited from v1 so page-level references keep working; the *values* define v2.
 
----
+## 1. Color
 
-## 1. Color palette (measured, role-correct)
-
-| Authored token | Hex | Upstream | Role |
-| --- | --- | --- | --- |
-| `--color-brand` | `#4c868f` | `--color-bravo` | **Primary brand. teal.** Sidebar background, every `.btn`, active nav item, pagination current, breadcrumb separator, `.module__rich-media` bullet color, rich-media ordered-list counters. |
-| `--color-brand-hover` | `#3e6f77` | (derived) | Button hover. slightly darker teal. |
-| `--color-ink` | `#1b2327` | `--color-echo` | **Ink AND dark surfaces.** Body text; hero section background; `.site-footer` background; `.mobile-menu__content-wrapper`; the charcoal hamburger nub on top of the sidebar; sub-menu dropdown surface. |
-| `--color-surface` | `#ffffff` | `--color-foxtrot` | Page background; text on dark surfaces. |
-| `--color-purple` | `#534588` | `--color-alpha` | Secondary accent. news-module headings, active pagination dot, `<strong>` inside hero slides. |
-| `--color-blueviolet` | `#5f6eb3` | `--color-hotel` | Featured-card post-date accent. Used sparingly. |
-| `--color-rust` | `#a44200` | `--color-charlie` | **Link hover + form-focus border only.** Not a section color, not a CTA color. |
-| `--color-rule` | `#dfe1e1` | `--color-delta` | The thin gray rule to the right of every `.heading__separator` label. Hairline dividers. |
-| `--color-banner-bg` | `#f9d54a` | ours | Parody banner. sticky, off-palette, meta-layer. |
-| `--color-banner-ink` | `#1a1a1a` | ours | Parody banner text. |
-
----
-
-## 2. Typography (measured)
-
-- **Body + section labels. Open Sans** (400, 700, italic 400). Loaded via `next/font/google` → `src/lib/fonts.ts`.
-- **Display headings. Rockwell** (slab-serif). System-installed only; no `@font-face`. Fallback stack: `"Rockwell", "Rockwell Std", "Roboto Slab", "Courier New", serif`. Used on `h1–h6`, hero slide titles (up to 8rem–20rem), ordered-list counters inside rich-media blocks. We do **not** ship Rockwell. it is not freely redistributable; this matches the source site's own approach.
-
-### Two distinct heading patterns. don't conflate them
-
-1. **Display heading**. Rockwell slab serif. Used for hero titles, section-body headlines (e.g. the big quote in the Contact band, news card titles, community-card titles). Varies in size; generally large.
-2. **Section label** (`.heading__separator`, our class: `.section-label`). **Open Sans 700**, uppercase, ~15px, with a flex-grown light-gray rule extending to its right. This is the small label above each homepage section ("ABOUT US", "NEWS", "GET TO KNOW OUR COMMUNITY"). **Not** Rockwell, **not** centered, **not** rust-underlined. Mistaking this for a display heading is the single easiest way to get the visual wrong.
-
----
-
-## 3. Layout primitives
-
-| Token | Value | Notes |
+| Token | Hex | Role |
 | --- | --- | --- |
-| `--container-wide` | `1280px` | Section wrappers, hero, footer. |
-| `--container-prose` | `68ch` | Long-form body copy. |
-| section padding | `clamp(3rem, 6vw, 6rem)` | Vertical padding on each section. |
+| `--color-surface` | `#f9f7f2` | Paper. The page surface. |
+| `--color-ink` | `#171512` | Ink. Text, buttons, dark bands (footer, inverted sections), notice bar. |
+| `--color-brand` / `--color-rust` | `#8f2b1f` | **The single accent.** Brick red. Eyebrows, footnote markers, CTAs-as-links, active nav, pending markers. Never used for large surfaces. |
+| `--color-brand-hover` | `#6e2015` | Accent hover. |
+| `--color-rule` | `#d9d4c9` | Hairline rules on paper. |
+| `--color-purple` | `#45413a` | Legacy slot, remapped: warm dark gray. |
+| `--color-blueviolet` | `#6e6a62` | Legacy slot, remapped: warm mid gray. |
+| `--color-banner-bg` / `--color-banner-ink` | ink / paper | Notice bar. inverted, slim, unmissable. |
 
-### Sidebar. a distinctive two-block chrome
+Rules: black-and-white does the identity work; red does the pointing. If a design choice adds a third color, it is wrong. Dark bands (ink background, paper text) are the inversion rhythm of the page: hero is paper, footer is ink, and at most two inverted bands between.
 
-| | Top block | Bottom block |
+## 2. Typography
+
+Three families, loaded via `next/font` in `src/lib/fonts.ts`:
+
+| Token | Face | Role |
 | --- | --- | --- |
-| Background | `--color-ink` (charcoal) | `--color-brand` (teal) |
-| Contents | Hamburger toggle, white on charcoal | Brand. on desktop, full text `Plymouth Brethren Christian Church` in Rockwell rendered vertically using `writing-mode: vertical-rl; transform: rotate(180deg)`. On mobile, a horizontal wordmark. |
-| Size | 96px tall (desktop) / 72px (mobile) | Fills remaining height |
+| `--font-serif` | **Newsreader** (400–700, italics) | Display headlines, record-wall prose, long-form body. The journal voice. |
+| `--font-sans` | **IBM Plex Sans** (400–700) | UI, nav, card bodies, general copy. |
+| `--font-mono` | **IBM Plex Mono** (400–600) | Section labels, eyebrows, footnote markers, meta lines, badges. The citation/archive register. |
 
-Desktop: 80px fixed left column, flex-column, sticky to viewport.
-Mobile: full-width top bar, flex-row (hamburger left, wordmark right).
+Heading defaults: Newsreader 600, tight leading (1.08), slight negative tracking. The mono register is what makes the site read as a *record* rather than a blog: anything that annotates evidence (labels, footnotes, "feeds: FACTS.md §8" lines, the ex-member badge) is mono, small, uppercase, letterspaced.
 
-### Hero. dark surface, serif display, teal CTA, circle visual
+Links in prose: ink with a visible underline; accent red on hover. Links are never bare color changes.
 
-- Background: `--color-ink` charcoal.
-- Left: eyebrow in teal small-caps → Rockwell display title (clamp to ~4.5rem) in white → sub-copy at 85% opacity → teal "Learn more about our way of life →" link underlined → four pagination dots (first purple, rest 35% white).
-- Right: circle-clipped visual with a 6px teal ring. The real site clips it against a curved teal arc. we render a simple circle with a teal halo for now.
-- The real hero is a Vue-hydrated slider (`<vue id="55">`); our build renders a single static slide.
+## 3. Chrome
 
----
+- **Notice bar** (`SiteBanner`): sticky, slim, ink background, paper text: "The Facts · Independent journalism and open-source transparency · Not affiliated with the PBCC." The affordance survives from v1; the styling no longer shouts.
+- **Masthead** (`Masthead.tsx`): broadsheet header. Wordmark line ("The Facts." in Newsreader 700 + mono subject line "Plymouth Brethren Christian Church · the public record"), then a nav row of top-level destinations, uppercase Plex Sans 600, with an "All pages ☰" toggle for the full drawer. Active item: red with a 2px inset underline. The masthead ends in a 1px ink rule.
+- **Hero** (`.hero`): paper, not dark. Mono eyebrow in red → huge Newsreader headline (clamp to 5rem, -0.02em tracking) → serif sub at 1.125rem → mono uppercase CTA underlined in red. Bottom edge: 3px double ink rule (the broadsheet fold line). The v1 circle visual and slider dots render as nothing (`display: none`); do not reintroduce.
+- **Footer**: ink band. Mono eyebrow, serif invitation ("Corrections, new evidence, and tips make this record better."), inverted button, two-column nav, hairline, © line.
 
-## 4. Section-label component (real markup)
+## 4. Components
 
-```html
-<h2 class="heading__separator">About us</h2>
-```
+- **`.btn`**: ink block, paper text, square corners, uppercase Plex Sans. Hover inverts (paper block, ink text, ink border). `--on-dark` starts inverted.
+- **Section label** (`.section-label`): mono 0.75rem uppercase, letterspaced, hairline rule flexing right. Every section gets one.
+- **Record wall** (`.record-wall` / `.record-row`): the signature component. 2px ink rule on top, hairline rules between rows; big serif year (or index number) left, mono outlet line in red + serif prose right. Used for the homepage record, /what-we-need requests, and any evidence ledger.
+- **Footnotes** (`.footnote`): mono superscript numerals in red. `--pending` renders the ⚠ source-pending state in red.
+- **Ex-member badge** (`ExMemberBadge.tsx` / `.exmember-badge`): bordered mono chip with a red dot and report count ("2 verified ex-member reports"). The visible form of the 🟣 tier in docs/REPORTS_SYSTEM.md. It is an evidentiary marker: never decorate with it.
+- **Cards**: 1px ink border on paper (contact channels), or 1px paper-alpha border on ink (`.open-card`). Square corners everywhere. No shadows, no rounding, no gradients.
 
-```css
-.heading__separator {
-  font: 700 1.6rem/1 "Open Sans", sans-serif;
-  text-transform: uppercase;
-  display: flex;
-  align-items: center;
-  color: #000;
-}
-.heading__separator::after {
-  content: "";
-  flex: 1;
-  height: 2px;
-  background: #dfe1e1;
-  margin-left: 4rem;
-}
-```
+## 5. Iconography and imagery
 
-Our CSS-module equivalent is `.section-label` in [`src/app/globals.css`](src/app/globals.css).
+- Iconography: line glyphs (`src/lib/glyphs.tsx`) inherit currentColor; use ink on paper, paper on ink, red only when the glyph itself marks evidence class.
+- Imagery: original or licensed only, no PBCC photography (unchanged from v1). Diagrams (the /money graphs) are original SVG in this palette: ink nodes/edges on paper, red for flagged flows, mono labels.
 
----
+## 6. Layout
 
-## 5. Footer
+- `--container-wide: 1200px`; prose measures at `--container-prose: 68ch`.
+- Section rhythm: `clamp(3rem, 6vw, 5.5rem)` vertical.
+- The page reads top-to-bottom as: notice bar → masthead → paper lede → alternating paper/ink bands → browse strip → ink footer.
 
-- Background: `--color-ink` (same charcoal as the hero, so the hero-to-content-to-footer cadence reads dark → light → dark).
-- Contact block: teal "CONTACT" eyebrow → large Rockwell invitation → teal `Get in touch` button.
-- Nav column: two columns of small white links at 80% opacity.
-- Bottom row: © line + source-repo link.
+## 7. What is retired from v1
 
----
-
-## 6. Buttons (`.btn`)
-
-- Teal `--color-brand` background, white text.
-- Open Sans 700, uppercase, 0.875rem, letter-spacing 0.04em.
-- **Square corners.** No rounded variant in the source.
-- Padding: ~0.9rem / 1.6rem.
-- Hover: slightly darker teal (`--color-brand-hover`).
-
----
-
-## 7. Parody banner (ours, not theirs)
-
-Sticky top, full-width, non-dismissible. `--color-banner-bg` yellow. Bold uppercase lead ("PARODY / CRITICISM SITE"), then "Not affiliated …" inline, then an "About this site" link. Sits **above** the source-site chrome so it reads unambiguously as a meta-layer. Do not soften; do not collapse into the palette. This is the single most important fair-use affordance on the site.
-
----
-
-## 8. Image strategy
-
-- All imagery locally hosted in `/public/images`. **No reuse of PBCC photography.**
-- Original photography or licensed stock (Unsplash/Pexels, verified licenses).
-- Every image captioned `"Illustrative. not affiliated with PBCC"`.
-- No identifiable private members. Bruce D. Hales + public litigants who have self-identified are fair game with clear attribution.
-- `<Image>` components carry explicit width/height to prevent CLS.
-
----
-
-## 9. Tailwind v4 translation
-
-Tokens live in `src/app/globals.css` under `@theme`. The full file is canonical; the shape is:
-
-```css
-@import "tailwindcss";
-@theme {
-  --color-brand: #4c868f;
-  --color-brand-hover: #3e6f77;
-  --color-ink: #1b2327;
-  --color-surface: #ffffff;
-  --color-purple: #534588;
-  --color-blueviolet: #5f6eb3;
-  --color-rust: #a44200;
-  --color-rule: #dfe1e1;
-  --color-banner-bg: #f9d54a;
-  --color-banner-ink: #1a1a1a;
-
-  --font-serif: "Rockwell", "Rockwell Std", "Roboto Slab", "Courier New", serif;
-  --font-sans: var(--font-open-sans), ui-sans-serif, system-ui, sans-serif;
-}
-```
-
-`--font-open-sans` comes from `next/font/google` (see `src/lib/fonts.ts`). Rockwell is **not** bundled.
+- The teal palette, the vertical teal sidebar, Rockwell (and any PBCC-mirroring type choice), the yellow parody banner, the hero circle visual and slider dots, rounded accents, and the "mirror their site's chrome" strategy wholesale. Do not reintroduce any of it.

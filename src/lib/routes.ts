@@ -37,7 +37,7 @@ export const ROUTES: RouteDef[] = [
   { path: "/about-this-site", topic: "About this site", cluster: "A", indexable: false, priority: 0.7, changefreq: "monthly" },
 
   // Cluster B. brand + investigative
-  { path: "/news", topic: "News", cluster: "B", indexable: false, priority: 0.8, changefreq: "weekly" },
+  { path: "/news", topic: "The record", cluster: "B", indexable: true, priority: 0.8, changefreq: "weekly" },
 
   // Cluster C. doctrine / practice
   { path: "/way-of-life", topic: "Way of life", cluster: "C", indexable: false, priority: 0.8, changefreq: "monthly" },
@@ -62,6 +62,7 @@ export const ROUTES: RouteDef[] = [
   { path: "/people/any-questions", topic: "Any questions", cluster: "B", indexable: false, priority: 0.6, changefreq: "monthly" },
 
   // Supporting
+  { path: "/what-we-need", topic: "What we need", cluster: "B", indexable: true, priority: 0.6, changefreq: "weekly" },
   { path: "/resources", topic: "Resources", cluster: "B", indexable: true, priority: 0.7, changefreq: "monthly" },
   { path: "/resources/podcast", topic: "Podcast", cluster: "B", indexable: false, priority: 0.5, changefreq: "monthly" },
   { path: "/contact", topic: "Contact", indexable: false, priority: 0.4, changefreq: "yearly" },
