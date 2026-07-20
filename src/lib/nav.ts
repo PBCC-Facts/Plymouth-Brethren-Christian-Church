@@ -47,16 +47,8 @@ export const drawerNav: NavItem[] = [
     ],
   },
   { label: "The Money", href: "/money" },
-  {
-    label: "People",
-    href: "/people",
-    children: [{ label: "Any questions?", href: "/people/any-questions" }],
-  },
-  {
-    label: "The Record",
-    href: "/news",
-    children: [{ label: "Podcast", href: "/resources/podcast" }],
-  },
+  { label: "People", href: "/people" },
+  { label: "The Record", href: "/news" },
   { label: "Stories", href: "/stories" },
   { label: "What we need", href: "/what-we-need" },
   { label: "Resources", href: "/resources" },
@@ -80,7 +72,5 @@ export const footerNav: NavItem[] = [
 
 /** Small-print row at the very bottom of the footer. */
 export const policyNav: NavItem[] = [
-  { label: "Terms", href: "/terms" },
   { label: "Privacy", href: "/privacy" },
-  { label: "Cookies", href: "/cookies" },
 ];

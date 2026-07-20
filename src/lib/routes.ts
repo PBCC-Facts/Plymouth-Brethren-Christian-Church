@@ -34,7 +34,6 @@ export const ROUTES: RouteDef[] = [
   // Cluster A. brand head terms
   { path: "/", topic: "Home", cluster: "A", indexable: true, priority: 1.0, changefreq: "weekly" },
   { path: "/mission", topic: "Mission", cluster: "A", indexable: true, priority: 0.9, changefreq: "monthly" },
-  { path: "/about-this-site", topic: "About this site", cluster: "A", indexable: false, priority: 0.7, changefreq: "monthly" },
 
   // Cluster B. brand + investigative
   { path: "/news", topic: "The record", cluster: "B", indexable: true, priority: 0.8, changefreq: "weekly" },
@@ -59,19 +58,15 @@ export const ROUTES: RouteDef[] = [
 
   { path: "/people", topic: "People", cluster: "D", indexable: true, priority: 0.8, changefreq: "monthly" },
   { path: "/people/bruce-d-hales", topic: "Bruce D. Hales", cluster: "D", indexable: true, priority: 0.7, changefreq: "monthly" },
-  { path: "/people/any-questions", topic: "Any questions", cluster: "B", indexable: false, priority: 0.6, changefreq: "monthly" },
 
   // Supporting
   { path: "/what-we-need", topic: "What we need", cluster: "B", indexable: true, priority: 0.6, changefreq: "weekly" },
   { path: "/resources", topic: "Resources", cluster: "B", indexable: true, priority: 0.7, changefreq: "monthly" },
-  { path: "/resources/podcast", topic: "Podcast", cluster: "B", indexable: false, priority: 0.5, changefreq: "monthly" },
   { path: "/contact", topic: "Contact", indexable: false, priority: 0.4, changefreq: "yearly" },
 
   // Legal. low-priority but indexable once real copy lands
   { path: "/legal", topic: "Legal", cluster: "A", indexable: true, priority: 0.4, changefreq: "yearly" },
-  { path: "/terms", topic: "Terms & conditions", indexable: false, priority: 0.2, changefreq: "yearly" },
   { path: "/privacy", topic: "Privacy policy", indexable: false, priority: 0.2, changefreq: "yearly" },
-  { path: "/cookies", topic: "Cookies policy", indexable: false, priority: 0.2, changefreq: "yearly" },
 ];
 
 /** Lookup table keyed by path for O(1) access in page files. */

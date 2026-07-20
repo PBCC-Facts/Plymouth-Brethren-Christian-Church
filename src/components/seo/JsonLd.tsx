@@ -119,7 +119,7 @@ export function articleSchema(input: ArticleSchemaInput) {
     author: {
       "@type": "Organization",
       name: input.authorName ?? "The Facts. editorial project",
-      url: absolute("/about-this-site"),
+      url: absolute("/mission"),
     },
     publisher: { "@id": `${SITE_URL}#publisher` },
   };
