@@ -25,6 +25,14 @@ export function GET(req: NextRequest) {
   ).slice(0, MAX_TITLE_LENGTH);
   const host = new URL(SITE_URL).host;
 
+  // Person pages pass ?person=<slug>; render their portrait instead of the
+  // default community mark. Sanitised, resolves to a static PNG asset.
+  const personRaw = searchParams.get("person") ?? "";
+  const person = /^[a-z0-9-]{1,64}$/.test(personRaw) ? personRaw : "";
+  const portraitUrl = person
+    ? new URL(`/images/og/people/${person}.png`, SITE_URL).toString()
+    : null;
+
   const titleSize = title.length > 58 ? 52 : title.length > 32 ? 64 : 74;
 
   return new ImageResponse(
@@ -81,8 +89,8 @@ export function GET(req: NextRequest) {
         {/* Divider */}
         <div style={{ display: "flex", width: "2px", height: "100%", background: INK }} />
 
-        {/* Right: marker illustration on a clean plate (image bg is near-white,
-            so the panel is white to avoid a visible box against the paper). */}
+        {/* Right: a person's portrait (cover-fills the panel) when ?person is
+            set, otherwise the default community marker on a clean plate. */}
         <div
           style={{
             display: "flex",
@@ -91,10 +99,22 @@ export function GET(req: NextRequest) {
             width: "463px",
             height: "100%",
             background: "#ffffff",
+            overflow: "hidden",
           }}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={OG_MARK} width={452} height={452} alt="" />
+          {portraitUrl ? (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img
+              src={portraitUrl}
+              width={463}
+              height={630}
+              style={{ objectFit: "cover" }}
+              alt=""
+            />
+          ) : (
+            // eslint-disable-next-line @next/next/no-img-element
+            <img src={OG_MARK} width={452} height={452} alt="" />
+          )}
         </div>
       </div>
     ),

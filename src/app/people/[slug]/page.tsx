@@ -12,6 +12,17 @@ import {
 } from "@/lib/members";
 import { buildPageMetadata } from "@/lib/seo";
 import { SITE_URL } from "@/lib/site";
+import { existsSync } from "node:fs";
+import { join } from "node:path";
+
+/** True when a dedicated OG portrait PNG exists for this slug. Automatic for
+ *  future people: drop public/images/og/people/<slug>.png and the share card
+ *  uses it. */
+function hasOgPortrait(slug: string): boolean {
+  return existsSync(
+    join(process.cwd(), "public", "images", "og", "people", `${slug}.png`),
+  );
+}
 
 export function generateStaticParams() {
   return listPublishedSlugs().map((slug) => ({ slug }));
@@ -44,6 +55,7 @@ export async function generateMetadata({
     cluster: "D",
     register: "record",
     ogType: "article",
+    ogImageKey: hasOgPortrait(member.slug) ? member.slug : undefined,
   });
 }
 

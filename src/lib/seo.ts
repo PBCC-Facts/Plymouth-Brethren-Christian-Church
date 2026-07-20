@@ -47,6 +47,8 @@ export interface PageSeoInput {
   ogTag?: string;
   /** Clean title for the OG share card, when `topic` carries an SEO suffix unwanted on the image. */
   ogTitle?: string;
+  /** Person key (slug) whose portrait to show on the OG card. Resolves to /images/og/people/<key>.png. */
+  ogImageKey?: string;
 }
 
 /** Resolve to an absolute origin+path URL (no trailing slash collapse). */
@@ -55,9 +57,10 @@ function absolute(path: string): string {
 }
 
 /** Build the dynamic OG image URL for a page. */
-export function ogImageUrl(topic: string, tag?: string): string {
+export function ogImageUrl(topic: string, tag?: string, person?: string): string {
   const params = new URLSearchParams({ title: topic });
   if (tag) params.set("tag", tag);
+  if (person) params.set("person", person);
   return absolute(`/og?${params.toString()}`);
 }
 
@@ -76,6 +79,7 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     ogType,
     ogTag,
     ogTitle,
+    ogImageKey,
   } = input;
 
   const title = rawTitle ? topic : `${topic} · ${TITLE_SUFFIX}`;
@@ -85,7 +89,7 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     : `${DESCRIPTION_PREFIX} ${description} ${DESCRIPTION_SUFFIX}`;
 
   const url = absolute(slug);
-  const image = ogImageUrl(ogTitle ?? topic, ogTag);
+  const image = ogImageUrl(ogTitle ?? topic, ogTag, ogImageKey);
 
   return {
     title: { absolute: title },
