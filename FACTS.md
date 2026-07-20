@@ -203,6 +203,7 @@ NZ Herald reporting by Patrick Gower describes Hales touring New Zealand congreg
 
 **Notes**
 - Do not invent aircraft details, tail numbers, or flight logs on the strength of this source. Companion NZ Herald pieces on the same tour: `.../PQAEZPCP34M4TBRFBB4WZE3BNA/` and the Whanganui Chronicle `/7XVPHETJ6QIYAAIDSABQGP3I34/`.
+- 2026-07-19 research pass: jet use further corroborated (Stuff NZ 2023 via cultnews101.com "Private jets, prison vans and Palmy"; Forum News Service / Inforum, 13 Aug 2024: Hales "travels in a private jet"). Maintainer's "multiple private jets" NOT corroborated; ship singular "private jet" only.
 
 **Pages**
 - `/people/bruce-d-hales`.
@@ -245,7 +246,9 @@ Members who are "withdrawn from" (PBCC term for excommunication) are cut off fro
 
 **Status**. ✅ verified (multi-source)
 **Sources**
-- New Statesman long-read (same as above).
+- New Statesman long-read (same as above): "when a member leaves or is 'withdrawn from' (excommunicated), those who remain will not eat, speak or live with them."
+- https://www.abuseincare.org.nz/reports/whanaketia/part-7/chapter-8. NZ Royal Commission, Whanaketia (25 Jun 2024), Part 7 Ch. 8 (primary): "shutting up" and "withdrawing from"; members instructed to shun their own family, sometimes while living in the same house.
+- https://assets.publishing.service.gov.uk/media/5a74c214e5274a3cb2866f23/preston_down_trust_full_decision.pdf. UK Charity Commission Preston Down Trust full decision, Jan 2014 (primary): "elements of detriment and harm" from disciplinary practices and impact on those who leave. _Note: the GOV.UK landing page is marked "[Withdrawn]"; the PDF remains the citable record._
 - https://reachouttrust.org/exclusive-brethren/. Reachout Trust overview.
 - https://publications.parliament.uk/pa/cm201213/cmselect/cmpubadm/writev/charity/m49.htm. UK Parliament submission, 2012.
 - ABC Four Corners "Behind the Exclusive Brethren" (Bachelard / Whitmont).
@@ -395,6 +398,23 @@ The ABC Four Corners documentary "Behind the Exclusive Brethren" (2006, Michael 
 
 ---
 
+### Claim
+The Get A Life podcast ("Ex-Cult Conversations") was founded in 2022 by four former North American PBCC members and interviews ex-members, psychologists, and journalists.
+
+**Status**. ✅ verified (the podcast's own public record)
+**Sources**
+- https://www.get-a-life.net/. Official site; episodes at /podcast-episodes.
+- https://podcasts.apple.com/us/podcast/get-a-life-ex-cult-conversations/id1651686638. Apple Podcasts; also Spotify (show 4GhNv1hZp6tjfLyA4s6PMu) and YouTube @getalifepodcast.
+
+**Notes**
+- Hosts: founded by four former USA/Canada members; Cheryl Bawtinheimer (née Hope) is the most publicly named host. UK/Europe and AU/NZ hosting teams added since.
+- Old brethrenexposed.com media-pack URLs are dead; brethrenexposed.com now redirects to brethrenintelligence.com.
+
+**Pages**
+- `/resources`, `/resources/podcast`.
+
+---
+
 ## 7. Bruce D. Hales. named claims (from 2026-04-23 dossier pass)
 
 ### Claim
@@ -486,6 +506,11 @@ On 19 March 2024, the Australian Taxation Office raided UBT's Sydney Olympic Par
 **Status**. ✅ verified (Guardian Australia + SMH confirmation)
 **Sources**
 - https://www.theguardian.com/australia-news/2024/apr/02/ato-raids-offices-of-plymouth-brethrens-universal-business-team. Davies & Butler, Guardian Australia, Apr 2024.
+- SMH raid exclusive (primary): Michael Bachelard, "Fleecing the flock: Exclusive Brethren businesses raided by Tax Office," smh.com.au/national, 22 Mar 2024 (confirmed via SMH's X post https://x.com/smh/status/1771353415018479763; full URL crawler-blocked, verify and archive manually).
+
+**Notes (2026-07-19 research pass)**
+- Raid targets: UBT, OneSchool Global, and Rapid Relief Team together at The Precinct, Herb Elliott Ave, Sydney Olympic Park; useful as documented evidence of shared infrastructure across the entities.
+- Later activist-aggregated reporting (Nov 2025) says UBT made a voluntary disclosure and paid "several million dollars" to the ATO over FBT/salary-splitting for FY2021–24. No major-outlet citation found; SourcePending at most.
 
 **Pages**
 - `/people/bruce-d-hales`. §6 body.
@@ -526,13 +551,14 @@ First-person recollections and leads supplied by the maintainer. **None of this 
 ### Claim
 The PBCC restricts which car brands and models members may own, based on leadership pronouncements rather than price: prestige marques such as BMW, Mercedes-Benz, Bentley, Maserati, and sports cars are prohibited, while high-priced vehicles outside the named brands (e.g. Cadillac Escalade, Range Rover) are permitted.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🔴 testimony; 2026-07-19 research pass found NO public source for brand-level car rules
 **Sources**
-- _Needed. Candidates: ex-member accounts (Get A Life podcast episodes on lifestyle rules), press coverage of Brethren car rules, leaked ministry text where Hales addresses cars._
+- _Not found in mainstream press, ex-member reference sites, or leaked ministry after multiple search passes. Closest: https://www.inforum.com/news/the-vault/unraveling-the-plymouth-brethren-christian-church (expenditures "strictly controlled and monitored" per former members), which supports spending control generally but not car brands._
+- _Best remaining candidates: on-record testimony via `/stories`, Get A Life podcast episodes, or leaked Hales ministry addressing cars._
 
 **Notes**
 - Maintainer testimony: a $250k Escalade-V was permissible while a $20k used BMW was not; the rule follows brands Bruce Hales has spoken against, not cost.
-- Strong illustrative fact for `/way-of-life` if sourced; phrase around the named-brand asymmetry.
+- Strong illustrative fact for `/way-of-life` if sourced; phrase around the named-brand asymmetry. Until sourced, ships nowhere (not even SourcePending: severity is low but specificity is high, and an error would be gleefully cited against the site).
 
 **Pages**
 - `/way-of-life/technology-and-entertainment` or a future `/way-of-life/cars-and-possessions`.
@@ -542,12 +568,15 @@ The PBCC restricts which car brands and models members may own, based on leaders
 ### Claim
 PBCC housing rules prohibit members from living in dwellings with shared plumbing, shared driveways, or shared walls (i.e. apartments and townhouses), requiring standalone single-family houses.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. ✅ corroborated (2026-07-19 research pass)
 **Sources**
-- _Needed. Candidates: UK Charity Commission evidence, ex-member accounts, reporting on Brethren housing; the "no shared sewer/drainage" rule is documented in older Exclusive Brethren coverage (Aberdeen era) and may be traceable to published ministry._
+- https://www.newstatesman.com/long-reads/2023/08/escaping-eden-exclusive-brethren. New Statesman, Aug 2023: Brethren live in detached houses, "no sharing of walls or sewage lines with outsiders."
+- https://en.wikipedia.org/wiki/Plymouth_Brethren_Christian_Church. Wikipedia (citing 2014 reporting): forbidden from residing in buildings sharing structural elements with non-members (semi-detached, townhouses, apartments) or sharing "common drains"/sewage lines. _Chase the underlying 2014 outlet citation before shipping; Wikipedia is a pointer, not a citation._
+- https://pbcc.info/pbcc-and-exclusive-brethren-jargon-explained/. PBCC.info (ex-member reference): detached, recommended 4 bed / 2 bath, not on a cul-de-sac, no shared drains or drives, within a few miles of a subdivisional meeting room; criteria circulate as a "housing plan." _503 to automated fetch; verified via snippets; re-fetch before citing._
 
 **Notes**
 - Maintainer testimony ties housing compliance to marriage approval (see marriage row below).
+- Historic no-shared-sewer rule under James Taylor Jr (1960s) is documented via the era's press coverage cited on the Wikipedia page.
 
 **Pages**
 - `/way-of-life` (future housing section).
@@ -555,14 +584,17 @@ PBCC housing rules prohibit members from living in dwellings with shared plumbin
 ---
 
 ### Claim
-Personal grooming and dress codes are enforced: men are expected to wear a part in their hair; women must wear headscarves, sold through a Brethren-linked brand ("Gabbiano" per maintainer, spelling unverified).
+Personal grooming and dress codes are enforced: men are expected to wear a part in their hair; women must wear headscarves, sold through a Brethren-linked brand (Gabiano).
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🟡 partially corroborated (2026-07-19 research pass): headscarf/token requirement and the Gabiano-UBT link are sourced; the men's hair-part rule is NOT found anywhere
 **Sources**
-- _Needed. Headscarf/token requirement is documented (CDAMM, press photos, PBCC's own imagery); the men's-hair-part rule and the scarf brand need specific sourcing._
+- https://www.plymouthbrethrenchristianchurch.org/way-of-life/clothing-hair-and-fashion/. PBCC's own page: headscarves at meetings, hair item ("token") outside.
+- New Statesman, Aug 2023 (same long-read as housing row): "a 'token', often a headband or bow."
+- Gabiano (one "b"; gabiano.com.au / .co.uk / .us) is ordered through UBT household accounts: https://support.ubttelecoms.eu/hc/en-us/articles/360000252228-How-do-I-order-Gabiano-scarves. UBT Telecoms support page. A Gabiano lookbook is published under the "ubteam" Issuu account: https://issuu.com/ubteam/docs/00908_libertylookbook_digi.
 
 **Notes**
-- Check whether the scarf brand is connected to UBT-coordinated commerce; if so this joins the "selling products to members" row.
+- Men's grooming: sources document clean-shaven, short neat hair, facial-hair ban (1965 press via Wikipedia), NOT a hair-part requirement. Do not ship the hair-part claim without a source.
+- The Gabiano-UBT ordering link feeds the "UBT sells to members" row below. Precise corporate ownership of Gabiano not yet established; a Companies House / ASIC lookup would settle it.
 
 **Pages**
 - `/way-of-life/clothing-hair-and-fashion`.
@@ -572,11 +604,20 @@ Personal grooming and dress codes are enforced: men are expected to wear a part 
 ### Claim
 Entertainment and technology prohibitions include: radio, prerecorded music, television, dirt bikes, go-karts, amusement parks, and pets. Enforcement of the pet prohibition reportedly extended to removal of existing pets in recent years.
 
-**Status**. 🔴 testimony, needs public source per item
+**Status**. 🟡 mixed (2026-07-19 research pass): radio/TV ✅, pets ✅ (strongly, incl. 2026 enforcement), pop music 🟡, dirt bikes / go-karts / amusement parks 🔴 not found
 **Sources**
-- _Needed. Radio/TV prohibitions are well documented historically (CDAMM, Four Corners, academic sources). Pets, dirt bikes, go-karts, amusement parks need pinning. Maintainer references public posts by an ex-member ("Cheryl") on the pet-removal enforcement; locate and archive._
+- Radio/TV: https://www.plymouthbrethrenchristianchurch.org/resource/what-are-brethren-members-not-allowed-to-do/. PBCC's own page ("Television viewed primarily as entertainment... is generally avoided"); Telegraph 2025 via Wikipedia (members "do not watch television, listen to the radio").
+- Pets, May 2026 removal directive after a dog bit a young Hales relative:
+  - SMH, ~11 May 2026 (mirrored at https://feministlegal.org/exclusive-brethren-pet-ban-order-sparks-fears-of-global-cull-in-sect-the-plymouth-brethren-christian-church-smh/): every household to be cleansed of "dirty" animals; birds, mice, cats included; a kitten already euthanised. _Pin the original SMH URL and archive it._
+  - https://www.stuff.co.nz/nz-news/360980937/brethren-church-denies-reports-followers-were-told-get-rid-their-pets. Stuff NZ: the church DENIES the order. Ship the denial alongside, per fairness norm.
+  - https://www.plymouthbrethrenchristianchurch.org/correcting-the-record-pet-ownership-and-animal-safety/. PBCC's own rebuttal.
+  - Get A Life podcast Ep. 169 "Cult Bans Pets": https://www.youtube.com/watch?v=QmSHqO7O470.
+  - Historic 1960s pet purge documented (Daily Mirror / Daily Express 1964 via Wikipedia).
+- Pop music: https://gayexpress.co.nz/2024/10/craig-hoyle-finding-freedom-after-the-exclusive-brethren/ ("rules against television, pop music, sports and even pets"). Exact "prerecorded music" wording not found; phrase as "pop music" per sources.
+- Dirt bikes / go-karts / amusement parks: _not found. The Hales-attributed 27-place do-not-attend list (court documents via Four Corners 2025 / Wikipedia) names cinemas, restaurants, hotels, sporting events, universities, zoos; amusement parks unconfirmed. Obtain the actual 27-place list from the court record._
 
 **Notes**
+- "Cheryl" is Cheryl Bawtinheimer (née Hope), Get A Life podcast host: already a public, on-record ex-member (also quoted in the SMH pet piece), so she clears the naming bar if cited to her public statements.
 - Some members privately defy the rules (maintainer cites prominent members keeping undisclosed televisions). Do not name private members; if ever published, the point is the gap between PR and practice, sourced to on-record accounts only.
 
 **Pages**
@@ -587,9 +628,12 @@ Entertainment and technology prohibitions include: radio, prerecorded music, tel
 ### Claim
 Separation rules govern eating and social contact: members may not share a meal or maintain social connection with non-members; when business circumstances force a shared table, members avoid literally eating at the same moment. Restaurants are off-limits except in narrow business-travel circumstances, and hotels are avoided.
 
-**Status**. 🔴 testimony; separation doctrine itself is ✅ (see §2), the specific behaviours need sources
+**Status**. ✅ largely corroborated (2026-07-19 research pass); the "avoid eating at the same moment" nuance still testimony-only
 **Sources**
-- _Needed for the specific behaviours. Candidates: Preston Down Trust evidence record (eating separately is discussed), Four Corners, Hoyle's Excommunicated, NZ Royal Commission testimony._
+- https://www.plymouthbrethrenchristianchurch.org/resource/what-are-brethren-members-not-allowed-to-do/. PBCC's own page: members "choose to eat meals only with those with whom they would also share the Lord's Supper."
+- 1964 "separate tables" edict forbidding "eating or drinking with anyone not 'in fellowship'" (Daily Record, Dec 1964, via Wikipedia's citations; chase the underlying source).
+- Restaurants and hotels appear on the Hales-attributed 27-place do-not-attend list per court documents cited in Four Corners "Big Brethren" (2025). _Obtain the list itself._
+- New Statesman, Aug 2023: children came home from school for lunch; men could not dine with worldly colleagues.
 
 **Notes**
 - Maintainer: rules are "heavily bent for business purposes especially by the elites." That asymmetry is a strong editorial point but needs an on-record source.
@@ -602,9 +646,9 @@ Separation rules govern eating and social contact: members may not share a meal 
 ### Claim
 Women sit separately from men at church services and are subject to distinct participation rules.
 
-**Status**. 🔴 testimony, likely easy to source
+**Status**. ✅ corroborated (2026-07-19 research pass)
 **Sources**
-- _Needed. Candidates: CDAMM, academic ethnography, PBCC's own service descriptions, ex-member accounts._
+- https://en.wikipedia.org/wiki/Plymouth_Brethren_Christian_Church. Women sit separately (men nearest the centre, women and children behind), per 1 Corinthians 14:34; women do not preach or pray audibly. _Chase the underlying citation on the Wikipedia page before shipping._
 
 **Pages**
 - `/way-of-life/beliefs`.
@@ -614,12 +658,12 @@ Women sit separately from men at church services and are subject to distinct par
 ### Claim
 Members are required to live within a defined radius of their assigned meeting room; members living outside the radius have been expected to sell their homes and move. The radius policy is attributed to Bruce D. Hales.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🟡 partially corroborated (2026-07-19 research pass): proximity requirement documented; Hales attribution and sell-and-move enforcement not found
 **Sources**
-- _Needed. Candidates: ex-member accounts, reporting on Brethren relocations; check Get A Life podcast and NZ/AU coverage._
+- https://pbcc.info/pbcc-and-exclusive-brethren-jargon-explained/. PBCC.info: houses must be "within a few miles of a subdivisional room"; circulated housing plans; 20–30 minute locality drive norms. _503 to automated fetch; re-verify._
 
 **Notes**
-- Attribution to Hales personally is a severity-adjacent claim: two sources or it ships attributed to "leadership" generally, or not at all.
+- Attribution to Hales personally is a severity-adjacent claim: two sources or it ships attributed to "leadership" generally, or not at all. The forced sell-and-move enforcement remains testimony-only; candidates are `/stories` accounts.
 
 **Pages**
 - `/way-of-life`, `/people/bruce-d-hales` (if attribution sources).
@@ -629,11 +673,15 @@ Members are required to live within a defined radius of their assigned meeting r
 ### Claim
 Members are expected not to work for non-Brethren businesses; rare exceptions exist but the norm is employment within the member-business network.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. ✅ corroborated (2026-07-19 research pass), with church denial to carry alongside
 **Sources**
-- _Needed. Candidates: Four Corners, UBT reporting, academic work on Brethren economic separation._
+- New Statesman, Aug 2023: professional-body membership prohibited (doctors, pharmacists, lawyers ceased practice); university banned; employment within Brethren-run businesses "became normative."
+- https://www.stuff.co.nz/nz-news/350495633/former-exclusive-brethren-members-detail-complete-control-massive-buying-power-of-cult-like-church. Stuff NZ, 2024.
+- https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round. RNZ, 2022: leaving the church means losing employment along with family.
+- Church's position for contrast: https://www.plymouthbrethrenchristianchurch.org/our-members/any-questions/ (spokesperson "rejected any suggestion that ex-members were forced to quit their jobs").
 
 **Notes**
+- Frame as norm/expectation reported by ex-members and journalists, not a written published rule.
 - Maintainer characterises the rare exceptions as useful for "plausible deniability" in PR. If published, that characterisation needs an on-record source or ships as clearly-labelled editorial opinion grounded in the documented pattern.
 
 **Pages**
@@ -644,9 +692,12 @@ Members are expected not to work for non-Brethren businesses; rare exceptions ex
 ### Claim
 Marriage within the PBCC requires a formal approval process: a multi-point compliance checklist (attendance at preachings, reading prescribed ministry including John S. Hales volumes), a budget signed off by local priests, ownership of a compliant standalone house, review by a regional approval team, and final approval from Sydney. Weddings are announced in batches as approvals return. Couples sign a document waiving church liability for the wedding.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🟡 partially corroborated (2026-07-19 research pass): elder approval of marriages, prescribed Hales ministry reading ("brown books"), and detailed house-compliance rules are publicly documented; the ~20-item checklist, budget sign-off, regional-then-Sydney approval, batch announcements, and liability waiver are NOT yet publicly sourced
 **Sources**
-- _Needed. This process is largely undocumented in public reporting; strongest candidates are on-record ex-member testimony (this site's `/stories` intake, Get A Life podcast) or leaked checklist documents (archive to `research/evidence/` if obtained)._
+- https://pbcc.info/pbcc-and-exclusive-brethren-jargon-explained/. PBCC Information (ex-member reference site). Documents "brown books" (printed John S. Hales ministry) and house rules: "must be detached... no shared drains or shared drives... within a few miles of a subdivisional room." _Site 503'd on direct fetch; verified via search snippets. Re-fetch before citing._
+- https://www.plymouthbrethrenchristianchurch.org/way-of-life/marriage/. PBCC's own marriage page (denies arranged marriage; Tuesday weddings). Useful as the church's position for contrast.
+- Get A Life media info pack stated members "need approval of church elders for their future wife or husband"; the old brethrenexposed.com PDF is 404. _Find a live mirror before citing._
+- _Still needed for the granular process: on-record ex-member testimony (`/stories` intake) or a leaked checklist document archived to `research/evidence/`._
 
 **Notes**
 - Maintainer names North American approval-team members (Jim Southard, Mick Strange, Brent Scott, possibly outdated) and the Sydney final-approval step. These are private individuals unless they clear MEMBERS_POLICY buckets; hold names in intake only.
@@ -660,9 +711,13 @@ Marriage within the PBCC requires a formal approval process: a multi-point compl
 ### Claim
 Weekly cash collections are taken at the Sunday Lord's Supper, the fellowship's most significant service, tying peak religious observance to peak monetary giving.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🟡 collections corroborated (2026-07-19 research pass); the Lord's-Supper-specific tie is still testimony-only
 **Sources**
-- _Needed. Candidates: RNZ "money-go-round" reporting (already ✅ in §2 for payments to Hales), Four Corners 2025, ex-member accounts of collection practice._
+- The Age, 23 Sep 2006, Michael Bachelard & Christian Catalano, "Brethren reap millions in tax-free donations" (mirror: https://culteducation.com/group/910-exclusive-brethren/6199-brethren-reap-millions-in-tax-free-donations.html): weekly donations for church upkeep; monthly "special collection" distributed "as gifts to the leaders... mainly to the Elect Vessel" (ex-leader Ron Fawkes on record). _Pin the original theage.com.au URL and archive._
+- https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round. RNZ, 2022: annual turnover/profit questionnaires with NAF representatives "suggesting" donation amounts.
+
+**Notes**
+- Soften to "weekly meetings" unless a source pins the Lord's Supper service specifically; the cash-at-the-most-sacred-service point needs on-record testimony (`/stories` candidate).
 
 **Pages**
 - `/way-of-life/beliefs`, future `/money` page.
@@ -670,15 +725,19 @@ Weekly cash collections are taken at the Sunday Lord's Supper, the fellowship's 
 ---
 
 ### Claim
-Ownership of local meeting rooms has been consolidated from locality-level trusts (held by senior local elders) into a centralised corporate structure (referred to by the maintainer as "GAP"), zeroing out local trusts; entities under or alongside it include the Rapid Relief Team, the Vision Foundation, OneSchool Global, and the now-closed Campus & Co retail chain.
+Ownership of local meeting rooms is being consolidated from locality-level trusts (held by senior local elders) into a centralised corporate structure: PBCC Properties Global Ltd, an Australian public company (ABN 68 691 860 858, active from 15 Oct 2025, registered in NSW 2127, the same Sydney Olympic Park postcode as UBT), self-described as supporting "the building and maintenance of places of public worship and the acquisition or sale of properties" across the UK, Europe, Australia, NZ, and the Americas.
 
-**Status**. 🔴 testimony, partially corroborated (UBT/RRT/OSG structure is documented; the deed-transfer mechanism and "GAP" entity are not yet)
+**Status**. 🟡 partially corroborated (2026-07-19 research pass): the entity exists and says what it does; the deed-transfer mechanism has one UK charity-filing example; no major-outlet journalism yet
 **Sources**
-- _Needed. Candidates: land-registry / title searches on meeting-room properties (public records), charity filings for Vision Foundation and RRT, ACNC and Companies House records, Four Corners 2025, Guardian Australia ATO-raid coverage._
+- https://www.pbccproperties.com/. The entity's own site (primary self-description).
+- https://abr.business.gov.au/ABN/View?id=68691860858. Australian Business Register (primary). Sister entity: PBCC Properties AU Ltd atf AU Operating Trust, ABN 35 930 317 906.
+- UK Charity Commission filings: Bridgefoot Gospel Hall Trust (organisation number 5047154) "transferred halls to an affiliated trust for nil consideration" in the year ended 5 Apr 2024. _Pull the full-print filing; repeat the search across other gospel hall trusts to establish the pattern._
 
 **Notes**
-- Maintainer characterises the structure as a money-laundering mechanism: cash donations flow into centrally-owned property development. **"Money laundering" is a legal accusation. It never ships in the site's own voice.** If a regulator, court, or major outlet uses the phrase, quote them; otherwise the site describes the documented flows (cash collections, centralised ownership, member-funded investment) and lets the record speak.
-- The ATO raid row (§7) and RNZ money-go-round row (§2) are the sourced anchors this cluster can build from.
+- Maintainer's working name "GAP" does not match any registered entity; the on-record entity is PBCC Properties Global Ltd. (Ask maintainer whether GAP was an internal/informal name or a distinct earlier vehicle.)
+- The stronger framing ("deeds stripped from local elders, trusts zeroed out") needs per-charity filings or reporting; until then it is SourcePending at most.
+- Maintainer characterises the structure as a money-laundering mechanism: cash donations flow into centrally-owned property development. **"Money laundering" is a legal accusation. It never ships in the site's own voice.** RNZ 2022 carries an interviewee's "almost like a legalised form of money laundering" quote; that exact attributed quote is the ceiling of what can ship.
+- The ATO raid row (§7) and RNZ money-go-round row (§2) are the sourced anchors this cluster builds from.
 
 **Pages**
 - future `/money`, `/way-of-life/network`, `/people/bruce-d-hales`.
@@ -686,11 +745,15 @@ Ownership of local meeting rooms has been consolidated from locality-level trust
 ---
 
 ### Claim
-The Vision Foundation raised funds from members (reportedly hundreds of millions of dollars, in part via seminars) and invested the money in profitable Brethren businesses, functioning as an internal private-equity vehicle funded by member contributions, with limited member benefit.
+The church's "Global Funding Team" builds an investment portfolio under Vision Growth / Vision Accelerator vehicles, taking controlling stakes in profitable Brethren companies, aiming at an endowment whose returns fund Brethren spending; fundraising reportedly runs to hundreds of millions of dollars.
 
-**Status**. 🔴 testimony, needs public source
+**Status**. 🟡 mechanism corroborated by RNZ (2026-07-19 research pass); dollar figures are activist-sourced only
 **Sources**
-- _Needed. Candidates: charity/regulator filings under the exact entity name (verify: "Vision Foundation" vs other spellings), AU/UK press, Four Corners 2025._
+- https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round. RNZ, Ruth Hill, 26 Jul 2022: Global Funding Team, Vision Growth / Vision Accelerator, controlling stakes in profitable companies; church spokesperson Doug Watt quoted.
+- Dollar figures ($0.65bn since 2017; annual "Strive" fundraiser targeting ~$250m/yr): openandcandid.com "Eye of the Needle" (403s to fetch) and Get A Life podcast Ep. 133 "Vision Foundation" (Dec 2024), https://www.youtube.com/watch?v=rtfAogcOBNY. _Activist-sourced; attribute explicitly or SourcePending._
+
+**Notes**
+- No regulator filing found for a body literally named "Vision Foundation"; the RNZ-verified names are Vision Growth and Vision Accelerator. (Ask maintainer which name members heard at the seminars.)
 
 **Pages**
 - future `/money`.
@@ -700,9 +763,13 @@ The Vision Foundation raised funds from members (reportedly hundreds of millions
 ### Claim
 UBT sells products and services directly to members, making the fellowship's own membership a captive market for its commercial arm; Campus & Co (member-facing grocery/superstores) operated on the same model before closing.
 
-**Status**. 🔴 testimony, partially sourceable now
+**Status**. ✅ largely corroborated (2026-07-19 research pass); Campus & Co closure announcement is activist-sourced, needs a mainstream pin
 **Sources**
-- _Needed. Campus & Co's existence and closure had trade-press and mainstream coverage (AU/NZ/UK); UBT's member-facing sales model appears in Guardian Australia and Four Corners reporting. Pin URLs._
+- https://www.rnz.co.nz/news/national/471615/former-exclusive-brethren-members-detail-the-church-s-money-go-round. RNZ, 2022: UBT model (subscriptions, Silver Bulletin, consultancy fees, ~3,000 businesses, 19 countries).
+- https://www.stuff.co.nz/nz-news/350495633/former-exclusive-brethren-members-detail-complete-control-massive-buying-power-of-cult-like-church. Stuff NZ, 2024.
+- https://www.couriermail.com.au/news/queensland/sunshine-coast/plymouth-brethren-supermarket-justified-public-ban-using-costco-model-documents-show/news-story/3cf58c85e3aa34b15e5c4f30cef6c429. Courier Mail, Jun 2026: leaked internal Campus & Co documents, members-only "Costco model" public ban.
+- Guardian Australia covered members-only Campus & Co store plans (pin the original theguardian.com URL; syndicated copy: https://worldwiretimes.com/exclusive-brethren-plan-new-members-only-campusco-supermarket-in-melbournes-north-east/).
+- Campus & Co physical-store closure: UBT's own announcement as carried by Brethren Intelligence (brethrenintelligence.com/campus--co-closure/shops-to-close); campusandco.com now describes online-only. _Activist-sourced for the closure; pin a mainstream or primary URL._
 
 **Pages**
 - `/way-of-life/network`, future `/money`.
@@ -712,12 +779,20 @@ UBT sells products and services directly to members, making the fellowship's own
 ### Claim
 Localities have held prayer meetings concerning the death or removal of named public politicians, while the fellowship maintains an outward policy of political non-participation (members do not vote) alongside documented political donations and lobbying.
 
-**Status**. 🔴 testimony for the prayer-meeting half; the donations/lobbying half is documented (see §5 Senate row, §7 Times lobbying row)
+**Status**. 🟡 prayer-meeting half corroborated as ex-member testimony (2026-07-19 research pass); the donations/lobbying half is strongly documented
 **Sources**
-- _Needed for prayer meetings: on-record ex-member testimony. This is a severity claim; two sources minimum before ship._
+- https://newsroom.co.nz/2023/11/20/we-prayed-helen-clark-would-fall-out-of-a-plane-brethren-book/. Newsroom NZ, 20 Nov 2023, drawing on Craig Hoyle, *Excommunicated* (HarperCollins NZ, 2023): ex-member recounts Brethren saying harder prayer would have made PM Helen Clark fall from a plane; teenagers burned an effigy of the PM at a Brethren gathering. _Page 403s to automated fetch; verified via search. Re-verify manually._
+- Michael Bachelard, *Behind the Exclusive Brethren* (Scribe, 2008). describes Brethren "praying night and day for [the Greens'] ruination". _Verify exact page before quoting._
+- Donations/lobbying primary URLs:
+  - https://www.aec.gov.au/parties_and_representatives/compliance/AEC_Advice/exclusive.htm. AEC (primary): investigation of 2004 election ads by Exclusive Brethren members, expenditure via Willmac Enterprises third-party return.
+  - https://www.nickyhager.info/the-hollow-men-chapter-1-the-path-of-principle/. Hager, *The Hollow Men*: Brethren letter to Brash/Key, May 2005: "We are working on 'our/your' campaign full-time."
+  - https://www.salon.com/2005/01/19/brethren/. Salon, Jan 2005: Thanksgiving 2004 Committee spent >$500,000 on pro-Bush/Martinez ads (FEC filing).
+  - https://humanists.uk/2015/03/19/bha-expresses-concern-at-allegations-that-political-lobbying-influenced-charity-commissions-exclusive-brethren-decision/. Humanists UK summary of The Times 2015 investigation (449 MPs visited).
+  - https://www.thirdsector.co.uk/brethren-members-followed-charity-commission-officials-during-preston-down-trust-dispute/governance/article/1338635. Third Sector: members followed Charity Commission officials.
 
 **Notes**
-- The voting-abstention-plus-donations asymmetry is already well documented (Hager, The Age 2007, SBS 2025). The prayer-meeting claim is the new, unsourced part.
+- Phrase the prayer claim as ex-member testimony/memoir (Hoyle), not an institutional practice: "Ex-members, including Craig Hoyle in his 2023 memoir, describe Brethren praying for the removal, and in one account the death, of NZ PM Helen Clark."
+- Date fix from research: The Times lobbying investigation published **2015** (covering lobbying that occurred 2012–14). Adjust §7 wording if it implies a 2012–14 publication date.
 
 **Pages**
 - `/way-of-life/voting`.
