@@ -843,6 +843,57 @@ Published Hales ministry describes the radio as a "pipeline of filth"; internet 
 
 ---
 
+### Claim
+Dating is forbidden; couples instead "start talking" and must then apply for approval to marry.
+
+**Status**. 🟣 ex-member reported (maintainer intake, 2026-07-20)
+**Sources**
+- _Needed: public corroboration. Candidates: Get A Life podcast episodes on courtship/marriage; Hoyle memoir; New Statesman._
+
+**Pages**
+- `/way-of-life` rules wall (Marriage & family), with ex-member badge.
+
+---
+
+### Claim
+Women are required to submit to men and hold no decision-making authority in the church; the church's PR points to women choosing the hymns.
+
+**Status**. 🟣 ex-member reported (maintainer intake, 2026-07-20)
+**Sources**
+- _Needed: public corroboration. Candidates: NZ Royal Commission faith-based hearing testimony; PBCC's own "women in the church" page (their framing is quotable as the PR half); Get A Life podcast._
+
+**Notes**
+- Register: state the reported practice flat; quote the church's hymn-choosing framing as their own words. No editorializing.
+
+**Pages**
+- `/way-of-life` rules wall (Authority), with ex-member badge.
+
+---
+
+### Claim
+Computers and mobile phones, previously banned outright, must now be purchased through UBT at significant markups.
+
+**Status**. 🟣 ex-member reported (maintainer intake, 2026-07-20); the captive-market half overlaps the existing §8 UBT row; the historical outright ban overlaps the 🟡 Symington-era row in §9
+**Sources**
+- _Needed: UBT device pricing vs retail (screenshots/catalogue), or journalism on UBT's member hardware sales. Streamline3 product site already pinned (§9)._
+
+**Pages**
+- `/way-of-life` rules wall (Technology & media), with ex-member badge; `/money` (UBT captive market).
+
+---
+
+### Claim
+Men wear short hair with a side part; ex-members report the part is taught as symbolizing separation from the world.
+
+**Status**. 🟣 ex-member reported (maintainer intake, 2026-07-20; extends the 2026-07-19 grooming row)
+**Sources**
+- _Needed: ministry text or journalism reference to the hair part._
+
+**Pages**
+- `/way-of-life` rules wall (Clothing & appearance), with ex-member badge.
+
+---
+
 ## 9. Rules research pass, 2026-07-20 (agent-team sourcing, issue #9)
 
 ### Claim

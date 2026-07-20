@@ -23,6 +23,7 @@ export const RULE_CATEGORIES = [
   "Clothing & appearance",
   "Marriage & family",
   "Money",
+  "Authority",
   "Discipline & leaving",
   "Civic life",
 ] as const;
@@ -149,6 +150,15 @@ export const rules: Rule[] = [
     id: "prerecorded-music",
     category: "Technology & media",
     statement: "No prerecorded music.",
+    tier: "exmember",
+    sourceIds: [],
+  },
+  {
+    id: "devices-via-ubt",
+    category: "Technology & media",
+    statement: "Computers and phones must be bought through UBT.",
+    detail:
+      "Ex-members report devices, once banned outright, are now sold to members through the church's own UBT at a markup.",
     tier: "exmember",
     sourceIds: [],
   },
@@ -309,7 +319,9 @@ export const rules: Rule[] = [
   {
     id: "hair-part",
     category: "Clothing & appearance",
-    statement: "Men are expected to wear a part in their hair.",
+    statement: "Men wear short hair, parted at the side.",
+    detail:
+      "Ex-members report the side part is taught as symbolizing separation from the world.",
     tier: "exmember",
     sourceIds: [],
   },
@@ -344,6 +356,15 @@ export const rules: Rule[] = [
     sourceIds: ["whanaketia-royalcommission-nz"],
   },
   {
+    id: "dating",
+    category: "Marriage & family",
+    statement: "Dating is forbidden.",
+    detail:
+      "Ex-members report couples instead “start talking,” then apply for approval to marry.",
+    tier: "exmember",
+    sourceIds: [],
+  },
+  {
     id: "women-seating",
     category: "Marriage & family",
     statement: "Women sit separately from men at services.",
@@ -360,6 +381,26 @@ export const rules: Rule[] = [
     statement: "Weekly cash collections at the most important service.",
     detail:
       "Ex-members report collections taken at the Sunday Lord's Supper, tying peak religious observance to peak giving.",
+    tier: "exmember",
+    sourceIds: [],
+  },
+
+  // ------------------------------------------------------------------ Authority
+  {
+    id: "leader-final",
+    category: "Authority",
+    statement: "The leader's word cannot be challenged.",
+    detail:
+      "Members treat Bruce D. Hales's word as the voice of God; Nicky Hager's investigation found “no major decisions are made without Hales's approval or direction.”",
+    tier: "verified",
+    sourceIds: ["hales-manofgod-newstatesman", "hollowmen-hager-2006"],
+  },
+  {
+    id: "women-authority",
+    category: "Authority",
+    statement: "Women hold no authority in the church.",
+    detail:
+      "Ex-members report women are required to submit to men and have no decision-making role; the church's public framing points to women choosing the hymns.",
     tier: "exmember",
     sourceIds: [],
   },
