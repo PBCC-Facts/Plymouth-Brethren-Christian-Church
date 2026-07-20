@@ -46,11 +46,6 @@ const basics: Basic[] = [
         <Footnote id="pbcc-members-selfreport" n={nextN()} />. For most of
         its history it was called the Exclusive Brethren; it rebranded, and
         most of the reporting still uses the old name.
-        <span className="mt-3 block font-bold underline underline-offset-4">
-          Two prime ministers have publicly called it a cult
-          <Footnote id="rudd-cult-2007-age" n={nextN()} />
-          <Footnote id="albanese-cult-2025-sbs" n={nextN()} />.
-        </span>
       </>
     ),
   },
@@ -248,8 +243,12 @@ export default function HomePage() {
               known as the Exclusive Brethren. Members live under rules that
               control who they can eat with, who they can marry, where they
               can live, and what they can watch and listen to. Leaving
-              usually means losing your family. This page is the
-              plain-language version, with a citation on every claim.
+              usually means losing your family.{" "}
+              <strong className="underline underline-offset-4">
+                Two prime ministers have publicly called it a cult
+                <Footnote id="rudd-cult-2007-age" n={nextN()} />
+                <Footnote id="albanese-cult-2025-sbs" n={nextN()} />.
+              </strong>
             </p>
             <Link href="#basics" className="hero__cta">
               Start with the basics &rarr;

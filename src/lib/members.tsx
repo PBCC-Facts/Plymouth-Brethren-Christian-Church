@@ -56,8 +56,10 @@ export type Member = {
    * <title> prefix and OG title instead of "Name. Role" when present.
    */
   seoTopic?: string;
-  /** Optional FAQ entries; rendered as FAQPage JSON-LD (not visible copy). */
+  /** Optional FAQ entries; rendered visibly as "Quick answers" AND as FAQPage JSON-LD. */
   faq?: MemberFaq[];
+  /** Optional at-a-glance facts (mono label + short value). Snippet-friendly. */
+  glance?: { label: string; value: string }[];
   /**
    * Optional portrait image path (e.g. "/images/members/bruce-d-hales.jpg").
    * When present, the <Artwork> pipeline renders this instead of the

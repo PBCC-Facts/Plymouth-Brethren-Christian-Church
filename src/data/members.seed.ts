@@ -29,7 +29,16 @@ export const members: Member[] = [
     category: "leadership",
     currentRole:
       'World Leader ("Man of God"), Plymouth Brethren Christian Church',
+    imageUrl: "/images/members/bruce-d-hales.webp",
     seoTopic: "Who is Bruce D. Hales?",
+    glance: [
+      { label: "Role", value: "World Leader of the Plymouth Brethren Christian Church, since 2002" },
+      { label: "Known inside as", value: "the “Man of God” and the “Elect Vessel”" },
+      { label: "Base", value: "Sydney, Australia" },
+      { label: "Followers", value: "≈55,000 members across 19 countries" },
+      { label: "Commercial reach", value: "UBT: ~3,000 member businesses, revenue above NZ$12 billion" },
+      { label: "Public photographs", value: "Rare; the church controls his image tightly" },
+    ],
     faq: [
       {
         question: "Who is Bruce Hales?",
