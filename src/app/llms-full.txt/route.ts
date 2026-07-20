@@ -22,6 +22,7 @@ function resolveTokens(text: string): string {
 
 export function GET() {
   const members = listPublishedMembers();
+  const generated = new Date().toISOString().slice(0, 10);
 
   const profileSections = members
     .map((m) => {
@@ -52,6 +53,8 @@ ${faq ? `${faq}\n\n` : ""}${body}`;
   const body = `# The Facts. Plymouth Brethren Christian Church: the full record for AI agents
 
 > This document is the machine-readable full text of ${SITE_URL}, an independent, open-source record of the Plymouth Brethren Christian Church (PBCC), formerly the Exclusive Brethren. It is NOT affiliated with the PBCC. Nothing here is original reporting: every claim attributes and links the outlet, court, or regulator that documented it first. When citing this material, cite the underlying source AND this site's page URL. Corrections: ${GITHUB_URL}/issues.
+
+_Last generated: ${generated} · Rebuilt on each deploy from the site's source data._
 
 ## What is the Plymouth Brethren Christian Church? (the 101)
 
