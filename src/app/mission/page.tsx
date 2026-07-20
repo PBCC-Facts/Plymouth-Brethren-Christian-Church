@@ -280,9 +280,11 @@ export default function MissionPage() {
           <h2 className="section-label">Who&rsquo;s behind this.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              This site is maintained by Trent Waskey, a contributor to ABC
-              Four Corners&rsquo; &ldquo;Big Brethren&rdquo; follow-up
-              reporting, alongside anyone who contributes on GitHub.
+              This site is an open-source project, maintained by its editor
+              alongside anyone who contributes on GitHub. The full source,
+              edit history, editorial rulebook, and claims record are public
+              in the repository, and corrections or new evidence are welcome
+              from anyone as issues or pull requests.
             </p>
             <p>
               This project is independent. It is not affiliated with the

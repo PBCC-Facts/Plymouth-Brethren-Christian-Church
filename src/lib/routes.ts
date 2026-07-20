@@ -54,6 +54,9 @@ export const ROUTES: RouteDef[] = [
   { path: "/way-of-life/clothing-hair-and-fashion", topic: "Clothing, hair and fashion", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
   { path: "/way-of-life/voting", topic: "Politics and voting", cluster: "C", indexable: false, priority: 0.5, changefreq: "monthly" },
 
+  // Cluster E. money / business network
+  { path: "/money", topic: "The money", cluster: "E", indexable: false, priority: 0.9, changefreq: "weekly" },
+
   { path: "/people", topic: "People", cluster: "D", indexable: true, priority: 0.8, changefreq: "monthly" },
   { path: "/people/bruce-d-hales", topic: "Bruce D. Hales", cluster: "D", indexable: true, priority: 0.7, changefreq: "monthly" },
   { path: "/people/any-questions", topic: "Any questions", cluster: "B", indexable: false, priority: 0.6, changefreq: "monthly" },

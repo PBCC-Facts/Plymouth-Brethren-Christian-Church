@@ -38,6 +38,7 @@ export const primaryNav: NavItem[] = [
       { label: "Neighbours", href: "/way-of-life/neighbours" },
     ],
   },
+  { label: "The Money", href: "/money" },
   {
     label: "People",
     href: "/people",
@@ -63,6 +64,7 @@ export const footerNav: NavItem[] = [
   { label: "Mission", href: "/mission" },
   { label: "Resources", href: "/resources" },
   { label: "Way of life", href: "/way-of-life" },
+  { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
   { label: "News", href: "/news" },
   { label: "Legal", href: "/legal" },
@@ -82,6 +84,7 @@ export const browseAll: BrowseItem[] = [
   { label: "Home", href: "/", exists: true },
   { label: "Mission", href: "/mission", exists: true },
   { label: "Way of life", href: "/way-of-life" },
+  { label: "The Money", href: "/money" },
   { label: "People", href: "/people", exists: true },
   { label: "News", href: "/news" },
   { label: "Reporting", href: "/news" },

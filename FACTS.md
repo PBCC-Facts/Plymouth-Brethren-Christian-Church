@@ -37,6 +37,7 @@ If you have a PDF, screenshot, or archived page, drop it into `research/evidence
 
 - ✅ **Verified**. two independent sources, or one primary (court ruling / inquiry / PBCC's own publication) + one journalism source.
 - 🟡 **Single source**. acceptable for uncontested factual matters (dates, locations, leadership succession); borderline for severity claims.
+- 🟣 **Ex-member reported**. at least one verified ex-member report on file supports the row (identity verified by the editor, held off-repo; see [docs/REPORTS_SYSTEM.md](docs/REPORTS_SYSTEM.md)). Ships only with the ex-member badge and "verified ex-members report…" phrasing. Public-record sources still required to reach ✅.
 - 🔴 **Unsourced / TODO**. on the site only if the paragraph is also marked `{/* TODO: source */}` in the MDX. Convert to ✅ before the paragraph ships to production.
 
 ---
@@ -546,19 +547,19 @@ Then-Opposition Leader Kevin Rudd (22 Aug 2007) called the Brethren an "extremis
 
 ## 8. Intake: maintainer testimony, 2026-07-19 (all unverified)
 
-First-person recollections and leads supplied by the maintainer. **None of this ships until sourced.** Each row is 🔴 until it gets public citations per §2 of EDITORIAL_GUIDE.md. Where a row names a private member of the fellowship, the name stays in this intake as a research lead only and never ships (MEMBERS_POLICY.md §6). Rows here are candidates for the `/way-of-life/*` pages.
+First-person recollections and leads from **two verified ex-member sources**: the maintainer, and a second ex-member interviewed in a recorded conversation (2026-07, recording held off-repo by the editor). Under the trust model in [docs/REPORTS_SYSTEM.md](docs/REPORTS_SYSTEM.md), rows supported by these interviews carry 🟣 (ex-member reported) and may ship ONLY with the ex-member badge and "verified ex-members report…" phrasing; public-record citations are still required for ✅. Where a row names a private member of the fellowship, the name stays in this intake as a research lead only and never ships (MEMBERS_POLICY.md §6). Rows here are candidates for the `/way-of-life/*` pages and `/money`.
 
 ### Claim
 The PBCC restricts which car brands and models members may own, based on leadership pronouncements rather than price: prestige marques such as BMW, Mercedes-Benz, Bentley, Maserati, and sports cars are prohibited, while high-priced vehicles outside the named brands (e.g. Cadillac Escalade, Range Rover) are permitted.
 
-**Status**. 🔴 testimony; 2026-07-19 research pass found NO public source for brand-level car rules
+**Status**. 🟣 ex-member reported (2 verified reports, 2026-07); no public source yet
 **Sources**
-- _Not found in mainstream press, ex-member reference sites, or leaked ministry after multiple search passes. Closest: https://www.inforum.com/news/the-vault/unraveling-the-plymouth-brethren-christian-church (expenditures "strictly controlled and monitored" per former members), which supports spending control generally but not car brands._
-- _Best remaining candidates: on-record testimony via `/stories`, Get A Life podcast episodes, or leaked Hales ministry addressing cars._
+- _Per both verified ex-member reports, the brand rules are stated in the printed Bruce D. Hales ministry ("white books"): BMW, Mercedes, Maserati, and sports cars named. **Priority task: obtain the specific volume and page.** A ministry citation is a primary source under EDITORIAL_GUIDE.md §2 and would take this to ✅._
+- _2026-07-19 search pass found nothing in mainstream press or ex-member reference sites. Closest: https://www.inforum.com/news/the-vault/unraveling-the-plymouth-brethren-christian-church (expenditures "strictly controlled and monitored" per former members)._
 
 **Notes**
-- Maintainer testimony: a $250k Escalade-V was permissible while a $20k used BMW was not; the rule follows brands Bruce Hales has spoken against, not cost.
-- Strong illustrative fact for `/way-of-life` if sourced; phrase around the named-brand asymmetry. Until sourced, ships nowhere (not even SourcePending: severity is low but specificity is high, and an error would be gleefully cited against the site).
+- Ex-member reported: a $250k Escalade-V was permissible while a $20k used BMW was not; the rule follows brands Hales has spoken against, not cost.
+- Ships (if at all) with the ex-member badge and reported phrasing until the ministry citation lands; the named-brand asymmetry is the point.
 
 **Pages**
 - `/way-of-life/technology-and-entertainment` or a future `/way-of-life/cars-and-possessions`.
@@ -734,7 +735,7 @@ Ownership of local meeting rooms is being consolidated from locality-level trust
 - UK Charity Commission filings: Bridgefoot Gospel Hall Trust (organisation number 5047154) "transferred halls to an affiliated trust for nil consideration" in the year ended 5 Apr 2024. _Pull the full-print filing; repeat the search across other gospel hall trusts to establish the pattern._
 
 **Notes**
-- Maintainer's working name "GAP" does not match any registered entity; the on-record entity is PBCC Properties Global Ltd. (Ask maintainer whether GAP was an internal/informal name or a distinct earlier vehicle.)
+- 🟣 "GAP" confirmed (2026-07-19) as the **internal name members use** for the property rollup, per verified ex-member reports; it matches no registered entity. Keep both names: "known internally as GAP" (ex-member badge) alongside the registered PBCC Properties Global Ltd.
 - The stronger framing ("deeds stripped from local elders, trusts zeroed out") needs per-charity filings or reporting; until then it is SourcePending at most.
 - Maintainer characterises the structure as a money-laundering mechanism: cash donations flow into centrally-owned property development. **"Money laundering" is a legal accusation. It never ships in the site's own voice.** RNZ 2022 carries an interviewee's "almost like a legalised form of money laundering" quote; that exact attributed quote is the ceiling of what can ship.
 - The ATO raid row (§7) and RNZ money-go-round row (§2) are the sourced anchors this cluster builds from.
@@ -753,7 +754,8 @@ The church's "Global Funding Team" builds an investment portfolio under Vision G
 - Dollar figures ($0.65bn since 2017; annual "Strive" fundraiser targeting ~$250m/yr): openandcandid.com "Eye of the Needle" (403s to fetch) and Get A Life podcast Ep. 133 "Vision Foundation" (Dec 2024), https://www.youtube.com/watch?v=rtfAogcOBNY. _Activist-sourced; attribute explicitly or SourcePending._
 
 **Notes**
-- No regulator filing found for a body literally named "Vision Foundation"; the RNZ-verified names are Vision Growth and Vision Accelerator. (Ask maintainer which name members heard at the seminars.)
+- 🟣 Naming resolved (2026-07-19): "**Vision Foundation**" is the name used at member fundraising seminars circa **2020**, per verified ex-member report; "Vision Growth" / "Vision Accelerator" are the names in more recent accounts (RNZ 2022 and multiple anonymous ex-member reports). Treat as one programme with evolving/parallel naming; say so explicitly when it ships.
+- No regulator filing found for a body literally named "Vision Foundation"; entity search across ACNC / Companies House / ABR still needed.
 
 **Pages**
 - future `/money`.
@@ -808,6 +810,36 @@ Meeting-room ownership is invoked in everyday social enforcement: members refere
 
 **Pages**
 - `/stories` (if a contributor puts it on record), else supporting colour for the ownership row above.
+
+---
+
+### Claim
+Members are required to purchase the printed ministry of Bruce D. Hales ("white books"; John S. Hales volumes are the "brown books"), at the member's own cost, and are expected to study them and answer questions on them at meetings.
+
+**Status**. 🟣 ex-member reported (2 verified reports, 2026-07); partial public corroboration for the books themselves
+**Sources**
+- pbcc.info jargon page (already cited in the marriage row) documents the "brown books" (printed John S. Hales ministry) as prescribed reading.
+- _Needed: the purchase requirement, the cost (maintainer is sourcing current pricing), and the quizzing practice. A price list, order form, or invoice archived to `research/evidence/` would be primary._
+
+**Notes**
+- The mandatory-purchase angle connects this row to the `/money` page (member-funded revenue streams), not just `/way-of-life`.
+
+**Pages**
+- `/way-of-life/beliefs`, `/money`.
+
+---
+
+### Claim
+Published Hales ministry describes the radio as a "pipeline of filth"; internet access is heavily restricted on member devices, and computers themselves were prohibited until relatively recently.
+
+**Status**. 🟣 ex-member reported (2 verified reports, 2026-07) for the quote's ministry provenance; device restriction is partially public
+**Sources**
+- _"Pipeline of filth": per verified ex-member reports the phrase is in the printed ministry. **Locate volume and page**; the phrase also circulates in ex-member accounts and possibly in earlier Taylor-era ministry: check both._
+- Device filtering: UBT sells/manages filtered devices and internet to members (candidates: UBT's own Streamline3 product pages, RNZ 2022, New Statesman 2023). _Pin URLs._
+- Historic computer prohibition: covered in older reporting on Brethren technology rules (candidates: Four Corners 2006, Bachelard's book)._
+
+**Pages**
+- `/way-of-life/technology-and-entertainment`, `/money` (UBT device revenue).
 
 ---
 

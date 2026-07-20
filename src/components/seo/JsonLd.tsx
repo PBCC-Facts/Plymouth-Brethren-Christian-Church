@@ -117,8 +117,8 @@ export function articleSchema(input: ArticleSchemaInput) {
     dateModified: input.dateModified,
     inLanguage: "en",
     author: {
-      "@type": "Person",
-      name: input.authorName ?? "Trent Waskey",
+      "@type": "Organization",
+      name: input.authorName ?? "The Facts. editorial project",
       url: absolute("/about-this-site"),
     },
     publisher: { "@id": `${SITE_URL}#publisher` },
