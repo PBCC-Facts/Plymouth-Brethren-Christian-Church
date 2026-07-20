@@ -520,3 +520,125 @@
 /* Retired slider chrome: circle visual and pagination dots render as nothing. */
 .hero__visual { display: none; }
 .hero__dots { display: none; }
+
+/* ---------------------------------------------------------------------------
+   Rules wall. one card per documented rule; hairline grid on paper.
+   The design goal is volume: dense cards, a big running count, no decoration
+   the citation doesn't earn. */
+.rules-count {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: clamp(4rem, 12vw, 8rem);
+  line-height: 0.95;
+  letter-spacing: -0.02em;
+}
+.rules-count__accent { color: var(--color-brand); }
+
+.rules-filter {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+.rules-filter__chip {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-ink);
+  background: transparent;
+  border: 1px solid var(--color-ink);
+  padding: 0.35rem 0.7rem;
+  cursor: pointer;
+  transition: background 120ms ease, color 120ms ease;
+}
+.rules-filter__chip:hover {
+  border-color: var(--color-brand);
+  color: var(--color-brand);
+}
+.rules-filter__chip[aria-pressed="true"] {
+  background: var(--color-ink);
+  color: var(--color-surface);
+  border-color: var(--color-ink);
+}
+.rules-filter__count { color: var(--color-brand); margin-left: 0.25em; }
+.rules-filter__chip[aria-pressed="true"] .rules-filter__count {
+  color: color-mix(in srgb, var(--color-surface) 75%, var(--color-brand));
+}
+
+.rules-grid {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  background: var(--color-surface);
+  border: 1px solid var(--color-ink);
+}
+.rule-card {
+  background: var(--color-surface);
+  padding: 1.1rem 1.15rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  /* Hairline separators drawn per-card so trailing empty grid space stays paper. */
+  box-shadow:
+    inset -1px 0 0 0 var(--color-rule),
+    inset 0 -1px 0 0 var(--color-rule);
+}
+.rule-card__cat {
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+.rule-card__statement {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1.22;
+  letter-spacing: -0.005em;
+}
+.rule-card__quote {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.rule-card__quote-by {
+  font-family: var(--font-mono);
+  font-style: normal;
+  font-size: 0.65rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+.rule-card__detail {
+  font-size: 0.8125rem;
+  line-height: 1.6;
+  color: color-mix(in srgb, var(--color-ink) 82%, var(--color-surface));
+}
+.rule-card__src {
+  margin-top: auto;
+  padding-top: 0.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.rule-card__srclink {
+  font-family: var(--font-mono);
+  font-size: 0.6875rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-brand);
+  text-decoration: none;
+  border-bottom: 1px solid color-mix(in srgb, var(--color-brand) 45%, transparent);
+}
+.rule-card__srclink:hover {
+  color: var(--color-brand-hover);
+  border-color: var(--color-brand-hover);
+}
+.rule-card .exmember-badge { font-size: 0.625rem; padding: 0.2rem 0.45rem; }
