@@ -45,6 +45,8 @@ export interface PageSeoInput {
   ogType?: "article" | "website";
   /** Optional OG image tag line. Default: "THE FACTS · INDEPENDENT". */
   ogTag?: string;
+  /** Clean title for the OG share card, when `topic` carries an SEO suffix unwanted on the image. */
+  ogTitle?: string;
 }
 
 /** Resolve to an absolute origin+path URL (no trailing slash collapse). */
@@ -73,6 +75,7 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     rawTitle = false,
     ogType,
     ogTag,
+    ogTitle,
   } = input;
 
   const title = rawTitle ? topic : `${topic} · ${TITLE_SUFFIX}`;
@@ -82,7 +85,7 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     : `${DESCRIPTION_PREFIX} ${description} ${DESCRIPTION_SUFFIX}`;
 
   const url = absolute(slug);
-  const image = ogImageUrl(topic, ogTag);
+  const image = ogImageUrl(ogTitle ?? topic, ogTag);
 
   return {
     title: { absolute: title },

@@ -11,6 +11,7 @@ export const metadata = buildPageMetadata({
   topic:
     "What is the Plymouth Brethren Christian Church? · The Facts (formerly Exclusive Brethren)",
   rawTitle: true,
+  ogTitle: "What is the Plymouth Brethren Christian Church?",
   description:
     "What is the Plymouth Brethren Christian Church? A plain-language introduction to the PBCC (formerly the Exclusive Brethren): who they are, the rules members live under, and what journalists, courts, and regulators have documented. Every claim cited.",
   slug: "/",

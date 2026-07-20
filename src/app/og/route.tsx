@@ -1,133 +1,100 @@
 import { ImageResponse } from "next/og";
 import type { NextRequest } from "next/server";
 import { SITE_URL } from "@/lib/site";
+import { OG_MARK } from "./mark";
 
 export const runtime = "edge";
 
 const MAX_TITLE_LENGTH = 120;
-const MAX_TAG_LENGTH = 48;
 
 const INK = "#171512";
 const PAPER = "#f9f7f2";
 const RED = "#8f2b1f";
 
 /**
- * Dynamic OpenGraph / Twitter card generator, in The Record design system:
- * paper surface, ink type, brick-red accent, double rule. Every indexable
- * page gets a 1200x630 card carrying its own title via
- * /og?title=…&tag=…, referenced from buildPageMetadata via ogImageUrl().
+ * Dynamic OpenGraph / Twitter card, The Record design system:
+ * paper surface, ink type, brick-red accent, a marker illustration on the
+ * right, and the brand mark stated exactly once (bottom wordmark). The
+ * per-page title comes from ?title=… (pass a clean title via ogTitle in
+ * buildPageMetadata when the SEO <title> carries a suffix).
  */
 export function GET(req: NextRequest) {
   const { searchParams } = new URL(req.url);
-
-  const rawTitle =
-    searchParams.get("title") ?? "Plymouth Brethren Christian Church";
-  const rawTag = searchParams.get("tag") ?? "THE FACTS · INDEPENDENT";
-
-  const title = rawTitle.slice(0, MAX_TITLE_LENGTH);
-  const tag = rawTag.slice(0, MAX_TAG_LENGTH);
-
+  const title = (
+    searchParams.get("title") ?? "Plymouth Brethren Christian Church"
+  ).slice(0, MAX_TITLE_LENGTH);
   const host = new URL(SITE_URL).host;
+
+  const titleSize = title.length > 58 ? 52 : title.length > 32 ? 64 : 74;
 
   return new ImageResponse(
     (
       <div
         style={{
           display: "flex",
-          flexDirection: "column",
-          justifyContent: "space-between",
           width: "100%",
           height: "100%",
-          padding: "64px 72px",
           background: PAPER,
           color: INK,
           fontFamily: "Georgia, serif",
         }}
       >
-        {/* Top: tag line + host over a hairline */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 18 }}>
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "space-between",
-              alignItems: "baseline",
-            }}
-          >
-            <div
-              style={{
-                display: "flex",
-                fontSize: 24,
-                letterSpacing: 5,
-                fontWeight: 700,
-                color: RED,
-                textTransform: "uppercase",
-              }}
-            >
-              {tag}
-            </div>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 22,
-                color: INK,
-                opacity: 0.65,
-              }}
-            >
-              {host}
-            </div>
-          </div>
-          <div style={{ display: "flex", height: 2, background: INK }} />
-        </div>
-
-        {/* Middle: the page title, big ink serif */}
+        {/* Left: text column */}
         <div
           style={{
             display: "flex",
-            fontSize: title.length > 60 ? 56 : 76,
-            lineHeight: 1.05,
-            fontWeight: 700,
-            letterSpacing: -1,
-            color: INK,
-            maxWidth: 1020,
+            flexDirection: "column",
+            justifyContent: "space-between",
+            width: "735px",
+            height: "100%",
+            padding: "60px 56px",
           }}
         >
-          {title}
-        </div>
-
-        {/* Bottom: double rule + wordmark + posture line */}
-        <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-          <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
-            <div style={{ display: "flex", height: 3, background: INK }} />
-            <div style={{ display: "flex", height: 1, background: INK }} />
+          <div style={{ display: "flex", fontSize: 22, letterSpacing: 1, color: INK, opacity: 0.6 }}>
+            {host}
           </div>
+
           <div
             style={{
               display: "flex",
-              justifyContent: "space-between",
-              alignItems: "baseline",
+              fontSize: titleSize,
+              lineHeight: 1.06,
+              fontWeight: 700,
+              letterSpacing: -1,
+              color: INK,
             }}
           >
-            <div
-              style={{
-                display: "flex",
-                fontSize: 40,
-                fontWeight: 700,
-                color: INK,
-              }}
-            >
+            {title}
+          </div>
+
+          <div style={{ display: "flex", flexDirection: "column", gap: 10 }}>
+            <div style={{ display: "flex", height: 3, background: INK, width: 96 }} />
+            <div style={{ display: "flex", fontSize: 40, fontWeight: 700, color: INK }}>
               The Facts.
             </div>
-            <div
-              style={{
-                display: "flex",
-                fontSize: 21,
-                color: INK,
-                opacity: 0.65,
-              }}
-            >
-              An independent, open-source record · Not affiliated with the PBCC
+            <div style={{ display: "flex", fontSize: 21, color: INK, opacity: 0.62 }}>
+              Independent, open-source · Not affiliated with the PBCC
             </div>
           </div>
+        </div>
+
+        {/* Divider */}
+        <div style={{ display: "flex", width: "2px", height: "100%", background: INK }} />
+
+        {/* Right: marker illustration on a clean plate (image bg is near-white,
+            so the panel is white to avoid a visible box against the paper). */}
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            width: "463px",
+            height: "100%",
+            background: "#ffffff",
+          }}
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={OG_MARK} width={452} height={452} alt="" />
         </div>
       </div>
     ),

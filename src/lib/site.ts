@@ -1,6 +1,8 @@
-export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL ??
-  "https://factsaboutplymouthbrethrenchristianchurch.org";
+export const SITE_URL = (
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://pbccfacts.com"
+)
+  .trim()
+  .replace(/\/+$/, ""); // no trailing whitespace/newline or slash; paths start with "/"
 
 export const SITE_NAME = "The Facts · Plymouth Brethren Christian Church";
 
