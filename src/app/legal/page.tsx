@@ -11,7 +11,7 @@ import { GITHUB_URL } from "@/lib/site";
 export const metadata = buildPageMetadata({
   topic: "Legal",
   description:
-    "Legal posture of The Facts: parody, criticism, and sourced reporting on the Plymouth Brethren Christian Church, and why it is protected under fair use, fair dealing, and the First Amendment. Correction process, counsel contact, and our policy on legal threats.",
+    "Legal posture of The Facts: news aggregation, criticism, and research on the Plymouth Brethren Christian Church, and why it is protected under fair use, fair dealing, and the First Amendment. Correction process, counsel contact, and our policy on legal threats.",
   slug: "/legal",
   cluster: "A",
   register: "explanatory",
@@ -25,7 +25,7 @@ export default function LegalPage() {
           headline:
             "Legal. The Facts about the Plymouth Brethren Christian Church",
           description:
-            "Legal posture: parody, criticism, fair use, fair dealing, sourcing discipline, correction process, and how we respond to legal threats.",
+            "Legal posture: news aggregation, criticism, fair use, fair dealing, sourcing discipline, correction process, and how we respond to legal threats.",
           slug: "/legal",
           datePublished: "2026-04-23",
           dateModified: "2026-04-23",
@@ -46,7 +46,7 @@ export default function LegalPage() {
             <p className="hero__eyebrow">The Facts.. legal posture</p>
             <h1 className="hero__title">Legal.</h1>
             <p className="hero__sub">
-              This site is parody, criticism, and sourced journalism about a
+              This site is news aggregation, criticism, and research about a
               public religious organisation and its public-facing leadership.
               That is protected expression under United States law, and the
               equivalent fair-dealing doctrines in the United Kingdom,
@@ -74,10 +74,10 @@ export default function LegalPage() {
           <h2 className="section-label">What this site is.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              <em>The Facts</em> is an independent, open-source parody and
-              criticism project about the Plymouth Brethren Christian Church
-              (PBCC), formerly and still widely known as the Exclusive
-              Brethren. It is not affiliated with the PBCC, any successor to
+              <em>The Facts</em> is an independent, open-source
+              news-aggregation and criticism project about the Plymouth
+              Brethren Christian Church (PBCC), formerly and still widely
+              known as the Exclusive Brethren. It is not affiliated with the PBCC, any successor to
               the Exclusive Brethren, or any other religious organisation.
               Every page of the repository is public on GitHub, under an
               open licence, with the full edit history visible at{" "}
@@ -91,17 +91,14 @@ export default function LegalPage() {
               .
             </p>
             <p>
-              The site operates in two editorial registers, separated page by
-              page and documented in our editorial guide: an openly satirical
-              register that structurally mirrors the PBCC&rsquo;s own
-              communications copy, and a plainspoken journalistic register for
-              explanatory content, reporting, and this page. Readers arrive
-              at either through clearly labelled pages. We do not mix the two
-              on a single page, and we do not imitate the PBCC&rsquo;s voice
-              in a way a reasonable reader could mistake for the fellowship
-              itself. The site&rsquo;s masthead, every page title, every
-              metadata description, and the footer of every page carry an
-              explicit parody / criticism / independent-publisher notice.
+              The site operates in a single editorial register, documented in
+              our public editorial guide: plainspoken, third-person, and
+              aggregator-framed. Reporting is attributed to the outlet, court,
+              or regulator that published it first. The site does not claim
+              original reporting, and it does not imitate the PBCC&rsquo;s
+              voice. The site&rsquo;s masthead, every page title, every
+              metadata description, and the footer of every page identify it
+              as an independent publication not affiliated with the PBCC.
             </p>
             <p>
               Our mission, methodology, correction process, and sourcing rules
@@ -125,32 +122,30 @@ export default function LegalPage() {
           <h2 className="section-label">The legal frame.</h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              <strong>Parody, satire, and criticism of a public
+              <strong>News reporting, criticism, and research about a public
               religious organisation are protected expression.</strong> In
               the United States, where this site is hosted and from which
-              most readers access it, commentary and criticism.
-              including satirical commentary. are squarely within
-              the First Amendment and within the statutory fair-use
-              doctrine at 17 U.S.C. &sect; 107. The four fair-use factors,
-              in the order Congress lists them, weigh in favour of this
-              project: the use is transformative (critical commentary, not
+              most readers access it, commentary, criticism, and news
+              aggregation are squarely within the First Amendment and within
+              the statutory fair-use doctrine at 17 U.S.C. &sect; 107. The
+              four fair-use factors, in the order Congress lists them, weigh
+              in favour of this project: the use is transformative (critical
+              commentary and organisation of a public record, not
               republication); the source material is largely
               factual/promotional rather than creative fiction; we do not
-              reproduce the PBCC&rsquo;s copy at length; and a parody and
-              criticism site does not substitute in the market for the
+              reproduce the PBCC&rsquo;s copy at length; and a criticism and
+              research site does not substitute in the market for the
               PBCC&rsquo;s own communications, it offers a different
               product to a different audience.
             </p>
             <p>
               The United Kingdom, Australia, and New Zealand reach the same
-              result by different doctrines. UK law provides a specific
-              exception for <em>caricature, parody or pastiche</em> in
-              section 30A of the Copyright, Designs and Patents Act 1988,
-              alongside the longer-standing fair-dealing exceptions for
-              criticism, review, and reporting current events in sections
-              30(1) and 30(2). Australian copyright law provides fair
-              dealing for parody or satire (Copyright Act 1968 (Cth)
-              s 41A) and for criticism or review (s 41). New Zealand&rsquo;s
+              result by different doctrines. UK law provides fair-dealing
+              exceptions for criticism, review, and reporting current events
+              in sections 30(1) and 30(2) of the Copyright, Designs and
+              Patents Act 1988. Australian copyright law provides fair
+              dealing for criticism or review (Copyright Act 1968 (Cth)
+              s 41) and for reporting news (s 42). New Zealand&rsquo;s
               Copyright Act 1994 provides fair-dealing exceptions for
               criticism, review, and news reporting (s 42). Each of these
               doctrines accommodates, in substance, what this site does:
@@ -195,12 +190,12 @@ export default function LegalPage() {
               The domain, every page title, every metadata description, the
               Open Graph tag on every share card, the site&rsquo;s masthead
               and its footer all identify the site as an independent
-              parody and criticism project not affiliated with the PBCC. A
-              reasonable reader is not confused about the source of this
-              material. No visitor who lands on a page headed <em>&ldquo;Way
-              of life. Plymouth Brethren Christian Church (parody
-              &middot; criticism &middot; survivor resources)&rdquo;</em>
-              believes they are on the PBCC&rsquo;s own site.
+              record not affiliated with the PBCC. A reasonable reader is
+              not confused about the source of this material. No visitor who
+              lands on a page headed <em>&ldquo;The Facts &middot; Plymouth
+              Brethren Christian Church&rdquo;</em>, with an independent-
+              publisher notice in the masthead and footer, believes they are
+              on the PBCC&rsquo;s own site.
             </p>
           </div>
         </div>
@@ -434,8 +429,8 @@ export default function LegalPage() {
           </h2>
           <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
             <p>
-              This is a parody and criticism site about a public religious
-              organisation. Every factual sentence has a public source.
+              This is a news-aggregation and criticism site about a public
+              religious organisation. Every factual sentence has a public source.
               Every page of this site, every edit to every page, and the
               full editorial rulebook are public on GitHub. Our corrections
               process is a pull request. Our legal posture is a paragraph

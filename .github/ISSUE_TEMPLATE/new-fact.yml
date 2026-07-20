@@ -1,0 +1,35 @@
+name: New fact or source
+description: Submit new evidence, a new source for an existing claim, or propose a /people profile.
+title: "New fact: "
+labels: ["new-fact"]
+body:
+  - type: textarea
+    id: claim
+    attributes:
+      label: The claim
+      description: One-sentence version of the claim as it would appear on the site. Third person, named subject.
+    validations:
+      required: true
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources
+      description: "Public URLs, one per line. Strongest first: court/regulator documents, academic work, major journalism, PBCC's own publications."
+    validations:
+      required: true
+  - type: textarea
+    id: caveats
+    attributes:
+      label: Notes / caveats
+      description: Anything affecting how the claim should be phrased, qualified, or dated. Contested numbers, date ranges, etc.
+    validations:
+      required: false
+  - type: checkboxes
+    id: policy
+    attributes:
+      label: Policy check
+      options:
+        - label: This does not name a private member of the fellowship who has not chosen to be public (see MEMBERS_POLICY.md).
+          required: true
+        - label: This is not first-person survivor testimony (that goes through the consent-controlled /stories intake, not GitHub).
+          required: true

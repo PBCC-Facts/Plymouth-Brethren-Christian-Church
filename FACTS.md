@@ -519,7 +519,224 @@ Then-Opposition Leader Kevin Rudd (22 Aug 2007) called the Brethren an "extremis
 
 ---
 
-## 8. Open research questions (not yet claims)
+## 8. Intake: maintainer testimony, 2026-07-19 (all unverified)
+
+First-person recollections and leads supplied by the maintainer. **None of this ships until sourced.** Each row is 🔴 until it gets public citations per §2 of EDITORIAL_GUIDE.md. Where a row names a private member of the fellowship, the name stays in this intake as a research lead only and never ships (MEMBERS_POLICY.md §6). Rows here are candidates for the `/way-of-life/*` pages.
+
+### Claim
+The PBCC restricts which car brands and models members may own, based on leadership pronouncements rather than price: prestige marques such as BMW, Mercedes-Benz, Bentley, Maserati, and sports cars are prohibited, while high-priced vehicles outside the named brands (e.g. Cadillac Escalade, Range Rover) are permitted.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: ex-member accounts (Get A Life podcast episodes on lifestyle rules), press coverage of Brethren car rules, leaked ministry text where Hales addresses cars._
+
+**Notes**
+- Maintainer testimony: a $250k Escalade-V was permissible while a $20k used BMW was not; the rule follows brands Bruce Hales has spoken against, not cost.
+- Strong illustrative fact for `/way-of-life` if sourced; phrase around the named-brand asymmetry.
+
+**Pages**
+- `/way-of-life/technology-and-entertainment` or a future `/way-of-life/cars-and-possessions`.
+
+---
+
+### Claim
+PBCC housing rules prohibit members from living in dwellings with shared plumbing, shared driveways, or shared walls (i.e. apartments and townhouses), requiring standalone single-family houses.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: UK Charity Commission evidence, ex-member accounts, reporting on Brethren housing; the "no shared sewer/drainage" rule is documented in older Exclusive Brethren coverage (Aberdeen era) and may be traceable to published ministry._
+
+**Notes**
+- Maintainer testimony ties housing compliance to marriage approval (see marriage row below).
+
+**Pages**
+- `/way-of-life` (future housing section).
+
+---
+
+### Claim
+Personal grooming and dress codes are enforced: men are expected to wear a part in their hair; women must wear headscarves, sold through a Brethren-linked brand ("Gabbiano" per maintainer, spelling unverified).
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Headscarf/token requirement is documented (CDAMM, press photos, PBCC's own imagery); the men's-hair-part rule and the scarf brand need specific sourcing._
+
+**Notes**
+- Check whether the scarf brand is connected to UBT-coordinated commerce; if so this joins the "selling products to members" row.
+
+**Pages**
+- `/way-of-life/clothing-hair-and-fashion`.
+
+---
+
+### Claim
+Entertainment and technology prohibitions include: radio, prerecorded music, television, dirt bikes, go-karts, amusement parks, and pets. Enforcement of the pet prohibition reportedly extended to removal of existing pets in recent years.
+
+**Status**. 🔴 testimony, needs public source per item
+**Sources**
+- _Needed. Radio/TV prohibitions are well documented historically (CDAMM, Four Corners, academic sources). Pets, dirt bikes, go-karts, amusement parks need pinning. Maintainer references public posts by an ex-member ("Cheryl") on the pet-removal enforcement; locate and archive._
+
+**Notes**
+- Some members privately defy the rules (maintainer cites prominent members keeping undisclosed televisions). Do not name private members; if ever published, the point is the gap between PR and practice, sourced to on-record accounts only.
+
+**Pages**
+- `/way-of-life/technology-and-entertainment`.
+
+---
+
+### Claim
+Separation rules govern eating and social contact: members may not share a meal or maintain social connection with non-members; when business circumstances force a shared table, members avoid literally eating at the same moment. Restaurants are off-limits except in narrow business-travel circumstances, and hotels are avoided.
+
+**Status**. 🔴 testimony; separation doctrine itself is ✅ (see §2), the specific behaviours need sources
+**Sources**
+- _Needed for the specific behaviours. Candidates: Preston Down Trust evidence record (eating separately is discussed), Four Corners, Hoyle's Excommunicated, NZ Royal Commission testimony._
+
+**Notes**
+- Maintainer: rules are "heavily bent for business purposes especially by the elites." That asymmetry is a strong editorial point but needs an on-record source.
+
+**Pages**
+- `/way-of-life/dining`, `/way-of-life/neighbours`.
+
+---
+
+### Claim
+Women sit separately from men at church services and are subject to distinct participation rules.
+
+**Status**. 🔴 testimony, likely easy to source
+**Sources**
+- _Needed. Candidates: CDAMM, academic ethnography, PBCC's own service descriptions, ex-member accounts._
+
+**Pages**
+- `/way-of-life/beliefs`.
+
+---
+
+### Claim
+Members are required to live within a defined radius of their assigned meeting room; members living outside the radius have been expected to sell their homes and move. The radius policy is attributed to Bruce D. Hales.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: ex-member accounts, reporting on Brethren relocations; check Get A Life podcast and NZ/AU coverage._
+
+**Notes**
+- Attribution to Hales personally is a severity-adjacent claim: two sources or it ships attributed to "leadership" generally, or not at all.
+
+**Pages**
+- `/way-of-life`, `/people/bruce-d-hales` (if attribution sources).
+
+---
+
+### Claim
+Members are expected not to work for non-Brethren businesses; rare exceptions exist but the norm is employment within the member-business network.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: Four Corners, UBT reporting, academic work on Brethren economic separation._
+
+**Notes**
+- Maintainer characterises the rare exceptions as useful for "plausible deniability" in PR. If published, that characterisation needs an on-record source or ships as clearly-labelled editorial opinion grounded in the documented pattern.
+
+**Pages**
+- `/way-of-life/network`.
+
+---
+
+### Claim
+Marriage within the PBCC requires a formal approval process: a multi-point compliance checklist (attendance at preachings, reading prescribed ministry including John S. Hales volumes), a budget signed off by local priests, ownership of a compliant standalone house, review by a regional approval team, and final approval from Sydney. Weddings are announced in batches as approvals return. Couples sign a document waiving church liability for the wedding.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. This process is largely undocumented in public reporting; strongest candidates are on-record ex-member testimony (this site's `/stories` intake, Get A Life podcast) or leaked checklist documents (archive to `research/evidence/` if obtained)._
+
+**Notes**
+- Maintainer names North American approval-team members (Jim Southard, Mick Strange, Brent Scott, possibly outdated) and the Sydney final-approval step. These are private individuals unless they clear MEMBERS_POLICY buckets; hold names in intake only.
+- Same-sex marriage is prohibited outright (this half is trivially sourceable from PBCC's own statements of belief).
+
+**Pages**
+- `/way-of-life/marriage`.
+
+---
+
+### Claim
+Weekly cash collections are taken at the Sunday Lord's Supper, the fellowship's most significant service, tying peak religious observance to peak monetary giving.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: RNZ "money-go-round" reporting (already ✅ in §2 for payments to Hales), Four Corners 2025, ex-member accounts of collection practice._
+
+**Pages**
+- `/way-of-life/beliefs`, future `/money` page.
+
+---
+
+### Claim
+Ownership of local meeting rooms has been consolidated from locality-level trusts (held by senior local elders) into a centralised corporate structure (referred to by the maintainer as "GAP"), zeroing out local trusts; entities under or alongside it include the Rapid Relief Team, the Vision Foundation, OneSchool Global, and the now-closed Campus & Co retail chain.
+
+**Status**. 🔴 testimony, partially corroborated (UBT/RRT/OSG structure is documented; the deed-transfer mechanism and "GAP" entity are not yet)
+**Sources**
+- _Needed. Candidates: land-registry / title searches on meeting-room properties (public records), charity filings for Vision Foundation and RRT, ACNC and Companies House records, Four Corners 2025, Guardian Australia ATO-raid coverage._
+
+**Notes**
+- Maintainer characterises the structure as a money-laundering mechanism: cash donations flow into centrally-owned property development. **"Money laundering" is a legal accusation. It never ships in the site's own voice.** If a regulator, court, or major outlet uses the phrase, quote them; otherwise the site describes the documented flows (cash collections, centralised ownership, member-funded investment) and lets the record speak.
+- The ATO raid row (§7) and RNZ money-go-round row (§2) are the sourced anchors this cluster can build from.
+
+**Pages**
+- future `/money`, `/way-of-life/network`, `/people/bruce-d-hales`.
+
+---
+
+### Claim
+The Vision Foundation raised funds from members (reportedly hundreds of millions of dollars, in part via seminars) and invested the money in profitable Brethren businesses, functioning as an internal private-equity vehicle funded by member contributions, with limited member benefit.
+
+**Status**. 🔴 testimony, needs public source
+**Sources**
+- _Needed. Candidates: charity/regulator filings under the exact entity name (verify: "Vision Foundation" vs other spellings), AU/UK press, Four Corners 2025._
+
+**Pages**
+- future `/money`.
+
+---
+
+### Claim
+UBT sells products and services directly to members, making the fellowship's own membership a captive market for its commercial arm; Campus & Co (member-facing grocery/superstores) operated on the same model before closing.
+
+**Status**. 🔴 testimony, partially sourceable now
+**Sources**
+- _Needed. Campus & Co's existence and closure had trade-press and mainstream coverage (AU/NZ/UK); UBT's member-facing sales model appears in Guardian Australia and Four Corners reporting. Pin URLs._
+
+**Pages**
+- `/way-of-life/network`, future `/money`.
+
+---
+
+### Claim
+Localities have held prayer meetings concerning the death or removal of named public politicians, while the fellowship maintains an outward policy of political non-participation (members do not vote) alongside documented political donations and lobbying.
+
+**Status**. 🔴 testimony for the prayer-meeting half; the donations/lobbying half is documented (see §5 Senate row, §7 Times lobbying row)
+**Sources**
+- _Needed for prayer meetings: on-record ex-member testimony. This is a severity claim; two sources minimum before ship._
+
+**Notes**
+- The voting-abstention-plus-donations asymmetry is already well documented (Hager, The Age 2007, SBS 2025). The prayer-meeting claim is the new, unsourced part.
+
+**Pages**
+- `/way-of-life/voting`.
+
+---
+
+### Claim
+Meeting-room ownership is invoked in everyday social enforcement: members reference that the buildings belong to the central structure ("Mr. Hales"), not the locality.
+
+**Status**. 🔴 testimony, anecdotal; likely ships only inside a consented `/stories` account
+**Sources**
+- _Needed. This is testimony-shaped rather than record-shaped; the named individual in the maintainer's recollection is a private member and never ships._
+
+**Pages**
+- `/stories` (if a contributor puts it on record), else supporting colour for the ownership row above.
+
+---
+
+## 9. Open research questions (not yet claims)
 
 Things we know are true but don't yet have the citation for. Add a source URL inline as you find them and I'll promote them to claim rows.
 
@@ -531,7 +748,7 @@ Things we know are true but don't yet have the citation for. Add a source URL in
 
 ---
 
-## 8. How this feeds the site
+## 10. How this feeds the site
 
 When a row here reaches ✅:
 1. Convert to a typed entry in `src/lib/sources.ts` with `{id, label, url, accessed}`.
