@@ -19,6 +19,14 @@ export type MemberCategory =
 export type MemberSection = {
   heading: string;
   paragraphs: string[];
+  /** Optional bullet list rendered after the paragraphs. Same token syntax. */
+  bullets?: string[];
+};
+
+/** FAQ entry rendered as FAQPage JSON-LD on the profile. Plain text only. */
+export type MemberFaq = {
+  question: string;
+  answer: string;
 };
 
 /**
@@ -43,6 +51,13 @@ export type Member = {
   currentRole?: string;
   /** 1–2 plain sentences. No citation tokens; this is the card/lede copy. */
   overview: string;
+  /**
+   * Optional SEO title override, e.g. "Who is Bruce D. Hales?". Used as the
+   * <title> prefix and OG title instead of "Name. Role" when present.
+   */
+  seoTopic?: string;
+  /** Optional FAQ entries; rendered as FAQPage JSON-LD (not visible copy). */
+  faq?: MemberFaq[];
   /**
    * Optional portrait image path (e.g. "/images/members/bruce-d-hales.jpg").
    * When present, the <Artwork> pipeline renders this instead of the
@@ -112,7 +127,7 @@ const TOKEN_RE = /\[\[(cite|pending):([^\]]+)\]\]/g;
  */
 export function assertCitationsResolve(member: Member): void {
   for (const section of member.body) {
-    for (const paragraph of section.paragraphs) {
+    for (const paragraph of [...section.paragraphs, ...(section.bullets ?? [])]) {
       TOKEN_RE.lastIndex = 0;
       let match: RegExpExecArray | null;
       while ((match = TOKEN_RE.exec(paragraph)) !== null) {

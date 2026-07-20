@@ -27,6 +27,10 @@ Key facts for agents:
 
 ${live.map((r) => `- [${r.topic}](${SITE_URL}${r.path})`).join("\n")}
 
+## Full text for agents
+
+- [llms-full.txt](${SITE_URL}/llms-full.txt): the site's substantive content (the 101, key documented events, the money, and every published profile) as one markdown document with inline source URLs.
+
 ## Ground truth documents
 
 - [FACTS.md](${GITHUB_URL}/blob/main/FACTS.md): every claim the site is prepared to make, with sources and verification status.

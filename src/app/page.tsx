@@ -1,12 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Footnote } from "@/components/site/Footnote";
+import { AskAI } from "@/components/site/AskAI";
 import { GITHUB_URL } from "@/lib/site";
 import { buildPageMetadata } from "@/lib/seo";
 import { JsonLd, websiteSchema, breadcrumbSchema } from "@/components/seo/JsonLd";
 
 export const metadata = buildPageMetadata({
-  topic: "The Facts",
+  topic:
+    "What is the Plymouth Brethren Christian Church? · The Facts (formerly Exclusive Brethren)",
+  rawTitle: true,
   description:
     "What is the Plymouth Brethren Christian Church? A plain-language introduction to the PBCC (formerly the Exclusive Brethren): who they are, the rules members live under, and what journalists, courts, and regulators have documented. Every claim cited.",
   slug: "/",
@@ -39,9 +42,9 @@ const basics: Basic[] = [
       <>
         A conservative Christian group of roughly 55,000 members across 19
         countries, by its own count
-        <Footnote id="pbcc-members-selfreport" n={nextN()} />. It was long
-        known as the Exclusive Brethren, the name most of the reporting
-        still uses.
+        <Footnote id="pbcc-members-selfreport" n={nextN()} />. For most of
+        its history it was called the Exclusive Brethren; it rebranded, and
+        most of the reporting still uses the old name.
       </>
     ),
   },
@@ -53,11 +56,12 @@ const basics: Basic[] = [
     },
     render: (nextN) => (
       <>
-        One man: Bruce D. Hales, a Sydney businessman known within the
-        fellowship as the &ldquo;Man of God.&rdquo; He has held the office
-        since 2002, when his father died holding it
+        One man: Bruce D. Hales, a Sydney businessman the church calls the
+        &ldquo;Man of God.&rdquo; Members treat his word as the voice of
+        God. He inherited the office from his father in 2002
         <Footnote id="hales-manofgod-pbcc" n={nextN()} />
-        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.{" "}
+        <Link href="/people/bruce-d-hales">Read the full sourced profile</Link>.
       </>
     ),
   },
@@ -69,11 +73,12 @@ const basics: Basic[] = [
     },
     render: (nextN) => (
       <>
-        The Doctrine of Separation: members may not eat with, live with,
-        marry, or go into business with anyone outside the fellowship
+        The Doctrine of Separation: members aren&rsquo;t allowed to eat
+        with, live with, marry, or go into business with anyone outside the
+        church
         <Footnote id="separation-cdamm" n={nextN()} />
-        <Footnote id="separation-pbcc-statement" n={nextN()} />. That one
-        rule shapes housing, work, school, marriage, and every friendship.
+        <Footnote id="separation-pbcc-statement" n={nextN()} />. Everything
+        else on this site follows from that one rule.
       </>
     ),
   },
@@ -85,14 +90,24 @@ const basics: Basic[] = [
     },
     render: (nextN) => (
       <>
-        Members live in detached houses with no shared walls or drains
-        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />, avoid
-        television and radio
-        <Footnote id="pbcc-whatnotallowed" n={nextN()} />, send children to
-        the church&rsquo;s own schools, and work inside a network of
-        member-owned businesses. The{" "}
-        <Link href="/way-of-life">Way of life</Link> section documents each
-        rule, with sources.
+        The rules reach into every corner of daily life. Members:
+        <ul className="mt-3 list-disc pl-5 space-y-1.5 text-[1rem]">
+          <li>
+            live in detached houses only, with no shared walls or drains
+            <Footnote id="hales-manofgod-newstatesman" n={nextN()} />
+          </li>
+          <li>
+            aren&rsquo;t allowed to have televisions or listen to the radio
+            <Footnote id="pbcc-whatnotallowed" n={nextN()} />
+          </li>
+          <li>send their children to the church&rsquo;s own schools</li>
+          <li>work inside the church&rsquo;s network of member-owned businesses</li>
+          <li>don&rsquo;t vote, don&rsquo;t go to university, don&rsquo;t join clubs</li>
+        </ul>
+        <span className="mt-3 block text-[0.95rem]">
+          The <Link href="/way-of-life">Way of life</Link> section documents
+          each rule, with sources.
+        </span>
       </>
     ),
   },
@@ -104,11 +119,13 @@ const basics: Basic[] = [
     },
     render: (nextN) => (
       <>
-        Those who leave or are expelled (&ldquo;withdrawn from&rdquo;) are
-        cut off: spouses, parents, and children who remain inside stop
-        eating, speaking, or living with them
+        You lose your family. Those who leave or are expelled
+        (&ldquo;withdrawn from&rdquo;) are cut off: spouses, parents, and
+        children who stay inside stop eating with them, speaking to them,
+        or living with them
         <Footnote id="withdrawing-ukparliament-2012" n={nextN()} />
-        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />.
+        <Footnote id="hales-manofgod-newstatesman" n={nextN()} />. Survivors
+        tell their own stories at <Link href="/stories">/stories</Link>.
       </>
     ),
   },
@@ -216,19 +233,20 @@ export default function HomePage() {
       <section className="hero">
         <div className="site-container hero__grid">
           <div>
-            <p className="hero__eyebrow">
-              An independent, open-source record. Not affiliated with the church.
-            </p>
+            <p className="hero__eyebrow">The 101. Start here.</p>
             <h1 className="hero__title">
               What is the Plymouth Brethren Christian Church?
             </h1>
             <p className="hero__sub">
-              A closed religious community, formerly known as the Exclusive
-              Brethren, whose members live under a doctrine that separates
-              them from everyone outside it. This site explains the group in
-              plain language and organises what journalists, courts, and
-              regulators have already documented, with a citation on every
-              claim.
+              A closed religious community of about 55,000 people, formerly
+              known as the Exclusive Brethren. Members live under rules that
+              control who they can eat with, who they can marry, where they
+              can live, and what they can watch and listen to. Leaving
+              usually means losing your family. Two Australian prime
+              ministers have publicly called it a cult
+              <Footnote id="rudd-cult-2007-age" n={nextN()} />
+              <Footnote id="albanese-cult-2025-sbs" n={nextN()} />. This page
+              is the plain-language version, with a citation on every claim.
             </p>
             <Link href="#basics" className="hero__cta">
               Start with the basics &rarr;
@@ -250,7 +268,7 @@ export default function HomePage() {
                 <div className="record-row__outlet" style={{ alignSelf: "start", paddingTop: "0.3rem" }}>
                   {b.label}
                 </div>
-                <p className="record-row__prose">{b.render(nextN)}</p>
+                <div className="record-row__prose">{b.render(nextN)}</div>
                 <Image
                   src={b.art.src}
                   alt={b.art.alt}
@@ -323,17 +341,19 @@ export default function HomePage() {
               </li>
             ))}
           </ul>
-          <p className="mt-12 max-w-prose text-sm leading-[1.7] opacity-80">
-            This site is an open-source project. Every page, every source, and
-            every edit is public on{" "}
-            <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
-              GitHub
-            </a>
-            , and anyone can file a correction. It is not affiliated with the
-            Plymouth Brethren Christian Church, and it does not claim original
-            reporting: every claim attributes the outlet, court, or regulator
-            that documented it first.
-          </p>
+          <div className="mt-12 grid gap-8 md:grid-cols-2 md:items-start">
+            <AskAI />
+            <p className="max-w-prose text-sm leading-[1.7] opacity-80">
+              This site is an open-source project: every page, every source,
+              and every edit is public on{" "}
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+                GitHub
+              </a>
+              , and anyone can file a correction. Nothing here is original
+              reporting; every claim attributes the outlet, court, or
+              regulator that documented it first.
+            </p>
+          </div>
         </div>
       </section>
     </>

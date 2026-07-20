@@ -11,6 +11,7 @@ import {
   listPublishedSlugs,
 } from "@/lib/members";
 import { buildPageMetadata } from "@/lib/seo";
+import { SITE_URL } from "@/lib/site";
 
 export function generateStaticParams() {
   return listPublishedSlugs().map((slug) => ({ slug }));
@@ -34,8 +35,11 @@ export async function generateMetadata({
     });
   }
   return buildPageMetadata({
-    topic: `${member.name}. ${member.currentRole ?? "Profile"}`,
-    description: member.overview,
+    topic: member.seoTopic ?? `${member.name}. ${member.currentRole ?? "Profile"}`,
+    description: member.seoTopic
+      ? `${member.overview} Sourced profile: every claim linked to journalism, court, or regulator records. Not affiliated with the PBCC.`
+      : member.overview,
+    rawDescription: Boolean(member.seoTopic),
     slug: `/people/${member.slug}`,
     cluster: "D",
     register: "record",
@@ -71,6 +75,30 @@ export default async function Page({
           { name: member.name, path: `/people/${member.slug}` },
         ])}
       />
+      <JsonLd
+        data={{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          name: member.name,
+          alternateName: member.aliases ?? [],
+          jobTitle: member.currentRole ?? "",
+          description: member.overview,
+          url: `${SITE_URL}/people/${member.slug}`,
+        }}
+      />
+      {member.faq && member.faq.length > 0 ? (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: member.faq.map((f) => ({
+              "@type": "Question",
+              name: f.question,
+              acceptedAnswer: { "@type": "Answer", text: f.answer },
+            })),
+          }}
+        />
+      ) : null}
       <MemberProfile member={member} />
     </>
   );

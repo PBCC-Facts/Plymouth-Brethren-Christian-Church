@@ -29,6 +29,29 @@ export const members: Member[] = [
     category: "leadership",
     currentRole:
       'World Leader ("Man of God"), Plymouth Brethren Christian Church',
+    seoTopic: "Who is Bruce D. Hales?",
+    faq: [
+      {
+        question: "Who is Bruce Hales?",
+        answer:
+          "Bruce D. Hales is a Sydney businessman and the World Leader of the Plymouth Brethren Christian Church (formerly the Exclusive Brethren), a role he has held since 2002 and which the church calls the “Man of God” and “Elect Vessel.” Members treat his ministry as the voice of God; investigative reporting, a UK charity regulator, and a New Zealand Royal Commission have documented his authority over the church's doctrine, schools, and commercial network.",
+      },
+      {
+        question: "What is Bruce Hales known for?",
+        answer:
+          "Outside the church, Hales is best known for documented episodes reported by major outlets: telling a distressed young member on a leaked 2015 recording to “take arsenic, or go and get some rat poison”; personally directing a gay teenager to a Brethren doctor who prescribed a chemical-castration drug; meeting an underage abuse victim five times while her abuser was restored to fellowship; and leading a church whose commercial arm was raided by the Australian Taxation Office in 2024.",
+      },
+      {
+        question: "Is the Plymouth Brethren Christian Church a cult?",
+        answer:
+          "Two Australian prime ministers have publicly called it one: Kevin Rudd called it “an extremist cult” in 2007, and Anthony Albanese called it a “cult” in 2025. The UK Charity Commission found “considerable evidence of significant detriment or harm” from its doctrine and practices in 2014. The church rejects the label.",
+      },
+      {
+        question: "How rich is Bruce Hales?",
+        answer:
+          "No audited public figure exists. Guardian Australia describes the Universal Business Team he leads as the umbrella for roughly 3,000 member businesses with combined revenue above NZ$12 billion; RNZ reporting describes congregational cash payments flowing to Hales and his family; and companies controlled by his sons won UK PPE contracts exceeding £2.5 billion during COVID-19. He travels by private jet.",
+      },
+    ],
     overview:
       "Sydney accountant. World Leader of the Plymouth Brethren Christian Church since 2002, a role internal documents call the \u201CMan of God\u201D and \u201CElect Vessel.\u201D Documented in mainstream investigative journalism, court and regulator records, a New Zealand Royal Commission and named ex-member testimony as the operational and doctrinal authority over a trans-national religious-commercial network whose internal directives include instructing a young man in mental distress to drink rat poison, directing a gay teenager into chemical-castration drugs, and personally interviewing an underage child-abuse victim before the church restored her abuser to fellowship.",
     pullQuote: {
@@ -72,6 +95,20 @@ export const members: Member[] = [
     publishedAt: "2026-04-23",
     lastReviewedAt: "2026-04-23",
     body: [
+      {
+        heading: "Who is Bruce Hales?",
+        paragraphs: [
+          "Bruce David Hales is a Sydney accountant and businessman who has led the Plymouth Brethren Christian Church since 2002, when his father John S. Hales died holding the office. [[cite:hales-manofgod-pbcc]] Inside the church he is called the “Man of God” and the “Elect Vessel”: members treat his ministry as the voice of God on earth, and his printed sermons are required reading in every Brethren household. [[cite:hales-manofgod-newstatesman]]",
+          "The office makes him more than a religious figurehead. On the public record, his word reaches into:",
+        ],
+        bullets: [
+          "What members may own, watch, and listen to. They're not allowed to have televisions or radios, and their internet is filtered through church-linked systems. [[cite:osg-guardian-surveillance-2023]]",
+          "Who members may eat with, marry, and work for: nobody outside the church. [[cite:pdt-charitycommission-2014]]",
+          "The schools. OneSchool Global's 120-plus campuses teach a curriculum vetted by community volunteers, with subjects like biology and music simply not offered at senior level. [[cite:osg-guardian-surveillance-2023]]",
+          "The businesses. Guardian Australia calls the Universal Business Team “the umbrella organisation for the various businesses and charities run by the sect under the leadership of Bruce Hales.” [[cite:ubt-atoraid-guardian-2024]]",
+          "Politics. Members don't vote, but Brethren money and volunteers have appeared in campaigns across four countries; Nicky Hager's investigation concluded “no major decisions are made without Hales's approval or direction.” [[cite:hollowmen-hager-2006]]",
+        ],
+      },
       {
         heading: "The rat-poison sermon",
         paragraphs: [

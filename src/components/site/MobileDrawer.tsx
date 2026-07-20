@@ -33,9 +33,7 @@ export function MobileDrawer({ open, setOpen }: Props) {
     <div
       id="primary-drawer"
       aria-hidden={!open}
-      // z-[60] sits above the sidebar (z-40) and parody banner (z-50).
-      // Without this, the sidebar's teal strip paints over the drawer's
-      // left edge and clips the first few characters of every menu item.
+      // Above the masthead (static) and the notice bar (z-50).
       className={`fixed inset-0 z-[60] transition-opacity ${
         open ? "opacity-100" : "pointer-events-none opacity-0"
       }`}
@@ -47,41 +45,34 @@ export function MobileDrawer({ open, setOpen }: Props) {
         className="absolute inset-0 bg-black/50"
       />
       <nav
-        aria-label="Primary"
-        className={`absolute left-0 top-0 flex h-full w-[min(380px,88vw)] flex-col bg-[color:var(--color-surface)] shadow-xl transition-transform ${
+        aria-label="All pages"
+        className={`absolute left-0 top-0 flex h-full w-[min(380px,88vw)] flex-col transition-transform ${
           open ? "translate-x-0" : "-translate-x-full"
         }`}
+        style={{
+          background: "var(--color-surface)",
+          borderRight: "1px solid var(--color-ink)",
+        }}
       >
-        {/* Drawer header: brand mark + explicit close button */}
+        {/* Drawer header: wordmark + close, matching the masthead */}
         <div
-          className="flex items-center justify-between px-6 py-4 border-b"
-          style={{ borderColor: "var(--color-rule)" }}
+          className="flex items-baseline justify-between px-6 py-4"
+          style={{ borderBottom: "1px solid var(--color-ink)" }}
         >
-          <div className="flex items-center gap-2">
-            <span
-              className="inline-block px-2 py-1 text-[0.65rem] font-bold uppercase tracking-[0.15em] leading-none"
-              style={{
-                background: "var(--color-facts)",
-                color: "var(--color-surface)",
-              }}
-            >
-              The Facts.
-            </span>
-            <span
-              className="font-[family-name:var(--font-serif)] text-sm leading-tight"
-              style={{ color: "var(--color-ink)" }}
-            >
-              Plymouth Brethren Christian Church
-            </span>
-          </div>
+          <span
+            className="font-[family-name:var(--font-serif)] text-xl font-bold"
+            style={{ color: "var(--color-ink)" }}
+          >
+            The Facts.
+          </span>
           <button
             type="button"
             aria-label="Close menu"
             onClick={() => setOpen(false)}
-            className="flex h-9 w-9 items-center justify-center text-xl"
+            className="font-[family-name:var(--font-mono)] text-[0.7rem] uppercase tracking-[0.08em]"
             style={{ color: "var(--color-ink)" }}
           >
-            <span aria-hidden="true">✕</span>
+            Close ✕
           </button>
         </div>
 
@@ -91,21 +82,20 @@ export function MobileDrawer({ open, setOpen }: Props) {
               <Link
                 href={item.href}
                 onClick={() => setOpen(false)}
-                className="block font-[family-name:var(--font-serif)] text-xl"
+                className="block font-[family-name:var(--font-serif)] text-xl no-underline hover:underline"
                 style={{ color: "var(--color-ink)" }}
               >
                 {item.label}
               </Link>
               {item.children && (
-                <ul className="mt-2 ml-4 space-y-2">
+                <ul className="mt-2 ml-4 space-y-1.5">
                   {item.children.map((c) => (
                     <li key={c.href}>
                       <Link
                         href={c.href}
                         onClick={() => setOpen(false)}
-                        className="block text-sm"
-                        target={c.external ? "_blank" : undefined}
-                        rel={c.external ? "noreferrer" : undefined}
+                        className="block text-sm no-underline opacity-80 hover:opacity-100 hover:underline"
+                        style={{ color: "var(--color-ink)" }}
                       >
                         {c.label}
                       </Link>

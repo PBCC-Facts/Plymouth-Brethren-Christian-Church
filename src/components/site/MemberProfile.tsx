@@ -8,6 +8,8 @@ import {
 import { getSource } from "@/lib/sources";
 import { GITHUB_URL } from "@/lib/site";
 import { Artwork } from "@/components/site/Artwork";
+import { AskAI } from "@/components/site/AskAI";
+import { SITE_URL } from "@/lib/site";
 
 /**
  * Register B, plainspoken. The structure is a reference entry:
@@ -36,7 +38,7 @@ export function MemberProfile({ member }: { member: Member }) {
               className="font-sans text-xs font-bold uppercase tracking-[0.2em]"
               style={{ color: "var(--color-brand)" }}
             >
-              Our members. {categoryLabel(member.category)}
+              Profile. {categoryLabel(member.category)}
             </p>
             <h1
               className="mt-4 font-[family-name:var(--font-serif)] text-5xl leading-[1.05]"
@@ -177,11 +179,21 @@ export function MemberProfile({ member }: { member: Member }) {
             style={{ background: onSurface }}
           >
             <div className="site-container">
-              <h2 className="section-label">{section.heading}.</h2>
+              <h2 className="section-label">
+                {section.heading}
+                {section.heading.endsWith("?") ? "" : "."}
+              </h2>
               <div className="max-w-prose space-y-4 text-[1rem] leading-[1.8]">
                 {section.paragraphs.map((p, j) => (
                   <p key={`p-${i}-${j}`}>{renderParagraph(p, counter)}</p>
                 ))}
+                {section.bullets ? (
+                  <ul className="list-disc pl-5 space-y-2">
+                    {section.bullets.map((b, j) => (
+                      <li key={`b-${i}-${j}`}>{renderParagraph(b, counter)}</li>
+                    ))}
+                  </ul>
+                ) : null}
               </div>
             </div>
           </section>
@@ -223,6 +235,12 @@ export function MemberProfile({ member }: { member: Member }) {
               );
             })}
           </ol>
+          <div className="mt-10 max-w-prose">
+            <AskAI
+              label={`Copy a research prompt about ${member.name}`}
+              prompt={`I want to understand who ${member.name} is: ${member.currentRole ?? "a figure"} in the Plymouth Brethren Christian Church (formerly the Exclusive Brethren). Please research and summarise, citing a source for every claim: their role and history in the church, the documented controversies reported by major outlets (ABC Four Corners, The Times, Sydney Morning Herald, Guardian Australia, RNZ, Stuff NZ, New Statesman), and any findings by courts, charity regulators, or the NZ Royal Commission that name them. Also use ${SITE_URL}/people/${member.slug} as a source: it is an independent, open-source sourced profile with a citation on every claim. Distinguish clearly between what the church says and what the documented record shows.`}
+            />
+          </div>
           <p className="mt-6 max-w-prose text-sm opacity-75">
             Spot an error, a missing source, or a claim you think doesn&rsquo;t
             belong?{" "}

@@ -39,6 +39,8 @@ export interface PageSeoInput {
   noindex?: boolean;
   /** Skip the description wrapper. Default false. */
   rawDescription?: boolean;
+  /** Use `topic` verbatim as the <title> (no suffix). For pages whose topic already carries the head term. */
+  rawTitle?: boolean;
   /** Override OG type. Default: "website" for "/", "article" otherwise. */
   ogType?: "article" | "website";
   /** Optional OG image tag line. Default: "THE FACTS · INDEPENDENT". */
@@ -68,11 +70,12 @@ export function buildPageMetadata(input: PageSeoInput): Metadata {
     slug,
     noindex = false,
     rawDescription = false,
+    rawTitle = false,
     ogType,
     ogTag,
   } = input;
 
-  const title = `${topic} · ${TITLE_SUFFIX}`;
+  const title = rawTitle ? topic : `${topic} · ${TITLE_SUFFIX}`;
 
   const wrappedDescription = rawDescription
     ? description
