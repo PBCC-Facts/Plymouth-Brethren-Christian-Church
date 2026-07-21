@@ -12,7 +12,7 @@ import {
 export const metadata = buildPageMetadata({
   topic: "What we need",
   description:
-    "Open information requests from The Facts: the documents, recordings, and first-hand accounts that would move claims about the Plymouth Brethren Christian Church from reported to documented. For current and former members who can help piece the record together.",
+    "Open information requests from The Facts, focused on the money: the Vision funds, Rapid Relief Team finances, UBT's ATO settlement, OneSchool contracts, and the trust transfers. The documents that would move claims about the Plymouth Brethren Christian Church from reported to documented.",
   slug: "/what-we-need",
   cluster: "B",
   register: "explanatory",
@@ -57,12 +57,14 @@ export default async function WhatWeNeedPage() {
             <p className="hero__eyebrow">Open information requests</p>
             <h1 className="hero__title">What we need.</h1>
             <p className="hero__sub">
-              Every claim on this site needs a source it can stand on. The
-              requests below are the specific documents, recordings, and
-              first-hand accounts that would move claims from
-              &ldquo;reported by verified ex-members&rdquo; to documented
-              public record. If you are inside or recently out and recognise
-              something on this list, you can help piece the record together.
+              Every claim on this site needs a source it can stand on, and the
+              requests below now concentrate on one thing: the money. Where
+              the Vision funds sit and who manages them, how Rapid Relief
+              Team&rsquo;s finances are structured, what UBT settled with the
+              ATO, what OneSchool paid Unispace, and where the trust
+              transfers went. The paperwork exists; filings already confirm
+              the outline. If you are inside or recently out and have seen
+              any of it, you can move the record from reported to documented.
             </p>
             <Link href="/contact" className="hero__cta">
               How to reach the editor safely &rarr;
