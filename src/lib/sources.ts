@@ -228,11 +228,11 @@ export const sources: Record<string, Source> = {
   "byline-ppe-halessons-2020": {
     id: "byline-ppe-halessons-2020",
     label:
-      "Byline Times: Exclusive: COVID-19 PPE contracts worth £2.6 billion awarded to Brethren-linked firms (2020)",
-    url: "https://bylinetimes.com/2020/11/18/the-ppe-scandal-457-million-of-contracts-linked-to-the-religious-sect-behind-the-tories/",
-    accessedOn: "2026-04-23",
+      "Byline Times: Up to £1.1 Billion in Government PPE Contracts Awarded to Firms Linked to Religious Sect (2020)",
+    url: "https://bylinetimes.com/2020/11/18/plymouth-exclusive-brethren-ppe-contracts-uk-government/",
+    accessedOn: "2026-07-21",
     notes:
-      "Documents UK Department of Health contracts to Sante Global LLP (99% owned by Charles and Gareth Hales) and other Hales-family firms. Companies House filings and contract-award records preserved in the Byline piece.",
+      "Documents UK Department of Health and Social Care pandemic PPE contracts worth up to £1.1 billion awarded to firms linked to the Plymouth Brethren, including Unispace (approx. £670m), Inivos (£126.5m), Clandeboye Agencies (over £107m), and Agile Medical (£18.4m). Contract-award records preserved in the Byline piece.",
   },
   "rudd-cult-2007-age": {
     id: "rudd-cult-2007-age",

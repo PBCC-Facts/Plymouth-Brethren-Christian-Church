@@ -98,7 +98,10 @@ export default function WayOfLifePage() {
             off-repo); the public evidence that would settle each one is
             listed on <Link href="/what-we-need">/what-we-need</Link>. If you
             lived under a rule that isn&rsquo;t here, or can document one that
-            is, <Link href="/contact">get in touch</Link>.
+            is, <Link href="/contact">get in touch</Link>. For the questions
+            people actually search (alcohol, marriage, television, leaving),
+            see <Link href="/questions">common questions, answered from the
+            public record</Link>.
           </p>
         </div>
       </section>

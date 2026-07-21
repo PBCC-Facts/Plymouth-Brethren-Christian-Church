@@ -20,6 +20,7 @@ export const primaryNav: NavItem[] = [
 export const drawerNav: NavItem[] = [
   { label: "Home", href: "/" },
   { label: "Way of life", href: "/way-of-life" },
+  { label: "Questions", href: "/questions" },
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
   { label: "The Record", href: "/news" },
@@ -33,6 +34,7 @@ export const drawerNav: NavItem[] = [
 
 export const footerNav: NavItem[] = [
   { label: "Way of life", href: "/way-of-life" },
+  { label: "Questions", href: "/questions" },
   { label: "The Money", href: "/money" },
   { label: "People", href: "/people" },
   { label: "The Record", href: "/news" },

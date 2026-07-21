@@ -50,6 +50,10 @@ export const ROUTES: RouteDef[] = [
   { path: "/people", topic: "People", cluster: "D", indexable: true, priority: 0.8, changefreq: "monthly" },
   { path: "/people/bruce-d-hales", topic: "Bruce D. Hales", cluster: "D", indexable: true, priority: 0.7, changefreq: "monthly" },
 
+  // Cluster B/C. the question library hub (article URLs are appended to the
+  // sitemap from src/data/questions; see src/app/sitemap.ts).
+  { path: "/questions", topic: "Common questions", cluster: "B", indexable: true, priority: 0.8, changefreq: "weekly" },
+
   // Supporting
   { path: "/what-we-need", topic: "What we need", cluster: "B", indexable: true, priority: 0.6, changefreq: "weekly" },
   { path: "/resources", topic: "Resources", cluster: "B", indexable: true, priority: 0.7, changefreq: "monthly" },
