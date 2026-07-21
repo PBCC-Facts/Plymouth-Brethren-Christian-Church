@@ -57,7 +57,7 @@ export const ROUTES: RouteDef[] = [
   // Supporting
   { path: "/what-we-need", topic: "What we need", cluster: "B", indexable: true, priority: 0.6, changefreq: "weekly" },
   { path: "/resources", topic: "Resources", cluster: "B", indexable: true, priority: 0.7, changefreq: "monthly" },
-  { path: "/contact", topic: "Contact", indexable: false, priority: 0.4, changefreq: "yearly" },
+  { path: "/contact", topic: "Submit information", cluster: "B", indexable: true, priority: 0.6, changefreq: "monthly" },
 
   // Legal. low-priority but indexable once real copy lands
   { path: "/legal", topic: "Legal", cluster: "A", indexable: true, priority: 0.4, changefreq: "yearly" },

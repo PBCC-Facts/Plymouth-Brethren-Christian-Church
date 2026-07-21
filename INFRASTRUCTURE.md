@@ -30,7 +30,8 @@ Both services are chosen for the same reason: they give us speed-to-launch and l
 - **Environment variables** (see Secrets section):
   - `NEXT_PUBLIC_SUPABASE_URL`
   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
-  - `SUPABASE_SERVICE_ROLE_KEY` (server-only. used by Edge Functions / Route Handlers for privileged operations)
+  - `SUPABASE_SERVICE_ROLE_KEY` (server-only. used by the `/api/intake/*` route handlers to write submissions and mint signed uploads. **Must be set in Vercel for the contact form to accept submissions**; when absent the form degrades gracefully and shows the other channels.)
+  - `INTAKE_TOKEN_SECRET` (server-only. HMAC secret for the contact form's anti-bot signed time token. Any long random string.)
   - `NEXT_PUBLIC_SITE_URL` (canonical origin. used by sitemap, OG, schema)
 - **Preview deployments:** enabled for every PR. Use a password-protected preview if counsel prefers pre-launch review to be unindexed.
 - **Production branch:** `main` (after we merge Step 1 and subsequent step PRs).
@@ -59,7 +60,7 @@ Both services are chosen for the same reason: they give us speed-to-launch and l
 
 ### What we actually use it for (initial scope)
 
-1. **Tip / correction intake.** `/contact`-style form → `submissions` table with fields: name (optional), email (optional), message, context, source\_url (optional), claimed\_affiliation (ex-member / journalist / researcher / other), created\_at, ip\_hash, status. Moderation surface later.
+1. **Tip / evidence intake.** `/contact` form → `submissions` table. **Shipped (GitHub #30), current shape:** `kind`, `message`, `contact` (nullable = anonymous), `attachment_paths[]` (private `submissions` storage bucket), `ref_code`, `triage_status`, `created_at`. **No name/email/ip_hash column: the v1 shape in the schema sketch below was replaced by migration `20260721132648_contact_intake.sql` because IP/PII contradict the page's anonymity promise.** Writes route through `src/app/api/intake/*` with the service role (anon key is default-deny); anti-bot is honeypot + signed time token + salted-hash rate limit, no CAPTCHA. Operator flow in [docs/INTAKE_RUNBOOK.md](docs/INTAKE_RUNBOOK.md).
 2. **Newsletter signup.** `subscribers` table. Double opt-in via Supabase Edge Function sending a confirmation email through a transactional provider (Resend recommended).
 3. **Survivor-story intake (opt-in public).** `testimonies` table with `is_public`, `is_moderated`, `display_name_policy` (anonymous / first-name / attributed), `consent_checkbox_version`. Default state is private; publishing requires explicit moderation.
 4. **Source registry mirror.** `src/lib/sources.ts` stays the canonical source of truth (typed, versioned in git). Supabase holds a read-replica for the `/sources` page's optional search UI.

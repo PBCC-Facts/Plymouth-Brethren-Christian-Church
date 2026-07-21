@@ -280,6 +280,179 @@
   background: transparent;
   color: var(--color-surface);
 }
+.btn:disabled { opacity: 0.5; cursor: default; }
+
+/* ---------------------------------------------------------------------------
+   Contact intake (/contact). Form-first: small hero, then the box.
+   --------------------------------------------------------------------------- */
+.intake-hero {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 1fr;
+  align-items: center;
+}
+@media (min-width: 720px) {
+  .intake-hero { grid-template-columns: 1fr 200px; }
+}
+.intake-hero__title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: clamp(1.8rem, 4vw, 2.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  margin: 0.5rem 0 0;
+}
+.intake-hero__sub {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  margin-top: 0.85rem;
+  max-width: 44ch;
+}
+.intake-hero__art { justify-self: center; height: auto; }
+@media (max-width: 719px) {
+  .intake-hero__art { display: none; }
+}
+
+.intake-card {
+  border: 1px solid var(--color-ink);
+  background: var(--color-surface);
+  padding: clamp(1.25rem, 3vw, 2rem);
+  max-width: 640px;
+}
+.intake-field { margin-bottom: 1.25rem; }
+.intake-field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.45rem;
+  color: var(--color-ink);
+}
+.intake-optional {
+  color: var(--color-blueviolet);
+  letter-spacing: 0.06em;
+}
+.intake-field input[type="text"],
+.intake-field textarea,
+.intake-field select,
+.intake-field input[type="file"] {
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  background: #fff;
+  border: 1px solid var(--color-rule);
+  padding: 0.65rem 0.75rem;
+}
+.intake-field textarea { resize: vertical; line-height: 1.6; }
+.intake-field input[type="file"] {
+  background: transparent;
+  border-style: dashed;
+  padding: 0.75rem;
+  font-size: 0.85rem;
+}
+.intake-field input:focus,
+.intake-field textarea:focus,
+.intake-field select:focus {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 1px;
+  border-color: var(--color-brand);
+}
+.intake-field textarea::placeholder,
+.intake-field input::placeholder {
+  color: color-mix(in srgb, var(--color-ink) 45%, var(--color-surface));
+}
+.intake-help {
+  font-size: 0.8rem;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--color-ink) 68%, var(--color-surface));
+  margin-top: 0.4rem;
+}
+.intake-files {
+  list-style: none;
+  margin: 0.6rem 0 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.intake-files li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  padding: 0.35rem 0.5rem;
+  background: color-mix(in srgb, var(--color-ink) 5%, var(--color-surface));
+}
+.intake-files button {
+  border: 0;
+  background: none;
+  cursor: pointer;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand);
+}
+.intake-files li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+/* Honeypot: off-screen, never shown, not tabbable. */
+.intake-hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+.intake-error {
+  margin-top: 0.85rem;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-brand);
+}
+.intake-promise {
+  list-style: none;
+  margin: 1.5rem 0 0;
+  padding: 1.25rem 0 0;
+  border-top: 1px solid var(--color-rule);
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.intake-promise li {
+  font-size: 0.82rem;
+  line-height: 1.55;
+  padding-left: 1.1rem;
+  position: relative;
+  color: color-mix(in srgb, var(--color-ink) 82%, var(--color-surface));
+}
+.intake-promise li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 6px;
+  height: 6px;
+  background: var(--color-brand);
+}
+.intake-ref {
+  font-family: var(--font-mono);
+  letter-spacing: 0.08em;
+  background: color-mix(in srgb, var(--color-ink) 8%, var(--color-surface));
+  padding: 0.1em 0.35em;
+}
+.intake-other { max-width: 640px; margin-top: 2.5rem; }
+.intake-other ul { list-style: none; margin: 0; padding: 0; }
+.intake-other li {
+  font-size: 0.92rem;
+  line-height: 1.65;
+  padding: 0.85rem 0;
+  border-top: 1px solid var(--color-rule);
+}
+.intake-other li:last-child { border-bottom: 1px solid var(--color-rule); }
 
 /* Footnotes. mono superscript citations in the accent red. */
 .footnote {
