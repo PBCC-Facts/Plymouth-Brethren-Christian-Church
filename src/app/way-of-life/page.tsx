@@ -73,7 +73,7 @@ export default function WayOfLifePage() {
               <span className="rules-count__accent"> rules.</span>
             </p>
             <h1 className="hero__title" style={{ fontSize: "1.6rem", marginTop: "1rem" }}>
-              And counting. Here is what members live under.
+              And counting. The rules Plymouth Brethren Christian Church members live under.
             </h1>
             <p className="hero__sub">
               One doctrine, the Doctrine of Separation, decides who members

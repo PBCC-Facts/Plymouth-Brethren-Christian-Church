@@ -37,6 +37,7 @@ export const ROUTES: RouteDef[] = [
 
   // Cluster B. brand + investigative
   { path: "/news", topic: "The record", cluster: "B", indexable: true, priority: 0.8, changefreq: "weekly" },
+  { path: "/stories", topic: "Stories", cluster: "B", indexable: true, priority: 0.7, changefreq: "weekly" },
 
   // Cluster C. doctrine / practice. One consolidated page: the rules, by
   // topic, each section sourced. The old per-topic children (which mirrored
