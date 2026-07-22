@@ -2,19 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { Dispatch, SetStateAction } from "react";
 import { primaryNav } from "@/lib/nav";
-
-type Props = {
-  open: boolean;
-  setOpen: Dispatch<SetStateAction<boolean>>;
-};
 
 /**
  * Broadsheet masthead: wordmark line, then a nav row of top-level
- * destinations with an "all pages" toggle for the full drawer.
+ * destinations. Secondary pages live in the footer.
  */
-export function Masthead({ open, setOpen }: Props) {
+export function Masthead() {
   const pathname = usePathname();
 
   const isCurrent = (href: string) =>
@@ -68,16 +62,6 @@ export function Masthead({ open, setOpen }: Props) {
               {item.label}
             </Link>
           ))}
-          <button
-            type="button"
-            className="masthead__all"
-            aria-label={open ? "Close full menu" : "Open full menu"}
-            aria-expanded={open}
-            aria-controls="primary-drawer"
-            onClick={() => setOpen((v) => !v)}
-          >
-            {open ? "Close ✕" : "All pages ☰"}
-          </button>
         </nav>
       </div>
     </header>

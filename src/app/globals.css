@@ -148,25 +148,23 @@
   align-self: center;
 }
 
-/* Secondary CTA. outlined, quieter than the primary submit button. */
+/* Secondary CTA. text + icon only, quieter than the primary submit button. */
 .masthead__cta-ghost {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
-  padding: 0.5rem 0.9rem;
+  padding: 0.5rem 0.4rem;
   font-family: var(--font-sans);
   font-weight: 600;
   font-size: 0.75rem;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: var(--color-ink);
-  border: 1px solid var(--color-rule);
   text-decoration: none;
   white-space: nowrap;
 }
 .masthead__cta-ghost svg { color: var(--color-brand); }
 .masthead__cta-ghost:hover {
-  border-color: var(--color-ink);
   color: var(--color-brand);
   text-decoration: none;
 }
@@ -203,22 +201,6 @@
   color: var(--color-brand);
   box-shadow: inset 0 -2px 0 var(--color-brand);
 }
-.masthead__all {
-  margin-left: auto;
-  font-family: var(--font-mono) !important;
-  font-size: 0.7rem !important;
-  border: 0;
-  background: none;
-  cursor: pointer;
-  color: var(--color-ink);
-  font-weight: 500;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  padding: 0.65rem 0.25rem 0.65rem 0.75rem;
-  white-space: nowrap;
-}
-.masthead__all:hover { color: var(--color-brand); }
-
 /* Section label. mono small-caps with hairline rule to the right. */
 .section-label {
   font-family: var(--font-mono);
@@ -314,6 +296,59 @@
   .intake-hero__art { display: none; }
 }
 
+/* Form + assurances two-up. */
+.intake-layout {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: start;
+}
+@media (min-width: 800px) {
+  .intake-layout {
+    grid-template-columns: minmax(0, 640px) minmax(200px, 260px);
+    gap: 2.5rem;
+  }
+}
+
+/* Risk-reversal panel: privacy assurances, right of the form. */
+.intake-assurances {
+  border: 1px solid var(--color-rule);
+  padding: 1.25rem 1.35rem;
+  background: color-mix(in srgb, var(--color-ink) 3%, var(--color-surface));
+}
+.intake-assurances__label {
+  font-family: var(--font-mono);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.7rem;
+  color: var(--color-ink);
+  margin: 0 0 1rem;
+}
+.intake-assurances ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+.intake-assurances li {
+  display: grid;
+  grid-template-columns: 22px 1fr;
+  gap: 0.7rem;
+  align-items: center;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  line-height: 1.35;
+  color: var(--color-ink);
+}
+.intake-assurances svg {
+  width: 22px;
+  height: 22px;
+  color: var(--color-brand);
+}
+
 .intake-card {
   border: 1px solid var(--color-ink);
   background: var(--color-surface);
@@ -335,9 +370,12 @@
   letter-spacing: 0.06em;
 }
 .intake-field input[type="text"],
+.intake-field input[type="email"],
+.intake-field input[type="tel"],
 .intake-field textarea,
 .intake-field select,
 .intake-field input[type="file"] {
+  display: block;
   width: 100%;
   font-family: var(--font-sans);
   font-size: 0.95rem;
@@ -346,7 +384,7 @@
   border: 1px solid var(--color-rule);
   padding: 0.65rem 0.75rem;
 }
-.intake-field textarea { resize: vertical; line-height: 1.6; }
+.intake-field textarea { resize: vertical; line-height: 1.6; min-height: 8rem; }
 .intake-field input[type="file"] {
   background: transparent;
   border-style: dashed;
@@ -370,6 +408,90 @@
   color: color-mix(in srgb, var(--color-ink) 68%, var(--color-surface));
   margin-top: 0.4rem;
 }
+
+/* Email/phone segmented selector. Block-level so the input always sits below. */
+.intake-toggle {
+  display: flex;
+  width: fit-content;
+  border: 1px solid var(--color-rule);
+  margin-bottom: 0.75rem;
+}
+.intake-toggle__btn {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  padding: 0.5rem 1.15rem;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  color: var(--color-ink);
+}
+.intake-toggle__btn + .intake-toggle__btn {
+  border-left: 1px solid var(--color-rule);
+}
+.intake-toggle__btn[aria-pressed="true"] {
+  background: var(--color-ink);
+  color: var(--color-surface);
+}
+
+/* react-phone-number-input, restyled to the record system (mono/ink, square). */
+.intake-field .PhoneInput { display: flex; gap: 0.5rem; align-items: stretch; }
+.intake-field .PhoneInputCountry {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0 0.6rem;
+  border: 1px solid var(--color-rule);
+  background: #fff;
+}
+.intake-field .PhoneInputCountryIcon { width: 1.4em; height: 1em; }
+.intake-field .PhoneInputCountrySelectArrow {
+  color: var(--color-ink);
+  opacity: 0.5;
+}
+.intake-field .PhoneInputInput {
+  flex: 1;
+  width: 100%;
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  color: var(--color-ink);
+  background: #fff;
+  border: 1px solid var(--color-rule);
+  padding: 0.65rem 0.75rem;
+}
+.intake-field .PhoneInputInput:focus,
+.intake-field .PhoneInput--focus .PhoneInputCountry {
+  outline: 2px solid var(--color-brand);
+  outline-offset: 1px;
+  border-color: var(--color-brand);
+}
+
+/* Follow-up consent checkbox. Specific enough to beat `.intake-field label`,
+   whose mono/uppercase/block styling would otherwise leak onto it. */
+.intake-field label.intake-check {
+  display: grid;
+  grid-template-columns: 1.05rem 1fr;
+  gap: 0.65rem;
+  align-items: start;
+  margin: 1.1rem 0 0;
+  cursor: pointer;
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.85rem;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.5;
+  color: color-mix(in srgb, var(--color-ink) 85%, var(--color-surface));
+}
+.intake-check input {
+  margin: 0;
+  width: 1.05rem;
+  height: 1.05rem;
+  accent-color: var(--color-brand);
+  transform: translateY(0.15rem);
+}
+.intake-check span { min-width: 0; }
 .intake-files {
   list-style: none;
   margin: 0.6rem 0 0;
@@ -412,31 +534,6 @@
   font-size: 0.9rem;
   line-height: 1.6;
   color: var(--color-brand);
-}
-.intake-promise {
-  list-style: none;
-  margin: 1.5rem 0 0;
-  padding: 1.25rem 0 0;
-  border-top: 1px solid var(--color-rule);
-  display: flex;
-  flex-direction: column;
-  gap: 0.55rem;
-}
-.intake-promise li {
-  font-size: 0.82rem;
-  line-height: 1.55;
-  padding-left: 1.1rem;
-  position: relative;
-  color: color-mix(in srgb, var(--color-ink) 82%, var(--color-surface));
-}
-.intake-promise li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.5em;
-  width: 6px;
-  height: 6px;
-  background: var(--color-brand);
 }
 .intake-ref {
   font-family: var(--font-mono);
@@ -679,6 +776,14 @@
   align-items: center;
   padding-block: clamp(3rem, 7vw, 5.5rem);
 }
+/* Split hero: intro text beside an illustration. */
+@media (min-width: 820px) {
+  .hero__grid--split { grid-template-columns: 1fr 300px; }
+}
+.hero__art { justify-self: center; height: auto; }
+@media (max-width: 819px) {
+  .hero__art { display: none; }
+}
 .hero__eyebrow {
   font-family: var(--font-mono);
   font-weight: 500;
@@ -724,6 +829,34 @@
   color: var(--color-ink);
   border-color: var(--color-ink);
   text-decoration: none;
+}
+
+/* Square-bullet fact list: one sourced statement per row, red square marker. */
+.fact-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.05rem;
+  max-width: 62ch;
+}
+.fact-list li {
+  position: relative;
+  padding-left: 1.6rem;
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  line-height: 1.55;
+  color: var(--color-ink);
+}
+.fact-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 9px;
+  height: 9px;
+  background: var(--color-brand);
 }
 /* Retired slider chrome: circle visual and pagination dots render as nothing. */
 .hero__visual { display: none; }

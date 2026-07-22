@@ -26,6 +26,7 @@ export async function POST(req: NextRequest) {
     kind?: string;
     message?: string;
     contact?: string;
+    followUpOk?: boolean;
     attachmentPaths?: string[];
     token?: string;
     website?: string; // honeypot; must be empty
@@ -69,7 +70,15 @@ export async function POST(req: NextRequest) {
         .filter((p) => typeof p === "string" && p.startsWith(`${submissionId}/`))
         .slice(0, MAX_FILES)
     : [];
-  const contact = body.contact?.trim() ? body.contact.trim().slice(0, 500) : null;
+
+  // Contact is required: the editor must be able to follow up and honour
+  // removal requests. Anonymity is preserved by the submitter's choice of
+  // channel (a Proton address, a Signal number), not by omitting it.
+  const contact = body.contact?.trim().slice(0, 500) ?? "";
+  if (contact.length < 1) {
+    return NextResponse.json({ error: "contact-required" }, { status: 422 });
+  }
+  const followUpOk = body.followUpOk === true;
 
   const refCode = refCodeFor(submissionId);
   const ok = await insertSubmission({
@@ -77,6 +86,7 @@ export async function POST(req: NextRequest) {
     kind,
     message,
     contact,
+    follow_up_ok: followUpOk,
     attachment_paths: attachmentPaths,
     ref_code: refCode,
   });

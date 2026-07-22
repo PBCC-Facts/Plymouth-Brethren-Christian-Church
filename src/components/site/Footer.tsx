@@ -1,6 +1,23 @@
 import Link from "next/link";
 import { footerNav, policyNav } from "@/lib/nav";
-import { GITHUB_URL } from "@/lib/site";
+import { GITHUB_URL, LINKEDIN_URL, X_URL } from "@/lib/site";
+
+const SOCIALS = [
+  {
+    href: LINKEDIN_URL,
+    label: "The Facts on LinkedIn",
+    icon: (
+      <path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5ZM3 9h4v12H3zM9 9h3.8v1.7h.05c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.3 0-2.95-1.8-2.95-1.8 0-2.08 1.4-2.08 2.85V21H9z" />
+    ),
+  },
+  {
+    href: X_URL,
+    label: "The Facts on X",
+    icon: (
+      <path d="M18.9 2H22l-7.6 8.7L23 22h-6.9l-4.5-5.9L5.2 22H2.1l8.1-9.3L1 2h7.1l4.1 5.4L18.9 2Zm-1.2 18h1.9L7.4 4H5.4z" />
+    ),
+  },
+];
 
 export function Footer() {
   return (
@@ -10,9 +27,35 @@ export function Footer() {
     >
       <div className="site-container py-14">
         <div className="flex flex-wrap items-baseline justify-between gap-x-8 gap-y-4">
-          <p className="font-[family-name:var(--font-serif)] text-2xl font-semibold m-0">
-            The Facts.
-          </p>
+          <div className="flex items-center gap-5">
+            <p className="font-[family-name:var(--font-serif)] text-2xl font-semibold m-0">
+              The Facts.
+            </p>
+            <ul className="flex items-center gap-3">
+              {SOCIALS.map((s) => (
+                <li key={s.href}>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={s.label}
+                    className="block opacity-70 transition-opacity hover:opacity-100"
+                    style={{ color: "var(--color-surface)" }}
+                  >
+                    <svg
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      aria-hidden="true"
+                    >
+                      {s.icon}
+                    </svg>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
           <nav aria-label="Footer">
             <ul className="flex flex-wrap gap-x-6 gap-y-2 text-sm">
               {footerNav.map((item) => (

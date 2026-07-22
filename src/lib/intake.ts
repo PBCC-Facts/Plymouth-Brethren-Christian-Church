@@ -149,7 +149,8 @@ export async function insertSubmission(row: {
   id: string;
   kind: SubmissionKind;
   message: string;
-  contact: string | null;
+  contact: string;
+  follow_up_ok: boolean;
   attachment_paths: string[];
   ref_code: string;
 }): Promise<boolean> {

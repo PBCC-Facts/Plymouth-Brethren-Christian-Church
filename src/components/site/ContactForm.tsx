@@ -1,6 +1,15 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import PhoneInput, {
+  isValidPhoneNumber,
+  type Flags,
+} from "react-phone-number-input";
+import * as flagComponents from "country-flag-icons/react/3x2";
+import "react-phone-number-input/style.css";
+
+// Bundle flags locally (no external CDN calls on an anonymity-sensitive page).
+const flags = flagComponents as unknown as Flags;
 
 /**
  * Streamlined intake form for /contact (GitHub #30). Anonymous by default.
@@ -23,6 +32,9 @@ const MAX_FILE_BYTES = 25 * 1024 * 1024;
 const IMAGE_REENCODE = new Set(["image/jpeg", "image/png"]);
 
 type Status = "idle" | "submitting" | "done" | "error";
+type ContactMethod = "email" | "phone";
+
+const EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 /** Re-encode JPEG/PNG through a canvas to drop EXIF (incl. GPS). Others pass through. */
 async function stripImageMetadata(file: File): Promise<File> {
@@ -54,7 +66,37 @@ export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
   const [refCode, setRefCode] = useState<string>("");
   const [error, setError] = useState<string>("");
+  const [contactMethod, setContactMethod] = useState<ContactMethod>("email");
+  const [email, setEmail] = useState("");
+  const [phone, setPhone] = useState<string | undefined>(undefined);
+  const [followUpOk, setFollowUpOk] = useState(true);
+  const [contactError, setContactError] = useState("");
   const submissionId = useRef<string>("");
+
+  function pickMethod(method: ContactMethod) {
+    setContactMethod(method);
+    setContactError("");
+  }
+
+  /** Validate the required contact and return the value to store, or an error. */
+  function resolveContact(): { value: string } | { error: string } {
+    if (contactMethod === "email") {
+      if (!email.trim()) {
+        return { error: "Add an email so the editor can follow up. A Proton or Tutanota address keeps you anonymous." };
+      }
+      if (!EMAIL_RE.test(email.trim())) {
+        return { error: "Enter a valid email address." };
+      }
+      return { value: email.trim() };
+    }
+    if (!phone) {
+      return { error: "Add a phone or Signal number so the editor can follow up. A number not tied to your name keeps you anonymous." };
+    }
+    if (!isValidPhoneNumber(phone)) {
+      return { error: "Enter a valid phone number." };
+    }
+    return { value: phone };
+  }
 
   useEffect(() => {
     submissionId.current = crypto.randomUUID();
@@ -83,14 +125,21 @@ export function ContactForm() {
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     if (!token) return;
+
+    const data = new FormData(e.currentTarget);
+    const message = String(data.get("message") ?? "").trim();
+    const website = String(data.get("website") ?? ""); // honeypot
+
+    const resolved = resolveContact();
+    if ("error" in resolved) {
+      setContactError(resolved.error);
+      return;
+    }
+    const contact = resolved.value;
+
     setStatus("submitting");
     setError("");
-
-    const form = e.currentTarget;
-    const data = new FormData(form);
-    const message = String(data.get("message") ?? "").trim();
-    const contact = String(data.get("contact") ?? "").trim();
-    const website = String(data.get("website") ?? ""); // honeypot
+    setContactError("");
 
     try {
       const attachmentPaths: string[] = [];
@@ -129,6 +178,7 @@ export function ContactForm() {
           kind,
           message,
           contact,
+          followUpOk,
           attachmentPaths,
           token,
           website,
@@ -238,21 +288,81 @@ export function ContactForm() {
       </div>
 
       <div className="intake-field">
-        <label htmlFor="contact">
-          How can we reach you <span className="intake-optional">optional</span>
-        </label>
-        <input
-          id="contact"
-          name="contact"
-          type="text"
-          autoComplete="off"
-          placeholder="Email or Signal, or leave blank to stay anonymous."
-        />
+        <label id="contact-label">How to reach you</label>
+        <div className="intake-toggle" role="group" aria-labelledby="contact-label">
+          <button
+            type="button"
+            className="intake-toggle__btn"
+            aria-pressed={contactMethod === "email"}
+            onClick={() => pickMethod("email")}
+          >
+            Email
+          </button>
+          <button
+            type="button"
+            className="intake-toggle__btn"
+            aria-pressed={contactMethod === "phone"}
+            onClick={() => pickMethod("phone")}
+          >
+            Phone
+          </button>
+        </div>
+
+        {contactMethod === "email" && (
+          <input
+            type="email"
+            inputMode="email"
+            autoComplete="off"
+            aria-label="Email address"
+            aria-invalid={Boolean(contactError)}
+            placeholder="you@example.com"
+            value={email}
+            onChange={(e) => {
+              setEmail(e.target.value);
+              setContactError("");
+            }}
+          />
+        )}
+
+        {contactMethod === "phone" && (
+          <PhoneInput
+            international
+            flags={flags}
+            defaultCountry="AU"
+            aria-label="Phone number"
+            placeholder="Enter phone number"
+            value={phone}
+            onChange={(v) => {
+              setPhone(v);
+              setContactError("");
+            }}
+          />
+        )}
+
         <p className="intake-help">
-          Leaving this blank keeps you anonymous. Providing it lets the editor
-          verify your account so it can carry the verified ex-member badge;
-          verification details are never published.
+          Required, so the editor can follow up and so you can have your
+          material removed later. To stay anonymous, use an address or number
+          not tied to your name: a Proton or Tutanota email, or a Signal
+          number. It is never published, and enables the verified ex-member
+          badge.
         </p>
+        {contactError && (
+          <p className="intake-error" role="alert">
+            {contactError}
+          </p>
+        )}
+
+        <label className="intake-check">
+          <input
+            type="checkbox"
+            checked={followUpOk}
+            onChange={(e) => setFollowUpOk(e.target.checked)}
+          />
+          <span>
+            The editor can contact me with follow-up questions about this
+            submission.
+          </span>
+        </label>
       </div>
 
       <button type="submit" className="btn" disabled={status === "submitting" || !token}>
@@ -264,26 +374,6 @@ export function ContactForm() {
           {error}
         </p>
       )}
-
-      <ul className="intake-promise">
-        <li>
-          No account, no login. The contact field is optional: leave it blank
-          and you are anonymous.
-        </li>
-        <li>
-          This form does not log your IP address or device with your
-          submission.
-        </li>
-        <li>
-          Only the editor can read submissions. Nothing is published as-is;
-          anything used follows the verified ex-member rules and is removable
-          on request.
-        </li>
-        <li>
-          Current members: use a device the community did not supply.
-          Church-managed devices may be filtered and monitored.
-        </li>
-      </ul>
     </form>
   );
 }

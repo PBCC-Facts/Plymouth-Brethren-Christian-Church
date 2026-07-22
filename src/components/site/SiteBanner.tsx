@@ -15,18 +15,18 @@ export function SiteBanner() {
         color: "var(--color-banner-ink)",
       }}
     >
-      <div className="site-container flex flex-wrap items-center justify-between gap-x-4 gap-y-1 py-2 text-sm">
+      <div className="site-container flex items-center justify-center py-2 text-sm text-center">
         <p>
-          Independent journalism and open-source transparency &middot; Not
-          affiliated with the PBCC.
+          Independent journalism and open-source transparency &middot;{" "}
+          <Link
+            href="/mission"
+            className="underline decoration-2 underline-offset-2"
+            style={{ color: "var(--color-banner-ink)" }}
+          >
+            Not affiliated with the PBCC
+          </Link>
+          .
         </p>
-        <Link
-          href="/mission"
-          className="underline decoration-2 underline-offset-2"
-          style={{ color: "var(--color-banner-ink)" }}
-        >
-          About this site
-        </Link>
       </div>
     </div>
   );

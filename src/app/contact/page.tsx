@@ -4,6 +4,7 @@ import { buildPageMetadata } from "@/lib/seo";
 import { GITHUB_URL } from "@/lib/site";
 import { JsonLd, breadcrumbSchema } from "@/components/seo/JsonLd";
 import { ContactForm } from "@/components/site/ContactForm";
+import { ContactAssurances } from "@/components/site/ContactAssurances";
 
 export const metadata = buildPageMetadata({
   topic: "Submit information",
@@ -50,7 +51,10 @@ export default function ContactPage() {
 
       <section className="section" style={{ paddingTop: "clamp(2rem, 4vw, 3rem)" }}>
         <div className="site-container">
-          <ContactForm />
+          <div className="intake-layout">
+            <ContactForm />
+            <ContactAssurances />
+          </div>
 
           <div className="intake-other">
             <h2 className="section-label">Other ways to reach us</h2>

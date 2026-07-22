@@ -270,6 +270,15 @@ export const sources: Record<string, Source> = {
     notes:
       "Book-length investigation of the Brethren's simultaneous 2004-05 four-country political campaign and its chain of command: 'no major decisions are made without Hales's approval or direction.' Source for the NZ $1 million 'Wake-up Call' campaign.",
   },
+  "vision-grace-trust-cc": {
+    id: "vision-grace-trust-cc",
+    label:
+      "UK Charity Commission: The Grace Trust (charity 257516), audited accounts",
+    url: "https://register-of-charities.charitycommission.gov.uk/en/charity-search/-/charity-details/257516/full-print",
+    accessedOn: "2026-07-21",
+    notes:
+      "Primary document. Names the 'Vision Foundation' expendable endowment; balance £7.42m (31 Dec 2020) rising to £50.16m (31 Dec 2024). Full working memo in research/money/VISION_FUND.md.",
+  },
   "osg-guardian-surveillance-2023": {
     id: "osg-guardian-surveillance-2023",
     label:

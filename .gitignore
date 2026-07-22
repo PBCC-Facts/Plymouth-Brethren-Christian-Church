@@ -36,3 +36,8 @@ research/captures/
 # is exempted so future contributors can see the pipeline.
 research/raw/*
 !research/raw/README.md
+
+# Get A Life podcast transcripts and extractions: survivor testimony and
+# private member names that, per research/getalife/REPORT.md, never ship.
+# Kept local; only sourced facts promoted into FACTS.md and the registry ship.
+research/getalife/

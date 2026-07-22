@@ -8,10 +8,14 @@ into the record. Built per GitHub #30; trust model per
 
 - **Table `public.submissions`** (Supabase project `pbcc-facts`,
   `qdboaafvxkeirjonkvjb`): one row per submission. Columns: `kind`, `message`,
-  `contact` (nullable; blank means anonymous), `attachment_paths[]`,
-  `ref_code`, `triage_status` (`new` → `reviewed` → `archived`), `created_at`.
-  **No IP, no user agent, ever.** RLS is default-deny; only the service role
-  reads it.
+  `contact` (**required**; an email or phone/Signal number, anonymised by the
+  submitter's choice of channel), `follow_up_ok` (did they consent to
+  proactive follow-up), `attachment_paths[]`, `ref_code`, `triage_status`
+  (`new` → `reviewed` → `archived`), `created_at`. **No IP, no user agent,
+  ever.** RLS is default-deny; only the service role reads it.
+  `contact` exists so the editor can verify, follow up, and honour removal
+  requests; a blank `follow_up_ok` means hold the contact but do not reach out
+  unsolicited.
 - **Storage bucket `submissions`** (private): attachments at
   `submissions/<submission-id>/<filename>`. No public access, no anon policy.
 - **Table `public.rate_limits`**: hourly hit counts keyed on a daily-salted IP
