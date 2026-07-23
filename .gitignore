@@ -41,3 +41,6 @@ research/raw/*
 # private member names that, per research/getalife/REPORT.md, never ship.
 # Kept local; only sourced facts promoted into FACTS.md and the registry ship.
 research/getalife/
+
+# Deploy secrets staging file (pushed to Vercel via scripts/push-secrets.sh)
+.env.secrets

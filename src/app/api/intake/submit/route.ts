@@ -11,6 +11,7 @@ import {
   underRateLimit,
   verifyFormToken,
 } from "@/lib/intake";
+import { notifySubmission, sendReceipt } from "@/lib/notify";
 
 // No-log zone: this handler must not record request metadata (no IP, no UA).
 export const runtime = "nodejs";
@@ -91,6 +92,18 @@ export async function POST(req: NextRequest) {
     ref_code: refCode,
   });
   if (!ok) return NextResponse.json({ error: "store" }, { status: 502 });
+
+  // Best-effort alerts + receipt. Metadata only to team channels; the
+  // receipt goes to the submitter's email when they consented to follow-up.
+  await Promise.allSettled([
+    notifySubmission({
+      kind,
+      refCode,
+      attachmentCount: attachmentPaths.length,
+      followUpOk,
+    }),
+    sendReceipt({ contact, followUpOk, refCode }),
+  ]);
 
   return NextResponse.json(
     { ok: true, refCode },
