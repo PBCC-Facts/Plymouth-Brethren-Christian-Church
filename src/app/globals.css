@@ -131,6 +131,31 @@
 }
 @media (max-width: 640px) {
   .masthead__subject { display: none; }
+
+  /* Stack and centre the whole header on phones. */
+  .masthead__inner {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 0.9rem;
+    padding-block: 1rem 0.85rem;
+  }
+  .masthead__brand { justify-content: center; }
+  .masthead__actions {
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.6rem;
+  }
+  /* Nav wraps and centres so no item is cut off mid-scroll. */
+  .masthead__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    overflow-x: visible;
+    gap: 0.15rem 0.35rem;
+    padding-top: 0.35rem;
+  }
+  .masthead__nav a { padding: 0.5rem 0.55rem; }
 }
 
 /* CTA cluster: secondary ghost link + primary submit button. */
